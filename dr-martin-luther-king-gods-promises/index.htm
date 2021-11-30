@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="en-US">
+  <head> <script type="text/javascript">if(!gform){document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0});var gform={domLoaded:!1,scriptsLoaded:!1,initializeOnLoaded:function(o){gform.domLoaded&&gform.scriptsLoaded?o():!gform.domLoaded&&gform.scriptsLoaded?window.addEventListener("DOMContentLoaded",o):document.addEventListener("gform_main_scripts_loaded",o)},hooks:{action:{},filter:{}},addAction:function(o,n,r,t){gform.addHook("action",o,n,r,t)},addFilter:function(o,n,r,t){gform.addHook("filter",o,n,r,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,n){gform.removeHook("action",o,n)},removeFilter:function(o,n,r){gform.removeHook("filter",o,n,r)},addHook:function(o,n,r,t,i){null==gform.hooks[o][n]&&(gform.hooks[o][n]=[]);var e=gform.hooks[o][n];null==i&&(i=n+"_"+e.length),null==t&&(t=10),gform.hooks[o][n].push({tag:i,callable:r,priority:t})},doHook:function(o,n,r){if(r=Array.prototype.slice.call(r,1),null!=gform.hooks[o][n]){var t,i=gform.hooks[o][n];i.sort(function(o,n){return o.priority-n.priority});for(var e=0;e<i.length;e++)"function"!=typeof(t=i[e].callable)&&(t=window[t]),"action"==o?t.apply(null,r):r[0]=t.apply(null,r)}if("filter"==o)return r[0]},removeHook:function(o,n,r,t){if(null!=gform.hooks[o][n])for(var i=gform.hooks[o][n],e=i.length-1;0<=e;e--)null!=t&&t!=i[e].tag||null!=r&&r!=i[e].priority||i.splice(e,1)}}}</script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-50e73d7670616162726",applicationID:"1406056197"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer', 'GTM-KMJ9WS7');</script>
+  
+  <!-- End Google Tag Manager -->
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v16.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Standing on God’s Promises: Dr. Martin Luther King Jr.’s Legacy and Hope for the Future - Sisters of Mercy</title>
+	<meta name="description" content="In February 2021, Mercy High School in Farmington Hills, Michigan, held its first Annual MLK Jr. Writing Contest in honor of Black History Month. Students" />
+	<link rel="canonical" href="http://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="es_MX" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Standing on God’s Promises: Dr. Martin Luther King Jr.’s Legacy and Hope for the Future - Sisters of Mercy" />
+	<meta property="og:description" content="In February 2021, Mercy High School in Farmington Hills, Michigan, held its first Annual MLK Jr. Writing Contest in honor of Black History Month. Students" />
+	<meta property="og:url" content="http://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/" />
+	<meta property="og:site_name" content="Sisters of Mercy" />
+	<meta property="article:published_time" content="2021-02-18T00:00:00+00:00" />
+	<meta property="article:modified_time" content="2021-06-11T17:06:46+00:00" />
+	<meta property="og:image" content="https://sistersofmercy.org/wp-content/uploads/2021/04/carrington-wash-mlk-winner-scaled.jpg" />
+	<meta property="og:image:width" content="1439" />
+	<meta property="og:image:height" content="2560" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="admin" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="4 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.sistersofmercy.org/#organization","name":"Sisters of Mercy","url":"https://www.sistersofmercy.org/","sameAs":[],"logo":{"@type":"ImageObject","@id":"https://www.sistersofmercy.org/#logo","inLanguage":"en-US","url":"https://sistersofmercy.org/wp-content/uploads/2012/09/som_logo_lores20121.jpg","contentUrl":"https://sistersofmercy.org/wp-content/uploads/2012/09/som_logo_lores20121.jpg","width":516,"height":205,"caption":"Sisters of Mercy"},"image":{"@id":"https://www.sistersofmercy.org/#logo"}},{"@type":"WebSite","@id":"https://www.sistersofmercy.org/#website","url":"https://www.sistersofmercy.org/","name":"Sisters of Mercy","description":"Catholic Women Religious Congregation","publisher":{"@id":"https://www.sistersofmercy.org/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://www.sistersofmercy.org/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"http://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/#primaryimage","inLanguage":"en-US","url":"https://www.sistersofmercy.org/wp-content/uploads/2021/04/carrington-wash-mlk-winner-scaled.jpg","contentUrl":"https://www.sistersofmercy.org/wp-content/uploads/2021/04/carrington-wash-mlk-winner-scaled.jpg","width":1439,"height":2560},{"@type":"WebPage","@id":"http://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/#webpage","url":"http://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/","name":"Standing on God\u2019s Promises: Dr. Martin Luther King Jr.\u2019s Legacy and Hope for the Future - Sisters of Mercy","isPartOf":{"@id":"https://www.sistersofmercy.org/#website"},"primaryImageOfPage":{"@id":"http://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/#primaryimage"},"datePublished":"2021-02-18T00:00:00+00:00","dateModified":"2021-06-11T17:06:46+00:00","description":"In February 2021, Mercy High School in Farmington Hills, Michigan, held its first Annual MLK Jr. Writing Contest in honor of Black History Month. Students","breadcrumb":{"@id":"http://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["http://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/"]}]},{"@type":"BreadcrumbList","@id":"http://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.sistersofmercy.org/"},{"@type":"ListItem","position":2,"name":"Standing on God\u2019s Promises: Dr. Martin Luther King Jr.\u2019s Legacy and Hope for the Future"}]},{"@type":"Article","@id":"http://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/#article","isPartOf":{"@id":"http://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/#webpage"},"author":{"@id":"https://www.sistersofmercy.org/#/schema/person/66e872321f828ec167adedffcca878d4"},"headline":"Standing on God\u2019s Promises: Dr. Martin Luther King Jr.\u2019s Legacy and Hope for the Future","datePublished":"2021-02-18T00:00:00+00:00","dateModified":"2021-06-11T17:06:46+00:00","mainEntityOfPage":{"@id":"http://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/#webpage"},"wordCount":737,"publisher":{"@id":"https://www.sistersofmercy.org/#organization"},"image":{"@id":"http://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/#primaryimage"},"thumbnailUrl":"https://www.sistersofmercy.org/wp-content/uploads/2021/04/carrington-wash-mlk-winner-scaled.jpg","inLanguage":"en-US"},{"@type":"Person","@id":"https://www.sistersofmercy.org/#/schema/person/66e872321f828ec167adedffcca878d4","name":"admin","image":{"@type":"ImageObject","@id":"https://www.sistersofmercy.org/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/cafadd1cf44c4ce1165590cf3e73e5ff?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/cafadd1cf44c4ce1165590cf3e73e5ff?s=96&d=mm&r=g","caption":"admin"},"url":"https://www.sistersofmercy.org/author/admin/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.sistersofmercy.org' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sistersofmercy.org\/wp\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7.1"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='threespot_custom_functions-css'  href='https://www.sistersofmercy.org/wp-content/mu-plugins/threespot-custom-wp-functions-master/public/css/threespot_custom_functions-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='sage/main.css-css'  href='https://www.sistersofmercy.org/wp-content/themes/sage/dist/styles/main.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sistersofmercy.org/wp/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://www.sistersofmercy.org/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://www.sistersofmercy.org/wp-content/mu-plugins/threespot-custom-wp-functions-master/public/js/threespot_custom_functions-public.js?ver=1.0.0' id='threespot_custom_functions-js'></script>
+<link rel="https://api.w.org/" href="https://www.sistersofmercy.org/wp-json/" /><link rel="alternate" type="application/json" href="https://www.sistersofmercy.org/wp-json/wp/v2/posts/23325" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sistersofmercy.org/wp/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sistersofmercy.org/wp/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.7.1" />
+<link rel='shortlink' href='https://www.sistersofmercy.org/?p=23325' />
+<link rel="alternate" type="application/json+oembed" href="https://www.sistersofmercy.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sistersofmercy.org%2Fdr-martin-luther-king-gods-promises%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sistersofmercy.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sistersofmercy.org%2Fdr-martin-luther-king-gods-promises%2F&#038;format=xml" />
+<link rel="alternate" href="https://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/" hreflang="en" />
+<link rel="alternate" href="https://www.sistersofmercy.org/es/martin-luther-king-dios-promesas/" hreflang="es" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://www.sistersofmercy.org/wp-content/uploads/2021/06/cropped-cropped-favicon32x32-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sistersofmercy.org/wp-content/uploads/2021/06/cropped-cropped-favicon32x32-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.sistersofmercy.org/wp-content/uploads/2021/06/cropped-cropped-favicon32x32-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sistersofmercy.org/wp-content/uploads/2021/06/cropped-cropped-favicon32x32-270x270.png" />
+</head>
+  <body class="post-template-default single single-post postid-23325 single-format-standard dr-martin-luther-king-gods-promises app-data index-data singular-data single-data single-post-data single-post-dr-martin-luther-king-gods-promises-data">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMJ9WS7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Need to keep the sticky header separate from body content in order to apply position:sticky with overflow:hidden on the body -->
+    <div class="stickyNav bg-white">
+  <div class="l-padding">
+    <div class="l-wrap--wide">
+      <div class="stickyNav-inner">
+        <a class="stickyNav-logo" href="https://www.sistersofmercy.org/">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="72" viewBox="0 0 250 100" focusable="false" aria-hidden="true">
+    <title>Logo</title>
+    <defs>
+        <polygon id="path-1" points="0.591102069 0.761918145 15.2693183 0.761918145 15.2693183 63 0.591102069 63"/>
+        <polygon id="path-3" points="0.4813 0.2138 8.591 0.2138 8.591 9.7388 0.4813 9.7388"/>
+        <polygon id="path-5" points="31.8072134 36.8736083 46.4854296 36.8736083 46.4854296 99.1116902 31.8072134 99.1116902"/>
+    </defs>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-89">
+            <path d="M94.6627,38.7188 C94.0597,38.3548 91.6747,37.3638 88.9467,37.3978 C83.9467,37.4608 79.9867,39.5438 79.2807,39.9298 C79.0927,38.0788 77.7637,25.0118 77.5387,23.2768 C77.4557,22.6438 77.3507,22.4698 77.2657,22.4537902 C77.1807,22.4378 75.9627,41.9588 77.7607,42.2288 L77.8097,42.2288 C78.1477,42.2288 82.9617,39.7128 84.7847,39.0958 C89.6627,37.4478 94.5717,38.9858 94.6997,38.9858 C95.1617,38.9858 94.7257,38.7568 94.6627,38.7188" id="Fill-1" fill="#950248"/>
+            <path d="M128.5504,22.4927 C128.5474,22.2327 128.2144,21.8057 127.6934,21.8057 C127.3324,21.8057 127.0084,22.0987 126.4524,22.4177 C124.7804,23.4117 120.4634,25.7277 116.4934,25.7287 C114.3974,25.7287 112.6864,25.0787 111.4064,23.7997 C107.4434,19.8357 110.9124,8.6257 112.5874,3.9897 C112.5874,3.9897 113.2244,2.3277 112.9024,1.5837 C112.7394,1.2137 112.4254,0.9747 111.9734,0.8467 C111.6894,0.7657 111.0714,0.6827 110.5074,0.6387 C110.5074,0.6387 90.1544,-0.6813 90.7114,0.4737 C97.0044,13.5257 97.4184,20.8667 94.4854,23.7997 C93.2354,25.0497 91.5254,25.6827 89.4024,25.6827 C84.1064,25.6827 79.1294,21.9957 79.0684,21.9567 L78.8124,21.7907 C78.8124,21.7907 78.8124,23.6257 80.0324,24.5677 C80.9904,25.3067 84.7074,26.8957 88.6414,26.8967 C91.3754,26.8967 93.5734,26.0847 95.1694,24.4867 C97.3324,22.4147 97.9864,18.8287 96.8554,13.8847 C94.9844,5.7127 91.8904,1.2177 91.5444,0.7847 C91.9194,0.9457 109.4104,2.7587 110.8364,2.7907 C110.2354,4.5387 105.4244,19.1887 110.7204,24.4857 C112.3194,26.0847 114.5164,26.8967 117.2514,26.8967 C121.3834,26.8967 125.5254,25.0107 126.3984,24.5877 L126.3864,40.9667 C126.4124,41.2387 126.5204,42.7077 128.1834,42.6167 C128.1964,42.6167 129.5414,42.6007 129.523579,40.9457 L128.5504,22.4927 Z" id="Fill-3" fill="#950248"/>
+            <path d="M122.8639,30.6817 C122.7979,30.6707 116.1099,29.6657 106.7109,29.2727 C106.3269,18.8137 104.3079,8.1587 104.3079,8.1587 C104.2539,7.8047 103.7569,6.9737 102.9079,6.9737 L102.5339,6.9737 C101.3969,6.9737 101.1269,7.6637 101.0609,8.0757 C101.0389,8.2417 99.6279,18.5577 99.2479,29.0137 C90.7279,29.3727 84.4419,30.4287 83.2679,30.6377 C83.0389,30.6707 82.8059,30.7317 82.5589,30.8207 C81.6009,31.1727 81.3139,31.6317 81.2419,31.9527 C81.1689,32.2787 81.2809,32.6157 81.5469,32.8857 C82.0339,33.3767 82.9339,33.4937 82.9679,33.5017 L83.0369,33.5097 C83.3229,33.6147 85.3919,33.9387 88.9549,34.4927 L90.3139,34.7037 C91.1429,34.8367 91.9879,34.9707 92.8249,35.1017 C94.2969,35.3327 98.6599,36.0277 99.2499,36.2587 C99.3129,36.9787 99.2129,39.8467 99.8149,53.9627 L99.8249,54.1837 C100.0459,59.3407 100.5669,65.2907 101.3319,71.3777 L101.3809,81.6777 C101.3809,82.4837 102.0349,83.1387 102.8419,83.1387 C103.6489,83.1387 104.2459,82.4547 104.3029,81.6587 C104.3029,81.6397 106.6139,44.9417 106.9689,35.1827 C115.1429,34.8417 121.0639,34.0857 122.4549,33.8937 C122.4549,33.8937 124.4249,33.6687 124.4249,32.5387 C124.4249,31.7797 123.7159,30.7977 122.8639,30.6817 M104.8079,34.0107 L104.6989,34.0107 L104.6929,34.1207 C104.6869,34.2767 103.5049,49.4757 102.6109,63.7457 L101.1989,34.1207 L101.1989,34.0107 L101.0849,34.0107 C101.0219,34.0097 94.3049,33.9547 84.7379,32.2587 C94.3049,30.5647 101.0219,30.5097 101.0849,30.5087 L101.1969,30.5067 L101.1989,30.3947 C101.1999,30.3407 101.2809,24.9037 102.7439,12.7767 C103.9859,23.9147 104.6869,30.3407 104.6949,30.4067 L104.7059,30.5067 L104.8079,30.5087 C104.8709,30.5097 111.1619,30.5647 120.7269,32.2587 C111.1619,33.9547 104.8709,34.0097 104.8079,34.0107" id="Fill-5" fill="#950248"/>
+            <path d="M95.6207,41.8287 C95.5497,42.2927 96.0047,51.0167 92.8527,81.7227 C92.5427,84.7527 91.8357,89.5057 91.8357,89.5057 C91.5997,91.0917 92.0707,91.8227 92.8697,91.9357 C93.6167,92.0407 94.4807,91.8167 94.6817,90.1197 C94.7657,89.4077 95.6357,79.0267 96.3457,59.7307 C96.7367,49.1267 96.5377,43.4247 95.8277,41.8587 C95.7257,41.6347 95.6567,41.5947 95.6207,41.8287" id="Fill-7" fill="#950248"/>
+            <g id="Group-11" transform="translate(108.000000, 36.111600)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"/>
+                </mask>
+                <g id="Clip-10"/>
+                <path d="M13.193,2.1521 C5.164,-1.2839 2.988,2.5181 2.094,4.2531 C-2.649,16.1911 5.227,58.3631 6.602,61.6001 C6.911,62.3221 7.444,63.2721 8.662,62.9271 C9.666,62.6421 9.648,61.7461 9.558,61.0291 C9.42,59.9281 8.866,57.9201 8.854,57.7671 C-1.679,11.9031 2.425,5.8051 3.543,3.7011 C6.41,-1.6939 14.077,4.1131 14.276,4.2851 C14.743,4.6841 15.205,4.5741 15.255,4.2501 C15.408,3.2591 14.309,2.6291 13.193,2.1521" id="Fill-9" fill="#950248" mask="url(#mask-2)"/>
+            </g>
+            <path d="M156.1979,68.9361 L155.2609,68.9361 C155.0339,68.9361 154.9509,69.0821 154.9509,69.2691 L154.9509,77.9611 C154.9509,80.1041 154.9919,80.8931 155.5329,80.8931 L156.7179,80.8931 L156.7179,81.5181 L151.8929,81.5181 L151.8929,80.8931 L152.8709,80.8931 C153.0979,80.8931 153.1809,80.7491 153.1809,80.5611 L153.1809,70.3291 L153.1409,70.2881 L148.4829,81.3101 C148.4419,81.4151 148.3999,81.4551 148.1089,81.4551 C148.0049,81.4551 147.9219,81.2071 147.7969,80.9351 L142.9099,70.5591 L142.8679,70.6001 L142.8679,78.7101 C142.8679,79.6661 142.9099,80.8931 143.5339,80.8931 L144.6349,80.8931 L144.6349,81.5181 L140.8309,81.5181 L140.8309,80.8931 L141.5999,80.8931 C141.8499,80.8931 142.0779,80.7901 142.0779,80.4781 L142.0779,71.3281 C142.0779,69.6431 141.8909,68.9361 140.9139,68.9361 L140.2689,68.9361 L140.2689,68.3131 L143.5949,68.3131 L148.6289,78.6901 L153.2229,68.3131 L156.1979,68.3131 L156.1979,68.9361 Z" id="Fill-12" fill="#231F20"/>
+            <path d="M162.9977,81.5171 L158.5677,81.5171 L158.5677,80.9551 L159.2967,80.9551 C159.4837,80.9551 159.7327,80.8721 159.7327,80.6231 L159.7327,75.7151 C159.7327,73.2201 159.5667,73.2201 158.8807,73.2201 L158.0907,73.2201 L158.0907,72.6591 C158.4017,72.6591 159.1097,72.5761 159.7747,72.4931 C160.4607,72.4101 161.1257,72.3261 161.3537,72.3261 L161.3537,77.6921 C161.3537,79.9581 161.3757,80.9551 161.9997,80.9551 L162.9977,80.9551 L162.9977,81.5171 Z M161.3337,69.3531 C161.3337,69.8721 160.9187,70.2881 160.3977,70.2881 C159.8787,70.2881 159.4627,69.8721 159.4627,69.3531 C159.4627,68.8121 159.8787,68.4161 160.3977,68.4161 C160.9187,68.4161 161.3337,68.8121 161.3337,69.3531 L161.3337,69.3531 Z" id="Fill-14" fill="#231F20"/>
+            <path d="M167.1774,81.8502 C166.3454,81.8502 165.4934,81.7252 164.7024,81.4342 C164.5574,80.5192 164.4534,79.9162 164.4534,79.7492 C164.4534,79.5002 164.5364,79.4382 164.6824,79.4382 C164.8484,79.4382 164.9314,79.5832 164.9724,79.7702 C165.2434,80.7062 166.6784,81.1632 167.5104,81.1632 C168.6334,81.1632 169.9444,80.6442 169.9444,79.2512 C169.9444,77.1292 164.7024,78.3772 164.7024,75.1122 C164.7024,74.1142 165.5344,72.3262 168.4474,72.3262 C169.1124,72.3262 169.9854,72.4712 170.6514,72.7832 C170.7134,73.4082 170.7764,73.9482 170.7764,74.1142 C170.7764,74.3222 170.7344,74.4052 170.5874,74.4052 C170.4214,74.4052 170.3804,74.3012 170.3184,74.1762 C169.9634,73.3872 168.8824,73.0122 168.0924,73.0122 C167.2194,73.0122 165.9924,73.4912 165.9924,74.5512 C165.9924,76.6512 171.3584,75.5282 171.3584,78.8352 C171.3584,81.0182 169.0074,81.8502 167.1774,81.8502" id="Fill-16" fill="#231F20"/>
+            <path d="M180.9225,80.2076 C179.8615,81.2896 178.5115,81.8506 177.0135,81.8506 C174.3935,81.8506 173.0415,79.7906 173.0415,77.3586 C173.0415,74.9676 174.3525,72.3266 177.0755,72.3266 C179.0105,72.3266 179.9865,73.6366 180.7565,75.2786 L174.6635,76.9216 C174.7685,78.9596 175.6195,80.8726 178.0125,80.8726 C179.0305,80.8726 179.8615,80.4986 180.6315,79.8326 L180.9225,80.2076 Z M178.9055,75.1746 C178.5725,74.2596 177.8655,72.9496 176.7645,72.9496 C175.3285,72.9496 174.6635,74.9876 174.6635,76.2976 L178.9055,75.1746 Z" id="Fill-18" fill="#231F20"/>
+            <path d="M185.2692,77.691 C185.2692,79.959 185.2902,80.956 185.9142,80.956 L186.9122,80.956 L186.9122,81.517 L182.4832,81.517 L182.4832,80.956 L183.2102,80.956 C183.3982,80.956 183.6472,80.873 183.6472,80.624 L183.6472,75.715 C183.6472,73.22 183.4812,73.22 182.7932,73.22 L182.0042,73.22 L182.0042,72.658 C182.3162,72.658 183.0232,72.575 183.6892,72.492 C184.3732,72.409 185.0402,72.326 185.2692,72.326 L185.2692,74.135 C186.1012,73.262 187.0572,72.326 187.9512,72.326 C188.3262,72.326 188.7212,72.471 188.9712,72.762 C188.7012,74.343 188.6802,74.384 188.4932,74.384 C188.1802,74.384 188.3672,73.719 187.2662,73.719 C186.4132,73.719 185.7882,74.301 185.2692,74.863 L185.2692,77.691 Z" id="Fill-20" fill="#231F20"/>
+            <path d="M195.2291,81.5171 L190.8001,81.5171 L190.8001,80.9551 L191.5281,80.9551 C191.7151,80.9551 191.9651,80.8721 191.9651,80.6231 L191.9651,75.7151 C191.9651,73.2201 191.7981,73.2201 191.1121,73.2201 L190.3221,73.2201 L190.3221,72.6591 C190.6341,72.6591 191.3401,72.5761 192.0061,72.4931 C192.6921,72.4101 193.3581,72.3261 193.5861,72.3261 L193.5861,77.6921 C193.5861,79.9581 193.6071,80.9551 194.2321,80.9551 L195.2291,80.9551 L195.2291,81.5171 Z M193.5661,69.3531 C193.5661,69.8721 193.1501,70.2881 192.6301,70.2881 C192.1101,70.2881 191.6941,69.8721 191.6941,69.3531 C191.6941,68.8121 192.1101,68.4161 192.6301,68.4161 C193.1501,68.4161 193.5661,68.8121 193.5661,69.3531 L193.5661,69.3531 Z" id="Fill-22" fill="#231F20"/>
+            <path d="M204.358,80.3326 C203.445,81.3516 202.092,81.8506 200.741,81.8506 C198.058,81.8506 196.518,79.8756 196.518,77.2746 C196.518,75.6106 197.6,72.3256 201.24,72.3256 C202.696,72.3256 204.046,73.3876 204.046,74.2796 C204.046,74.6346 203.755,74.8846 203.402,74.8846 C202.591,74.8846 202.072,73.8226 201.967,73.1156 C201.717,72.9486 201.384,72.8876 201.074,72.8876 C198.994,72.8876 198.141,74.9676 198.141,76.7556 C198.141,78.9796 199.243,80.8726 201.675,80.8726 C202.549,80.8726 203.402,80.5406 204.067,79.9586 L204.358,80.3326 Z" id="Fill-24" fill="#231F20"/>
+            <path d="M214.5895,76.9009 C214.5895,78.5649 213.5085,81.8489 209.8685,81.8489 C207.1875,81.8489 205.6485,79.8749 205.6485,77.2759 C205.6485,75.6119 206.7295,72.3259 210.3675,72.3259 C213.0505,72.3259 214.5895,74.3009 214.5895,76.9009 M212.9045,77.4209 C212.9045,75.6119 212.1145,72.9499 209.8895,72.9499 C207.8115,72.9499 207.3315,75.1129 207.3315,76.7759 C207.3315,78.5859 208.1225,81.2259 210.3465,81.2259 C212.4265,81.2259 212.9045,79.0849 212.9045,77.4209" id="Fill-26" fill="#231F20"/>
+            <path d="M219.1852,77.691 C219.1852,79.959 219.2062,80.956 219.8302,80.956 L220.8282,80.956 L220.8282,81.517 L216.3992,81.517 L216.3992,80.956 L217.1272,80.956 C217.3142,80.956 217.5632,80.873 217.5632,80.624 L217.5632,75.715 C217.5632,73.22 217.3972,73.22 216.7102,73.22 L215.9212,73.22 L215.9212,72.658 C216.2322,72.658 216.9392,72.575 217.6052,72.492 C218.2892,72.409 218.9562,72.326 219.1852,72.326 L219.1852,74.135 C220.0172,73.262 220.9732,72.326 221.8672,72.326 C222.2422,72.326 222.6372,72.471 222.8872,72.762 C222.6172,74.343 222.5962,74.384 222.4092,74.384 C222.0962,74.384 222.2832,73.719 221.1822,73.719 C220.3292,73.719 219.7042,74.301 219.1852,74.863 L219.1852,77.691 Z" id="Fill-28" fill="#231F20"/>
+            <path d="M232.2692,77.691 C232.2692,79.959 232.2902,80.956 232.9142,80.956 L233.9122,80.956 L233.9122,81.517 C232.8312,81.559 231.7292,81.705 230.6472,81.85 L230.6472,80.311 C229.6282,81.101 228.6932,81.85 227.4872,81.85 C224.9702,81.85 223.8062,79.709 223.8062,77.421 C223.8062,73.989 226.1772,72.326 228.2142,72.326 C229.1292,72.326 229.8772,72.596 230.6472,73.074 L230.6472,70.35 C230.6472,67.854 230.4812,67.854 229.7942,67.854 L229.0052,67.854 L229.0052,67.294 C229.5242,67.294 231.1872,67.045 232.2692,66.857 L232.2692,77.691 Z M230.6472,73.74 C230.0652,73.283 229.3372,72.949 228.5882,72.949 C226.3432,72.949 225.4902,74.842 225.4902,76.859 C225.4902,78.814 226.0732,80.727 228.3602,80.727 C229.2332,80.727 230.0652,80.228 230.6472,79.584 L230.6472,73.74 Z" id="Fill-30" fill="#231F20"/>
+            <path d="M240.0055,81.5171 L235.5745,81.5171 L235.5745,80.9551 L236.3035,80.9551 C236.4895,80.9551 236.7395,80.8721 236.7395,80.6231 L236.7395,75.7151 C236.7395,73.2201 236.5725,73.2201 235.8885,73.2201 L235.0975,73.2201 L235.0975,72.6591 C235.4085,72.6591 236.1155,72.5761 236.7805,72.4931 C237.4685,72.4101 238.1335,72.3261 238.3615,72.3261 L238.3615,77.6921 C238.3615,79.9581 238.3835,80.9551 239.0075,80.9551 L240.0055,80.9551 L240.0055,81.5171 Z M238.3425,69.3531 C238.3425,69.8721 237.9255,70.2881 237.4055,70.2881 C236.8855,70.2881 236.4705,69.8721 236.4705,69.3531 C236.4705,68.8121 236.8855,68.4161 237.4055,68.4161 C237.9255,68.4161 238.3425,68.8121 238.3425,69.3531 L238.3425,69.3531 Z" id="Fill-32" fill="#231F20"/>
+            <g id="Group-36" transform="translate(241.000000, 72.111600)">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"/>
+                </mask>
+                <g id="Clip-35"/>
+                <path d="M5.5973,3.8128 L5.5973,2.7508 C5.5973,1.8158 5.5353,1.0448 4.0583,1.0448 C3.5383,1.0448 2.8113,1.2128 2.3733,1.5448 C2.3733,2.6678 1.9153,3.4798 1.2103,3.4798 C0.8983,3.4798 0.6483,3.2298 0.6483,2.9168 C0.6483,1.4618 2.8523,0.2138 5.0573,0.2138 C7.1153,0.2138 7.2193,1.2128 7.2193,2.8978 L7.2193,6.0788 C7.2193,7.8048 7.3433,8.3668 8.5913,8.6768 L7.9683,9.7388 C7.0113,9.7388 5.9713,8.9678 5.7223,7.8458 C4.9103,8.6578 3.5183,9.7388 2.3533,9.7388 C1.1683,9.7388 0.4813,8.9268 0.4813,7.7848 C0.4813,5.9958 2.2483,5.1848 4.8493,4.1248 L5.5973,3.8128 Z M5.5973,4.4568 C3.4763,5.2688 2.1653,5.9748 2.1653,7.3878 C2.1653,8.0758 2.5393,8.5108 3.2463,8.5108 C4.2033,8.5108 5.0573,7.8678 5.5973,7.1388 L5.5973,4.4568 Z" id="Fill-34" fill="#231F20" mask="url(#mask-4)"/>
+            </g>
+            <path d="M123.6344,55.2613 L123.6344,58.5253 C123.6344,60.6673 123.6764,61.4563 124.2164,61.4563 L125.4024,61.4563 L125.4024,62.0813 L120.5774,62.0813 L120.5774,61.4563 L121.5554,61.4563 C121.7834,61.4563 121.8664,61.3123 121.8664,61.1243 L121.8664,52.4323 C121.8664,50.2913 121.8254,49.5003 121.2844,49.5003 L120.0574,49.5003 L120.0574,48.8773 L124.8824,48.8773 L124.8824,49.5003 L123.9464,49.5003 C123.7174,49.5003 123.6344,49.6463 123.6344,49.8333 L123.6344,54.5123 L130.4754,54.5123 L130.4754,52.4323 C130.4754,50.2913 130.4344,49.5003 129.8934,49.5003 L128.6664,49.5003 L128.6664,48.8773 L133.4914,48.8773 L133.4914,49.5003 L132.5554,49.5003 C132.3274,49.5003 132.2434,49.6463 132.2434,49.8333 L132.2434,58.5253 C132.2434,60.6673 132.2854,61.4563 132.8264,61.4563 L134.0114,61.4563 L134.0114,62.0813 L129.1864,62.0813 L129.1864,61.4563 L130.1644,61.4563 C130.3924,61.4563 130.4754,61.3123 130.4754,61.1243 L130.4754,55.2613 L123.6344,55.2613 Z" id="Fill-37" fill="#231F20"/>
+            <path d="M142.9323,60.7711 C141.8713,61.8531 140.5203,62.4151 139.0233,62.4151 C136.4033,62.4151 135.0503,60.3541 135.0503,57.9221 C135.0503,55.5321 136.3613,52.8901 139.0843,52.8901 C141.0193,52.8901 141.9963,54.2011 142.7663,55.8421 L136.6723,57.4851 C136.7773,59.5231 137.6293,61.4361 140.0213,61.4361 C141.0393,61.4361 141.8713,61.0621 142.6413,60.3961 L142.9323,60.7711 Z M140.9143,55.7381 C140.5813,54.8241 139.8743,53.5131 138.7733,53.5131 C137.3373,53.5131 136.6723,55.5511 136.6723,56.8611 L140.9143,55.7381 Z" id="Fill-39" fill="#231F20"/>
+            <path d="M147.028,58.2554 C147.028,60.5224 147.049,61.5194 147.674,61.5194 L148.672,61.5194 L148.672,62.0804 L144.243,62.0804 L144.243,61.5194 L144.969,61.5194 C145.157,61.5194 145.406,61.4364 145.406,61.1874 L145.406,56.2784 C145.406,53.7834 145.24,53.7834 144.553,53.7834 L143.764,53.7834 L143.764,53.2224 C144.076,53.2224 144.782,53.1394 145.448,53.0564 C146.134,52.9734 146.799,52.8904 147.028,52.8904 L147.028,54.6984 C147.86,53.8254 148.817,52.8904 149.712,52.8904 C150.086,52.8904 150.48,53.0344 150.73,53.3254 C150.461,54.9064 150.439,54.9474 150.252,54.9474 C149.939,54.9474 150.128,54.2824 149.024,54.2824 C148.173,54.2824 147.549,54.8644 147.028,55.4274 L147.028,58.2554 Z" id="Fill-41" fill="#231F20"/>
+            <path d="M155.2418,58.2554 C155.2418,60.5224 155.2628,61.5194 155.8878,61.5194 L156.8028,61.5194 L156.8028,62.0804 L152.4568,62.0804 L152.4568,61.5194 L153.1838,61.5194 C153.3718,61.5194 153.6208,61.4364 153.6208,61.1874 L153.6208,56.2784 C153.6208,53.7834 153.4548,53.7834 152.7678,53.7834 L151.9778,53.7834 L151.9778,53.2224 C152.2898,53.2224 152.9978,53.1394 153.6628,53.0564 C154.3478,52.9734 155.0128,52.8904 155.2418,52.8904 L155.2418,54.5954 C156.3238,53.7214 157.1138,52.9104 158.6748,52.9104 C159.8388,52.9104 160.6068,53.4724 160.8148,54.5534 C161.8348,53.7634 162.7288,52.9104 164.0398,52.8904 C166.2008,52.8904 166.5548,54.3044 166.5548,55.8434 L166.5548,58.2554 C166.5548,60.5224 166.5758,61.5194 167.1988,61.5194 L168.1138,61.5194 L168.1138,62.0804 L163.7688,62.0804 L163.7688,61.5194 L164.4968,61.5194 C164.6828,61.5194 164.9328,61.4364 164.9328,61.1874 L164.9328,56.2784 C164.9328,54.3654 164.2258,53.9504 163.2908,53.9504 C162.4588,54.0134 161.6058,54.4904 160.8978,55.1364 L160.8978,58.2554 C160.8978,60.5224 160.9198,61.5194 161.5438,61.5194 L162.4588,61.5194 L162.4588,62.0804 L158.1118,62.0804 L158.1118,61.5194 L158.8408,61.5194 C159.0268,61.5194 159.2758,61.4364 159.2758,61.1874 L159.2758,56.2784 C159.2758,54.3654 158.5698,53.9504 157.6348,53.9504 C156.5948,54.0134 155.9708,54.5954 155.2418,55.1364 L155.2418,58.2554 Z" id="Fill-43" fill="#231F20"/>
+            <path d="M174.5406,56.4879 L174.5406,55.4259 C174.5406,54.4909 174.4776,53.7199 173.0016,53.7199 C172.4806,53.7199 171.7536,53.8879 171.3156,54.2199 C171.3156,55.3429 170.8596,56.1549 170.1526,56.1549 C169.8406,56.1549 169.5906,55.9049 169.5906,55.5929 C169.5906,54.1369 171.7956,52.8899 173.9996,52.8899 C176.0586,52.8899 176.1626,53.8879 176.1626,55.5729 L176.1626,58.7539 C176.1626,60.4809 176.2876,61.0419 177.5346,61.3529 L176.9106,62.4139 C175.9546,62.4139 174.9146,61.6439 174.6656,60.5219 C173.8536,61.3329 172.4606,62.4139 171.2956,62.4139 C170.1106,62.4139 169.4246,61.6029 169.4246,60.4599 C169.4246,58.6709 171.1926,57.8599 173.7916,56.7999 L174.5406,56.4879 Z M174.5406,57.1319 C172.4196,57.9439 171.1086,58.6499 171.1086,60.0639 C171.1086,60.7509 171.4816,61.1869 172.1896,61.1869 C173.1456,61.1869 173.9996,60.5429 174.5406,59.8149 L174.5406,57.1319 Z" id="Fill-45" fill="#231F20"/>
+            <path d="M187.7653,58.2554 C187.7653,60.5224 187.7863,61.5194 188.4113,61.5194 L189.3243,61.5194 L189.3243,62.0804 L184.9793,62.0804 L184.9793,61.5194 L185.7073,61.5194 C185.8943,61.5194 186.1433,61.4364 186.1433,61.1874 L186.1433,56.2784 C186.1433,54.3654 185.4373,53.9504 184.5013,53.9504 C183.4193,53.9504 182.6083,54.4704 181.8393,55.1364 L181.8393,58.2554 C181.8393,60.5224 181.8603,61.5194 182.4833,61.5194 L183.3983,61.5194 L183.3983,62.0804 L179.0523,62.0804 L179.0523,61.5194 L179.7803,61.5194 C179.9673,61.5194 180.2173,61.4364 180.2173,61.1874 L180.2173,56.2784 C180.2173,53.7834 180.0503,53.7834 179.3643,53.7834 L178.5743,53.7834 L178.5743,53.2224 C178.8863,53.2224 179.5933,53.1394 180.2593,53.0564 C180.9443,52.9734 181.6103,52.8904 181.8393,52.8904 L181.8393,54.4484 C182.9003,53.6584 183.8353,52.8904 185.2493,52.8904 C187.4123,52.8904 187.7653,54.3044 187.7653,55.8434 L187.7653,58.2554 Z" id="Fill-47" fill="#231F20"/>
+            <path d="M195.5436,56.4879 L195.5436,55.4259 C195.5436,54.4909 195.4816,53.7199 194.0036,53.7199 C193.4846,53.7199 192.7576,53.8879 192.3196,54.2199 C192.3196,55.3429 191.8626,56.1549 191.1556,56.1549 C190.8436,56.1549 190.5936,55.9049 190.5936,55.5929 C190.5936,54.1369 192.7986,52.8899 195.0026,52.8899 C197.0626,52.8899 197.1656,53.8879 197.1656,55.5729 L197.1656,58.7539 C197.1656,60.4809 197.2896,61.0419 198.5376,61.3529 L197.9136,62.4139 C196.9576,62.4139 195.9176,61.6439 195.6686,60.5219 C194.8566,61.3329 193.4636,62.4139 192.2986,62.4139 C191.1136,62.4139 190.4276,61.6029 190.4276,60.4599 C190.4276,58.6709 192.1956,57.8599 194.7946,56.7999 L195.5436,56.4879 Z M195.5436,57.1319 C193.4226,57.9439 192.1116,58.6499 192.1116,60.0639 C192.1116,60.7509 192.4856,61.1869 193.1936,61.1869 C194.1506,61.1869 195.0026,60.5429 195.5436,59.8149 L195.5436,57.1319 Z" id="Fill-49" fill="#231F20"/>
+            <path d="M202.2594,62.4136 C201.4284,62.4136 200.5754,62.2886 199.7844,61.9976 C199.6394,61.0826 199.5354,60.4796 199.5354,60.3126 C199.5354,60.0636 199.6184,60.0026 199.7634,60.0026 C199.9304,60.0026 200.0144,60.1466 200.0554,60.3336 C200.3254,61.2696 201.7604,61.7266 202.5914,61.7266 C203.7154,61.7266 205.0264,61.2076 205.0264,59.8146 C205.0264,57.6926 199.7844,58.9406 199.7844,55.6766 C199.7844,54.6786 200.6164,52.8906 203.5294,52.8906 C204.1944,52.8906 205.0664,53.0346 205.7324,53.3476 C205.7944,53.9716 205.8574,54.5126 205.8574,54.6786 C205.8574,54.8866 205.8154,54.9696 205.6704,54.9696 C205.5044,54.9696 205.4624,54.8646 205.4014,54.7396 C205.0454,53.9506 203.9654,53.5756 203.1744,53.5756 C202.3014,53.5756 201.0744,54.0556 201.0744,55.1146 C201.0744,57.2156 206.4394,56.0926 206.4394,59.3986 C206.4394,61.5816 204.0904,62.4136 202.2594,62.4136" id="Fill-51" fill="#231F20"/>
+            <path d="M217.028,59.4117 C217.028,60.9927 217.042,61.6887 217.478,61.6887 L218.174,61.6887 L218.174,62.0807 C217.419,62.1097 216.65,62.2127 215.895,62.3127 L215.895,61.2397 C215.185,61.7917 214.533,62.3127 213.691,62.3127 C211.935,62.3127 211.123,60.8177 211.123,59.2237 C211.123,56.8297 212.777,55.6697 214.198,55.6697 C214.837,55.6697 215.359,55.8577 215.895,56.1907 L215.895,54.2917 C215.895,52.5507 215.78,52.5507 215.3,52.5507 L214.75,52.5507 L214.75,52.1577 C215.112,52.1577 216.273,51.9837 217.028,51.8527 L217.028,59.4117 Z M215.895,56.6547 C215.489,56.3367 214.982,56.1037 214.46,56.1037 C212.893,56.1037 212.298,57.4247 212.298,58.8307 C212.298,60.1947 212.704,61.5297 214.299,61.5297 C214.909,61.5297 215.489,61.1817 215.895,60.7317 L215.895,56.6547 Z" id="Fill-53" fill="#231F20"/>
+            <path d="M224.4996,61.1675 C223.7586,61.9225 222.8156,62.3135 221.7706,62.3135 C219.9426,62.3135 219.0006,60.8775 219.0006,59.1805 C219.0006,57.5125 219.9136,55.6695 221.8146,55.6695 C223.1636,55.6695 223.8456,56.5835 224.3836,57.7295 L220.1316,58.8755 C220.2036,60.2975 220.7996,61.6325 222.4676,61.6325 C223.1796,61.6325 223.7586,61.3695 224.2966,60.9055 L224.4996,61.1675 Z M223.0926,57.6555 C222.8586,57.0185 222.3656,56.1045 221.5976,56.1045 C220.5966,56.1045 220.1316,57.5255 220.1316,58.4395 L223.0926,57.6555 Z" id="Fill-55" fill="#231F20"/>
+            <path d="M231.1871,59.4117 C231.1871,60.9927 231.2021,61.6887 231.6361,61.6887 L232.3331,61.6887 L232.3331,62.0807 L229.2431,62.0807 L229.2431,61.6887 L229.7501,61.6887 C229.8811,61.6887 230.0541,61.6327 230.0541,61.4577 L230.0541,54.2917 C230.0541,52.5507 229.9391,52.5507 229.4591,52.5507 L228.9101,52.5507 L228.9101,52.1577 C229.2721,52.1577 230.4321,51.9837 231.1871,51.8527 L231.1871,59.4117 Z" id="Fill-57" fill="#231F20"/>
+            <path d="M237.0768,58.1783 L237.0768,57.4383 C237.0768,56.7863 237.0338,56.2483 236.0038,56.2483 C235.6408,56.2483 235.1338,56.3653 234.8288,56.5973 C234.8288,57.3803 234.5108,57.9473 234.0168,57.9473 C233.7978,57.9473 233.6248,57.7733 233.6248,57.5553 C233.6248,56.5383 235.1618,55.6683 236.6998,55.6683 C238.1378,55.6683 238.2088,56.3653 238.2088,57.5393 L238.2088,59.7593 C238.2088,60.9633 238.2958,61.3573 239.1658,61.5743 L238.7308,62.3123 C238.0638,62.3123 237.3388,61.7773 237.1648,60.9933 C236.5988,61.5593 235.6258,62.3123 234.8138,62.3123 C233.9868,62.3123 233.5088,61.7473 233.5088,60.9493 C233.5088,59.7023 234.7418,59.1363 236.5558,58.3953 L237.0768,58.1783 Z M237.0768,58.6283 C235.5978,59.1943 234.6828,59.6863 234.6828,60.6743 C234.6828,61.1533 234.9448,61.4573 235.4378,61.4573 C236.1048,61.4573 236.6998,61.0073 237.0768,60.5003 L237.0768,58.6283 Z" id="Fill-59" fill="#231F20"/>
+            <path d="M45.0768,45.0269 L44.1408,45.0269 C43.9128,45.0269 43.8288,45.1719 43.8288,45.3599 L43.8288,54.0509 C43.8288,56.1939 43.8708,56.9839 44.4118,56.9839 L45.5968,56.9839 L45.5968,57.6079 L40.7718,57.6079 L40.7718,56.9839 L41.7498,56.9839 C41.9788,56.9839 42.0618,56.8379 42.0618,56.6509 L42.0618,46.4199 L42.0198,46.3789 L37.3618,57.3999 C37.3208,57.5039 37.2788,57.5459 36.9878,57.5459 C36.8838,57.5459 36.8008,57.2969 36.6758,57.0259 L31.7888,46.6489 L31.7468,46.6909 L31.7468,54.7999 C31.7468,55.7559 31.7888,56.9839 32.4128,56.9839 L33.5148,56.9839 L33.5148,57.6079 L29.7098,57.6079 L29.7098,56.9839 L30.4788,56.9839 C30.7278,56.9839 30.9568,56.8799 30.9568,56.5679 L30.9568,47.4189 C30.9568,45.7339 30.7698,45.0269 29.7928,45.0269 L29.1478,45.0269 L29.1478,44.4029 L32.4748,44.4029 L37.5078,54.7799 L42.1028,44.4029 L45.0768,44.4029 L45.0768,45.0269 Z" id="Fill-61" fill="#231F20"/>
+            <path d="M54.5592,56.2974 C53.4982,57.3794 52.1472,57.9414 50.6502,57.9414 C48.0292,57.9414 46.6782,55.8804 46.6782,53.4484 C46.6782,51.0584 47.9882,48.4164 50.7122,48.4164 C52.6462,48.4164 53.6232,49.7264 54.3932,51.3684 L48.3002,53.0124 C48.4042,55.0504 49.2562,56.9624 51.6482,56.9624 C52.6672,56.9624 53.4982,56.5884 54.2682,55.9224 L54.5592,56.2974 Z M52.5422,51.2654 C52.2092,50.3504 51.5022,49.0404 50.4002,49.0404 C48.9652,49.0404 48.3002,51.0774 48.3002,52.3884 L52.5422,51.2654 Z" id="Fill-63" fill="#231F20"/>
+            <path d="M58.8634,53.7818 C58.8634,56.0488 58.8844,57.0458 59.5084,57.0458 L60.5064,57.0458 L60.5064,57.6078 L56.0774,57.6078 L56.0774,57.0458 L56.8044,57.0458 C56.9924,57.0458 57.2414,56.9628 57.2414,56.7138 L57.2414,51.8048 C57.2414,49.3108 57.0754,49.3108 56.3894,49.3108 L55.5984,49.3108 L55.5984,48.7498 C55.9104,48.7498 56.6174,48.6668 57.2834,48.5828 C57.9694,48.4998 58.6344,48.4168 58.8634,48.4168 L58.8634,50.2258 C59.6954,49.3528 60.6524,48.4168 61.5454,48.4168 C61.9204,48.4168 62.3154,48.5618 62.5644,48.8538 C62.2944,50.4328 62.2744,50.4738 62.0864,50.4738 C61.7744,50.4738 61.9624,49.8098 60.8594,49.8098 C60.0074,49.8098 59.3834,50.3908 58.8634,50.9538 L58.8634,53.7818 Z" id="Fill-65" fill="#231F20"/>
+            <path d="M71.1368,56.4224 C70.2218,57.4424 68.8708,57.9414 67.5188,57.9414 C64.8358,57.9414 63.2968,55.9654 63.2968,53.3654 C63.2968,51.7014 64.3788,48.4164 68.0178,48.4164 C69.4728,48.4164 70.8248,49.4764 70.8248,50.3704 C70.8248,50.7244 70.5338,50.9744 70.1798,50.9744 C69.3688,50.9744 68.8498,49.9134 68.7458,49.2064 C68.4958,49.0404 68.1628,48.9774 67.8518,48.9774 C65.7718,48.9774 64.9188,51.0574 64.9188,52.8454 C64.9188,55.0704 66.0218,56.9624 68.4538,56.9624 C69.3278,56.9624 70.1798,56.6304 70.8458,56.0484 L71.1368,56.4224 Z" id="Fill-67" fill="#231F20"/>
+            <path d="M75.795,49.3106 L74.734,49.3106 C74.651,49.3106 74.568,49.3316 74.568,49.4356 C74.568,49.6226 76.211,53.3876 77.188,55.6316 C78.706,52.4306 79.455,50.2456 79.455,49.6016 C79.455,49.3316 79.205,49.3106 78.935,49.3106 L77.999,49.3106 L77.999,48.7486 L81.555,48.7486 L81.555,49.3106 L80.827,49.3106 C80.599,49.3106 80.515,49.4556 80.411,49.7056 C79.663,51.6406 77.043,57.3996 74.693,62.4746 C73.986,62.6616 73.216,62.7666 72.468,62.7666 C72.322,62.7666 72.218,62.7026 72.218,62.5356 C72.218,62.2036 73.071,62.1836 73.84,61.4136 C74.755,60.4986 75.441,59.2916 76.294,57.4626 C74.069,52.3896 73.591,51.3276 73.008,50.1006 C72.634,49.3106 72.489,49.3106 71.698,49.3106 L71.698,48.7486 L75.795,48.7486 L75.795,49.3106 Z" id="Fill-69" fill="#231F20"/>
+            <path d="M1.7682,28.2125 C1.7682,29.8965 3.3272,30.4375 4.6382,30.9365 C7.2992,31.9135 8.5682,32.7665 8.5682,34.9915 C8.5682,36.8005 6.9872,39.0675 3.5562,39.0675 C2.5372,39.0675 1.2692,38.8595 0.3122,38.4855 C0.0832,37.1955 0.0002,36.7595 0.0002,36.5725 C0.0002,36.4265 0.0832,36.3225 0.2502,36.3225 C0.4582,36.3225 0.5202,36.5305 0.5622,36.7175 C0.8532,37.8825 2.7872,38.3185 3.8062,38.3185 C5.4692,38.3185 7.1752,37.4865 7.1752,35.6155 C7.1752,34.0145 5.9682,33.3075 3.9102,32.5585 C2.9742,32.2255 0.4372,31.4145 0.4372,28.8775 C0.4372,26.3825 2.9322,25.0725 5.1582,25.0725 C6.0312,25.0725 6.8422,25.1555 7.5072,25.4675 C7.5282,25.9665 7.5702,26.4865 7.5702,26.9855 C7.5702,27.1305 7.5072,27.2555 7.3412,27.2555 C7.1332,27.2555 7.1122,27.0895 7.0922,26.9435 C6.9462,26.0495 5.2612,25.8205 4.5962,25.8205 C3.2032,25.8205 1.7682,26.6735 1.7682,28.2125" id="Fill-71" fill="#231F20"/>
+            <path d="M14.4113,38.6724 L9.9823,38.6724 L9.9823,38.1104 L10.7103,38.1104 C10.8973,38.1104 11.1463,38.0274 11.1463,37.7784 L11.1463,32.8704 C11.1463,30.3754 10.9803,30.3754 10.2943,30.3754 L9.5043,30.3754 L9.5043,29.8134 C9.8153,29.8134 10.5233,29.7304 11.1883,29.6474 C11.8743,29.5644 12.5403,29.4814 12.7683,29.4814 L12.7683,34.8464 C12.7683,37.1124 12.7893,38.1104 13.4133,38.1104 L14.4113,38.1104 L14.4113,38.6724 Z M12.7473,26.5074 C12.7473,27.0274 12.3323,27.4434 11.8123,27.4434 C11.2923,27.4434 10.8763,27.0274 10.8763,26.5074 C10.8763,25.9664 11.2923,25.5714 11.8123,25.5714 C12.3323,25.5714 12.7473,25.9664 12.7473,26.5074 L12.7473,26.5074 Z" id="Fill-73" fill="#231F20"/>
+            <path d="M18.3834,39.0049 C17.5514,39.0049 16.6994,38.8799 15.9084,38.5889 C15.7634,37.6739 15.6594,37.0709 15.6594,36.9049 C15.6594,36.6549 15.7424,36.5929 15.8884,36.5929 C16.0544,36.5929 16.1374,36.7379 16.1794,36.9259 C16.4494,37.8609 17.8844,38.3189 18.7164,38.3189 C19.8394,38.3189 21.1494,37.7989 21.1494,36.4059 C21.1494,34.2849 15.9084,35.5319 15.9084,32.2669 C15.9084,31.2689 16.7404,29.4809 19.6524,29.4809 C20.3174,29.4809 21.1904,29.6259 21.8564,29.9379 C21.9184,30.5619 21.9814,31.1029 21.9814,31.2689 C21.9814,31.4769 21.9394,31.5599 21.7934,31.5599 C21.6274,31.5599 21.5864,31.4559 21.5234,31.3319 C21.1694,30.5419 20.0884,30.1669 19.2984,30.1669 C18.4254,30.1669 17.1984,30.6449 17.1984,31.7059 C17.1984,33.8059 22.5634,32.6829 22.5634,35.9899 C22.5634,38.1729 20.2134,39.0049 18.3834,39.0049" id="Fill-75" fill="#231F20"/>
+            <path d="M28.4689,29.8135 C28.3859,30.2715 28.3439,30.3755 28.0529,30.3755 L26.2649,30.3755 L26.2649,35.8445 C26.2649,37.1745 26.3269,38.1315 27.6369,38.1315 C28.0949,38.1315 28.5729,37.9865 29.0099,37.7985 L29.2179,38.2565 C28.4899,38.6725 27.3049,39.0045 26.8259,39.0045 C26.0979,39.0045 24.6429,38.9425 24.6429,36.9465 L24.6429,30.3755 C23.6859,30.3755 23.6029,30.3545 23.6029,30.2295 C23.6029,30.0635 23.7899,29.9175 25.9319,27.7135 L26.2649,27.7135 L26.2649,29.8135 L28.4689,29.8135 Z" id="Fill-77" fill="#231F20"/>
+            <path d="M38.0138,37.3624 C36.9538,38.4434 35.6018,39.0054 34.1048,39.0054 C31.4848,39.0054 30.1328,36.9464 30.1328,34.5134 C30.1328,32.1224 31.4428,29.4814 34.1668,29.4814 C36.1008,29.4814 37.0778,30.7914 37.8478,32.4344 L31.7548,34.0764 C31.8588,36.1144 32.7118,38.0274 35.1028,38.0274 C36.1218,38.0274 36.9538,37.6534 37.7228,36.9884 L38.0138,37.3624 Z M35.9968,32.3304 C35.6638,31.4154 34.9568,30.1044 33.8548,30.1044 C32.4198,30.1044 31.7548,32.1424 31.7548,33.4524 L35.9968,32.3304 Z" id="Fill-79" fill="#231F20"/>
+            <path d="M42.318,34.8462 C42.318,37.1132 42.339,38.1112 42.963,38.1112 L43.961,38.1112 L43.961,38.6722 L39.532,38.6722 L39.532,38.1112 L40.259,38.1112 C40.447,38.1112 40.696,38.0282 40.696,37.7782 L40.696,32.8712 C40.696,30.3752 40.53,30.3752 39.844,30.3752 L39.053,30.3752 L39.053,29.8132 C39.365,29.8132 40.072,29.7302 40.738,29.6472 C41.424,29.5642 42.089,29.4812 42.318,29.4812 L42.318,31.2902 C43.15,30.4172 44.107,29.4812 45.001,29.4812 C45.375,29.4812 45.77,29.6262 46.02,29.9182 C45.749,31.4982 45.729,31.5402 45.541,31.5402 C45.229,31.5402 45.417,30.8742 44.314,30.8742 C43.462,30.8742 42.838,31.4562 42.318,32.0182 L42.318,34.8462 Z" id="Fill-81" fill="#231F20"/>
+            <path d="M49.9498,39.0049 C49.1178,39.0049 48.2658,38.8799 47.4748,38.5889 C47.3298,37.6739 47.2258,37.0709 47.2258,36.9049 C47.2258,36.6549 47.3088,36.5929 47.4538,36.5929 C47.6208,36.5929 47.7038,36.7379 47.7458,36.9259 C48.0158,37.8609 49.4508,38.3189 50.2828,38.3189 C51.4058,38.3189 52.7158,37.7989 52.7158,36.4059 C52.7158,34.2849 47.4748,35.5319 47.4748,32.2669 C47.4748,31.2689 48.3068,29.4809 51.2178,29.4809 C51.8838,29.4809 52.7568,29.6259 53.4228,29.9379 C53.4848,30.5619 53.5478,31.1029 53.5478,31.2689 C53.5478,31.4769 53.5058,31.5599 53.3598,31.5599 C53.1938,31.5599 53.1528,31.4559 53.0898,31.3319 C52.7358,30.5419 51.6548,30.1669 50.8648,30.1669 C49.9918,30.1669 48.7648,30.6449 48.7648,31.7059 C48.7648,33.8059 54.1298,32.6829 54.1298,35.9899 C54.1298,38.1729 51.7798,39.0049 49.9498,39.0049" id="Fill-83" fill="#231F20"/>
+            <path d="M64.3063,35.4517 C64.3063,36.6127 63.5523,38.9047 61.0133,38.9047 C59.1413,38.9047 58.0683,37.5267 58.0683,35.7127 C58.0683,34.5527 58.8223,32.2597 61.3613,32.2597 C63.2323,32.2597 64.3063,33.6377 64.3063,35.4517 M63.1313,35.8147 C63.1313,34.5527 62.5803,32.6957 61.0273,32.6957 C59.5763,32.6957 59.2433,34.2037 59.2433,35.3647 C59.2433,36.6267 59.7943,38.4697 61.3463,38.4697 C62.7973,38.4697 63.1313,36.9747 63.1313,35.8147" id="Fill-85" fill="#231F20"/>
+            <path d="M67.527,36.0025 C67.527,37.5835 67.541,38.2805 67.977,38.2805 L68.76,38.2805 L68.76,38.6725 L65.583,38.6725 L65.583,38.2805 L66.091,38.2805 C66.221,38.2805 66.395,38.2225 66.395,38.0485 L66.395,32.8835 L65.525,32.8835 L65.525,32.4915 L66.395,32.4915 L66.395,30.5335 C66.395,28.9085 67.512,28.3425 68.455,28.3425 C69.007,28.3425 70.022,28.5455 70.022,29.1545 C70.022,29.3585 69.819,29.4885 69.631,29.4885 C69.166,29.4885 68.847,29.1695 68.63,28.8065 L68.426,28.7775 C67.846,28.7775 67.527,29.1545 67.527,30.5335 L67.527,32.4915 L68.717,32.4915 L68.717,32.8835 L67.527,32.8835 L67.527,36.0025 Z" id="Fill-87" fill="#231F20"/>
+        </g>
+        <g id="Group" transform="translate(76.783889, -0.000090)">
+            <path d="M17.8788113,38.7188902 C17.2758113,38.3548902 14.8908113,37.3638902 12.1628113,37.3978902 C7.16281135,37.4608902 3.20281135,39.5438902 2.49681135,39.9298902 C2.30881135,38.0788902 0.97981135,25.0118902 0.75481135,23.2768902 C0.67181135,22.6438902 0.56681135,22.4698902 0.48181135,22.4538803 C0.39681135,22.4378902 -0.82118865,41.9588902 0.97681135,42.2288902 L1.02581135,42.2288902 C1.36381135,42.2288902 6.17781135,39.7128902 8.00081135,39.0958902 C12.8788113,37.4478902 17.7878113,38.9858902 17.9158113,38.9858902 C18.3778113,38.9858902 17.9418113,38.7568902 17.8788113,38.7188902" id="Fill-1" fill="#950248"/>
+            <path d="M51.7665113,22.4927902 C51.7635113,22.2327902 51.4305113,21.8057902 50.9095113,21.8057902 C50.5485113,21.8057902 50.2245113,22.0987902 49.6685113,22.4177902 C47.9965113,23.4117902 43.6795113,25.7277902 39.7095113,25.7287902 C37.6135113,25.7287902 35.9025113,25.0787902 34.6225113,23.7997902 C30.6595113,19.8357902 34.1285113,8.62579017 35.8035113,3.98979017 C35.8035113,3.98979017 36.4405113,2.32779017 36.1185113,1.58379017 C35.9555113,1.21379017 35.6415113,0.97479017 35.1895113,0.84679017 C34.9055113,0.76579017 34.2875113,0.68279017 33.7235113,0.63879017 C33.7235113,0.63879017 13.3705113,-0.68120983 13.9275113,0.47379017 C20.2205113,13.5257902 20.6345113,20.8667902 17.7015113,23.7997902 C16.4515113,25.0497902 14.7415113,25.6827902 12.6185113,25.6827902 C7.32251135,25.6827902 2.34551135,21.9957902 2.28451135,21.9567902 L2.02851135,21.7907902 C2.02851135,21.7907902 2.02851135,23.6257902 3.24851135,24.5677902 C4.20651135,25.3067902 7.92351135,26.8957902 11.8575113,26.8967902 C14.5915113,26.8967902 16.7895113,26.0847902 18.3855113,24.4867902 C20.5485113,22.4147902 21.2025113,18.8287902 20.0715113,13.8847902 C18.2005113,5.71279017 15.1065113,1.21779017 14.7605113,0.78479017 C15.1355113,0.94579017 32.6265113,2.75879017 34.0525113,2.79079017 C33.4515113,4.53879017 28.6405113,19.1887902 33.9365113,24.4857902 C35.5355113,26.0847902 37.7325113,26.8967902 40.4675113,26.8967902 C44.5995113,26.8967902 48.7415113,25.0107902 49.6145113,24.5877902 L49.6025113,40.9667902 C49.6285113,41.2387902 49.7365113,42.7077902 51.3995113,42.6167902 C51.4125113,42.6167902 52.7575113,42.6007902 52.7396904,40.9457902 L51.7665113,22.4927902 Z" id="Fill-3" fill="#950248"/>
+            <path d="M46.0800113,30.6817902 C46.0140113,30.6707902 39.3260113,29.6657902 29.9270113,29.2727902 C29.5430113,18.8137902 27.5240113,8.15879017 27.5240113,8.15879017 C27.4700113,7.80479017 26.9730113,6.97379017 26.1240113,6.97379017 L25.7500113,6.97379017 C24.6130113,6.97379017 24.3430113,7.66379017 24.2770113,8.07579017 C24.2550113,8.24179017 22.8440113,18.5577902 22.4640113,29.0137902 C13.9440113,29.3727902 7.65801135,30.4287902 6.48401135,30.6377902 C6.25501135,30.6707902 6.02201135,30.7317902 5.77501135,30.8207902 C4.81701135,31.1727902 4.53001135,31.6317902 4.45801135,31.9527902 C4.38501135,32.2787902 4.49701135,32.6157902 4.76301135,32.8857902 C5.25001135,33.3767902 6.15001135,33.4937902 6.18401135,33.5017902 L6.25301135,33.5097902 C6.53901135,33.6147902 8.60801135,33.9387902 12.1710113,34.4927902 L13.5300113,34.7037902 C14.3590113,34.8367902 15.2040113,34.9707902 16.0410113,35.1017902 C17.5130113,35.3327902 21.8760113,36.0277902 22.4660113,36.2587902 C22.5290113,36.9787902 22.4290113,39.8467902 23.0310113,53.9627902 L23.0410113,54.1837902 C23.2620113,59.3407902 23.7830113,65.2907902 24.5480113,71.3777902 L24.5970113,81.6777902 C24.5970113,82.4837902 25.2510113,83.1387902 26.0580113,83.1387902 C26.8650113,83.1387902 27.4620113,82.4547902 27.5190113,81.6587902 C27.5190113,81.6397902 29.8300113,44.9417902 30.1850113,35.1827902 C38.3590113,34.8417902 44.2800113,34.0857902 45.6710113,33.8937902 C45.6710113,33.8937902 47.6410113,33.6687902 47.6410113,32.5387902 C47.6410113,31.7797902 46.9320113,30.7977902 46.0800113,30.6817902 M28.0240113,34.0107902 L27.9150113,34.0107902 L27.9090113,34.1207902 C27.9030113,34.2767902 26.7210113,49.4757902 25.8270113,63.7457902 L24.4150113,34.1207902 L24.4150113,34.0107902 L24.3010113,34.0107902 C24.2380113,34.0097902 17.5210113,33.9547902 7.95401135,32.2587902 C17.5210113,30.5647902 24.2380113,30.5097902 24.3010113,30.5087902 L24.4130113,30.5067902 L24.4150113,30.3947902 C24.4160113,30.3407902 24.4970113,24.9037902 25.9600113,12.7767902 C27.2020113,23.9147902 27.9030113,30.3407902 27.9110113,30.4067902 L27.9220113,30.5067902 L28.0240113,30.5087902 C28.0870113,30.5097902 34.3780113,30.5647902 43.9430113,32.2587902 C34.3780113,33.9547902 28.0870113,34.0097902 28.0240113,34.0107902" id="Fill-5" fill="#950248"/>
+            <path d="M18.8368113,41.8287902 C18.7658113,42.2927902 19.2208113,51.0167902 16.0688113,81.7227902 C15.7588113,84.7527902 15.0518113,89.5057902 15.0518113,89.5057902 C14.8158113,91.0917902 15.2868113,91.8227902 16.0858113,91.9357902 C16.8328113,92.0407902 17.6968113,91.8167902 17.8978113,90.1197902 C17.9818113,89.4077902 18.8518113,79.0267902 19.5618113,59.7307902 C19.9528113,49.1267902 19.7538113,43.4247902 19.0438113,41.8587902 C18.9418113,41.6347902 18.8728113,41.5947902 18.8368113,41.8287902" id="Fill-7" fill="#950248"/>
+            <mask id="mask-6" fill="white">
+                <use xlink:href="#path-5"/>
+            </mask>
+            <g id="Clip-10"/>
+            <path d="M44.4091113,38.2637902 C36.3801113,34.8277902 34.2041113,38.6297902 33.3101113,40.3647902 C28.5671113,52.3027902 36.4431113,94.4747902 37.8181113,97.7117902 C38.1271113,98.4337902 38.6601113,99.3837902 39.8781113,99.0387902 C40.8821113,98.7537902 40.8641113,97.8577902 40.7741113,97.1407902 C40.6361113,96.0397902 40.0821113,94.0317902 40.0701113,93.8787902 C29.5371113,48.0147902 33.6411113,41.9167902 34.7591113,39.8127902 C37.6261113,34.4177902 45.2931113,40.2247902 45.4921113,40.3967902 C45.9591113,40.7957902 46.4211113,40.6857902 46.4711113,40.3617902 C46.6241113,39.3707902 45.5251113,38.7407902 44.4091113,38.2637902" id="Fill-9" fill="#950248" mask="url(#mask-6)"/>
+        </g>
+    </g>
+</svg>
+          <span class="u-screenreader">Sisters of Mercy</span>
+        </a>
+        <div class="stickyNav-nav">
+                              <a class="stickyNav-nav-item c-purple -link" href="/stories">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18.7 10.9" style="enable-background:new 0 0 18.7 10.9;" xml:space="preserve" focusable="false" aria-hidden="true" height="12" width="12"><g><path d="M8.9,10.7L0.2,2C0.1,1.9,0,1.7,0,1.6s0.1-0.3,0.2-0.4l0.9-0.9C1.2,0.1,1.4,0,1.5,0c0.1,0,0.3,0.1,0.4,0.2l7.4,7.4l7.4-7.4C16.8,0.1,17,0,17.1,0s0.3,0.1,0.4,0.2l0.9,0.9c0.2,0.1,0.3,0.3,0.3,0.5S18.6,1.9,18.5,2l-8.7,8.7c-0.1,0.1-0.3,0.2-0.4,0.2S9,10.8,8.9,10.7z"/></g></svg>
+              stories
+            </a>
+                                <p class="stickyNav-nav-item c-purple">Standing on God’s Promises: Dr. Martin Luther King Jr.’s Legacy and Hope for the Future</p>
+                  </div>
+        <a class="stickyNav-top" href="#top">back to top</a>
+      </div>
+    </div>
+  </div>
+</div>    <div class="body-wrap">
+            <header>
+        <div class="SkipLinks">
+  <ul>
+    <li><a href="#main">skip to main content</a></li>
+    <li><a href="#footer">skip to footer</a></li>
+  </ul>
+</div>        <div class="header txtr-brush-white bg-shadow">
+  <div class="l-padding">
+    <div class="l-wrap--wide">
+      <div class="header-inner">
+        <a class="header-logo" href="https://www.sistersofmercy.org/">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="100" viewBox="0 0 250 100" focusable="false" aria-hidden="true">
+    <title>Logo</title>
+    <defs>
+        <polygon id="path-1" points="0.591102069 0.761918145 15.2693183 0.761918145 15.2693183 63 0.591102069 63"/>
+        <polygon id="path-3" points="0.4813 0.2138 8.591 0.2138 8.591 9.7388 0.4813 9.7388"/>
+        <polygon id="path-5" points="31.8072134 36.8736083 46.4854296 36.8736083 46.4854296 99.1116902 31.8072134 99.1116902"/>
+    </defs>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-89">
+            <path d="M94.6627,38.7188 C94.0597,38.3548 91.6747,37.3638 88.9467,37.3978 C83.9467,37.4608 79.9867,39.5438 79.2807,39.9298 C79.0927,38.0788 77.7637,25.0118 77.5387,23.2768 C77.4557,22.6438 77.3507,22.4698 77.2657,22.4537902 C77.1807,22.4378 75.9627,41.9588 77.7607,42.2288 L77.8097,42.2288 C78.1477,42.2288 82.9617,39.7128 84.7847,39.0958 C89.6627,37.4478 94.5717,38.9858 94.6997,38.9858 C95.1617,38.9858 94.7257,38.7568 94.6627,38.7188" id="Fill-1" fill="#950248"/>
+            <path d="M128.5504,22.4927 C128.5474,22.2327 128.2144,21.8057 127.6934,21.8057 C127.3324,21.8057 127.0084,22.0987 126.4524,22.4177 C124.7804,23.4117 120.4634,25.7277 116.4934,25.7287 C114.3974,25.7287 112.6864,25.0787 111.4064,23.7997 C107.4434,19.8357 110.9124,8.6257 112.5874,3.9897 C112.5874,3.9897 113.2244,2.3277 112.9024,1.5837 C112.7394,1.2137 112.4254,0.9747 111.9734,0.8467 C111.6894,0.7657 111.0714,0.6827 110.5074,0.6387 C110.5074,0.6387 90.1544,-0.6813 90.7114,0.4737 C97.0044,13.5257 97.4184,20.8667 94.4854,23.7997 C93.2354,25.0497 91.5254,25.6827 89.4024,25.6827 C84.1064,25.6827 79.1294,21.9957 79.0684,21.9567 L78.8124,21.7907 C78.8124,21.7907 78.8124,23.6257 80.0324,24.5677 C80.9904,25.3067 84.7074,26.8957 88.6414,26.8967 C91.3754,26.8967 93.5734,26.0847 95.1694,24.4867 C97.3324,22.4147 97.9864,18.8287 96.8554,13.8847 C94.9844,5.7127 91.8904,1.2177 91.5444,0.7847 C91.9194,0.9457 109.4104,2.7587 110.8364,2.7907 C110.2354,4.5387 105.4244,19.1887 110.7204,24.4857 C112.3194,26.0847 114.5164,26.8967 117.2514,26.8967 C121.3834,26.8967 125.5254,25.0107 126.3984,24.5877 L126.3864,40.9667 C126.4124,41.2387 126.5204,42.7077 128.1834,42.6167 C128.1964,42.6167 129.5414,42.6007 129.523579,40.9457 L128.5504,22.4927 Z" id="Fill-3" fill="#950248"/>
+            <path d="M122.8639,30.6817 C122.7979,30.6707 116.1099,29.6657 106.7109,29.2727 C106.3269,18.8137 104.3079,8.1587 104.3079,8.1587 C104.2539,7.8047 103.7569,6.9737 102.9079,6.9737 L102.5339,6.9737 C101.3969,6.9737 101.1269,7.6637 101.0609,8.0757 C101.0389,8.2417 99.6279,18.5577 99.2479,29.0137 C90.7279,29.3727 84.4419,30.4287 83.2679,30.6377 C83.0389,30.6707 82.8059,30.7317 82.5589,30.8207 C81.6009,31.1727 81.3139,31.6317 81.2419,31.9527 C81.1689,32.2787 81.2809,32.6157 81.5469,32.8857 C82.0339,33.3767 82.9339,33.4937 82.9679,33.5017 L83.0369,33.5097 C83.3229,33.6147 85.3919,33.9387 88.9549,34.4927 L90.3139,34.7037 C91.1429,34.8367 91.9879,34.9707 92.8249,35.1017 C94.2969,35.3327 98.6599,36.0277 99.2499,36.2587 C99.3129,36.9787 99.2129,39.8467 99.8149,53.9627 L99.8249,54.1837 C100.0459,59.3407 100.5669,65.2907 101.3319,71.3777 L101.3809,81.6777 C101.3809,82.4837 102.0349,83.1387 102.8419,83.1387 C103.6489,83.1387 104.2459,82.4547 104.3029,81.6587 C104.3029,81.6397 106.6139,44.9417 106.9689,35.1827 C115.1429,34.8417 121.0639,34.0857 122.4549,33.8937 C122.4549,33.8937 124.4249,33.6687 124.4249,32.5387 C124.4249,31.7797 123.7159,30.7977 122.8639,30.6817 M104.8079,34.0107 L104.6989,34.0107 L104.6929,34.1207 C104.6869,34.2767 103.5049,49.4757 102.6109,63.7457 L101.1989,34.1207 L101.1989,34.0107 L101.0849,34.0107 C101.0219,34.0097 94.3049,33.9547 84.7379,32.2587 C94.3049,30.5647 101.0219,30.5097 101.0849,30.5087 L101.1969,30.5067 L101.1989,30.3947 C101.1999,30.3407 101.2809,24.9037 102.7439,12.7767 C103.9859,23.9147 104.6869,30.3407 104.6949,30.4067 L104.7059,30.5067 L104.8079,30.5087 C104.8709,30.5097 111.1619,30.5647 120.7269,32.2587 C111.1619,33.9547 104.8709,34.0097 104.8079,34.0107" id="Fill-5" fill="#950248"/>
+            <path d="M95.6207,41.8287 C95.5497,42.2927 96.0047,51.0167 92.8527,81.7227 C92.5427,84.7527 91.8357,89.5057 91.8357,89.5057 C91.5997,91.0917 92.0707,91.8227 92.8697,91.9357 C93.6167,92.0407 94.4807,91.8167 94.6817,90.1197 C94.7657,89.4077 95.6357,79.0267 96.3457,59.7307 C96.7367,49.1267 96.5377,43.4247 95.8277,41.8587 C95.7257,41.6347 95.6567,41.5947 95.6207,41.8287" id="Fill-7" fill="#950248"/>
+            <g id="Group-11" transform="translate(108.000000, 36.111600)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"/>
+                </mask>
+                <g id="Clip-10"/>
+                <path d="M13.193,2.1521 C5.164,-1.2839 2.988,2.5181 2.094,4.2531 C-2.649,16.1911 5.227,58.3631 6.602,61.6001 C6.911,62.3221 7.444,63.2721 8.662,62.9271 C9.666,62.6421 9.648,61.7461 9.558,61.0291 C9.42,59.9281 8.866,57.9201 8.854,57.7671 C-1.679,11.9031 2.425,5.8051 3.543,3.7011 C6.41,-1.6939 14.077,4.1131 14.276,4.2851 C14.743,4.6841 15.205,4.5741 15.255,4.2501 C15.408,3.2591 14.309,2.6291 13.193,2.1521" id="Fill-9" fill="#950248" mask="url(#mask-2)"/>
+            </g>
+            <path d="M156.1979,68.9361 L155.2609,68.9361 C155.0339,68.9361 154.9509,69.0821 154.9509,69.2691 L154.9509,77.9611 C154.9509,80.1041 154.9919,80.8931 155.5329,80.8931 L156.7179,80.8931 L156.7179,81.5181 L151.8929,81.5181 L151.8929,80.8931 L152.8709,80.8931 C153.0979,80.8931 153.1809,80.7491 153.1809,80.5611 L153.1809,70.3291 L153.1409,70.2881 L148.4829,81.3101 C148.4419,81.4151 148.3999,81.4551 148.1089,81.4551 C148.0049,81.4551 147.9219,81.2071 147.7969,80.9351 L142.9099,70.5591 L142.8679,70.6001 L142.8679,78.7101 C142.8679,79.6661 142.9099,80.8931 143.5339,80.8931 L144.6349,80.8931 L144.6349,81.5181 L140.8309,81.5181 L140.8309,80.8931 L141.5999,80.8931 C141.8499,80.8931 142.0779,80.7901 142.0779,80.4781 L142.0779,71.3281 C142.0779,69.6431 141.8909,68.9361 140.9139,68.9361 L140.2689,68.9361 L140.2689,68.3131 L143.5949,68.3131 L148.6289,78.6901 L153.2229,68.3131 L156.1979,68.3131 L156.1979,68.9361 Z" id="Fill-12" fill="#231F20"/>
+            <path d="M162.9977,81.5171 L158.5677,81.5171 L158.5677,80.9551 L159.2967,80.9551 C159.4837,80.9551 159.7327,80.8721 159.7327,80.6231 L159.7327,75.7151 C159.7327,73.2201 159.5667,73.2201 158.8807,73.2201 L158.0907,73.2201 L158.0907,72.6591 C158.4017,72.6591 159.1097,72.5761 159.7747,72.4931 C160.4607,72.4101 161.1257,72.3261 161.3537,72.3261 L161.3537,77.6921 C161.3537,79.9581 161.3757,80.9551 161.9997,80.9551 L162.9977,80.9551 L162.9977,81.5171 Z M161.3337,69.3531 C161.3337,69.8721 160.9187,70.2881 160.3977,70.2881 C159.8787,70.2881 159.4627,69.8721 159.4627,69.3531 C159.4627,68.8121 159.8787,68.4161 160.3977,68.4161 C160.9187,68.4161 161.3337,68.8121 161.3337,69.3531 L161.3337,69.3531 Z" id="Fill-14" fill="#231F20"/>
+            <path d="M167.1774,81.8502 C166.3454,81.8502 165.4934,81.7252 164.7024,81.4342 C164.5574,80.5192 164.4534,79.9162 164.4534,79.7492 C164.4534,79.5002 164.5364,79.4382 164.6824,79.4382 C164.8484,79.4382 164.9314,79.5832 164.9724,79.7702 C165.2434,80.7062 166.6784,81.1632 167.5104,81.1632 C168.6334,81.1632 169.9444,80.6442 169.9444,79.2512 C169.9444,77.1292 164.7024,78.3772 164.7024,75.1122 C164.7024,74.1142 165.5344,72.3262 168.4474,72.3262 C169.1124,72.3262 169.9854,72.4712 170.6514,72.7832 C170.7134,73.4082 170.7764,73.9482 170.7764,74.1142 C170.7764,74.3222 170.7344,74.4052 170.5874,74.4052 C170.4214,74.4052 170.3804,74.3012 170.3184,74.1762 C169.9634,73.3872 168.8824,73.0122 168.0924,73.0122 C167.2194,73.0122 165.9924,73.4912 165.9924,74.5512 C165.9924,76.6512 171.3584,75.5282 171.3584,78.8352 C171.3584,81.0182 169.0074,81.8502 167.1774,81.8502" id="Fill-16" fill="#231F20"/>
+            <path d="M180.9225,80.2076 C179.8615,81.2896 178.5115,81.8506 177.0135,81.8506 C174.3935,81.8506 173.0415,79.7906 173.0415,77.3586 C173.0415,74.9676 174.3525,72.3266 177.0755,72.3266 C179.0105,72.3266 179.9865,73.6366 180.7565,75.2786 L174.6635,76.9216 C174.7685,78.9596 175.6195,80.8726 178.0125,80.8726 C179.0305,80.8726 179.8615,80.4986 180.6315,79.8326 L180.9225,80.2076 Z M178.9055,75.1746 C178.5725,74.2596 177.8655,72.9496 176.7645,72.9496 C175.3285,72.9496 174.6635,74.9876 174.6635,76.2976 L178.9055,75.1746 Z" id="Fill-18" fill="#231F20"/>
+            <path d="M185.2692,77.691 C185.2692,79.959 185.2902,80.956 185.9142,80.956 L186.9122,80.956 L186.9122,81.517 L182.4832,81.517 L182.4832,80.956 L183.2102,80.956 C183.3982,80.956 183.6472,80.873 183.6472,80.624 L183.6472,75.715 C183.6472,73.22 183.4812,73.22 182.7932,73.22 L182.0042,73.22 L182.0042,72.658 C182.3162,72.658 183.0232,72.575 183.6892,72.492 C184.3732,72.409 185.0402,72.326 185.2692,72.326 L185.2692,74.135 C186.1012,73.262 187.0572,72.326 187.9512,72.326 C188.3262,72.326 188.7212,72.471 188.9712,72.762 C188.7012,74.343 188.6802,74.384 188.4932,74.384 C188.1802,74.384 188.3672,73.719 187.2662,73.719 C186.4132,73.719 185.7882,74.301 185.2692,74.863 L185.2692,77.691 Z" id="Fill-20" fill="#231F20"/>
+            <path d="M195.2291,81.5171 L190.8001,81.5171 L190.8001,80.9551 L191.5281,80.9551 C191.7151,80.9551 191.9651,80.8721 191.9651,80.6231 L191.9651,75.7151 C191.9651,73.2201 191.7981,73.2201 191.1121,73.2201 L190.3221,73.2201 L190.3221,72.6591 C190.6341,72.6591 191.3401,72.5761 192.0061,72.4931 C192.6921,72.4101 193.3581,72.3261 193.5861,72.3261 L193.5861,77.6921 C193.5861,79.9581 193.6071,80.9551 194.2321,80.9551 L195.2291,80.9551 L195.2291,81.5171 Z M193.5661,69.3531 C193.5661,69.8721 193.1501,70.2881 192.6301,70.2881 C192.1101,70.2881 191.6941,69.8721 191.6941,69.3531 C191.6941,68.8121 192.1101,68.4161 192.6301,68.4161 C193.1501,68.4161 193.5661,68.8121 193.5661,69.3531 L193.5661,69.3531 Z" id="Fill-22" fill="#231F20"/>
+            <path d="M204.358,80.3326 C203.445,81.3516 202.092,81.8506 200.741,81.8506 C198.058,81.8506 196.518,79.8756 196.518,77.2746 C196.518,75.6106 197.6,72.3256 201.24,72.3256 C202.696,72.3256 204.046,73.3876 204.046,74.2796 C204.046,74.6346 203.755,74.8846 203.402,74.8846 C202.591,74.8846 202.072,73.8226 201.967,73.1156 C201.717,72.9486 201.384,72.8876 201.074,72.8876 C198.994,72.8876 198.141,74.9676 198.141,76.7556 C198.141,78.9796 199.243,80.8726 201.675,80.8726 C202.549,80.8726 203.402,80.5406 204.067,79.9586 L204.358,80.3326 Z" id="Fill-24" fill="#231F20"/>
+            <path d="M214.5895,76.9009 C214.5895,78.5649 213.5085,81.8489 209.8685,81.8489 C207.1875,81.8489 205.6485,79.8749 205.6485,77.2759 C205.6485,75.6119 206.7295,72.3259 210.3675,72.3259 C213.0505,72.3259 214.5895,74.3009 214.5895,76.9009 M212.9045,77.4209 C212.9045,75.6119 212.1145,72.9499 209.8895,72.9499 C207.8115,72.9499 207.3315,75.1129 207.3315,76.7759 C207.3315,78.5859 208.1225,81.2259 210.3465,81.2259 C212.4265,81.2259 212.9045,79.0849 212.9045,77.4209" id="Fill-26" fill="#231F20"/>
+            <path d="M219.1852,77.691 C219.1852,79.959 219.2062,80.956 219.8302,80.956 L220.8282,80.956 L220.8282,81.517 L216.3992,81.517 L216.3992,80.956 L217.1272,80.956 C217.3142,80.956 217.5632,80.873 217.5632,80.624 L217.5632,75.715 C217.5632,73.22 217.3972,73.22 216.7102,73.22 L215.9212,73.22 L215.9212,72.658 C216.2322,72.658 216.9392,72.575 217.6052,72.492 C218.2892,72.409 218.9562,72.326 219.1852,72.326 L219.1852,74.135 C220.0172,73.262 220.9732,72.326 221.8672,72.326 C222.2422,72.326 222.6372,72.471 222.8872,72.762 C222.6172,74.343 222.5962,74.384 222.4092,74.384 C222.0962,74.384 222.2832,73.719 221.1822,73.719 C220.3292,73.719 219.7042,74.301 219.1852,74.863 L219.1852,77.691 Z" id="Fill-28" fill="#231F20"/>
+            <path d="M232.2692,77.691 C232.2692,79.959 232.2902,80.956 232.9142,80.956 L233.9122,80.956 L233.9122,81.517 C232.8312,81.559 231.7292,81.705 230.6472,81.85 L230.6472,80.311 C229.6282,81.101 228.6932,81.85 227.4872,81.85 C224.9702,81.85 223.8062,79.709 223.8062,77.421 C223.8062,73.989 226.1772,72.326 228.2142,72.326 C229.1292,72.326 229.8772,72.596 230.6472,73.074 L230.6472,70.35 C230.6472,67.854 230.4812,67.854 229.7942,67.854 L229.0052,67.854 L229.0052,67.294 C229.5242,67.294 231.1872,67.045 232.2692,66.857 L232.2692,77.691 Z M230.6472,73.74 C230.0652,73.283 229.3372,72.949 228.5882,72.949 C226.3432,72.949 225.4902,74.842 225.4902,76.859 C225.4902,78.814 226.0732,80.727 228.3602,80.727 C229.2332,80.727 230.0652,80.228 230.6472,79.584 L230.6472,73.74 Z" id="Fill-30" fill="#231F20"/>
+            <path d="M240.0055,81.5171 L235.5745,81.5171 L235.5745,80.9551 L236.3035,80.9551 C236.4895,80.9551 236.7395,80.8721 236.7395,80.6231 L236.7395,75.7151 C236.7395,73.2201 236.5725,73.2201 235.8885,73.2201 L235.0975,73.2201 L235.0975,72.6591 C235.4085,72.6591 236.1155,72.5761 236.7805,72.4931 C237.4685,72.4101 238.1335,72.3261 238.3615,72.3261 L238.3615,77.6921 C238.3615,79.9581 238.3835,80.9551 239.0075,80.9551 L240.0055,80.9551 L240.0055,81.5171 Z M238.3425,69.3531 C238.3425,69.8721 237.9255,70.2881 237.4055,70.2881 C236.8855,70.2881 236.4705,69.8721 236.4705,69.3531 C236.4705,68.8121 236.8855,68.4161 237.4055,68.4161 C237.9255,68.4161 238.3425,68.8121 238.3425,69.3531 L238.3425,69.3531 Z" id="Fill-32" fill="#231F20"/>
+            <g id="Group-36" transform="translate(241.000000, 72.111600)">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"/>
+                </mask>
+                <g id="Clip-35"/>
+                <path d="M5.5973,3.8128 L5.5973,2.7508 C5.5973,1.8158 5.5353,1.0448 4.0583,1.0448 C3.5383,1.0448 2.8113,1.2128 2.3733,1.5448 C2.3733,2.6678 1.9153,3.4798 1.2103,3.4798 C0.8983,3.4798 0.6483,3.2298 0.6483,2.9168 C0.6483,1.4618 2.8523,0.2138 5.0573,0.2138 C7.1153,0.2138 7.2193,1.2128 7.2193,2.8978 L7.2193,6.0788 C7.2193,7.8048 7.3433,8.3668 8.5913,8.6768 L7.9683,9.7388 C7.0113,9.7388 5.9713,8.9678 5.7223,7.8458 C4.9103,8.6578 3.5183,9.7388 2.3533,9.7388 C1.1683,9.7388 0.4813,8.9268 0.4813,7.7848 C0.4813,5.9958 2.2483,5.1848 4.8493,4.1248 L5.5973,3.8128 Z M5.5973,4.4568 C3.4763,5.2688 2.1653,5.9748 2.1653,7.3878 C2.1653,8.0758 2.5393,8.5108 3.2463,8.5108 C4.2033,8.5108 5.0573,7.8678 5.5973,7.1388 L5.5973,4.4568 Z" id="Fill-34" fill="#231F20" mask="url(#mask-4)"/>
+            </g>
+            <path d="M123.6344,55.2613 L123.6344,58.5253 C123.6344,60.6673 123.6764,61.4563 124.2164,61.4563 L125.4024,61.4563 L125.4024,62.0813 L120.5774,62.0813 L120.5774,61.4563 L121.5554,61.4563 C121.7834,61.4563 121.8664,61.3123 121.8664,61.1243 L121.8664,52.4323 C121.8664,50.2913 121.8254,49.5003 121.2844,49.5003 L120.0574,49.5003 L120.0574,48.8773 L124.8824,48.8773 L124.8824,49.5003 L123.9464,49.5003 C123.7174,49.5003 123.6344,49.6463 123.6344,49.8333 L123.6344,54.5123 L130.4754,54.5123 L130.4754,52.4323 C130.4754,50.2913 130.4344,49.5003 129.8934,49.5003 L128.6664,49.5003 L128.6664,48.8773 L133.4914,48.8773 L133.4914,49.5003 L132.5554,49.5003 C132.3274,49.5003 132.2434,49.6463 132.2434,49.8333 L132.2434,58.5253 C132.2434,60.6673 132.2854,61.4563 132.8264,61.4563 L134.0114,61.4563 L134.0114,62.0813 L129.1864,62.0813 L129.1864,61.4563 L130.1644,61.4563 C130.3924,61.4563 130.4754,61.3123 130.4754,61.1243 L130.4754,55.2613 L123.6344,55.2613 Z" id="Fill-37" fill="#231F20"/>
+            <path d="M142.9323,60.7711 C141.8713,61.8531 140.5203,62.4151 139.0233,62.4151 C136.4033,62.4151 135.0503,60.3541 135.0503,57.9221 C135.0503,55.5321 136.3613,52.8901 139.0843,52.8901 C141.0193,52.8901 141.9963,54.2011 142.7663,55.8421 L136.6723,57.4851 C136.7773,59.5231 137.6293,61.4361 140.0213,61.4361 C141.0393,61.4361 141.8713,61.0621 142.6413,60.3961 L142.9323,60.7711 Z M140.9143,55.7381 C140.5813,54.8241 139.8743,53.5131 138.7733,53.5131 C137.3373,53.5131 136.6723,55.5511 136.6723,56.8611 L140.9143,55.7381 Z" id="Fill-39" fill="#231F20"/>
+            <path d="M147.028,58.2554 C147.028,60.5224 147.049,61.5194 147.674,61.5194 L148.672,61.5194 L148.672,62.0804 L144.243,62.0804 L144.243,61.5194 L144.969,61.5194 C145.157,61.5194 145.406,61.4364 145.406,61.1874 L145.406,56.2784 C145.406,53.7834 145.24,53.7834 144.553,53.7834 L143.764,53.7834 L143.764,53.2224 C144.076,53.2224 144.782,53.1394 145.448,53.0564 C146.134,52.9734 146.799,52.8904 147.028,52.8904 L147.028,54.6984 C147.86,53.8254 148.817,52.8904 149.712,52.8904 C150.086,52.8904 150.48,53.0344 150.73,53.3254 C150.461,54.9064 150.439,54.9474 150.252,54.9474 C149.939,54.9474 150.128,54.2824 149.024,54.2824 C148.173,54.2824 147.549,54.8644 147.028,55.4274 L147.028,58.2554 Z" id="Fill-41" fill="#231F20"/>
+            <path d="M155.2418,58.2554 C155.2418,60.5224 155.2628,61.5194 155.8878,61.5194 L156.8028,61.5194 L156.8028,62.0804 L152.4568,62.0804 L152.4568,61.5194 L153.1838,61.5194 C153.3718,61.5194 153.6208,61.4364 153.6208,61.1874 L153.6208,56.2784 C153.6208,53.7834 153.4548,53.7834 152.7678,53.7834 L151.9778,53.7834 L151.9778,53.2224 C152.2898,53.2224 152.9978,53.1394 153.6628,53.0564 C154.3478,52.9734 155.0128,52.8904 155.2418,52.8904 L155.2418,54.5954 C156.3238,53.7214 157.1138,52.9104 158.6748,52.9104 C159.8388,52.9104 160.6068,53.4724 160.8148,54.5534 C161.8348,53.7634 162.7288,52.9104 164.0398,52.8904 C166.2008,52.8904 166.5548,54.3044 166.5548,55.8434 L166.5548,58.2554 C166.5548,60.5224 166.5758,61.5194 167.1988,61.5194 L168.1138,61.5194 L168.1138,62.0804 L163.7688,62.0804 L163.7688,61.5194 L164.4968,61.5194 C164.6828,61.5194 164.9328,61.4364 164.9328,61.1874 L164.9328,56.2784 C164.9328,54.3654 164.2258,53.9504 163.2908,53.9504 C162.4588,54.0134 161.6058,54.4904 160.8978,55.1364 L160.8978,58.2554 C160.8978,60.5224 160.9198,61.5194 161.5438,61.5194 L162.4588,61.5194 L162.4588,62.0804 L158.1118,62.0804 L158.1118,61.5194 L158.8408,61.5194 C159.0268,61.5194 159.2758,61.4364 159.2758,61.1874 L159.2758,56.2784 C159.2758,54.3654 158.5698,53.9504 157.6348,53.9504 C156.5948,54.0134 155.9708,54.5954 155.2418,55.1364 L155.2418,58.2554 Z" id="Fill-43" fill="#231F20"/>
+            <path d="M174.5406,56.4879 L174.5406,55.4259 C174.5406,54.4909 174.4776,53.7199 173.0016,53.7199 C172.4806,53.7199 171.7536,53.8879 171.3156,54.2199 C171.3156,55.3429 170.8596,56.1549 170.1526,56.1549 C169.8406,56.1549 169.5906,55.9049 169.5906,55.5929 C169.5906,54.1369 171.7956,52.8899 173.9996,52.8899 C176.0586,52.8899 176.1626,53.8879 176.1626,55.5729 L176.1626,58.7539 C176.1626,60.4809 176.2876,61.0419 177.5346,61.3529 L176.9106,62.4139 C175.9546,62.4139 174.9146,61.6439 174.6656,60.5219 C173.8536,61.3329 172.4606,62.4139 171.2956,62.4139 C170.1106,62.4139 169.4246,61.6029 169.4246,60.4599 C169.4246,58.6709 171.1926,57.8599 173.7916,56.7999 L174.5406,56.4879 Z M174.5406,57.1319 C172.4196,57.9439 171.1086,58.6499 171.1086,60.0639 C171.1086,60.7509 171.4816,61.1869 172.1896,61.1869 C173.1456,61.1869 173.9996,60.5429 174.5406,59.8149 L174.5406,57.1319 Z" id="Fill-45" fill="#231F20"/>
+            <path d="M187.7653,58.2554 C187.7653,60.5224 187.7863,61.5194 188.4113,61.5194 L189.3243,61.5194 L189.3243,62.0804 L184.9793,62.0804 L184.9793,61.5194 L185.7073,61.5194 C185.8943,61.5194 186.1433,61.4364 186.1433,61.1874 L186.1433,56.2784 C186.1433,54.3654 185.4373,53.9504 184.5013,53.9504 C183.4193,53.9504 182.6083,54.4704 181.8393,55.1364 L181.8393,58.2554 C181.8393,60.5224 181.8603,61.5194 182.4833,61.5194 L183.3983,61.5194 L183.3983,62.0804 L179.0523,62.0804 L179.0523,61.5194 L179.7803,61.5194 C179.9673,61.5194 180.2173,61.4364 180.2173,61.1874 L180.2173,56.2784 C180.2173,53.7834 180.0503,53.7834 179.3643,53.7834 L178.5743,53.7834 L178.5743,53.2224 C178.8863,53.2224 179.5933,53.1394 180.2593,53.0564 C180.9443,52.9734 181.6103,52.8904 181.8393,52.8904 L181.8393,54.4484 C182.9003,53.6584 183.8353,52.8904 185.2493,52.8904 C187.4123,52.8904 187.7653,54.3044 187.7653,55.8434 L187.7653,58.2554 Z" id="Fill-47" fill="#231F20"/>
+            <path d="M195.5436,56.4879 L195.5436,55.4259 C195.5436,54.4909 195.4816,53.7199 194.0036,53.7199 C193.4846,53.7199 192.7576,53.8879 192.3196,54.2199 C192.3196,55.3429 191.8626,56.1549 191.1556,56.1549 C190.8436,56.1549 190.5936,55.9049 190.5936,55.5929 C190.5936,54.1369 192.7986,52.8899 195.0026,52.8899 C197.0626,52.8899 197.1656,53.8879 197.1656,55.5729 L197.1656,58.7539 C197.1656,60.4809 197.2896,61.0419 198.5376,61.3529 L197.9136,62.4139 C196.9576,62.4139 195.9176,61.6439 195.6686,60.5219 C194.8566,61.3329 193.4636,62.4139 192.2986,62.4139 C191.1136,62.4139 190.4276,61.6029 190.4276,60.4599 C190.4276,58.6709 192.1956,57.8599 194.7946,56.7999 L195.5436,56.4879 Z M195.5436,57.1319 C193.4226,57.9439 192.1116,58.6499 192.1116,60.0639 C192.1116,60.7509 192.4856,61.1869 193.1936,61.1869 C194.1506,61.1869 195.0026,60.5429 195.5436,59.8149 L195.5436,57.1319 Z" id="Fill-49" fill="#231F20"/>
+            <path d="M202.2594,62.4136 C201.4284,62.4136 200.5754,62.2886 199.7844,61.9976 C199.6394,61.0826 199.5354,60.4796 199.5354,60.3126 C199.5354,60.0636 199.6184,60.0026 199.7634,60.0026 C199.9304,60.0026 200.0144,60.1466 200.0554,60.3336 C200.3254,61.2696 201.7604,61.7266 202.5914,61.7266 C203.7154,61.7266 205.0264,61.2076 205.0264,59.8146 C205.0264,57.6926 199.7844,58.9406 199.7844,55.6766 C199.7844,54.6786 200.6164,52.8906 203.5294,52.8906 C204.1944,52.8906 205.0664,53.0346 205.7324,53.3476 C205.7944,53.9716 205.8574,54.5126 205.8574,54.6786 C205.8574,54.8866 205.8154,54.9696 205.6704,54.9696 C205.5044,54.9696 205.4624,54.8646 205.4014,54.7396 C205.0454,53.9506 203.9654,53.5756 203.1744,53.5756 C202.3014,53.5756 201.0744,54.0556 201.0744,55.1146 C201.0744,57.2156 206.4394,56.0926 206.4394,59.3986 C206.4394,61.5816 204.0904,62.4136 202.2594,62.4136" id="Fill-51" fill="#231F20"/>
+            <path d="M217.028,59.4117 C217.028,60.9927 217.042,61.6887 217.478,61.6887 L218.174,61.6887 L218.174,62.0807 C217.419,62.1097 216.65,62.2127 215.895,62.3127 L215.895,61.2397 C215.185,61.7917 214.533,62.3127 213.691,62.3127 C211.935,62.3127 211.123,60.8177 211.123,59.2237 C211.123,56.8297 212.777,55.6697 214.198,55.6697 C214.837,55.6697 215.359,55.8577 215.895,56.1907 L215.895,54.2917 C215.895,52.5507 215.78,52.5507 215.3,52.5507 L214.75,52.5507 L214.75,52.1577 C215.112,52.1577 216.273,51.9837 217.028,51.8527 L217.028,59.4117 Z M215.895,56.6547 C215.489,56.3367 214.982,56.1037 214.46,56.1037 C212.893,56.1037 212.298,57.4247 212.298,58.8307 C212.298,60.1947 212.704,61.5297 214.299,61.5297 C214.909,61.5297 215.489,61.1817 215.895,60.7317 L215.895,56.6547 Z" id="Fill-53" fill="#231F20"/>
+            <path d="M224.4996,61.1675 C223.7586,61.9225 222.8156,62.3135 221.7706,62.3135 C219.9426,62.3135 219.0006,60.8775 219.0006,59.1805 C219.0006,57.5125 219.9136,55.6695 221.8146,55.6695 C223.1636,55.6695 223.8456,56.5835 224.3836,57.7295 L220.1316,58.8755 C220.2036,60.2975 220.7996,61.6325 222.4676,61.6325 C223.1796,61.6325 223.7586,61.3695 224.2966,60.9055 L224.4996,61.1675 Z M223.0926,57.6555 C222.8586,57.0185 222.3656,56.1045 221.5976,56.1045 C220.5966,56.1045 220.1316,57.5255 220.1316,58.4395 L223.0926,57.6555 Z" id="Fill-55" fill="#231F20"/>
+            <path d="M231.1871,59.4117 C231.1871,60.9927 231.2021,61.6887 231.6361,61.6887 L232.3331,61.6887 L232.3331,62.0807 L229.2431,62.0807 L229.2431,61.6887 L229.7501,61.6887 C229.8811,61.6887 230.0541,61.6327 230.0541,61.4577 L230.0541,54.2917 C230.0541,52.5507 229.9391,52.5507 229.4591,52.5507 L228.9101,52.5507 L228.9101,52.1577 C229.2721,52.1577 230.4321,51.9837 231.1871,51.8527 L231.1871,59.4117 Z" id="Fill-57" fill="#231F20"/>
+            <path d="M237.0768,58.1783 L237.0768,57.4383 C237.0768,56.7863 237.0338,56.2483 236.0038,56.2483 C235.6408,56.2483 235.1338,56.3653 234.8288,56.5973 C234.8288,57.3803 234.5108,57.9473 234.0168,57.9473 C233.7978,57.9473 233.6248,57.7733 233.6248,57.5553 C233.6248,56.5383 235.1618,55.6683 236.6998,55.6683 C238.1378,55.6683 238.2088,56.3653 238.2088,57.5393 L238.2088,59.7593 C238.2088,60.9633 238.2958,61.3573 239.1658,61.5743 L238.7308,62.3123 C238.0638,62.3123 237.3388,61.7773 237.1648,60.9933 C236.5988,61.5593 235.6258,62.3123 234.8138,62.3123 C233.9868,62.3123 233.5088,61.7473 233.5088,60.9493 C233.5088,59.7023 234.7418,59.1363 236.5558,58.3953 L237.0768,58.1783 Z M237.0768,58.6283 C235.5978,59.1943 234.6828,59.6863 234.6828,60.6743 C234.6828,61.1533 234.9448,61.4573 235.4378,61.4573 C236.1048,61.4573 236.6998,61.0073 237.0768,60.5003 L237.0768,58.6283 Z" id="Fill-59" fill="#231F20"/>
+            <path d="M45.0768,45.0269 L44.1408,45.0269 C43.9128,45.0269 43.8288,45.1719 43.8288,45.3599 L43.8288,54.0509 C43.8288,56.1939 43.8708,56.9839 44.4118,56.9839 L45.5968,56.9839 L45.5968,57.6079 L40.7718,57.6079 L40.7718,56.9839 L41.7498,56.9839 C41.9788,56.9839 42.0618,56.8379 42.0618,56.6509 L42.0618,46.4199 L42.0198,46.3789 L37.3618,57.3999 C37.3208,57.5039 37.2788,57.5459 36.9878,57.5459 C36.8838,57.5459 36.8008,57.2969 36.6758,57.0259 L31.7888,46.6489 L31.7468,46.6909 L31.7468,54.7999 C31.7468,55.7559 31.7888,56.9839 32.4128,56.9839 L33.5148,56.9839 L33.5148,57.6079 L29.7098,57.6079 L29.7098,56.9839 L30.4788,56.9839 C30.7278,56.9839 30.9568,56.8799 30.9568,56.5679 L30.9568,47.4189 C30.9568,45.7339 30.7698,45.0269 29.7928,45.0269 L29.1478,45.0269 L29.1478,44.4029 L32.4748,44.4029 L37.5078,54.7799 L42.1028,44.4029 L45.0768,44.4029 L45.0768,45.0269 Z" id="Fill-61" fill="#231F20"/>
+            <path d="M54.5592,56.2974 C53.4982,57.3794 52.1472,57.9414 50.6502,57.9414 C48.0292,57.9414 46.6782,55.8804 46.6782,53.4484 C46.6782,51.0584 47.9882,48.4164 50.7122,48.4164 C52.6462,48.4164 53.6232,49.7264 54.3932,51.3684 L48.3002,53.0124 C48.4042,55.0504 49.2562,56.9624 51.6482,56.9624 C52.6672,56.9624 53.4982,56.5884 54.2682,55.9224 L54.5592,56.2974 Z M52.5422,51.2654 C52.2092,50.3504 51.5022,49.0404 50.4002,49.0404 C48.9652,49.0404 48.3002,51.0774 48.3002,52.3884 L52.5422,51.2654 Z" id="Fill-63" fill="#231F20"/>
+            <path d="M58.8634,53.7818 C58.8634,56.0488 58.8844,57.0458 59.5084,57.0458 L60.5064,57.0458 L60.5064,57.6078 L56.0774,57.6078 L56.0774,57.0458 L56.8044,57.0458 C56.9924,57.0458 57.2414,56.9628 57.2414,56.7138 L57.2414,51.8048 C57.2414,49.3108 57.0754,49.3108 56.3894,49.3108 L55.5984,49.3108 L55.5984,48.7498 C55.9104,48.7498 56.6174,48.6668 57.2834,48.5828 C57.9694,48.4998 58.6344,48.4168 58.8634,48.4168 L58.8634,50.2258 C59.6954,49.3528 60.6524,48.4168 61.5454,48.4168 C61.9204,48.4168 62.3154,48.5618 62.5644,48.8538 C62.2944,50.4328 62.2744,50.4738 62.0864,50.4738 C61.7744,50.4738 61.9624,49.8098 60.8594,49.8098 C60.0074,49.8098 59.3834,50.3908 58.8634,50.9538 L58.8634,53.7818 Z" id="Fill-65" fill="#231F20"/>
+            <path d="M71.1368,56.4224 C70.2218,57.4424 68.8708,57.9414 67.5188,57.9414 C64.8358,57.9414 63.2968,55.9654 63.2968,53.3654 C63.2968,51.7014 64.3788,48.4164 68.0178,48.4164 C69.4728,48.4164 70.8248,49.4764 70.8248,50.3704 C70.8248,50.7244 70.5338,50.9744 70.1798,50.9744 C69.3688,50.9744 68.8498,49.9134 68.7458,49.2064 C68.4958,49.0404 68.1628,48.9774 67.8518,48.9774 C65.7718,48.9774 64.9188,51.0574 64.9188,52.8454 C64.9188,55.0704 66.0218,56.9624 68.4538,56.9624 C69.3278,56.9624 70.1798,56.6304 70.8458,56.0484 L71.1368,56.4224 Z" id="Fill-67" fill="#231F20"/>
+            <path d="M75.795,49.3106 L74.734,49.3106 C74.651,49.3106 74.568,49.3316 74.568,49.4356 C74.568,49.6226 76.211,53.3876 77.188,55.6316 C78.706,52.4306 79.455,50.2456 79.455,49.6016 C79.455,49.3316 79.205,49.3106 78.935,49.3106 L77.999,49.3106 L77.999,48.7486 L81.555,48.7486 L81.555,49.3106 L80.827,49.3106 C80.599,49.3106 80.515,49.4556 80.411,49.7056 C79.663,51.6406 77.043,57.3996 74.693,62.4746 C73.986,62.6616 73.216,62.7666 72.468,62.7666 C72.322,62.7666 72.218,62.7026 72.218,62.5356 C72.218,62.2036 73.071,62.1836 73.84,61.4136 C74.755,60.4986 75.441,59.2916 76.294,57.4626 C74.069,52.3896 73.591,51.3276 73.008,50.1006 C72.634,49.3106 72.489,49.3106 71.698,49.3106 L71.698,48.7486 L75.795,48.7486 L75.795,49.3106 Z" id="Fill-69" fill="#231F20"/>
+            <path d="M1.7682,28.2125 C1.7682,29.8965 3.3272,30.4375 4.6382,30.9365 C7.2992,31.9135 8.5682,32.7665 8.5682,34.9915 C8.5682,36.8005 6.9872,39.0675 3.5562,39.0675 C2.5372,39.0675 1.2692,38.8595 0.3122,38.4855 C0.0832,37.1955 0.0002,36.7595 0.0002,36.5725 C0.0002,36.4265 0.0832,36.3225 0.2502,36.3225 C0.4582,36.3225 0.5202,36.5305 0.5622,36.7175 C0.8532,37.8825 2.7872,38.3185 3.8062,38.3185 C5.4692,38.3185 7.1752,37.4865 7.1752,35.6155 C7.1752,34.0145 5.9682,33.3075 3.9102,32.5585 C2.9742,32.2255 0.4372,31.4145 0.4372,28.8775 C0.4372,26.3825 2.9322,25.0725 5.1582,25.0725 C6.0312,25.0725 6.8422,25.1555 7.5072,25.4675 C7.5282,25.9665 7.5702,26.4865 7.5702,26.9855 C7.5702,27.1305 7.5072,27.2555 7.3412,27.2555 C7.1332,27.2555 7.1122,27.0895 7.0922,26.9435 C6.9462,26.0495 5.2612,25.8205 4.5962,25.8205 C3.2032,25.8205 1.7682,26.6735 1.7682,28.2125" id="Fill-71" fill="#231F20"/>
+            <path d="M14.4113,38.6724 L9.9823,38.6724 L9.9823,38.1104 L10.7103,38.1104 C10.8973,38.1104 11.1463,38.0274 11.1463,37.7784 L11.1463,32.8704 C11.1463,30.3754 10.9803,30.3754 10.2943,30.3754 L9.5043,30.3754 L9.5043,29.8134 C9.8153,29.8134 10.5233,29.7304 11.1883,29.6474 C11.8743,29.5644 12.5403,29.4814 12.7683,29.4814 L12.7683,34.8464 C12.7683,37.1124 12.7893,38.1104 13.4133,38.1104 L14.4113,38.1104 L14.4113,38.6724 Z M12.7473,26.5074 C12.7473,27.0274 12.3323,27.4434 11.8123,27.4434 C11.2923,27.4434 10.8763,27.0274 10.8763,26.5074 C10.8763,25.9664 11.2923,25.5714 11.8123,25.5714 C12.3323,25.5714 12.7473,25.9664 12.7473,26.5074 L12.7473,26.5074 Z" id="Fill-73" fill="#231F20"/>
+            <path d="M18.3834,39.0049 C17.5514,39.0049 16.6994,38.8799 15.9084,38.5889 C15.7634,37.6739 15.6594,37.0709 15.6594,36.9049 C15.6594,36.6549 15.7424,36.5929 15.8884,36.5929 C16.0544,36.5929 16.1374,36.7379 16.1794,36.9259 C16.4494,37.8609 17.8844,38.3189 18.7164,38.3189 C19.8394,38.3189 21.1494,37.7989 21.1494,36.4059 C21.1494,34.2849 15.9084,35.5319 15.9084,32.2669 C15.9084,31.2689 16.7404,29.4809 19.6524,29.4809 C20.3174,29.4809 21.1904,29.6259 21.8564,29.9379 C21.9184,30.5619 21.9814,31.1029 21.9814,31.2689 C21.9814,31.4769 21.9394,31.5599 21.7934,31.5599 C21.6274,31.5599 21.5864,31.4559 21.5234,31.3319 C21.1694,30.5419 20.0884,30.1669 19.2984,30.1669 C18.4254,30.1669 17.1984,30.6449 17.1984,31.7059 C17.1984,33.8059 22.5634,32.6829 22.5634,35.9899 C22.5634,38.1729 20.2134,39.0049 18.3834,39.0049" id="Fill-75" fill="#231F20"/>
+            <path d="M28.4689,29.8135 C28.3859,30.2715 28.3439,30.3755 28.0529,30.3755 L26.2649,30.3755 L26.2649,35.8445 C26.2649,37.1745 26.3269,38.1315 27.6369,38.1315 C28.0949,38.1315 28.5729,37.9865 29.0099,37.7985 L29.2179,38.2565 C28.4899,38.6725 27.3049,39.0045 26.8259,39.0045 C26.0979,39.0045 24.6429,38.9425 24.6429,36.9465 L24.6429,30.3755 C23.6859,30.3755 23.6029,30.3545 23.6029,30.2295 C23.6029,30.0635 23.7899,29.9175 25.9319,27.7135 L26.2649,27.7135 L26.2649,29.8135 L28.4689,29.8135 Z" id="Fill-77" fill="#231F20"/>
+            <path d="M38.0138,37.3624 C36.9538,38.4434 35.6018,39.0054 34.1048,39.0054 C31.4848,39.0054 30.1328,36.9464 30.1328,34.5134 C30.1328,32.1224 31.4428,29.4814 34.1668,29.4814 C36.1008,29.4814 37.0778,30.7914 37.8478,32.4344 L31.7548,34.0764 C31.8588,36.1144 32.7118,38.0274 35.1028,38.0274 C36.1218,38.0274 36.9538,37.6534 37.7228,36.9884 L38.0138,37.3624 Z M35.9968,32.3304 C35.6638,31.4154 34.9568,30.1044 33.8548,30.1044 C32.4198,30.1044 31.7548,32.1424 31.7548,33.4524 L35.9968,32.3304 Z" id="Fill-79" fill="#231F20"/>
+            <path d="M42.318,34.8462 C42.318,37.1132 42.339,38.1112 42.963,38.1112 L43.961,38.1112 L43.961,38.6722 L39.532,38.6722 L39.532,38.1112 L40.259,38.1112 C40.447,38.1112 40.696,38.0282 40.696,37.7782 L40.696,32.8712 C40.696,30.3752 40.53,30.3752 39.844,30.3752 L39.053,30.3752 L39.053,29.8132 C39.365,29.8132 40.072,29.7302 40.738,29.6472 C41.424,29.5642 42.089,29.4812 42.318,29.4812 L42.318,31.2902 C43.15,30.4172 44.107,29.4812 45.001,29.4812 C45.375,29.4812 45.77,29.6262 46.02,29.9182 C45.749,31.4982 45.729,31.5402 45.541,31.5402 C45.229,31.5402 45.417,30.8742 44.314,30.8742 C43.462,30.8742 42.838,31.4562 42.318,32.0182 L42.318,34.8462 Z" id="Fill-81" fill="#231F20"/>
+            <path d="M49.9498,39.0049 C49.1178,39.0049 48.2658,38.8799 47.4748,38.5889 C47.3298,37.6739 47.2258,37.0709 47.2258,36.9049 C47.2258,36.6549 47.3088,36.5929 47.4538,36.5929 C47.6208,36.5929 47.7038,36.7379 47.7458,36.9259 C48.0158,37.8609 49.4508,38.3189 50.2828,38.3189 C51.4058,38.3189 52.7158,37.7989 52.7158,36.4059 C52.7158,34.2849 47.4748,35.5319 47.4748,32.2669 C47.4748,31.2689 48.3068,29.4809 51.2178,29.4809 C51.8838,29.4809 52.7568,29.6259 53.4228,29.9379 C53.4848,30.5619 53.5478,31.1029 53.5478,31.2689 C53.5478,31.4769 53.5058,31.5599 53.3598,31.5599 C53.1938,31.5599 53.1528,31.4559 53.0898,31.3319 C52.7358,30.5419 51.6548,30.1669 50.8648,30.1669 C49.9918,30.1669 48.7648,30.6449 48.7648,31.7059 C48.7648,33.8059 54.1298,32.6829 54.1298,35.9899 C54.1298,38.1729 51.7798,39.0049 49.9498,39.0049" id="Fill-83" fill="#231F20"/>
+            <path d="M64.3063,35.4517 C64.3063,36.6127 63.5523,38.9047 61.0133,38.9047 C59.1413,38.9047 58.0683,37.5267 58.0683,35.7127 C58.0683,34.5527 58.8223,32.2597 61.3613,32.2597 C63.2323,32.2597 64.3063,33.6377 64.3063,35.4517 M63.1313,35.8147 C63.1313,34.5527 62.5803,32.6957 61.0273,32.6957 C59.5763,32.6957 59.2433,34.2037 59.2433,35.3647 C59.2433,36.6267 59.7943,38.4697 61.3463,38.4697 C62.7973,38.4697 63.1313,36.9747 63.1313,35.8147" id="Fill-85" fill="#231F20"/>
+            <path d="M67.527,36.0025 C67.527,37.5835 67.541,38.2805 67.977,38.2805 L68.76,38.2805 L68.76,38.6725 L65.583,38.6725 L65.583,38.2805 L66.091,38.2805 C66.221,38.2805 66.395,38.2225 66.395,38.0485 L66.395,32.8835 L65.525,32.8835 L65.525,32.4915 L66.395,32.4915 L66.395,30.5335 C66.395,28.9085 67.512,28.3425 68.455,28.3425 C69.007,28.3425 70.022,28.5455 70.022,29.1545 C70.022,29.3585 69.819,29.4885 69.631,29.4885 C69.166,29.4885 68.847,29.1695 68.63,28.8065 L68.426,28.7775 C67.846,28.7775 67.527,29.1545 67.527,30.5335 L67.527,32.4915 L68.717,32.4915 L68.717,32.8835 L67.527,32.8835 L67.527,36.0025 Z" id="Fill-87" fill="#231F20"/>
+        </g>
+        <g id="Group" transform="translate(76.783889, -0.000090)">
+            <path d="M17.8788113,38.7188902 C17.2758113,38.3548902 14.8908113,37.3638902 12.1628113,37.3978902 C7.16281135,37.4608902 3.20281135,39.5438902 2.49681135,39.9298902 C2.30881135,38.0788902 0.97981135,25.0118902 0.75481135,23.2768902 C0.67181135,22.6438902 0.56681135,22.4698902 0.48181135,22.4538803 C0.39681135,22.4378902 -0.82118865,41.9588902 0.97681135,42.2288902 L1.02581135,42.2288902 C1.36381135,42.2288902 6.17781135,39.7128902 8.00081135,39.0958902 C12.8788113,37.4478902 17.7878113,38.9858902 17.9158113,38.9858902 C18.3778113,38.9858902 17.9418113,38.7568902 17.8788113,38.7188902" id="Fill-1" fill="#950248"/>
+            <path d="M51.7665113,22.4927902 C51.7635113,22.2327902 51.4305113,21.8057902 50.9095113,21.8057902 C50.5485113,21.8057902 50.2245113,22.0987902 49.6685113,22.4177902 C47.9965113,23.4117902 43.6795113,25.7277902 39.7095113,25.7287902 C37.6135113,25.7287902 35.9025113,25.0787902 34.6225113,23.7997902 C30.6595113,19.8357902 34.1285113,8.62579017 35.8035113,3.98979017 C35.8035113,3.98979017 36.4405113,2.32779017 36.1185113,1.58379017 C35.9555113,1.21379017 35.6415113,0.97479017 35.1895113,0.84679017 C34.9055113,0.76579017 34.2875113,0.68279017 33.7235113,0.63879017 C33.7235113,0.63879017 13.3705113,-0.68120983 13.9275113,0.47379017 C20.2205113,13.5257902 20.6345113,20.8667902 17.7015113,23.7997902 C16.4515113,25.0497902 14.7415113,25.6827902 12.6185113,25.6827902 C7.32251135,25.6827902 2.34551135,21.9957902 2.28451135,21.9567902 L2.02851135,21.7907902 C2.02851135,21.7907902 2.02851135,23.6257902 3.24851135,24.5677902 C4.20651135,25.3067902 7.92351135,26.8957902 11.8575113,26.8967902 C14.5915113,26.8967902 16.7895113,26.0847902 18.3855113,24.4867902 C20.5485113,22.4147902 21.2025113,18.8287902 20.0715113,13.8847902 C18.2005113,5.71279017 15.1065113,1.21779017 14.7605113,0.78479017 C15.1355113,0.94579017 32.6265113,2.75879017 34.0525113,2.79079017 C33.4515113,4.53879017 28.6405113,19.1887902 33.9365113,24.4857902 C35.5355113,26.0847902 37.7325113,26.8967902 40.4675113,26.8967902 C44.5995113,26.8967902 48.7415113,25.0107902 49.6145113,24.5877902 L49.6025113,40.9667902 C49.6285113,41.2387902 49.7365113,42.7077902 51.3995113,42.6167902 C51.4125113,42.6167902 52.7575113,42.6007902 52.7396904,40.9457902 L51.7665113,22.4927902 Z" id="Fill-3" fill="#950248"/>
+            <path d="M46.0800113,30.6817902 C46.0140113,30.6707902 39.3260113,29.6657902 29.9270113,29.2727902 C29.5430113,18.8137902 27.5240113,8.15879017 27.5240113,8.15879017 C27.4700113,7.80479017 26.9730113,6.97379017 26.1240113,6.97379017 L25.7500113,6.97379017 C24.6130113,6.97379017 24.3430113,7.66379017 24.2770113,8.07579017 C24.2550113,8.24179017 22.8440113,18.5577902 22.4640113,29.0137902 C13.9440113,29.3727902 7.65801135,30.4287902 6.48401135,30.6377902 C6.25501135,30.6707902 6.02201135,30.7317902 5.77501135,30.8207902 C4.81701135,31.1727902 4.53001135,31.6317902 4.45801135,31.9527902 C4.38501135,32.2787902 4.49701135,32.6157902 4.76301135,32.8857902 C5.25001135,33.3767902 6.15001135,33.4937902 6.18401135,33.5017902 L6.25301135,33.5097902 C6.53901135,33.6147902 8.60801135,33.9387902 12.1710113,34.4927902 L13.5300113,34.7037902 C14.3590113,34.8367902 15.2040113,34.9707902 16.0410113,35.1017902 C17.5130113,35.3327902 21.8760113,36.0277902 22.4660113,36.2587902 C22.5290113,36.9787902 22.4290113,39.8467902 23.0310113,53.9627902 L23.0410113,54.1837902 C23.2620113,59.3407902 23.7830113,65.2907902 24.5480113,71.3777902 L24.5970113,81.6777902 C24.5970113,82.4837902 25.2510113,83.1387902 26.0580113,83.1387902 C26.8650113,83.1387902 27.4620113,82.4547902 27.5190113,81.6587902 C27.5190113,81.6397902 29.8300113,44.9417902 30.1850113,35.1827902 C38.3590113,34.8417902 44.2800113,34.0857902 45.6710113,33.8937902 C45.6710113,33.8937902 47.6410113,33.6687902 47.6410113,32.5387902 C47.6410113,31.7797902 46.9320113,30.7977902 46.0800113,30.6817902 M28.0240113,34.0107902 L27.9150113,34.0107902 L27.9090113,34.1207902 C27.9030113,34.2767902 26.7210113,49.4757902 25.8270113,63.7457902 L24.4150113,34.1207902 L24.4150113,34.0107902 L24.3010113,34.0107902 C24.2380113,34.0097902 17.5210113,33.9547902 7.95401135,32.2587902 C17.5210113,30.5647902 24.2380113,30.5097902 24.3010113,30.5087902 L24.4130113,30.5067902 L24.4150113,30.3947902 C24.4160113,30.3407902 24.4970113,24.9037902 25.9600113,12.7767902 C27.2020113,23.9147902 27.9030113,30.3407902 27.9110113,30.4067902 L27.9220113,30.5067902 L28.0240113,30.5087902 C28.0870113,30.5097902 34.3780113,30.5647902 43.9430113,32.2587902 C34.3780113,33.9547902 28.0870113,34.0097902 28.0240113,34.0107902" id="Fill-5" fill="#950248"/>
+            <path d="M18.8368113,41.8287902 C18.7658113,42.2927902 19.2208113,51.0167902 16.0688113,81.7227902 C15.7588113,84.7527902 15.0518113,89.5057902 15.0518113,89.5057902 C14.8158113,91.0917902 15.2868113,91.8227902 16.0858113,91.9357902 C16.8328113,92.0407902 17.6968113,91.8167902 17.8978113,90.1197902 C17.9818113,89.4077902 18.8518113,79.0267902 19.5618113,59.7307902 C19.9528113,49.1267902 19.7538113,43.4247902 19.0438113,41.8587902 C18.9418113,41.6347902 18.8728113,41.5947902 18.8368113,41.8287902" id="Fill-7" fill="#950248"/>
+            <mask id="mask-6" fill="white">
+                <use xlink:href="#path-5"/>
+            </mask>
+            <g id="Clip-10"/>
+            <path d="M44.4091113,38.2637902 C36.3801113,34.8277902 34.2041113,38.6297902 33.3101113,40.3647902 C28.5671113,52.3027902 36.4431113,94.4747902 37.8181113,97.7117902 C38.1271113,98.4337902 38.6601113,99.3837902 39.8781113,99.0387902 C40.8821113,98.7537902 40.8641113,97.8577902 40.7741113,97.1407902 C40.6361113,96.0397902 40.0821113,94.0317902 40.0701113,93.8787902 C29.5371113,48.0147902 33.6411113,41.9167902 34.7591113,39.8127902 C37.6261113,34.4177902 45.2931113,40.2247902 45.4921113,40.3967902 C45.9591113,40.7957902 46.4211113,40.6857902 46.4711113,40.3617902 C46.6241113,39.3707902 45.5251113,38.7407902 44.4091113,38.2637902" id="Fill-9" fill="#950248" mask="url(#mask-6)"/>
+        </g>
+    </g>
+</svg>
+          <span class="u-screenreader">Sisters of Mercy, Hermanas de la Misercordia</span>
+        </a>
+        <nav class="header-nav">
+          <div class="header-nav-primary-wrap">
+                        <ul class="header-nav-primary">
+              <!-- TOP LEVEL PRIMARY MENU ITEMS -->
+                              <li class="header-nav-primary-item">
+                  <a class="header-nav-primary-item-link Nav-toggle
+                    " 
+                    href="#" 
+                    data-expands-height data-expands=submenu-9
+                    data-icon=chev>
+                    Our Work
+                  </a>
+
+                                      <div class="header-nav-primary-submenu txtr-brush-white" id="submenu-9">
+                      <ul class="header-nav-primary-submenu-list">
+                        <!-- ONE LEVEL DEEP PRIMARY MENU ITEMS -->
+                                                  <li class="header-nav-primary-submenu-item ">
+                            <a class="header-nav-primary-submenu-item-link" href="https://www.sistersofmercy.org/mercy-for-justice/" data-icon="chev">
+                              Mercy for Justice
+                            </a>
+                                                        <ul class="header-nav-primary-subchild-list">
+                              <!-- TWO LEVELS DEEP PRIMARY MENU ITEMS -->
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="/earth">
+                                    Earth
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="/immigration">
+                                    Immigration
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="/nonviolence">
+                                    Nonviolence
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="https://www.sistersofmercy.org/mercy-for-justice/racism/">
+                                    Racism
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="/women">
+                                    Women
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link -italic" href="/resources/">
+                                    Social Justice Resources
+                                  </a>
+                                                              </li>
+                                                          </ul>
+                                                      </li>
+                                                  <li class="header-nav-primary-submenu-item ">
+                            <a class="header-nav-primary-submenu-item-link" href="https://www.sistersofmercy.org/spirituality-and-faith/" data-icon="chev">
+                              Spirituality and Faith
+                            </a>
+                                                        <ul class="header-nav-primary-subchild-list">
+                              <!-- TWO LEVELS DEEP PRIMARY MENU ITEMS -->
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="https://www.sistersofmercy.org/spirituality-and-faith/our-faith-and-values/">
+                                    Our Faith and Values
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="https://www.sistersofmercy.org/spirituality-and-faith/prayers-and-meditation/">
+                                    Prayers and Meditation
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="/spirituality-and-faith/spiritual-direction/">
+                                    Spiritual Direction
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="https://www.sistersofmercy.org/ministries/retreat-and-spiritual-centers/">
+                                    Retreat and Spiritual Centers
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link -italic" href="/request-a-prayer">
+                                    Request a Prayer
+                                  </a>
+                                                              </li>
+                                                          </ul>
+                                                      </li>
+                                                  <li class="header-nav-primary-submenu-item ">
+                            <a class="header-nav-primary-submenu-item-link" href="https://www.sistersofmercy.org/ministries/" data-icon="chev">
+                              Ministries
+                            </a>
+                                                        <ul class="header-nav-primary-subchild-list">
+                              <!-- TWO LEVELS DEEP PRIMARY MENU ITEMS -->
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="https://www.sistersofmercy.org/ministries/education/">
+                                    Education
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="https://www.sistersofmercy.org/ministries/healthcare/">
+                                    Healthcare
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="/pastoral-services">
+                                    Pastoral Services
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="https://www.sistersofmercy.org/ministries/retreat-and-spiritual-centers/">
+                                    Retreat and Spiritual Centers
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="https://www.sistersofmercy.org/ministries/social-services/">
+                                    Social Services
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="https://www.sistersofmercy.org/ministries/mercy-investment-services/">
+                                    Mercy Investment Services
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link -italic" href="https://sistersofmercy.org/stories/?_story_types=ministry-story">
+                                    Ministry Stories
+                                  </a>
+                                                              </li>
+                                                          </ul>
+                                                      </li>
+                                                  <li class="header-nav-primary-submenu-item ">
+                            <a class="header-nav-primary-submenu-item-link" href="https://www.sistersofmercy.org/circle-of-mercy/" data-icon="chev">
+                              Mercy Presence
+                            </a>
+                                                        <ul class="header-nav-primary-subchild-list">
+                              <!-- TWO LEVELS DEEP PRIMARY MENU ITEMS -->
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="https://www.sistersofmercy.org/circle-of-mercy/mercy-international-association/">
+                                    Mercy International Association
+                                  </a>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item ">
+
+                                                                  <a class="header-nav-primary-subchild-item-link " href="/about-us/locations/">
+                                    Mercy Locations
+                                  </a>
+                                                              </li>
+                                                          </ul>
+                                                      </li>
+                                              </ul>
+                    </div>
+                                  </li>
+                              <li class="header-nav-primary-item">
+                  <a class="header-nav-primary-item-link 
+                    " 
+                    href="https://www.sistersofmercy.org/stories/" 
+                    
+                    >
+                    Stories of Mercy
+                  </a>
+
+                                  </li>
+                              <li class="header-nav-primary-item">
+                  <a class="header-nav-primary-item-link Nav-toggle
+                    " 
+                    href="#" 
+                    data-expands-height data-expands=submenu-11
+                    data-icon=chev>
+                    Get Involved
+                  </a>
+
+                                      <div class="header-nav-primary-submenu txtr-brush-white" id="submenu-11">
+                      <ul class="header-nav-primary-submenu-list">
+                        <!-- ONE LEVEL DEEP PRIMARY MENU ITEMS -->
+                                                  <li class="header-nav-primary-submenu-item -solo">
+                            <a class="header-nav-primary-submenu-item-link" href="https://www.sistersofmercy.org/ways-to-get-involved/" data-icon="chev">
+                              Ways to Get Involved
+                            </a>
+                                                        <ul class="header-nav-primary-subchild-list">
+                              <!-- TWO LEVELS DEEP PRIMARY MENU ITEMS -->
+                                                            <li class="header-nav-primary-subchild-item -heading">
+
+                                                                  <p class="header-nav-primary-subchild-item-link c-purple ">
+                                    Take Action
+                                  </p>
+                                  <ul class="header-nav-primary-grandchild-list">
+                                  <!-- THREE LEVELS DEEP PRIMARY MENU ITEMS -->
+                                                                        <li>
+                                      <a class="" href="/mercy-for-justice/action-alerts/">
+                                        Advocate for Social Justice
+                                      </a>
+                                    </li>
+                                                                        <li>
+                                      <a class="" href="/volunteer-with-mercy-corp">
+                                        Mercy Volunteer Corps
+                                      </a>
+                                    </li>
+                                                                        <li>
+                                      <a class="" href="https://secure.etransfer.com/eft/flexblockcode/donation1.cfm?d2org=SOMACCASA&amp;d2tool=donate">
+                                        Support CCASA
+                                      </a>
+                                    </li>
+                                                                        <li>
+                                      <a class="" href="https://www.sistersofmercy.org/ways-to-get-involved/ways-to-give/">
+                                        Ways to Give
+                                      </a>
+                                    </li>
+                                                                      </ul>
+                                                              </li>
+                                                            <li class="header-nav-primary-subchild-item -heading">
+
+                                                                  <p class="header-nav-primary-subchild-item-link c-purple ">
+                                    Join
+                                  </p>
+                                  <ul class="header-nav-primary-grandchild-list">
+                                  <!-- THREE LEVELS DEEP PRIMARY MENU ITEMS -->
+                                                                        <li>
+                                      <a class="" href="/become-a-sister">
+                                        Become a Sister
+                                      </a>
+                                    </li>
+                                                                        <li>
+                                      <a class="" href="/become-a-mercy-associate">
+                                        Become a Mercy Associate
+                                      </a>
+                                    </li>
+                                                                        <li>
+                                      <a class="" href="https://www.sistersofmercy.org/become-a-companions-in-mercy/">
+                                        Become a Companion in Mercy
+                                      </a>
+                                    </li>
+                                                                        <li>
+                                      <a class="" href="/careers">
+                                        Job Opportunities
+                                      </a>
+                                    </li>
+                                                                      </ul>
+                                                              </li>
+                                                          </ul>
+                                                      </li>
+                                              </ul>
+                    </div>
+                                  </li>
+                          </ul>
+                    <a class="btn--berry" href="/donate">donate</a>
+          </div>
+            <div class="header-nav-secondary-wrap">
+              <!-- SECONDARY MENU ITEMS -->
+                            <ul id="menu-secondary-navigation-in-english" class="header-nav-secondary">
+                                  <li id="menu-item-20" class=" ">
+                    <a href="/about-us">About Us</a>
+                  </li>
+                                  <li id="menu-item-21" class=" ">
+                    <a href="/resources">Resources</a>
+                  </li>
+                                  <li id="menu-item-22" class=" ">
+                    <a href="/news">News</a>
+                  </li>
+                                  <li id="menu-item-23" class=" ">
+                    <a href="/events">Events</a>
+                  </li>
+                                  <li id="menu-item-28590" class=" ">
+                    <a href="/contact-us">Contact Us</a>
+                  </li>
+                                  <li id="menu-item-32-en" class="lang-item lang-item-2 lang-item-en current-lang lang-item-first current-menu-item">
+                    <a href="https://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/">English</a>
+                  </li>
+                                  <li id="menu-item-32-es" class="lang-item lang-item-14 lang-item-es ">
+                    <a href="https://www.sistersofmercy.org/es/martin-luther-king-dios-promesas/">Español</a>
+                  </li>
+                              </ul>
+                          
+            <form action="https://www.sistersofmercy.org/" class="header-nav-search u-form">
+              <label for="nav-search-desktop">
+                <span class="u-screenreader">Search term</span>
+              </label>
+              <input class="header-nav-search-input" type="text" name="s" id="nav-search-desktop" placeholder="search">
+              <button class="header-nav-search-button" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 14 14" focusable="false" aria-hidden="true" width="20" height="20">
+    <g stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g transform="translate(-1207.000000, -56.000000)" fill-rule="nonzero">
+            <g transform="translate(1207.000000, 56.000000)">
+                <path d="M9.69209648,5.92268756 C9.69209648,4.8849326 9.32326452,3.99740264 8.58560058,3.26009766 C7.84793664,2.52279269 6.96040668,2.15396072 5.92301068,2.1536015 C4.88561468,2.1532428 3.99808472,2.52207477 3.26042078,3.26009766 C2.52275684,3.99812056 2.15392488,4.88565052 2.15392488,5.92268756 C2.15392488,6.9597246 2.52275684,7.84725457 3.26042078,8.58527746 C3.99808472,9.32330036 4.88561468,9.69213233 5.92301068,9.69177363 C6.96040668,9.69141441 7.84793664,9.32258244 8.58560058,8.58527746 C9.32326452,7.84797249 9.69209648,6.96044252 9.69209648,5.92268756 Z M13.9996231,12.9224183 C13.9996231,13.2138943 13.8930118,13.4662436 13.6797893,13.6794661 C13.4665667,13.8926887 13.2142174,13.9993 12.9227415,13.9993 C12.6197788,13.9993 12.3674295,13.8926887 12.1656937,13.6794661 L9.28018925,10.8020384 C8.27617658,11.4973449 7.15729654,11.8449982 5.92354912,11.8449982 C5.12163125,11.8449982 4.35471203,11.6893888 3.62279146,11.37817 C2.89087089,11.0669512 2.25981824,10.6462495 1.7296335,10.1160647 C1.19944877,9.58588 0.778746998,8.95482735 0.467528199,8.22290678 C0.1563094,7.49098622 0.0007,6.724067 0.0007,5.92214912 C0.0007,5.12023125 0.1563094,4.35331203 0.467528199,3.62139146 C0.778746998,2.88947089 1.19944877,2.25841824 1.7296335,1.7282335 C2.25981824,1.19804877 2.89087089,0.777346998 3.62279146,0.466128199 C4.35471203,0.1549094 5.12163125,-0.0007 5.92354912,-0.0007 C6.725467,-0.0007 7.49238622,0.1549094 8.22430678,0.466128199 C8.95622735,0.777346998 9.58728,1.19804877 10.1174647,1.7282335 C10.6476495,2.25841824 11.0683512,2.88947089 11.37957,3.62139146 C11.6907888,4.35331203 11.8463982,5.12023125 11.8463982,5.92214912 C11.8463982,7.15589654 11.4987449,8.27477658 10.8034384,9.27878925 L13.6889428,12.1642937 C13.896422,12.3717729 14.0001616,12.6241221 14.0001616,12.9213415 L13.9996231,12.9224183 Z"/>
+            </g>
+        </g>
+    </g>
+</svg>
+                <span class="u-screenreader">search sisters of mercy dot org</span>
+              </button>
+            </form>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Mobile Nav Toggle -->
+      <div class="header-nav-toggle">
+        <button type="button" name="button" data-expands="mobile-nav" data-expands-height>
+          <span>menu</span>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 22" style="enable-background:new 0 0 25 22;" xml:space="preserve" focusable="false" aria-hidden="true" width="30" height="26.4" class="header-nav-toggle-icon -open">
+	<g id="Symbols">
+		<g id="menu-icon" fill="#8B0742">
+			<rect id="Rectangle-11" width="25" height="3"/>
+			<rect id="Rectangle-11_1_" y="10" width="25" height="3"/>
+			<rect id="Rectangle-11_2_" y="19" width="25" height="3"/>
+		</g>
+	</g>
+</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 23.4 23.4" style="enable-background:new 0 0 23.4 23.4;" xml:space="preserve" fill="#8B0742" focusable="false" aria-hidden="true" width="30" height="30" class="header-nav-toggle-icon -close">
+	<polygon points="23.4,2.1 21.3,0 11.7,9.6 2.1,0 0,2.1 9.6,11.7 0,21.3 2.1,23.4 11.7,13.8 21.3,23.4 23.4,21.3 13.8,11.7 "/>
+</svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Nav Menu -->
+<div class="mobileNav bg-white" id="mobile-nav">
+  <div class="mobileNav-wrap">
+    <ul class="mobileNav-primary">
+      <!-- TOP LEVEL PRIMARY MENU ITEMS -->
+                                    <li class="mobileNav-primary-item">
+              <a class="mobileNav-primary-item-link" href="#" data-expands="mobile-nav-submenu-9" data-expands-height data-icon="chev">
+                <span>Our Work</span>
+              </a>
+      
+              <ul class="mobileNav-primary-submenu-list" id="mobile-nav-submenu-9">
+                <!-- ONE LEVEL DEEP PRIMARY MENU ITEMS -->
+                                  <li class="mobileNav-primary-submenu-item">
+                    <a class="mobileNav-primary-submenu-item-link" href="https://www.sistersofmercy.org/mercy-for-justice/"  data-icon="chev">
+                      Mercy for Justice
+                    </a>
+
+                                          <ul class="mobileNav-primary-subchild-list">
+                        <!-- TWO LEVELS DEEP PRIMARY MENU ITEMS -->
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="/earth">
+                              Earth
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="/immigration">
+                              Immigration
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="/nonviolence">
+                              Nonviolence
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="https://www.sistersofmercy.org/mercy-for-justice/racism/">
+                              Racism
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="/women">
+                              Women
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link -italic" href="/resources/">
+                              Social Justice Resources
+                            </a>
+                                                  </li>
+                                              </ul>
+                                      </li>
+                                  <li class="mobileNav-primary-submenu-item">
+                    <a class="mobileNav-primary-submenu-item-link" href="https://www.sistersofmercy.org/spirituality-and-faith/"  data-icon="chev">
+                      Spirituality and Faith
+                    </a>
+
+                                          <ul class="mobileNav-primary-subchild-list">
+                        <!-- TWO LEVELS DEEP PRIMARY MENU ITEMS -->
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="https://www.sistersofmercy.org/spirituality-and-faith/our-faith-and-values/">
+                              Our Faith and Values
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="https://www.sistersofmercy.org/spirituality-and-faith/prayers-and-meditation/">
+                              Prayers and Meditation
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="/spirituality-and-faith/spiritual-direction/">
+                              Spiritual Direction
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="https://www.sistersofmercy.org/ministries/retreat-and-spiritual-centers/">
+                              Retreat and Spiritual Centers
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link -italic" href="/request-a-prayer">
+                              Request a Prayer
+                            </a>
+                                                  </li>
+                                              </ul>
+                                      </li>
+                                  <li class="mobileNav-primary-submenu-item">
+                    <a class="mobileNav-primary-submenu-item-link" href="https://www.sistersofmercy.org/ministries/"  data-icon="chev">
+                      Ministries
+                    </a>
+
+                                          <ul class="mobileNav-primary-subchild-list">
+                        <!-- TWO LEVELS DEEP PRIMARY MENU ITEMS -->
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="https://www.sistersofmercy.org/ministries/education/">
+                              Education
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="https://www.sistersofmercy.org/ministries/healthcare/">
+                              Healthcare
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="/pastoral-services">
+                              Pastoral Services
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="https://www.sistersofmercy.org/ministries/retreat-and-spiritual-centers/">
+                              Retreat and Spiritual Centers
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="https://www.sistersofmercy.org/ministries/social-services/">
+                              Social Services
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="https://www.sistersofmercy.org/ministries/mercy-investment-services/">
+                              Mercy Investment Services
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link -italic" href="https://sistersofmercy.org/stories/?_story_types=ministry-story">
+                              Ministry Stories
+                            </a>
+                                                  </li>
+                                              </ul>
+                                      </li>
+                                  <li class="mobileNav-primary-submenu-item">
+                    <a class="mobileNav-primary-submenu-item-link" href="https://www.sistersofmercy.org/circle-of-mercy/"  data-icon="chev">
+                      Mercy Presence
+                    </a>
+
+                                          <ul class="mobileNav-primary-subchild-list">
+                        <!-- TWO LEVELS DEEP PRIMARY MENU ITEMS -->
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="https://www.sistersofmercy.org/circle-of-mercy/mercy-international-association/">
+                              Mercy International Association
+                            </a>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item ">
+
+                                                      <a class="mobileNav-primary-subchild-item-link " href="/about-us/locations/">
+                              Mercy Locations
+                            </a>
+                                                  </li>
+                                              </ul>
+                                      </li>
+                              </ul>
+            </li>
+                                        <li class="mobileNav-primary-item">
+              <a class="mobileNav-primary-item-link" href="https://www.sistersofmercy.org/stories/">
+                Stories of Mercy
+              </a>
+            </li>
+                                        <li class="mobileNav-primary-item">
+              <a class="mobileNav-primary-item-link" href="#" data-expands="mobile-nav-submenu-11" data-expands-height data-icon="chev">
+                <span>Get Involved</span>
+              </a>
+      
+              <ul class="mobileNav-primary-submenu-list" id="mobile-nav-submenu-11">
+                <!-- ONE LEVEL DEEP PRIMARY MENU ITEMS -->
+                                  <li class="mobileNav-primary-submenu-item">
+                    <a class="mobileNav-primary-submenu-item-link" href="https://www.sistersofmercy.org/ways-to-get-involved/"  data-icon="chev">
+                      Ways to Get Involved
+                    </a>
+
+                                          <ul class="mobileNav-primary-subchild-list">
+                        <!-- TWO LEVELS DEEP PRIMARY MENU ITEMS -->
+                                                <li class="mobileNav-primary-subchild-item -heading">
+
+                                                      <p class="mobileNav-primary-subchild-item-link c-purple ">Take Action</p>
+                            <ul class="mobileNav-primary-grandchild-list">
+                              <!-- THREE LEVELS DEEP PRIMARY MENU ITEMS -->
+                                                            <li>
+                                <a class="" href="/mercy-for-justice/action-alerts/">
+                                  Advocate for Social Justice
+                                </a>
+                              </li>
+                                                            <li>
+                                <a class="" href="/volunteer-with-mercy-corp">
+                                  Mercy Volunteer Corps
+                                </a>
+                              </li>
+                                                            <li>
+                                <a class="" href="https://secure.etransfer.com/eft/flexblockcode/donation1.cfm?d2org=SOMACCASA&amp;d2tool=donate">
+                                  Support CCASA
+                                </a>
+                              </li>
+                                                            <li>
+                                <a class="" href="https://www.sistersofmercy.org/ways-to-get-involved/ways-to-give/">
+                                  Ways to Give
+                                </a>
+                              </li>
+                                                          </ul>
+                                                  </li>
+                                                <li class="mobileNav-primary-subchild-item -heading">
+
+                                                      <p class="mobileNav-primary-subchild-item-link c-purple ">Join</p>
+                            <ul class="mobileNav-primary-grandchild-list">
+                              <!-- THREE LEVELS DEEP PRIMARY MENU ITEMS -->
+                                                            <li>
+                                <a class="" href="/become-a-sister">
+                                  Become a Sister
+                                </a>
+                              </li>
+                                                            <li>
+                                <a class="" href="/become-a-mercy-associate">
+                                  Become a Mercy Associate
+                                </a>
+                              </li>
+                                                            <li>
+                                <a class="" href="https://www.sistersofmercy.org/become-a-companions-in-mercy/">
+                                  Become a Companion in Mercy
+                                </a>
+                              </li>
+                                                            <li>
+                                <a class="" href="/careers">
+                                  Job Opportunities
+                                </a>
+                              </li>
+                                                          </ul>
+                                                  </li>
+                                              </ul>
+                                      </li>
+                              </ul>
+            </li>
+                            </ul>
+
+    
+    <!-- SECONDARY MENU ITEMS -->
+    <div class="mobileNav-secondary">
+              <div class="menu-secondary-navigation-in-english-container"><ul id="menu-secondary-navigation-in-english" class="menu"><li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="/about-us">About Us</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21"><a href="/resources">Resources</a></li>
+<li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22"><a href="/news">News</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23"><a href="/events">Events</a></li>
+<li id="menu-item-28590" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28590"><a href="/contact-us">Contact Us</a></li>
+<li id="menu-item-32-en" class="lang-item lang-item-2 lang-item-en current-lang lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-32-en"><a href="https://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/" hreflang="en-US" lang="en-US">English</a></li>
+<li id="menu-item-32-es" class="lang-item lang-item-14 lang-item-es menu-item menu-item-type-custom menu-item-object-custom menu-item-32-es"><a href="https://www.sistersofmercy.org/es/martin-luther-king-dios-promesas/" hreflang="es-MX" lang="es-MX">Español</a></li>
+</ul></div>
+          </div>
+
+    <form action="https://www.sistersofmercy.org/" class="header-nav-search u-form">
+      <label for="nav-search-mobile">
+        <span class="u-screenreader">search term</span>
+      </label>
+      <input class="header-nav-search-input" type="text" name="s" id="nav-search-mobile" placeholder="search">
+      <button class="header-nav-search-button" type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 14 14" focusable="false" aria-hidden="true" width="20" height="20">
+    <g stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g transform="translate(-1207.000000, -56.000000)" fill-rule="nonzero">
+            <g transform="translate(1207.000000, 56.000000)">
+                <path d="M9.69209648,5.92268756 C9.69209648,4.8849326 9.32326452,3.99740264 8.58560058,3.26009766 C7.84793664,2.52279269 6.96040668,2.15396072 5.92301068,2.1536015 C4.88561468,2.1532428 3.99808472,2.52207477 3.26042078,3.26009766 C2.52275684,3.99812056 2.15392488,4.88565052 2.15392488,5.92268756 C2.15392488,6.9597246 2.52275684,7.84725457 3.26042078,8.58527746 C3.99808472,9.32330036 4.88561468,9.69213233 5.92301068,9.69177363 C6.96040668,9.69141441 7.84793664,9.32258244 8.58560058,8.58527746 C9.32326452,7.84797249 9.69209648,6.96044252 9.69209648,5.92268756 Z M13.9996231,12.9224183 C13.9996231,13.2138943 13.8930118,13.4662436 13.6797893,13.6794661 C13.4665667,13.8926887 13.2142174,13.9993 12.9227415,13.9993 C12.6197788,13.9993 12.3674295,13.8926887 12.1656937,13.6794661 L9.28018925,10.8020384 C8.27617658,11.4973449 7.15729654,11.8449982 5.92354912,11.8449982 C5.12163125,11.8449982 4.35471203,11.6893888 3.62279146,11.37817 C2.89087089,11.0669512 2.25981824,10.6462495 1.7296335,10.1160647 C1.19944877,9.58588 0.778746998,8.95482735 0.467528199,8.22290678 C0.1563094,7.49098622 0.0007,6.724067 0.0007,5.92214912 C0.0007,5.12023125 0.1563094,4.35331203 0.467528199,3.62139146 C0.778746998,2.88947089 1.19944877,2.25841824 1.7296335,1.7282335 C2.25981824,1.19804877 2.89087089,0.777346998 3.62279146,0.466128199 C4.35471203,0.1549094 5.12163125,-0.0007 5.92354912,-0.0007 C6.725467,-0.0007 7.49238622,0.1549094 8.22430678,0.466128199 C8.95622735,0.777346998 9.58728,1.19804877 10.1174647,1.7282335 C10.6476495,2.25841824 11.0683512,2.88947089 11.37957,3.62139146 C11.6907888,4.35331203 11.8463982,5.12023125 11.8463982,5.92214912 C11.8463982,7.15589654 11.4987449,8.27477658 10.8034384,9.27878925 L13.6889428,12.1642937 C13.896422,12.3717729 14.0001616,12.6241221 14.0001616,12.9213415 L13.9996231,12.9224183 Z"/>
+            </g>
+        </g>
+    </g>
+</svg>
+        <span class="u-screenreader">search sisters of mercy dot org</span>
+      </button>
+    </form>
+  </div>
+</div>
+<a class="mobileNav-donate bg-dark-berry" href="/donate">donate</a>
+
+      </header>
+      <div class="wrap container" role="document">
+        <div class="content">
+          <main class="main" id="main">
+                   <article class="post-23325 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized social_justice_tag-nonviolence social_justice_tag-racism story_type-education">
+  <header class="article-header -thumbnail -large">
+    <div class="l-padding">
+      <div class="article-header-wrap l-wrap--narrow">
+        <div class="article-header-inner">
+          <div class="article-header-content">
+                          <a class="f-breadcrumb" href="/stories">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18.7 10.9" style="enable-background:new 0 0 18.7 10.9;" xml:space="preserve" focusable="false" aria-hidden="true" height="14" width="14"><g><path d="M8.9,10.7L0.2,2C0.1,1.9,0,1.7,0,1.6s0.1-0.3,0.2-0.4l0.9-0.9C1.2,0.1,1.4,0,1.5,0c0.1,0,0.3,0.1,0.4,0.2l7.4,7.4l7.4-7.4C16.8,0.1,17,0,17.1,0s0.3,0.1,0.4,0.2l0.9,0.9c0.2,0.1,0.3,0.3,0.3,0.5S18.6,1.9,18.5,2l-8.7,8.7c-0.1,0.1-0.3,0.2-0.4,0.2S9,10.8,8.9,10.7z"/></g></svg>
+                stories
+              </a>
+                        <h1 class="article-title">Standing on God’s Promises: Dr. Martin Luther King Jr.’s Legacy and Hope for the Future</h1>
+                          <div class="article-meta">
+                <time class="f-meta" datetime="2021-02-18T00:00:00+00:00">February 18, 2021</time>
+                </div>
+                      </div>
+
+                      <div class="article-thumbnail-wrap -desktop">
+              <div class="article-thumbnail" style="background-image: url('https://www.sistersofmercy.org/wp-content/uploads/fly-images/23326/carrington-wash-mlk-winner-scaled-880x880-c.jpg')"></div>
+              <div class="frame-brush -large" style="background-image: url('https://www.sistersofmercy.org/wp-content/themes/sage/dist/images/textures/frame-brush-large.png')"></div> 
+              <div class="frame-brush -small" style="background-image: url('https://www.sistersofmercy.org/wp-content/themes/sage/dist/images/textures/frame-brush-small.png')"></div> 
+              
+                          </div>
+            
+            <div class="article-thumbnail-wrap -mobile">
+              <div class="article-thumbnail" style="background-image: url('https://www.sistersofmercy.org/wp-content/uploads/fly-images/23326/carrington-wash-mlk-winner-scaled-640x360-c.jpg')"></div>
+            </div>
+              
+                      
+                      <div class="article-utilities">
+                              <div class="article-utility-group u-mb2">
+                  <h6>languages</h6>
+                  <ul class="article-languageSwitcher u-mt1">
+                    	<li class="lang-item lang-item-2 lang-item-en current-lang lang-item-first"><a lang="en-US" hreflang="en-US" href="https://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/">English</a></li>
+	<li class="lang-item lang-item-14 lang-item-es"><a lang="es-MX" hreflang="es-MX" href="https://www.sistersofmercy.org/es/martin-luther-king-dios-promesas/">Español</a></li>
+
+                  </ul>
+                </div>
+                            <div class="article-utility-group u-mb2">
+                <h6>share</h6>
+                <div class="article-utility-items u-mt1">
+                  <a class="btn--outline-berry" href="https://www.facebook.com/sharer/sharer.php?u=https://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/">  
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 82 84" focusable="false" aria-hidden="true" height="20" width="20">
+    <title>facebook-brands-4 2</title>
+    <g stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g fill-rule="nonzero">
+            <g transform="translate(0.000000, 0.149660)">
+                <path d="M82,41.2494929 C82,18.4624746 63.6491935,0 41,0 C18.3508065,0 0,18.4624746 0,41.2494929 C0,61.8376471 14.9931048,78.9029615 34.59375,82 L34.59375,53.1735903 L24.1784274,53.1735903 L24.1784274,41.2494929 L34.59375,41.2494929 L34.59375,32.1612982 C34.59375,21.8239757 40.7106855,16.1139148 50.0795161,16.1139148 C54.566371,16.1139148 59.2582258,16.9189452 59.2582258,16.9189452 L59.2582258,27.0649899 L54.0869355,27.0649899 C48.995,27.0649899 47.40625,30.2451927 47.40625,33.5068966 L47.40625,41.2494929 L58.7771371,41.2494929 L56.9585887,53.1735903 L47.40625,53.1735903 L47.40625,82 C67.0068952,78.9029615 82,61.8376471 82,41.2494929 Z"/>
+            </g>
+        </g>
+    </g>
+</svg>
+                    <span class="u-screenreader">Share this on Facebook</span>
+                  </a>  
+                  <a class="btn--outline-berry" href="https://twitter.com/intent/tweet?text=Standing on God’s Promises: Dr. Martin Luther King Jr.’s Legacy and Hope for the Future&amp;url=https://www.sistersofmercy.org/dr-martin-luther-king-gods-promises/">  
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1792 1792" focusable="false" aria-hidden="true"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg>
+                    <span class="u-screenreader">Share this on Twitter</span>
+                  </a>
+                </div>
+              </div>
+                            <div class="article-utility-group u-mb2">
+                <h6>topics</h6>
+                <div class="article-utility-items u-mt1">
+                                        <a class="btn--outline-berry" href="/?s= &amp;_social_justice_tags=nonviolence">Nonviolence</a>
+                                        <a class="btn--outline-berry" href="/?s= &amp;_social_justice_tags=racism">Racism</a>
+                                    </div>
+              </div>
+                          </div>
+                  </div>
+      </div>
+    </div>
+  </header>
+  <div class="l-padding">
+    <div class="l-wrap--narrow">
+      <div class="u-richtext f-scale-body">
+        
+<blockquote class="wp-block-quote"><p><em><strong>In February 2021, </strong></em><a href="https://mhsmi.org/" target="_blank" rel="noreferrer noopener"><strong><em>Mercy High School</em></strong></a><em><strong> in Farmington Hills, Michigan, held its first Annual MLK Jr. Writing Contest in honor of Black History Month. Students were asked to respond to the essential question,&nbsp;“Where do you stand in times of challenge and controversy?”&nbsp;This question was inspired by Dr. King’s own words:&nbsp;“The ultimate measure of a [person] is not where [they] stand in moments of comfort and convenience but where [they] stand at times of challenge and controversy.” Two students were chosen as winners. </strong></em></p></blockquote>
+
+
+
+<p><em>By Carrington Wash, Class of 2024</em></p>
+
+
+
+<p>Dr. Martin Luther King Jr. was an African American minister and a civil rights activist who advocated for justice and equality for all people. Dr. King wanted the citizens of our nation and all over the world to understand the power and beauty of social equality for all people. A man of God, Dr. King promoted his vision of equality through peace and <a href="https://www.sistersofmercy.org/what-we-do/social-justice-advocacy/non-violence/" target="_blank" rel="noreferrer noopener">nonviolence</a>. A rising leader, Dr. King used his oratorical skills to organize and unify people of all races, religions and socioeconomic backgrounds to combat racism and social inequality.</p>
+
+
+
+<p>As I reflect on Dr. King’s words, I am inspired and know the power of leadership through God’s word. My faith in God and His word have allowed me to be resilient and find peace during challenges.</p>
+
+
+
+<p>As a student, Dr. King’s words inspire me through the challenges of COVID-19 and the transition to virtual learning at home. Online learning is a new journey for me. I knew how to be a successful student at school, but how would this look full time at home? During challenging times, I stand on God’s promises to see me through. One of my favorite Bible verses is Philippians 4:13, “I can do all things through Him who strengthens me.” Like Dr. King’s word, God’s word gives me the power to believe in myself and therefore see challenges as new opportunities to learn and grow. My transition to online learning has allowed me to become more knowledgeable regarding technology and empowered me as a student.</p>
+
+
+
+<span id="more-23325"></span>
+
+
+
+<p>My moral identity continues to be defined as I grow and meet more people in a variety of situations. My values of honesty, kindness and fairness were instilled in me as a young child, and I continue to develop these characteristics as I grow as a Christian. Unfortunately, I have experienced situations where people have been in church and school and have not been kind to one another. My moral identity has often led me to find peace by myself or with a small group of people, because I will not be influenced by challenges and negativity. I stand on God’s promises of kindness and peace. Another one of my favorite Bible verses is Psalm 34:14, “Turn away from evil and do good; seek peace and pursue it.” Like Dr. Martin Luther King Jr., an advocate for peace and kindness, I always strive to be kind to people and seek peace.</p>
+
+
+
+<p>During the summer of 2020, social injustice became a wound that would not heal. There were marches and protests that occurred across the country to combat the evil ways of racism. Often, as I watched the news, I thought I was a teenager in 1960, but I was actually trying to make sense of my reality in 2020. Once again, I had to stand on God’s promises of peace and comfort to see me through. I found joy talking to my maternal grandmother, an African-American woman who was raised in the segregated South. My grandmother gave me wisdom, through shared experiences, to understand how God’s hope will see one through situations that are unjust and unfair. My grandmother shared her favorite Bible verse with me, Romans 15:13, “May the God of hope fill you with all joy and peace as you trust in Him, so that you may overflow with hope by the power of the Holy Spirit.” My hope through God’s Word gives me peace and understanding just like Dr. Martin Luther King Jr.’s words do.</p>
+
+
+
+<p>Like Dr. Martin Luther King Jr., I stand for peace, hope and kindness during challenging times and controversy. Ultimately, God’s word is the key that gives me the strength to walk with God and leaders like Dr. Martin Luther King Jr.</p>
+      </div>
+    </div>
+  </div>
+</article>
+            </main>
+                  </div>
+      </div>
+            <footer class="footer bg-dark-berry txtr-brush-dark-berry-top u-pb4 c-off-white" id="footer">
+  <div class="footer-texture" style="background-image: url('https://www.sistersofmercy.org/wp-content/themes/sage/dist/images/textures/footer-bg.jpg')"></div> 
+  <div class="l-padding">
+    <div class="footer-wrap l-wrap--wide">
+      <!-- Upper half of footer -->
+      <div class="footer-upper">
+        <!-- Signup Section -->
+        <div class="footer-upper-section">
+          <p class="footer-heading">Stay Connected. Sign up for updates.</p>
+          <form class="footer-signup u-form validate" action="https://sistersofmercy.us1.list-manage.com/subscribe/post?u=5ac3afa50d3a416d91294d1bc&amp;id=37cb6f3679" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+            <label class="u-screenreader" for="EMAIL">your email</label>
+            <input class="footer-signup-field" id="footer_email" name="EMAIL" type="email" placeholder="example@email.com">
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5ac3afa50d3a416d91294d1bc_37cb6f3679" tabindex="-1" value=""></div>
+            <input class="btn--outline" type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe">
+          </form>
+        </div>
+        <!-- FAQ Section -->
+        <div class="footer-upper-section">
+          <div class="border-brush" style="background-image: url('https://www.sistersofmercy.org/wp-content/themes/sage/dist/images/textures/border-brush.png')"></div> 
+          <p class="footer-heading-faq c-gold">Frequently Asked Questions</p>
+
+                                  <a class="footer-upper-section-link" href="https://www.sistersofmercy.org/faq/do-i-have-to-be-catholic-to-become-a-sister-of-mercy/" data-icon="chev">Do I have to be Catholic to become a Sister of Mercy?</a>
+                        <a class="footer-upper-section-link" href="https://www.sistersofmercy.org/faq/why-are-you-called-sisters-of-mercy/" data-icon="chev">Why are you called Sisters of Mercy?</a>
+                                <a class="btn--outline" href="/about-us/faqs">See all FAQs</a>
+        </div>
+      </div>
+
+      <!-- Lower half of footer -->
+      <div class="footer-lower">
+        <!-- Social link/chat button Section for mobile -->
+        <div class="footer-lower-section -mobile">
+          <div class="footer-social">
+            <a class="social-link" href="https://twitter.com/sistersofmercy">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1792 1792" focusable="false" aria-hidden="true"><path d="M1664 896q0 209-103 385.5t-279.5 279.5-385.5 103q-111 0-218-32 59-93 78-164 9-34 54-211 20 39 73 67.5t114 28.5q121 0 216-68.5t147-188.5 52-270q0-114-59.5-214t-172.5-163-255-63q-105 0-196 29t-154.5 77-109 110.5-67 129.5-21.5 134q0 104 40 183t117 111q30 12 38-20 2-7 8-31t8-30q6-23-11-43-51-61-51-151 0-151 104.5-259.5t273.5-108.5q151 0 235.5 82t84.5 213q0 170-68.5 289t-175.5 119q-61 0-98-43.5t-23-104.5q8-35 26.5-93.5t30-103 11.5-75.5q0-50-27-83t-77-33q-62 0-105 57t-43 142q0 73 25 122l-99 418q-17 70-13 177-206-91-333-281t-127-423q0-209 103-385.5t279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/></svg>
+  <span class="u-screenreader">Share Sisters of Mercy on Pinterest</span>
+</a>
+<a class="social-link" href="https://instagram.com/mercysisters/">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1792 1792" focusable="false" aria-hidden="true"><path d="M1152 896q0-106-75-181t-181-75-181 75-75 181 75 181 181 75 181-75 75-181zm138 0q0 164-115 279t-279 115-279-115-115-279 115-279 279-115 279 115 115 279zm108-410q0 38-27 65t-65 27-65-27-27-65 27-65 65-27 65 27 27 65zm-502-220q-7 0-76.5-.5t-105.5 0-96.5 3-103 10-71.5 18.5q-50 20-88 58t-58 88q-11 29-18.5 71.5t-10 103-3 96.5 0 105.5.5 76.5-.5 76.5 0 105.5 3 96.5 10 103 18.5 71.5q20 50 58 88t88 58q29 11 71.5 18.5t103 10 96.5 3 105.5 0 76.5-.5 76.5.5 105.5 0 96.5-3 103-10 71.5-18.5q50-20 88-58t58-88q11-29 18.5-71.5t10-103 3-96.5 0-105.5-.5-76.5.5-76.5 0-105.5-3-96.5-10-103-18.5-71.5q-20-50-58-88t-88-58q-29-11-71.5-18.5t-103-10-96.5-3-105.5 0-76.5.5zm768 630q0 229-5 317-10 208-124 322t-322 124q-88 5-317 5t-317-5q-208-10-322-124t-124-322q-5-88-5-317t5-317q10-208 124-322t322-124q88-5 317-5t317 5q208 10 322 124t124 322q5 88 5 317z"/></svg>
+  <span class="u-screenreader">Visit Sisters of Mercy on Instagram</span>
+</a>
+<a class="social-link" href="https://twitter.com/sistersofmercy">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1792 1792" focusable="false" aria-hidden="true"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg>
+  <span class="u-screenreader">Visit Sisters of Mercy on Twitter</span>
+</a>
+<a class="social-link" href="https://www.facebook.com/MercySisters">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 82 84" focusable="false" aria-hidden="true" width="26" height="26.634146341463">
+    <title>facebook-brands-4 2</title>
+    <g stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g fill-rule="nonzero">
+            <g transform="translate(0.000000, 0.149660)">
+                <path d="M82,41.2494929 C82,18.4624746 63.6491935,0 41,0 C18.3508065,0 0,18.4624746 0,41.2494929 C0,61.8376471 14.9931048,78.9029615 34.59375,82 L34.59375,53.1735903 L24.1784274,53.1735903 L24.1784274,41.2494929 L34.59375,41.2494929 L34.59375,32.1612982 C34.59375,21.8239757 40.7106855,16.1139148 50.0795161,16.1139148 C54.566371,16.1139148 59.2582258,16.9189452 59.2582258,16.9189452 L59.2582258,27.0649899 L54.0869355,27.0649899 C48.995,27.0649899 47.40625,30.2451927 47.40625,33.5068966 L47.40625,41.2494929 L58.7771371,41.2494929 L56.9585887,53.1735903 L47.40625,53.1735903 L47.40625,82 C67.0068952,78.9029615 82,61.8376471 82,41.2494929 Z"/>
+            </g>
+        </g>
+    </g>
+</svg>
+  <span class="u-screenreader">Visit Sisters of Mercy on Facebook</span>
+</a>
+<a class="social-link" href="https://www.youtube.com/user/TheMercySisters">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" focusable="false" aria-hidden="true" width="32" height="28.444444444444"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+  <span class="u-screenreader">Visit Sisters of Mercy on YouTube</span>
+</a>          </div>
+          <div class="footer-chat">
+            <div data-id="TPCFv6TH_Mn" class="footer-chat-button-mobile livechat_button"><a href="https://www.livechat.com/utm-builder/?utm_source=chat_button&utm_medium=referral&utm_campaign=lc_12786621">UTM Builder</a></div>
+          </div>
+        </div>
+        <!-- Footer Navigation Section -->
+        <div class="footer-lower-section -nav">
+                                      <a class="footer-lower-section-link" href="https://sistersofmercy.org/about-us/" data-icon="chev">About Us</a>
+                            <a class="footer-lower-section-link" href="https://sistersofmercy.org/ways-to-get-involved/become-a-sister/" data-icon="chev">Become a Sister</a>
+                            <a class="footer-lower-section-link" href="https://sistersofmercy.org/careers/" data-icon="chev">Careers</a>
+                            <a class="footer-lower-section-link" href="https://sistersofmercy.org/contact-us/" data-icon="chev">Contact Us</a>
+                            <a class="footer-lower-section-link" href="https://sistersofmercy.org/news/?_news_types=press-release" data-icon="chev">Press Resources</a>
+                            <a class="footer-lower-section-link" href="https://sistersofmercy.org/about-us/locations/" data-icon="chev">Our Location</a>
+                              </div>
+        <!-- Organization Address and phone -->
+        <div class="footer-lower-section">
+          <p>Sisters of Mercy of the Americas</p>
+          <p>8403 Colesville Road, Suite 400<br />
+Silver Spring, MD 20910</p>
+          <p class="footer-phone">301.587.0423</p>
+        </div>
+        <!-- Social link/chat button Section for desktop -->
+        <div class="footer-lower-section -desktop">
+          <div class="footer-social">
+            <a class="social-link" href="https://twitter.com/sistersofmercy">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1792 1792" focusable="false" aria-hidden="true"><path d="M1664 896q0 209-103 385.5t-279.5 279.5-385.5 103q-111 0-218-32 59-93 78-164 9-34 54-211 20 39 73 67.5t114 28.5q121 0 216-68.5t147-188.5 52-270q0-114-59.5-214t-172.5-163-255-63q-105 0-196 29t-154.5 77-109 110.5-67 129.5-21.5 134q0 104 40 183t117 111q30 12 38-20 2-7 8-31t8-30q6-23-11-43-51-61-51-151 0-151 104.5-259.5t273.5-108.5q151 0 235.5 82t84.5 213q0 170-68.5 289t-175.5 119q-61 0-98-43.5t-23-104.5q8-35 26.5-93.5t30-103 11.5-75.5q0-50-27-83t-77-33q-62 0-105 57t-43 142q0 73 25 122l-99 418q-17 70-13 177-206-91-333-281t-127-423q0-209 103-385.5t279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/></svg>
+  <span class="u-screenreader">Share Sisters of Mercy on Pinterest</span>
+</a>
+<a class="social-link" href="https://instagram.com/mercysisters/">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1792 1792" focusable="false" aria-hidden="true"><path d="M1152 896q0-106-75-181t-181-75-181 75-75 181 75 181 181 75 181-75 75-181zm138 0q0 164-115 279t-279 115-279-115-115-279 115-279 279-115 279 115 115 279zm108-410q0 38-27 65t-65 27-65-27-27-65 27-65 65-27 65 27 27 65zm-502-220q-7 0-76.5-.5t-105.5 0-96.5 3-103 10-71.5 18.5q-50 20-88 58t-58 88q-11 29-18.5 71.5t-10 103-3 96.5 0 105.5.5 76.5-.5 76.5 0 105.5 3 96.5 10 103 18.5 71.5q20 50 58 88t88 58q29 11 71.5 18.5t103 10 96.5 3 105.5 0 76.5-.5 76.5.5 105.5 0 96.5-3 103-10 71.5-18.5q50-20 88-58t58-88q11-29 18.5-71.5t10-103 3-96.5 0-105.5-.5-76.5.5-76.5 0-105.5-3-96.5-10-103-18.5-71.5q-20-50-58-88t-88-58q-29-11-71.5-18.5t-103-10-96.5-3-105.5 0-76.5.5zm768 630q0 229-5 317-10 208-124 322t-322 124q-88 5-317 5t-317-5q-208-10-322-124t-124-322q-5-88-5-317t5-317q10-208 124-322t322-124q88-5 317-5t317 5q208 10 322 124t124 322q5 88 5 317z"/></svg>
+  <span class="u-screenreader">Visit Sisters of Mercy on Instagram</span>
+</a>
+<a class="social-link" href="https://twitter.com/sistersofmercy">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1792 1792" focusable="false" aria-hidden="true"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg>
+  <span class="u-screenreader">Visit Sisters of Mercy on Twitter</span>
+</a>
+<a class="social-link" href="https://www.facebook.com/MercySisters">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 82 84" focusable="false" aria-hidden="true" width="26" height="26.634146341463">
+    <title>facebook-brands-4 2</title>
+    <g stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g fill-rule="nonzero">
+            <g transform="translate(0.000000, 0.149660)">
+                <path d="M82,41.2494929 C82,18.4624746 63.6491935,0 41,0 C18.3508065,0 0,18.4624746 0,41.2494929 C0,61.8376471 14.9931048,78.9029615 34.59375,82 L34.59375,53.1735903 L24.1784274,53.1735903 L24.1784274,41.2494929 L34.59375,41.2494929 L34.59375,32.1612982 C34.59375,21.8239757 40.7106855,16.1139148 50.0795161,16.1139148 C54.566371,16.1139148 59.2582258,16.9189452 59.2582258,16.9189452 L59.2582258,27.0649899 L54.0869355,27.0649899 C48.995,27.0649899 47.40625,30.2451927 47.40625,33.5068966 L47.40625,41.2494929 L58.7771371,41.2494929 L56.9585887,53.1735903 L47.40625,53.1735903 L47.40625,82 C67.0068952,78.9029615 82,61.8376471 82,41.2494929 Z"/>
+            </g>
+        </g>
+    </g>
+</svg>
+  <span class="u-screenreader">Visit Sisters of Mercy on Facebook</span>
+</a>
+<a class="social-link" href="https://www.youtube.com/user/TheMercySisters">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" focusable="false" aria-hidden="true" width="32" height="28.444444444444"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+  <span class="u-screenreader">Visit Sisters of Mercy on YouTube</span>
+</a>          </div>
+          <div class="footer-chat">
+            <div data-id="TPCFv6TH_Mn" class="footer-chat-button livechat_button"><a href="https://www.livechat.com/utm-builder/?utm_source=chat_button&utm_medium=referral&utm_campaign=lc_12786621">UTM Builder</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- Legal links/text -->
+      <div class="footer-legal">
+                                                    <a class="footer-legal-item" href="https://www.sistersofmercy.org/sitemap_index.xml">Sitemap</a>
+                                                        <a class="footer-legal-item" href="https://www.sistersofmercy.org/privacy-policy">Privacy Policy</a>
+                                                        <p class="footer-legal-item">© 2021 Sisters of Mercy of the Americas</p>
+                                          </div>
+    </div>
+  </div>
+</footer>
+      <script type='text/javascript' src='https://www.sistersofmercy.org/wp-content/themes/sage/dist/scripts/main.js' id='sage/main.js-js'></script>
+<script type='text/javascript' src='https://www.sistersofmercy.org/wp/wp-includes/js/wp-embed.min.js?ver=5.7.1' id='wp-embed-js'></script>
+      
+      <!-- Start of LiveChat (www.livechatinc.com) code --> <script type="text/javascript">   window.__lc = window.__lc || {};   window.__lc.license = 12786621;   ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)};   var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){   i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},   get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");   return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){   var n=t.createElement("script");   n.async=!0,n.type="text/javascript",   n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};   !n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice)) </script> <noscript> <a href="https://www.livechatinc.com/chat-with/12786621/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a> </noscript> <!-- End of LiveChat code -->
+    </div>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-50e73d7670616162726","applicationID":"1406056197","transactionName":"b1MAMkIDDEcAB0QKDlYZIwVECw1aTg1eBwRA","queueTime":0,"applicationTime":185,"atts":"QxQDRAoZH0k=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

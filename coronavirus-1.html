@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html  lang="en-US">
+<head id="Head">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KN77PD9');</script>
+<!-- End Google Tag Manager -->
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"gov-bam.nr-data.net","errorBeacon":"gov-bam.nr-data.net","licenseKey":"885419a33c","applicationID":"2374866","transactionName":"MVBUMkVWX0YEVEBdDAgadzVnGFVQA1ZBWBdIVEUWTw==","queueTime":0,"applicationTime":284,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["gov-bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"UA8AWVRTGwEDU1VaAQc=",licenseKey:"885419a33c",applicationID:"2374866"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(28),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(29),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(10),t(9),"addEventListener"in window&&t(6),c.xhrWrappable&&t(11),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function i(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+l])try{window.performance[h](m,i,!1)}catch(t){}else try{window.performance[h]("webkit"+m,i,!1)}catch(t){}}function o(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(10),f=t(9),u=t(5),d=t(19),l="learResourceTimings",p="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",S=t("loader");if(!S.disabled){S.features.stn=!0,t(8),"addEventListener"in window&&t(6);var O=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=S.now())}),a.on(b,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,S.now()])}),c.on(x,function(t,e,n){this.bstStart=S.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),this.bstType])}),f.on(x,function(){this.bstStart=S.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=S.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+l]?window.performance[p](m,i,d(!1)):window.performance[p]("webkit"+m,i,d(!1))),document[p]("scroll",o,d(!1)),document[p]("keypress",o,d(!1)),document[p]("click",o,d(!1))}}},{}],5:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(29),a=t(28);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],10:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],11:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function o(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,S.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=t(19),p=NREUM.o,h=p.XHR,m=p.MO,v=p.PR,w=p.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,i,l(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,S=document.createTextNode(R);new m(a).observe(S,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],12:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&l())&&(w.traceContextParentHeader=i(h,m),w.traceContextStateHeader=o(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(25),h=t(14);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],13:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this))}}function i(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(14),f=t(12).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(20),m=t(18),v=t(15),w=t(19),g=NREUM.o.REQ,y=window.XMLHttpRequest;a.features.xhr=!0,t(11),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof y&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof y&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof y&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;"string"==typeof o?n=o:"object"==typeof o&&o instanceof g?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n);var s=(""+(o&&o instanceof g&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}),u.on("fetch-done",function(t,e){this.endTime=a.now(),this.params||(this.params={}),this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],14:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],15:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(18);e.exports=r},{}],16:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),o(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(28),s=t(29),c=t("ee").get("tracer"),f=t("loader"),u=t(21),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var l=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(l,function(t,e){d[e]=i(p,e,!0,"api")}),d.addPageAction=i(p,"addPageAction",!0),d.setCurrentRouteName=i(p,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),o("err",[t,f.now(),!1,e])}},{}],17:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],20:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[s,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:i}},{}],22:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(30);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],23:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],24:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(c&&c<r.startTime)return;l("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){if(t instanceof v&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,l("timing",["fi",e,n])}}function s(t){"hidden"===t&&(c=p.now(),l("pageHide",[c]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,f,u,d,l=t("handle"),p=t("loader"),h=t(27),m=t(19),v=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(w){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(w){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(w){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(t){document.addEventListener(t,a,m(!1))})}h(s)}},{}],25:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],26:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],27:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(19);e.exports=r;var o,a,s;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],28:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],29:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],30:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return l[t]=l[t]||i(n)}function w(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(28),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=O.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(R,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+O.offset],null,"api"),s("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=h+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){s("mark",["domContent",a()+O.offset],null,"api")}var a=t(22),s=t("handle"),c=t(28),f=t("ee"),u=t(26),d=t(23),l=t(17),p=t(19),h=l.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,w="addEventListener",g="attachEvent",y=m.XMLHttpRequest,x=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var E=""+location,R={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},S=y&&x&&x[w]&&!/CriOS/.test(navigator.userAgent),O=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:S,userAgent:u,disabled:b};if(!b){t(16),t(24),v[w]?(v[w]("DOMContentLoaded",o,p(!1)),m[w]("load",r,p(!1))):(v[g]("onreadystatechange",i),m[g]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(29),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,13,4,3]);</script>
+<meta name="REVISIT-AFTER" content="1 DAYS" />
+<meta name="RATING" content="GENERAL" />
+<meta name="RESOURCE-TYPE" content="DOCUMENT" />
+<meta content="text/javascript" http-equiv="Content-Script-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<title>
+	Coronavirus Updates
+</title><meta id="MetaDescription" name="description" content="The Michigan High School Athletic Association, Inc., is a private, voluntary asso­ci­­a­tion for public, private and parochial secondary schools which choose to join and participate in the organization. The primary function of the Asso­ciation is to conduct postseason tournaments and to help member schools have rules and guidelines to follow and enforce locally to promote equitable competition.
+" /><meta id="MetaKeywords" name="keywords" content="Michigan High School Sports, Michigan Sports, Michigan Football, Michigan Basketball, High School Athletics, Michigan, Athletics, Sportsmanship" /><meta id="MetaRobots" name="robots" content="INDEX, FOLLOW" /><link href="/Resources/Shared/stylesheets/dnndefault/7.0.0/default.css?cdv=294" type="text/css" rel="stylesheet"/><link href="/DesktopModules/HTML/module.css?cdv=294" type="text/css" rel="stylesheet"/><link href="/DesktopModules/GravityWorks-CustomLogin/module.css?cdv=294" type="text/css" rel="stylesheet"/><link href="/DesktopModules/TanLDGoogleSearch/module.css?cdv=294" type="text/css" rel="stylesheet"/><link href="/DesktopModules/SmokeRanch.BannerDisplay/SmokeRanch.BannerDisplay/module.css?cdv=294" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Skins/mhsaathirteen/skin.css?cdv=294" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Skins/mhsaathirteen/InsideSkin.css?cdv=294" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Containers/mhsaa/container.css?cdv=294" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Containers/mhsaathirteen/container.css?cdv=294" type="text/css" rel="stylesheet"/><link href="/Portals/0/portal.css?cdv=294" type="text/css" rel="stylesheet"/><script src="/Resources/libraries/jQuery/03_05_01/jquery.js?cdv=294" type="text/javascript"></script><script src="/Resources/libraries/jQuery-UI/01_12_01/jquery-ui.js?cdv=294" type="text/javascript"></script><!--[if LT IE 10]><link id="IE10Minus" rel="stylesheet" type="text/css" href="/Portals/_default/Skins/mhsaathirteen/ie.css" /><![endif]--></head>
+<body id="Body">
+
+    <form method="post" action="/coronavirus" id="Form" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="vvKCvEgFg/8u2Al9ZGW3RSd+4GUHumou9AOzvo18jxBG1PAaut8x99R6Pwsk1urh/8gAhc2mUfkxBprqadjqNQ2tMTvC3bLQ8k+2Eej1W4um8ZcHYFobBBXToODb2tJHH47WVTWhU+m4+821ePiRx1twORHdcemQuYOtbczCZLSypxg81IwmcKrjOwdLJ0tvf+KrbvgCKzCyefms6T11bxM9zHBg4xsbdM0GFUYU7XdIpv0mjYXdf8HPI1LKFd38/cwpm6zCXMljNi4MkfTIckQQHnnA0UoSbFftaWNqeKjsucuDRGXrX1UnxBYlCLV9GTXHBarBRsvZREeiOpzfCxkLJbWewzOHQv6g75lECid5z2l+xKVf8jkdEOdUfVAMFrNShC1g25sFF0eJ475B9MN8ggUT9RneCY1wN3ngCUbyA4J0YoIXAOaeFNpag0Nq/7bywtSMuaRmC1U8BxA21cNaz7PotAv8pmtRNhDhKXWoZMR7j6dq7GbME/aLnk/99sT8v67S1C/EEo71mUr/YNuLHjP8iJEH6PP5hz8Pz+LTVvzeDZgCzBSPUm3zm+Kg+TTZp2M9NjR412TKZ2ipbpXgO/ImTiTMSkpg7lPNCZow2jJM6qNKcJ8wRlLFujoLJhgt7P9tcx1oFyKPZEi+8SSmrY80vUWp7QhsXYg3KIo+glmeVXQAAS9n/XyAM8FZmyNxod1udm077JD9/s8Ij/FNCSDlLtomZ5PccJgA9/3jIrGKlt8V8laNHLQBBtKUzUs5xAIHgUQeV+pzCWhRftOB40EzbcUM6HOtIUkXUPV16OdajGJBfwWCU9/KWQUqWwromP2wCdIrwdaw/dD+Zcm6TBxcxwuEOrm9zQrQCcsocEVnPmvze290AHfGK64+xESGroo7bHuAgbzw/+1Tnh9sx4IxLcYjFV2vAkNzkjEOwPHBv+8YZetkjXqNQV2LgE4MsQVly7L3oUDV/SAvAs/28wNNjH9sCXL4FOXKjrqN2jXgmuqB3kXg4JA30xoGkq80IzEmiXff73HN5WWK3odcJEbSfDiZbLiouoRMeul6/7vDUVxTd3FXDrouTacsj0pgwGSt4DvOXFdFuYN2XAVx/7kUHsCGL+zt25yZO/qGGKgh4baq0Log9o5nPD7aMyloooeOdGm+n1WJmaKv1RkfVWR2qibREiDeCcdJYZ+OXuCl5SEos2W2COSrziTwXGTHIRlgr43cV4L8KUtUeBHkkkG0BmSvQGvyYLUrnMgvwLu8uTRL8Dd4735nudfIaaqzqWq6ODqsPKVBlyALAcYR+QhUBbJhO6vT4gI2VsXYb1Ma0LUKV6lmXmdKvmBqY8iyNvC7eM3kqZgFsaxQPj/z8IQ9w5M7xF1aQaYD3/GvbWcA3utqrz+j2N9gEhO7+vMdif86zODKOoqi4EcPsw==" />
+</div>
+
+
+<script src="/DesktopModules/GravityWorks-CustomLogin/js/jquery.watermark.min.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhviHyEjku8yAy-nrPEJcbbjOm7NTmaqgBIuJpZL43UQqBaDJAwMjy68pplaRtMOyNIKjh2Jc7WVyYqzxWZX9SatnTovUxNiBurAQ8_IVJb9WBFC_dd5aKVjEUzn52bWRbYgjQskImFFN4NgxT8I8HgYzzMbxcrOdjPgivcksF4eWbF6VtnIqeRDjTUV_vSdGkjQ2&amp;t=363be08" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OFP_tKmPO9xpZcqVEpo_KbXZ1Ozuz2MZLbOdRCpFnaeVYS78DMlMmGJzEoQkjjq-S8QEapTi6lhMCjWg-H_WvCNyBY9OS1stzPFfdPf9fWnW-8pVkVrDbnaBGzcwvj72Ec_KrnormuecZMxzsr8ggUwqnbL7QkoD7E1fh-AuL31hDoxP-k0vknOERYeKd46I3w2&amp;t=363be08" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div><script src="/js/dnn.modalpopup.js?cdv=294" type="text/javascript"></script><script src="/js/dnncore.js?cdv=294" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', 'Form', [], [], [], 90, '');
+//]]>
+</script>
+
+        
+        
+        
+
+<meta name="viewport" content="width=device-width">
+<script src="/Portals/_default/Skins/mhsaathirteen/js/modernizr.custom.mhsaa.js"></script>
+
+<!--[If IE 8]>
+    <body id="Body" class="ie8">
+<![endif]-->
+<!--[If IE 7]>
+    <body id="Body" class="ie7">
+<![endif]-->
+
+
+<!-- header start -->
+<header class="branding">
+    <div class="row-wrap">
+        <div class="half col logo-container">
+            <a href="/" class="logo"><img src="/Portals/_default/Skins/mhsaathirteen/images/logo.png" alt="Michigan High School Athletic Association" /></a>
+        </div>
+    </div>
+    <div class="mobile-links">
+        <a class="mobile-menu">Menu</a>
+        <a class="mobile-search">Search</a>
+        
+            <a class="mobile-login">Log In</a>
+        
+    </div>
+
+    <div class="social-links">
+        <a class="social-icon social-icon--tw" href="https://twitter.com/mhsaa" target="_blank">Twitter</a>
+        <a class="social-icon social-icon--fb" href="https://www.facebook.com/MHSAASports" target="_blank">Facebook</a>
+        <a class="social-icon social-icon--ig" href="https://instagram.com/mhsaasports" target="_blank">Instagram</a>
+        <a class="social-icon social-icon--yt" href="http://www.youtube.com/MHSAASPORTS" target="_blank">YouTube</a>
+    </div>
+    <div class="site-search">
+        <div id="dnn_SearchPane"><div class="DnnModule DnnModule-TanLDSearchBox DnnModule-5251"><a name="5251"></a><div id="dnn_ctr5251_ContentPane"><!-- Start_Module_5251 --><div id="dnn_ctr5251_ModuleContent" class="DNNModuleContent ModTanLDSearchBoxC">
+	
+
+<style type="text/css">
+    .searchbox-container { max-width: 100%; }
+</style>
+<div class="searchbox-container">
+<label class='lbl-ui search '>
+    <input name="dnn$ctr5251$SearchBox$txtSearch" id="dnn_ctr5251_SearchBox_txtSearch" class="input" type="search" onkeydown="return __dnn_KeyDown(&#39;13&#39;, &#39;javascript:__doPostBack(%27dnn$ctr5251$SearchBox$cmdSearch%27,%27%27)&#39;, event);" placeholder="Search..." />
+    <input type="submit" name="dnn$ctr5251$SearchBox$cmdSearch" value="Search" id="dnn_ctr5251_SearchBox_cmdSearch" class="button" />
+</label>
+</div>
+
+<script src="//www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">
+    (function () {
+        var searchCX = '005501871061013732584:lcghs34nmfu';
+        var SameTab = false;
+
+        if (searchCX != '')
+        {
+            if (!SameTab) {
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + searchCX;
+
+                var s = document.getElementsByTagName('script')[0];
+
+                s.parentNode.insertBefore(gcse, s);
+                google.load("search", "1");
+            }
+
+            // Run this once the Google search JavaScript has loaded
+            google.setOnLoadCallback(function () {
+                // This makes your input field support autocomplete
+                var autoCompletionOptions = {
+                    'maxCompletions': 5,
+                    'styleOptions': {
+                        'xOffset': 30,
+                        'widthOffset': -102
+                    }
+                };
+
+                google.search.CustomSearchControl.attachAutoCompletionWithOptions(
+                        searchCX,
+                        document.getElementById('dnn_ctr5251_SearchBox_txtSearch'),
+                    document.getElementById('dnn_ctr5251_SearchBox_cmdSearch'),
+                    autoCompletionOptions);
+            })
+        }
+
+    })();
+
+</script>
+</div><!-- End_Module_5251 --></div>
+   </div></div>
+    </div>
+
+    <div class="login-menu">
+        
+            <a class="login-link"><span>Login</span></a> <span class="login-help"><a href="/MyMHSAARegistration.aspx" class="register-account">Register</a> | <a href="/LoginPage/tabid/581/ctl/SendPassword/Default.aspx?returnurl=%2fLogin.aspx" class="forgot-password">Forgot Password?</a></span>
+        <div id="dnn_loginBar"><div class="DnnModule DnnModule-GravityWorks-CustomLogin DnnModule-4641"><a name="4641"></a><div id="dnn_ctr4641_ContentPane"><!-- Start_Module_4641 --><div id="dnn_ctr4641_ModuleContent" class="DNNModuleContent ModGravityWorksCustomLoginC">
+	
+
+
+<div style="display: none;">
+<div id="dnn_ctr4641_Default_divCustomLoginMain" class="CustomLoginMain">
+    
+    
+
+    
+    
+    
+        <div class="UserNameContainer">
+            <label for="dnn_ctr4641_Default_txtUsername" id="dnn_ctr4641_Default_lblUserName" class="UserNameLabel">Email</label><input name="dnn$ctr4641$Default$txtUsername" type="text" id="dnn_ctr4641_Default_txtUsername" class="UserNameText" onkeydown="javascript: if( event.which || event.keyCode) { if( (event.which == 13) || (event.keyCode == 13) ) { __doPostBack(&#39;dnn$ctr4641$Default$lnkLogin&#39;,&#39;&#39;); return false; } } else { return true; }" />
+        </div>
+        
+        <div class="PasswordContainer">
+            <label for="dnn_ctr4641_Default_txtPassword" id="dnn_ctr4641_Default_lblPassword" class="PasswordLabel">Password</label><input name="dnn$ctr4641$Default$txtPassword" type="password" id="dnn_ctr4641_Default_txtPassword" class="PasswordText" onkeydown="javascript: if( event.which || event.keyCode) { if( (event.which == 13) || (event.keyCode == 13) ) { __doPostBack(&#39;dnn$ctr4641$Default$lnkLogin&#39;,&#39;&#39;); return false; } } else { return true; }" />
+        </div>
+        
+        <div class="LoginButtonContainer">
+            <a id="dnn_ctr4641_Default_lnkLogin" class="LoginButton" href="javascript:__doPostBack(&#39;dnn$ctr4641$Default$lnkLogin&#39;,&#39;&#39;)">Login to MHSAA</a>
+        </div>
+    
+</div>
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+  
+
+
+        jQuery("div.login-menu > a.login-link, div.mobile-links > a.mobile-login").click(function () {
+
+            var domain = document.domain;
+
+            var redirectUrl = 'https://' + domain + '/login';
+
+            window.location.href = redirectUrl;
+
+        });
+
+    });
+</script>
+
+</div><!-- End_Module_4641 --></div>
+   </div></div>
+    </div>
+
+    <nav class="primary">
+        <div class="site-menu">
+            <span class="menu-wrapper">
+                <ul class="main-navigation">
+                    <li class="first"><a href="/sports/scorecenter" id="scores" title="Scores">Scores</a></li>
+                    <li><a href="/sports" id="sports" title="List of Official MHSAA High School Sports">Sports</a></li>
+                    <li><a href="/schools" id="schools" title="MHSAA Directory of Schools">Schools &amp; Schedules</a></li>
+                    <li><a href="/officials" id="officials" title="MHSAA Officials Directory">Officials</a></li>
+                    <li><a href="/news" id="news" title="MHSAA News">News</a></li>
+                    <li><a href="/trainingeducation" id="training" title="MHSAA Sports Training &amp; Education">Education</a></li>
+                    <li class="last"><a href="/schools/healthsafetyresources.aspx" id="health" title="MHSAA Health &amp; Safety">Health & Safety</a></li>
+                </ul>
+                <div class="TabList" id="topNav">
+                    <ul class="Level0">
+                        <li>
+                            <a href="/" title=
+                            "Michigan High School Athletic Association">Home</a>
+                        </li>
+                        <li>
+                            <a href="/aboutthemhsaa.aspx" title=
+                            "About the MHSAA | Michigan High School Athletic Association">About</a>
+                        </li>
+                        <li>
+                            <a href="/aboutthemhsaa/corporatepartnerprogram.aspx">Corporate Partners</a>
+                        </li>
+                        <li>
+                            <a href="/news/mhsaanetwork.aspx" title=
+                            "MHSAA Network | Michigan High School Athletic Association">MHSAA
+                            Network</a>
+                        </li>
+                        <li>
+                            <a href="/calendars.aspx" title=
+                            "Calendars | Michigan High School Athletic Association">Calendars</a>
+                        </li>
+                        <li>
+                            <a href="/contactus.aspx" title=
+                            "Contact Us | Michigan High School Athletic Association">Contact</a>
+                        </li>
+                        <li>
+                            <a href="/store.aspx" title=
+                            "MHSAA Store | Michigan High School Athletic Association">Store</a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+        </div>
+    </nav>
+
+</header>
+<!-- header end -->
+
+
+<div id="main-content" class="inside">
+    <span id="loginerror"></span>
+    <div id="dnn_TopPane"><div class="DnnModule DnnModule-BannerDisplay DnnModule-6761"><a name="6761"></a><div id="dnn_ctr6761_ContentPane"><!-- Start_Module_6761 --><div id="dnn_ctr6761_ModuleContent" class="DNNModuleContent ModBannerDisplayC">
+	
+
+<!--BEGIN BannerDisplay module, Copyright (C) 2006-2016 Smoke Ranch Software (http://www.smokeranch.com)-->
+<script type="text/javascript" src="https://www.mhsaa.com:443/DesktopModules/SmokeRanch.BannerDisplay/SmokeRanch.BannerDisplay/bannerdisplay.js"></script>
+
+<div id="dnn_ctr6761_View_pnlBanners">
+		
+	
+<div class="bannerDisplayDiv">
+
+</div>
+
+	</div>
+
+
+<!--END BannerDisplay module-->
+</div><!-- End_Module_6761 --></div>
+   </div></div>
+    <span id="dnn_dnnBreadcrumb_lblBreadCrumb" itemprop="breadcrumb" itemscope="" itemtype="https://schema.org/breadcrumb"><span itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://www.mhsaa.com/coronavirus" class="SkinObject" itemprop="item"><span itemprop="name">Coronavirus Updates</span></a><meta itemprop="position" content="1" /></span></span></span>
+    <div class="inside-title-container">
+        
+            <h1 class="inside-title">Coronavirus Updates</h1>
+        
+    </div>
+    <div class="row-wrap">
+        <div class="main-wrapper">
+            <div class="main-content">
+                <div class="row-wrap">
+                    <div class="TopContentLeft"></div>
+                    <div class="TopContentRight"></div>
+                </div>
+                <div id="dnn_ContentPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-6758"><a name="6758"></a>
+<h2 class="plain-title"><span id="dnn_ctr6758_ctl00_titleLabel" class="Head">MHSAA Coronavirus Updates</span>
+
+
+</h2>
+<div id="dnn_ctr6758_ContentPane" class="DNNAlignleft"><!-- Start_Module_6758 --><div id="dnn_ctr6758_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr6758_HtmlModule_lblContent" class="Normal">
+		<h3><a href="/Portals/0/Documents/AD%20Forms/miaaa%20roundtable%202.pdf" target="_blank">MHSAA-MIAAA Roundtable Slides</a>&nbsp;- Feb. 5. 2021</h3>
+
+<h3><a href="/Portals/0/Documents/AD%20Forms/miaaa%20roundtable.pdf" target="_blank">MHSAA-MIAAA Roundtable Slides</a>&nbsp;- Jan. 15. 2021</h3>
+
+<h3><a href="/Portals/0/documents/AD%20Forms/covid%20coach%20monitor%20form.pdf" target="_blank">Covid-19 Athlete/Coach Monitoring Form</a></h3>
+
+<hr />
+<h3><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2037.pdf" target="_blank">MHSAA Spring Update #37</a>&nbsp;- 6/17/21</h3>
+
+<h3><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2036.pdf" target="_blank">MHSAA Spring Update #36</a>&nbsp;- 5/27/21</h3>
+
+<h3><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2035.pdf" target="_blank">MHSAA Spring Update #35</a>&nbsp;- 5/14/21</h3>
+
+<h3><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2034.pdf" target="_blank">MHSAA Spring Update #34</a>&nbsp;- 5/5/21</h3>
+
+<h3><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2033.pdf" target="_blank">MHSAA Spring Update #33</a>&nbsp;- 4/23/21</h3>
+
+<h3><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2032.pdf" target="_blank">MHSAA Spring Update #32</a>&nbsp;- 4/16/21</h3>
+
+<h3><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2031.pdf" target="_blank">MHSAA Spring Update #31</a>&nbsp;- 4/9/21</h3>
+
+<h3><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2030.pdf" target="_blank">MHSAA Spring Update #30</a>&nbsp;- 4/1/21</h3>
+
+<h3><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2029.pdf" target="_blank">MHSAA Winter/Spring Update #29</a>&nbsp;- 3/24/21</h3>
+
+<h3><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2028.pdf" target="_blank">MHSAA Winter/Spring Update #28</a>&nbsp;- 3/19/21</h3>
+
+<h3><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2027.pdf" target="_blank">MHSAA Winter Update #27</a>&nbsp;- 3/11/21</h3>
+
+<h3><strong><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2026.pdf" target="_blank">MHSAA Winter/Spring Update #26</a>&nbsp;- 3/3/21</strong></h3>
+
+<h3><strong><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2025.pdf" target="_blank">MHSAA Spring Update #25</a>&nbsp;- 2/22/21</strong></h3>
+
+<h3><strong><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2024.pdf" target="_blank">MHSAA Winter/Spring Update #24</a>&nbsp;- 2/10/21</strong></h3>
+
+<h3><strong><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2023.pdf" target="_blank">MHSAA Winter/Spring Update #23</a>&nbsp;- 2/8/21</strong></h3>
+
+<h3><strong><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2022.pdf" target="_blank">MHSAA Winter/Spring Update #22</a>&nbsp;- 2/4/21</strong></h3>
+
+<h3><strong><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2021.pdf" target="_blank">MHSAA Fall/Winter Update #21</a>&nbsp;- 1/22/21</strong></h3>
+
+<h3><strong><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2020.pdf" target="_blank">MHSAA Fall/Winter Update #20</a>&nbsp;- 1/14/21</strong></h3>
+
+<h3><strong><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2019.pdf" target="_blank">MHSAA Fall/Winter Update #19</a>&nbsp;- 1/13/21</strong></h3>
+
+<h3><strong><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2018.pdf" target="_blank">MHSAA Fall/Winter Update #18</a>&nbsp;- 1/6/21</strong></h3>
+
+<h3><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2017.pdf" target="_blank">MHSAA Fall/Winter Update #17</a>&nbsp;- 12/23/20</h3>
+
+<h3><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2016.pdf" target="_blank">MHSAA Fall/Winter Update #16</a>&nbsp;- 12/18/20</h3>
+
+<h3 style="text-align:justify"><span style="font-size:18px"><span style="font-size:18px"><span style="font-size:18px"><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2015.pdf" target="_blank">MHSAA Fall/Winter Update #15</a>&nbsp;- 11/18/20</span></span></span></h3>
+
+<p><strong><span style="font-size:18px"><span style="font-size:18px"><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2014.pdf" target="_blank">MHSAA Fall/Winter Update #14</a>&nbsp;- 11/15/20</span> </span></strong></p>
+
+<div style="color: #d31528;"><strong><span style="font-size:18px"><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2013.pdf" style="color: #d31528;" target="_blank">MHSAA Fall/Winter Update #13</a><span style="color:#333333">&nbsp;- 10/23/20</span></span></strong></div>
+
+<div style="color: #d31528;">&nbsp;</div>
+
+<div style="color: #d31528;"><strong><span style="font-size:18px"><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2012.pdf" style="color: #d31528;" target="_blank">MHSAA Fall Update #12</a>&nbsp;- 10/6/20</span></strong></div>
+
+<div style="color: #d31528;">&nbsp;</div>
+
+<h3 style="text-align:justify"><span style="font-size:18px"><span style="font-size:18px"><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2011.pdf" style="color: #d31528;" target="_blank">MHSAA Fall Update #11</a>&nbsp;- 9/30/20</span></span></h3>
+
+<h3 style="text-align:justify"><span style="font-size:18px"><span style="font-size:18px"><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%2010.pdf" style="color: #d31528;" target="_blank">MHSAA Fall Update #10</a>&nbsp;- 9/25/20</span></span></h3>
+
+<h3 style="text-align:justify"><span style="font-size:18px"><span style="font-size:18px"><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%209.pdf" style="color: #d31528;" target="_blank">MHSAA Fall Update #9</a>&nbsp;- 9/10/20</span></span></h3>
+
+<p><span style="font-size:18px">Sept. 3:&nbsp;<a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%208.pdf" style="color: #046387;" target="_blank">MHSAA Update #8</a></span></p>
+
+<p><span style="font-size:16px"><span style="color:#333333">The Fall 2020 football season has been reinstated today by the Representative Council of the Michigan High School Athletic Association after Governor Gretchen Whitmer&rsquo;s Executive Order 176 lifted restrictions that previously did not allow the sport to be played.</span><br />
+<br />
+<span style="color:#333333">Whitmer&rsquo;s executive order also allows for an immediate start of competition boys soccer; Lower Peninsula girls swimming &amp; diving and girls volleyball on Wednesday (Sept. 9) for schools located in Regions 1-5 and 7 based on the MI Safe Start Plan.&nbsp; It also sets spectator limits of two per participant for outdoor and indoor events in Phase 4 of the MI Safe Start Plan.</span><br />
+<br />
+<span style="color:#333333">Statewide football, and competition in those regions for volleyball, soccer and swimming &amp; diving, had been restricted as part of EO 160, which ordered gyms and pools to remain closed and required social distancing in competition to prevent the spread of COVID-19 in areas under Phase 4 of the Safe Start plan. Schools in Regions 6 and 8 have been able to play volleyball, soccer and swim because those regions have been under fewer restrictions while in Phase 5 of the reopening process.</span><br />
+<br />
+<span style="color:#333333">The MHSAA&rsquo;s Council had authorized on Aug. 20 the start of competition in volleyball, soccer and swim statewide, pending the authorization of that activity in the specific regions by Whitmer&rsquo;s office. The Council also on Aug 14. postponed the Fall 2020 football season to Spring 2021, but voted today to allow for a shortened season this fall.</span><br />
+<br />
+<span style="color:#333333">Schools are not required to play any of those sports this fall, and may postpone until the spring. However, the MHSAA will conduct its postseason events in those four sports only for the Fall 2020 season.&nbsp;</span><br />
+<br />
+<span style="color:#333333">&ldquo;We are thankful for the opportunity for kids to get back on the field in all fall sports, and we appreciate Governor Whitmer providing that opportunity with Executive Order 176 ,&rdquo; MHSAA Executive Director Mark Uyl said. &ldquo;We share the Governor&rsquo;s priorities of putting health and safety first, and the COVID-19 guidance and protocols designed by the MHSAA at her request have led to the safe starts in all sports across the state.</span></span></p>
+
+<hr />
+<p>Aug. 20:&nbsp;<a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%207.pdf" style="color: #046387;" target="_blank">MHSAA Update #7</a></p>
+
+<p>The Representative Council of the Michigan High School Athletic Association today approved the start of competition in girls volleyball, boys soccer and girls swimming &amp; diving in regions of Michigan authorized for that activity by Governor Gretchen Whitmer&rsquo;s executive orders, with competition in those sports pending in regions where those activities are not yet allowed as part of preventing spread of COVID-19.<br />
+<br />
+Schools in the northern Lower Peninsula and Upper Peninsula &ndash; designated as Regions 6 and 8, respectively, by executive order &ndash; are allowed to begin competition Aug. 21, as originally scheduled. Schools in all other Regions (1-5, and 7) may continue to practice, pending further executive orders allowing for the opening of indoor facilities and limited physical contact in those areas.<br />
+<br />
+The Council also approved out-of-season coaching adjustments allowing football and spring sports coaches more contact with their athletes in advance of the 2021 season.<br />
+<br />
+To provide additional offseason activity for sports that have had their full seasons canceled or moved, the Council approved 16 contact days for football and all spring sports to be used for voluntary practices among students from the same school only. Football may schedule their contact days from Aug. 24 through Oct 31. Spring sports &ndash; baseball, softball, girls soccer, track &amp; field, girls and boys lacrosse, boys golf, Upper Peninsula girls golf, and Lower Peninsula girls tennis and Upper Peninsula boys tennis &ndash; may schedule their 16 contact days for voluntary practices from Sept. 8-Oct. 31, if the school permits and all safety protocols are followed.&nbsp;</p>
+
+<div>&nbsp;</div>
+
+<hr />
+<p><span style="font-size:16px">Aug. 14:&nbsp;<a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Guidance%206.pdf" style="color: #046387;" target="_blank">MHSAA Update #6</a></span></p>
+
+<p><span style="font-size:16px">The&nbsp;Earlier today, the Representative Council made the difficult decision to postpone football until the spring of 2021. This decision was based on feedback and input from the Governor&rsquo;s office, state health department officials, member schools, collegiate conferences and individuals on both sides of the issue. Plans will be shared soon regarding allowed fall coach-player workouts as well as concepts for the spring football season dates, format and playoffs.<br />
+<br />
+Know that all other fall sports in the low and moderate risk categories are moving forward. Practices have begun in all those other sports and competitions may begin in golf and tennis on August 19 and cross country on August 21. The Representative Council will be meeting again next Wednesday to finalize the competition calendars for boys soccer, girls swimming and volleyball.&nbsp; Further guidance regarding these indoor facilities in Phase 4 is coming to schools next week.&nbsp;&nbsp;<br />
+<br />
+At the end of the day, we did everything we could to find a path forward for football this fall. With all input received, along with school feedback from the first week of practice, there was just too much uncertainty and too many unknowns to safely play football this fall. While there is dis-appointment today that we could not play football this fall, we are encouraged and motivated to find the best possible plan to fit football in with existing seasons to give all of our kids the best experience possible.&nbsp;<br />
+<br />
+Please look for our next update to reach you on August 19 with finalized plans and dates for the remaining fall sports.</span></p>
+
+<div>&nbsp;</div>
+
+<p>&nbsp;</p>
+
+<hr />
+<p><span style="font-size:16px"><strong>July 29:&nbsp;<a href="/Portals/0/Documents/AD%20Forms/MHSAA Guidance 5.pdf" style="color: #046387;" target="_blank">MHSAA Update #5</a></strong></span></p>
+
+<p>The Representative Council met this morning to discuss fall sports.&nbsp; Here is a summary of the action taken.</p>
+
+<ul>
+ <li>Approved a &ldquo;phased-in&rdquo; approach to fall athletics.</li>
+ <li>Eliminated scrimmages in all fall sports; the only occasions where students from different schools would be together is for official games, matches, meets and competitions.</li>
+ <li>Finalized the fall sports guidance documents for the safe return to activity.&nbsp; This guidance includes general information along with sport-specific directives for students, coaches, staff, officials and media members.&nbsp; Spectator guidance will be added once those number of individual limits are finalized by the Governor&rsquo;s office.&nbsp; These documents are posted at mhsaa.com on each sport page and comply with all Executive Orders from Governor Whitmer.</li>
+ <li>New competition limits in all fall sports were approved to limit the number of teams and in-dividuals at any one competition site.&nbsp; The concept is fall competition will take place as lo-cally as possible with no large-scale events, invitationals or tournaments.&nbsp; See the fall sport-specific guidance documents for these limits.</li>
+ <li>Allowed all low-risk sports to begin practice and competition as scheduled on August 12.&nbsp; This includes golf, tennis, cross country and swimming.&nbsp; Swimming can begin indoor practice and competition once pools are opened with capacity limitations being followed.</li>
+ <li>Allowed moderate-risk sports of soccer and volleyball (pending the opening of school gyms) to begin practice as scheduled on August 12 but to delay competition.&nbsp; Decisions on competition timelines (to start or to delay further) would be made on or by August 20.</li>
+ <li>Delayed the start of football practice with full player pads and equipment until Monday, August 17.&nbsp; The week of August 10 shall only include practice sessions that consists of conditioning, physical training and skill work but without player equipment other than helmets.&nbsp; This week of acclimatization (August 10-16) is similar to the allowed summer ac-tivities with helmets, only, that have been ongoing since June.&nbsp; Decisions on competition timelines (to start or to delay further) would be made on or by August 20.&nbsp;&nbsp;</li>
+</ul>
+
+<p>More Information at&nbsp;<a href="https://www.michigan.gov/coronavirus/" style="color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></p>
+
+<hr />
+<p><strong>July 17:&nbsp;<a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Summer%20Guidance%20Update%204.pdf" style="color: #046387;" target="_blank">MHSAA Update #4</a></strong></p>
+
+<p><br />
+The Representative Council, our 19-member legislative body, met virtually with MHSAA staff Wednesday (July 15) to discuss a series of ideas for playing sports beginning in August. The Council will meet again July 29 for further discussion on Fall sports. Currently, high school football practices are scheduled to begin Aug. 10, with all other Fall sports to start practice Aug. 12.</p>
+
+<p>&nbsp;The MHSAA is moving forward with a return to play plan for fall sports that follows this progression:</p>
+
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Play Fall sports in the Fall, as scheduled.</p>
+
+<p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If conditions deem it necessary, delay the start of some or all Fall sports practices and competitions.</p>
+
+<p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If conditions only allow some sports, play lower-risk Fall sports with higher-risk Fall sports postponed until later in the school year.</p>
+
+<p>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If any Fall sport is postponed or suspended, resume the season using a reconfigured calendar that would see a completion of Winter sports, followed by the Fall and Spring seasons potentially extending into July 2021.</p>
+
+<p>&nbsp;Additionally, the Council considered a concept that would swap traditional Fall and Spring sports, but determined that was not a feasible plan. Football, girls volleyball, girls swimming &amp; diving and boys soccer during the Fall are considered moderate or high-risk sports because they include athletes in close contact or are played indoors; they were considered the impetus for potentially switching all Fall sports to Spring. But traditional Spring sports - girls soccer and girls and boys lacrosse - carry similar risk, negating the value of making that full season switch. Moving only selected sports, like all low-risk sports to Fall, was not considered sound because it would force student-athletes to pick between sports they&rsquo;ve previously played and would have created new problems for many students.</p>
+
+<p>More Information at&nbsp;<span style="color:#046387"><a href="https://www.michigan.gov/coronavirus/" style="color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></span></p>
+
+<hr />
+<p><span style="font-size:16px"><strong>July 1:&nbsp;<a href="/Portals/0/Documents/AD%20Forms/MHSAA Update July 1.pdf" target="_blank">MHSAA Update #3</a></strong></span></p>
+
+<p><span style="font-size:16px">These three points have guided our planning the past several weeks, and will continue to be our focus in the days ahead.</span></p>
+
+<p><span style="font-size:16px">1. The MHSAA&rsquo;s current plan is to play all scheduled fall sports in the fall.&nbsp;&nbsp;</span></p>
+
+<p><span style="font-size:16px">2. We will do everything within our control to safely have all three high school sports seasons in 2020-21, even if conditions change that would require creativity to provide those three seasons.&nbsp; &nbsp;We owe it to our kids to plan this way, especially during these uncertain days of the pandemic.</span></p>
+
+<p><span style="font-size:16px">3. Contingency planning has been ongoing since March, and this continues with the release of the Return to School Road Map on June 30.&nbsp; These contingencies reflect our plan to play fall sports as scheduled and to provide three seasons during the school year while also being prepared to operate creatively should that be necessary.&nbsp; One possible contingency for consideration could be a swap of fall and spring sports as there are concerns with indoor sports (volleyball and girls swimming &amp; diving) being able to be conducted in the fall along with differing views on football.&nbsp;&nbsp;</span></p>
+
+<p><span style="font-size:16px">More Information at&nbsp;<span style="color:#046387"><a href="https://www.michigan.gov/coronavirus/" style="color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></span></span></p>
+
+<hr />
+<p><strong>June 9:&nbsp;<a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Summer%20Guidance%20Update%202.pdf" target="_blank">MHSAA Summer Guidance, Update #2</a></strong></p>
+
+<p><span style="font-size:16px">Following are points of likely interest from Update #2 :</span></p>
+
+<ul>
+ <li>
+ <p><span style="font-size:16px">Member schools may begin summer activities at school facilities as long as these two conditions are met: 1. School administration has announced schools facilities are open to students and staff, and 2. The academic school year (last day of online instruction/exams) has ended.</span></p>
+ </li>
+ <li>
+ <p><span style="font-size:16px">As noted in the June 2 MHSAA update, member schools may begin summer activities at school facilities as long as these two conditions are met: 1. School administration has announced schools facilities are open to students and staff, and 2. The academic school year (last day of online instruction/exams) has ended.&nbsp;</span></p>
+ </li>
+ <li>
+ <p><span style="font-size:16px">Schools that are reopened in Regions 6 and 8 may begin indoor activities with no more than 50 people but must continue social (physical) distancing and proper cleaning of equipment as noted in the June 2 update. Schools in Regions 6 and 8 also may increase their participation in outdoor activities from 100 to a maximum of 250 people. Again, social distancing and proper cleaning must be followed.&nbsp;</span></p>
+ </li>
+ <li>
+ <p><span style="font-size:16px">Competition is not yet allowed because participants must continue to follow social distancing.&nbsp;</span></p>
+ </li>
+ <li>
+ <p><span style="font-size:16px">Although a group of 50 may meet indoors in Regions 6 and 8, the MHSAA recommends smaller groups of the same students continue to work out together. This will allow for a better response and easier tracing should a positive case of COVID-19 be discovered. Also, because most weight rooms cannot accommodate social distancing for groups of 50, the MHSAA recommends cycling in these smaller groups to weight rooms with proper cleaning of equipment between rotations.&nbsp;</span></p>
+ </li>
+ <li>
+ <p><span style="font-size:16px">Schools in all other Regions &ndash; 1, 2, 3, 4, 5 and 7 &ndash; should continue to adhere to guidelines put forth in the MHSAA&rsquo;s June 2 update. However, administrators and coaches should begin preparing for the allowance of similar opportunities now open in Regions 6 and 8.&nbsp;</span></p>
+ </li>
+</ul>
+
+<p><span style="font-size:16px"><strong>More Information at&nbsp;</strong><strong><a href="https://www.michigan.gov/coronavirus/" style="color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></strong></span></p>
+
+<hr />
+<p><strong>June 2: </strong><a href="/Portals/0/Documents/AD%20Forms/MHSAA%20Summer%20Guidance%20Update%201.pdf" style="font-weight: bold;" target="_blank">MHSAA Summer Guidance, Update #1</a></p>
+
+<p><span style="font-size:16px">Following are points of likely interest from Update #1 and a comment from MHSAA Executive Director Mark Uyl:</span></p>
+
+<ul>
+ <li>
+ <p><span style="font-size:16px">Member schools may begin summer activities at school facilities as long as these two conditions are met: 1. School administration has announced schools facilities are open to students and staff, and 2. The academic school year (last day of online instruction/exams) has ended.</span></p>
+ </li>
+ <li>
+ <p><span style="font-size:16px">Indoor facilities, including gymnasiums and weight rooms, remain closed. This includes swimming pools, although outdoor pools may be used for athletic activities.&nbsp;</span></p>
+ </li>
+ <li>
+ <p><span style="font-size:16px">Competition is not yet allowed because participants must continue to follow social distancing.</span></p>
+ </li>
+ <li>
+ <p><span style="font-size:16px">Balls may be used among groups of participants, but participants should clean such common equipment as permitted and continue to maintain proper hygiene (washing hands, not touching their faces) and social distance.&nbsp;</span></p>
+ </li>
+ <li>
+ <p><span style="font-size:16px">The most accurate answer to the question &ldquo;What Step are schools on?&rdquo; is Step 2 for outdoor activities &ndash; thanks to the ability to have gatherings of up to 100 participants &ndash; while indoor activities will start at Step 1 if gatherings of only 10 or fewer are allowed. Guidelines will continue to be updated based on directives from Governor Whitmer&rsquo;s office.&nbsp;</span></p>
+ </li>
+</ul>
+
+<p><span style="font-size:16px">Comment from Mark Uyl: </span><span style="font-size:16px">We were excited and encouraged by Governor Whitmer&rsquo;s announcements Monday. The opportunity for outside gatherings of up to 100 allowed us to rework a number of guidelines that we had published Friday as part of the MHSAA/NFHS reopening document. Our schools have been cautiously eager to take this long-awaited first step. We will continue to provide updates in accordance with the Governor&rsquo;s directives for reopening the state, always prioritizing safety for all involved in school sports programs.&rdquo;</span></p>
+
+<p><span style="font-size:16px"><strong>More Information at&nbsp;</strong><strong><a href="https://www.michigan.gov/coronavirus/" style="color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></strong></span></p>
+
+<hr />
+<p><strong>May 29: <a href="/Portals/0/Documents/AD%20Forms/Guidance%205-29-20.pdf" target="_blank">MHSAA/NFHS Guidance For Re-Opening School Sports</a></strong></p>
+
+<p>Please&nbsp;<a href="/News/Press-Releases/articleType/ArticleView/articleId/9146/MHSAA-Provides-Updated-Timelines-Guidelines-for-Return-of-School-Sports">read the press release</a>&nbsp;for additional information and quotes from the MHSAA.<br />
+<br />
+<strong>More Information at&nbsp;</strong><strong><a href="https://www.michigan.gov/coronavirus/" style="font-weight: bold; color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></strong><br />
+&nbsp;</p>
+
+<hr />
+<p><strong>April 8 (revised May 3):&nbsp;</strong><strong><a href="/portals/0/Documents/AD%20Forms/2020%20covid%20clarifications.pdf" target="_blank">Spring 2020 Pandemic Clarifications</a></strong><br />
+&nbsp;</p>
+
+<hr />
+<p><strong>April 3, 1:00 p.m.:</strong> The Michigan High School Athletic Association has canceled the remainder of the 2019-20 Winter and Spring sports seasons, in compliance with the Thursday (April 2) &ldquo;state of disaster&rdquo; directive by Gov. Gretchen Whitmer closing school buildings and moving education online for the remainder of the school year to help decrease the spread of the COVID-19 coronavirus.</p>
+
+<p>Please&nbsp;<a href="/News/Press-Releases/articleType/ArticleView/articleId/9062/MHSAA-Cancels-Remainder-of-2019-20-Winter-Spring-Seasons">read the press release</a>&nbsp;for additional information and quotes from the MHSAA.</p>
+
+<p><strong>More Information at&nbsp;&nbsp;</strong><strong><a href="https://www.michigan.gov/coronavirus/" style="color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></strong><br />
+&nbsp;</p>
+
+<hr />
+<p><strong>April 2, 12:00 p.m.:&nbsp;</strong>The Michigan High School Athletic Association will announce no later than Friday (April 3) afternoon the status of its 2019-20 Winter and Spring seasons, after the directive by Gov. Gretchen Whitmer closing school buildings and moving education online during her ordered &ldquo;state of disaster.&rdquo;</p>
+
+<p>Executive Director Mark Uyl: &ldquo;We&rsquo;re reviewing the governor&rsquo;s announcement, asking questions and will make a statement as we continue to digest this order.&rdquo;<br />
+<br />
+No further comments will be available at this time. Updates will be posted as necessary.<br />
+<br />
+<strong>More Information at&nbsp;</strong><strong><a href="https://www.michigan.gov/coronavirus/" style="color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></strong><br />
+&nbsp;</p>
+
+<hr />
+<p><strong>March 24:</strong> The MHSAA has extended its suspension of activities in all sports for all seasons through Monday, April 13, to fall in line with Gov. Gretchen Whitmer&rsquo;s school closure and &ldquo;stay home, stay safe&rdquo; orders to deter the spread of COVID-19.</p>
+
+<p>All athletic activities to be halted include practices, scrimmages and competitions/games, as well as strength training, conditioning and any other organized sessions and activities in all MHSAA in-season and out-of-season sports.</p>
+
+<p><strong>More Information at&nbsp;</strong><strong><a href="https://www.michigan.gov/coronavirus/" style="color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></strong><br />
+&nbsp;</p>
+
+<hr />
+<p><strong>March 17, 4:30 pm:&nbsp;</strong>In doing our part to keep everyone as safe as possible, MHSAA staff is working remotely as of March 17. The MHSAA headquarters is currently closed to visitors and walk-in customers.</p>
+
+<p>To contact the MHSAA via email,&nbsp;<a href="/Contact-Us" target="_blank">visit the Contact Us page on MHSAA.com</a>. You can access the &ldquo;<a href="/portals/0/documents/whom%20to%20contact.pdf" target="_blank">Whom to Contact</a>&rdquo; listing at this page as well as send an email through our <a href="/Contact-Us" target="_blank">Help Desk site</a>.<br />
+<br />
+To leave a voicemail message, call 517-332-5046 and leave a message in our general mailbox. We will be monitoring this voice mailbox on an hourly basis during normal business hours and messages will be returned on a timely basis.<br />
+<br />
+We will provide an update when changes are made to this current staff and office environment approach.<br />
+<br />
+We thank you in advance for your understanding and support in these unusual times.<br />
+<br />
+<strong>More Information at&nbsp;</strong><a href="https://www.michigan.gov/coronavirus/" style="font-weight: bold; color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a><br />
+&nbsp;</p>
+
+<hr />
+<div><strong>March 13, 2:00 pm:&nbsp;</strong>The Michigan High School Athletic Association has directed all member schools to suspend activities in all sports for all seasons &ndash; effective Monday, March 16 through at least Sunday, April 5 &ndash; to fall in line with Gov. Gretchen Whitmer&rsquo;s order that all schools close for the next three weeks in order to deter the spread of COVID-19.</div>
+
+<p>All athletic activities to be halted include practices, scrimmages and competitions/games, as well as strength training, conditioning and any other organized sessions and activities in all MHSAA in-season and out-of-season sports.<br />
+<br />
+The suspension of activities applies to sports for all three MHSAA seasons as Spring sports practices have begun, Winter tournaments were suspended Thursday and Fall sports coaches are working with limited numbers of athletes during the offseason.<br />
+<br />
+&ldquo;By suspending all sports activities for the next three weeks, we are taking an additional step to maintain safety and minimize risk first, and also keep a level playing field for our schools and teams during this time of uncertainty,&rdquo; MHSAA Executive Director Mark Uyl said. &ldquo;A number of schools across the state already were making this decision, and setting this as the standard across our membership is appropriate especially given the quick pace with which this situation is continuing to evolve. Given the rapid, fast-moving and unprecedented events of this week, the MHSAA will use the time during this all-sport suspension of activities to evaluate all options and next steps which will be shared with schools in a timely manner.&rdquo;</p>
+
+<p><strong>More Information at&nbsp;<a href="https://www.michigan.gov/coronavirus/" style="color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></strong><br />
+&nbsp;</p>
+
+<hr />
+<p><strong>March 12, 3:00 pm:&nbsp;</strong>Postseason events sponsored by the Michigan High School Athletic Association have been suspended immediately and indefinitely due to concerns related to COVID-19.</p>
+
+<p>The Ice Hockey, Girls Gymnastics and Lower Peninsula Boys Swimming &amp; Diving Finals had been scheduled for this weekend, while the Girls &amp; Boys Basketball Tournaments are midway through earlier rounds of their playoff progressions.&nbsp;</p>
+
+<p>On Wednesday, Gov. Gretchen Whitmer recommended a stoppage of large gatherings in order to assist in preventing the spread of COVID-19.</p>
+
+<p>&ldquo;Based on the events of the last 48 hours and with things changing by the minute, we believe we have no choice but to suspend our winter tournaments immediately,&rdquo; MHSAA Executive Director Mark Uyl said. &ldquo;This is a suspension until we have a better handle on the situation. The health and welfare of everyone involved is our number one priority.&rdquo;</p>
+
+<p>Uyl added that more information and updates will be forthcoming over the next few days. No timetable has been determined for possible rescheduling for tournaments.</p>
+
+<p><strong>More Information at&nbsp;<a href="https://www.michigan.gov/coronavirus/" style="color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></strong><br />
+&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<hr />
+<p><strong>March 12, 2:25 pm:&nbsp;<span style="color:#ff0000">BREAKING:</span> </strong>All MHSAA winter tournaments are suspended, effective immediately and indefinitely, due to concerns related to COVID-19. Updates and press release to follow.</p>
+
+<p>&nbsp;</p>
+
+<hr />
+<p><strong>March 12, 2:00 pm:</strong> As this remains a fluid situation, and in order to provide the most current information, the Michigan High School Athletic Association is preparing an update on Winter postseason events to publish before the close of business today (4:30 p.m.).</p>
+
+<p>Spring Sports: The MHSAA is receiving numerous questions about Spring sports, as relates to COVID-19 concerns.&nbsp;The decisions to conduct practices and hold competitions for Spring sports are being made at the local school level, by local administration. Parents should contact their school&rsquo;s athletic director for updates.</p>
+
+<p><strong>More Information at&nbsp;<a href="https://www.michigan.gov/coronavirus/" style="color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></strong><br />
+&nbsp;</p>
+
+<hr />
+<p><strong>March 12, 10:00 am:</strong><strong>&nbsp;</strong>Postseason events sponsored by the Michigan High School Athletic Association and scheduled for March 12-14 will be conducted as scheduled. However, attendance will be restricted at all events through this weekend, with updates to be announced Monday, March 16, for the remainder of the girls and boys basketball tournaments.<br />
+<br />
+The MHSAA Ice Hockey Semifinals and Finals will be played March 12-14 at USA Hockey Arena, with Lower Peninsula Boys Swimming &amp; Diving Finals beginning Friday, March 13 and concluding March 14 at Oakland University and Holland Aquatic Center. Girls Gymnastics at Rockford High School also will be competed Friday and Saturday this weekend. Girls Basketball Regionals Finals are scheduled for tonight, March 12, across the state, as are Boys District Finals on Friday, March 13.<br />
+<br />
+Based on recommendations from Gov. Gretchen Whitmer suggesting attendance limitations, no spectators will be allowed for the three Swimming &amp; Diving Finals, both days, or Saturday&rsquo;s Girls Gymnastics Individual Finals. These events have the highest number of participants of this weekend&rsquo;s events.<br />
+<br />
+However, for Hockey Semifinals and Finals and Gymnastics Team Finals &ndash; events with far fewer participants &ndash; a limited number of spectators will be allowed, as determined by participating schools, to include only parents, legal guardians and essential administrators. Basketball games during the next two days also will allow only limited spectators, as determined by participating schools and following these same restrictions.&nbsp; Each competing school will provide the entry list of parents, legal guardians and essential administrators to the host site prior to each contest.</p>
+
+<p>CREDENTIALED MHSAA MEDIA WILL STILL BE PERMITTED AT EVENTS<br />
+<br />
+<strong>To recap, here is a breakdown of sport-by-sport attendance and broadcast stipulations.&nbsp;<br />
+<br />
+Boys Swimming &amp; Diving Finals</strong><br />
+Rounds: Preliminaries on March 13, Finals on March 14<br />
+Attendance: No onsite spectators allowed.<br />
+Broadcast: Live streaming of prelims and Finals on MHSAA.tv.&nbsp;<br />
+<br />
+<strong>Girls Gymnastics Finals</strong><br />
+Rounds: Team Finals on March 13, Individual Finals on March 14<br />
+Attendance: Limited to parents, legal guardians and essential administrators on March 13. No onsite spectators allowed March 14.&nbsp;<br />
+Broadcast: Live streaming of Team and Individual Finals on MHSAA.tv.&nbsp;<br />
+<br />
+<strong>Boys Ice Hockey Semifinals and Finals</strong><br />
+Rounds: Semifinals on March 12-13, Finals on March 14<br />
+Attendance: Limited to parents, legal guardians and essential administrators.<br />
+Broadcast: Live streaming of all nine games on MHSAA.tv.&nbsp;<br />
+<br />
+<strong>Girls Basketball Regional Finals</strong><br />
+Rounds: All scheduled for March 12.<br />
+Attendance: Limited to parents, legal guardians and essential administrators.<br />
+Broadcast: Live streaming of some games, with subscription, on MHSAA.tv.&nbsp;<br />
+<br />
+<strong>Boys Basketball District Finals</strong><br />
+Rounds: All scheduled for March 13.<br />
+Attendance: Limited to parents, legal guardians and essential administrators.<br />
+Broadcast: Live streaming of some games, with subscription, on MHSAA.tv.<br />
+<br />
+Bands, cheerleaders and gatherings in parking lots or elsewhere on-site will not be allowed. Restrictions on noisemakers, etc., will continue to be upheld for those fans who will attend.&nbsp;<br />
+<br />
+For those allowed to be present, there will be no admission charged at any of these five events. Online ticket sales have been stopped, and all tickets that have been purchased are voided and will be fully refunded.&nbsp;<br />
+<br />
+Fans not allowed to attend will have the opportunity to watch coverage of all three of this weekend&rsquo;s Finals live on <a href="https://www.nfhsnetwork.com/associations/mhsaa-mi" target="_blank"><strong>MHSAA.tv.</strong></a> Complete streaming of all nine Hockey Semifinals and Finals games is scheduled, as is streaming of both the Team and Individual Gymnastics Finals and both preliminaries and Finals for swimming &amp; diving. MHSAA.tv also will carry a number of girls and boys basketball games this weekend as part of its usual subscription coverage by members of the School Broadcast Program.&nbsp;<br />
+<br />
+The streaming of all three divisions of the MHSAA Swimming &amp; Diving Finals and both Team and Individual Gymnastics Finals will be provided FREE OF CHARGE.&nbsp; More details about access to these free feeds will be provided in the next update this afternoon.<br />
+<br />
+This remains a fluid situation, and another update will be released here today, March 12, at 2 p.m.&nbsp;</p>
+
+<p><strong>More Information at&nbsp;<a href="https://www.michigan.gov/coronavirus/" style="color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></strong><br />
+&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<hr />
+<p><strong>March 11, 6:30 pm:</strong>&nbsp;The Michigan High School Athletic Association is planning to conduct all remaining winter postseason tournaments as scheduled. However, based on the recommendations from Gov. Gretchen Whitmer this afternoon, the MHSAA is finalizing plans that will either prohibit or allow limited spectators through this Saturday&rsquo;s events.</p>
+
+<p><br />
+This weekend&rsquo;s Boys Swimming &amp; Diving Finals will be held as scheduled at Oakland University and the Holland Aquatic Center, but will be conducted with no on-site spectators. All events at both Swim Final locations will be streamed live at <a href="https://www.nfhsnetwork.com/associations/mhsaa-mi" target="_blank">MHSAA.tv</a>.<br />
+<br />
+Specific plans and policies for spectators at this weekend&rsquo;s Ice Hockey Semifinals &amp; Finals, Girls Gymnastic Finals, Girls Regional Basketball and Boys District Basketball games will be provided by 10 a.m. Thursday, March 12. Spectator plans for the final two weeks of the Girls and Boys Basketball Tournaments will be provided by Monday, March 16.<br />
+<br />
+Executive Director Mark Uyl:&nbsp;<br />
+<br />
+&ldquo;While this is unfortunate for many reasons, we intend to do everything possible to allow our students who have earned the opportunities to compete at these highest levels to do so. However, we also take seriously our responsibility to help slow the spread of this disease. We will continue to follow guidance from the Governor&rsquo;s office, Michigan Department of Health and Human Services, county health departments and our member schools, maintaining the flexibility necessary to allow us to finish this winter season and provide opportunities for lifetime memories to be made while keeping all involved in our events as safe as possible.&rdquo;</p>
+
+<p><strong>More Information at&nbsp;<a href="https://www.michigan.gov/coronavirus/" style="color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></strong><br />
+&nbsp;</p>
+
+<hr />
+<p><strong>March 11, 12:00 pm: </strong>The MHSAA is working with state and local health authorities to monitor the developing COVID-19 situation in Michigan. At this time, all MHSAA postseason tournament events will be played as scheduled. We encourage people to follow the CDC guidance regarding hand-washing, personal hygiene and staying home when sick. We are continually monitoring this situation.&nbsp; If it becomes necessary to make adjustments to MHSAA tournament events, decisions will be made to ensure a healthy and safe environment for everyone involved.</p>
+
+<p><strong>More Information at&nbsp;<a href="https://www.michigan.gov/coronavirus/" style="color: #046387;" target="_blank">Michigan Coronavirus Resource Page</a></strong></p>
+
+<div id="radePasteHelper" style="position: absolute; left: -10000px; border: 0px solid red; top: 0px; width: 1px; height: 1px; overflow: hidden;">
+<hr />&nbsp;
+<p>&nbsp;</p>
+</div>
+
+	</div>
+
+</div><!-- End_Module_6758 --></div>
+   </div></div>
+                <div class="row-wrap">
+                    <div id="dnn_middlePane" class="DNNEmptyPane"></div>
+                    <div id="dnn_rightPane" class="DNNEmptyPane"></div>
+                </div>
+                <div class="row-wrap">
+                    <div id="dnn_BottomLeftPane" class="DNNEmptyPane"></div>
+                    <div id="dnn_BottomRightPane" class="DNNEmptyPane"></div>
+                </div>
+                <div id="dnn_BottomPane" class="DNNEmptyPane"></div>
+            </div>
+        </div>
+        <div class="secondary-content">
+            <div class="sidebar-menu">
+                <a href="/CoronavirusUpdates.aspx" class="sidebar-menu-title">Coronavirus Updates</a>
+                
+
+
+
+
+
+
+
+    <ul>
+				<li  class="first">
+					<a href="https://www.mhsaa.com/">Home</a>
+				  
+				</li>
+				<li >
+					<a href="https://www.mhsaa.com/About-the-MHSAA">About the MHSAA</a>
+				      <ul>
+    </ul>
+
+				</li>
+				<li >
+					<a href="https://www.mhsaa.com/News/MHSAA-Network">MHSAA Network</a>
+				  
+				</li>
+				<li >
+					<a href="https://www.mhsaa.com/Calendars">Calendars</a>
+				  
+				</li>
+				<li >
+					<a href="https://www.mhsaa.com/Contact-Us">Contact Us</a>
+				  
+				</li>
+				<li >
+					<a href="https://www.mhsaa.com/Store">Store</a>
+				  
+				</li>
+				<li >
+					<a href="https://www.mhsaa.com/Sports">Sports</a>
+				      <ul>
+    </ul>
+
+				</li>
+				<li >
+					<a href="https://www.mhsaa.com/Officials">Officials</a>
+				      <ul>
+    </ul>
+
+				</li>
+				<li >
+					<a href="https://www.mhsaa.com/Training-Education">Training &amp; Education</a>
+				      <ul>
+    </ul>
+
+				</li>
+				<li  class="last">
+					<a href="https://www.mhsaa.com/News">News</a>
+				      <ul>
+    </ul>
+
+				</li>
+    </ul>
+
+            </div>
+            <div id="dnn_leftPane1" class="DNNEmptyPane"></div>
+            <div id="dnn_leftPane2" class="DNNEmptyPane"></div>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- Uncomment to render XML tree for Navigation menu -->
+<!-- <div style="margin-left:1em" xmlns:ddr="urn:ddrmenu">
+      &lt;Root&gt;
+  <div style="margin-left:1em">
+      &lt;root&gt;
+    <div style="margin-left:1em">
+      &lt;node id="1368" text="Home" title="Michigan High School Athletic Association" url="https://www.mhsaa.com/" enabled="1" selected="0" breadcrumb="0" separator="0" first="1" last="0" only="0" depth="0" /&gt;</div>
+    <div style="margin-left:1em">
+      &lt;node id="61" text="About the MHSAA" title="About the MHSAA | Michigan High School Athletic Association" url="https://www.mhsaa.com/About-the-MHSAA" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="0"&gt;
+      <div style="margin-left:1em">
+      &lt;node id="123" text="MHSAA Staff" title="MHSAA Staff | About the MHSAA" url="https://www.mhsaa.com/About-the-MHSAA/MHSAA-Staff" enabled="1" selected="0" breadcrumb="0" separator="0" first="1" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="124" text="Representative Council" title="Representative Council | About the MHSAA" url="https://www.mhsaa.com/About-the-MHSAA/Representative-Council" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="125" text="Corporate Partner Program" title="Corporate Partner Program | About the MHSAA" url="https://www.mhsaa.com/About-the-MHSAA/Corporate-Partner-Program" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="126" text="State Associations" title="State Associations | About the MHSAA" url="https://www.mhsaa.com/About-the-MHSAA/State-Associations" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="127" text="Coaches Associations" title="Coaches Associations | About the MHSAA" url="https://www.mhsaa.com/About-the-MHSAA/Coaches-Associations" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="128" text="Leagues &amp;amp; Conferences" title="Leagues &amp;amp; Conferences | About the MHSAA" url="https://www.mhsaa.com/About-the-MHSAA/Leagues-Conferences" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="129" text="FAQs" title="FAQs | About the MHSAA" url="https://www.mhsaa.com/About-the-MHSAA/FAQs" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="1" only="0" depth="1" /&gt;</div>&lt;/node&gt;</div>
+    <div style="margin-left:1em">
+      &lt;node id="62" text="MHSAA Network" title="MHSAA Network | Michigan High School Athletic Association" url="https://www.mhsaa.com/News/MHSAA-Network" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="0" /&gt;</div>
+    <div style="margin-left:1em">
+      &lt;node id="63" text="Calendars" title="Calendars | Michigan High School Athletic Association" url="https://www.mhsaa.com/Calendars" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="0" /&gt;</div>
+    <div style="margin-left:1em">
+      &lt;node id="64" text="Contact Us" title="Contact Us | Michigan High School Athletic Association" url="https://www.mhsaa.com/Contact-Us" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="0" /&gt;</div>
+    <div style="margin-left:1em">
+      &lt;node id="65" text="Store" title="MHSAA Store | Michigan High School Athletic Association" url="https://www.mhsaa.com/Store" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="0" /&gt;</div>
+    <div style="margin-left:1em">
+      &lt;node id="56" text="Sports" title="Sports | Michigan High School Athletic Association" url="https://www.mhsaa.com/Sports" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="0"&gt;
+      <div style="margin-left:1em">
+      &lt;node id="106" text="Baseball" title="Baseball | MHSAA Sports" url="https://www.mhsaa.com/Sports/Baseball" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/baseball.png?ver=pPHie4QfJcn0GHWT05TkyQ%3d%3d" first="1" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="104" text="Boys Basketball" title="Boys Basketball | MHSAA Sports" url="https://www.mhsaa.com/Sports/Boys-Basketball" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/basketball.png?ver=ikhUgAEDA0FMvpxsJQNEFA%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="105" text="Girls Basketball" title="Girls Basketball | MHSAA Sports" url="https://www.mhsaa.com/Sports/Girls-Basketball" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/baseball.png?ver=pPHie4QfJcn0GHWT05TkyQ%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="108" text="Boys Bowling" title="Boys Bowling | MHSAA Sports" url="https://www.mhsaa.com/Sports/Boys-Bowling" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/bowling.png?ver=2WXHvTZg5BhKLMTsuvHgwA%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="107" text="Girls Bowling" title="Girls Bowling | MHSAA Sports" url="https://www.mhsaa.com/Sports/Girls-Bowling" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/bowling.png?ver=2WXHvTZg5BhKLMTsuvHgwA%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="109" text="Girls Competitive Cheer" title="Girls Competitive Cheer | MHSAA Sports" url="https://www.mhsaa.com/Sports/Girls-Competitive-Cheer" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="143" text="Boys Cross Country" title="Boys Cross Country | MHSAA Sports" url="https://www.mhsaa.com/Sports/Boys-Cross-Country" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/crosscountry.png?ver=PFlApFNtZUs67s5WhxY7TQ%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="142" text="Girls Cross Country" title="Girls Cross Country | MHSAA Sports" url="https://www.mhsaa.com/Sports/Girls-Cross-Country" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/crosscountry.png?ver=PFlApFNtZUs67s5WhxY7TQ%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="110" text="Football" title="Football | MHSAA Sports" url="https://www.mhsaa.com/Sports/Football" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/football.png?ver=OJhKDy-ZT1G_NjKmegicag%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="112" text="Boys Golf" title="Boys Golf | MHSAA Sports" url="https://www.mhsaa.com/Sports/Boys-Golf" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/golf.png?ver=vuNVt-PA_cZmbDhLwBDXDw%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="111" text="Girls Golf" title="Girls Golf | MHSAA Sports" url="https://www.mhsaa.com/Sports/Girls-Golf" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/golf.png?ver=vuNVt-PA_cZmbDhLwBDXDw%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="113" text="Girls Gymnastics" title="Girls Gymnastics | MHSAA Sports" url="https://www.mhsaa.com/Sports/Girls-Gymnastics" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/gymnastics.png?ver=NIRb2MRrjf_LWodCIjG3dA%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="114" text="Ice Hockey" title="Ice Hockey | MHSAA Sports" url="https://www.mhsaa.com/Sports/Ice-Hockey" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/hockey.png?ver=EAD4JjKRwoXjLLF7U0aD8w%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="185" text="Boys Lacrosse" title="Boys Lacrosse | MHSAA Sports" url="https://www.mhsaa.com/Sports/Boys-Lacrosse" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/lacrosse.png?ver=um4vuwoVy5DLASs_ABO_BA%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="184" text="Girls Lacrosse" title="Girls Lacrosse | MHSAA Sports" url="https://www.mhsaa.com/Sports/Girls-Lacrosse" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/lacrosse.png?ver=um4vuwoVy5DLASs_ABO_BA%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="186" text="Boys Skiing" title="Boys Skiing | MHSAA Sports" url="https://www.mhsaa.com/Sports/Boys-Skiing" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/skiing.png?ver=oc1uX1i8bjD9_3RjpcQImA%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="187" text="Girls Skiing" title="Girls Skiing | MHSAA Sports" url="https://www.mhsaa.com/Sports/Girls-Skiing" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/skiing.png?ver=oc1uX1i8bjD9_3RjpcQImA%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="144" text="Boys Soccer" title="Boys Soccer | MHSAA Sports" url="https://www.mhsaa.com/Sports/Boys-Soccer" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/soccer.png?ver=0f2j0pLBc2Lo-XC3dCwv8w%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="140" text="Girls Soccer" title="Girls Soccer | MHSAA Sports" url="https://www.mhsaa.com/Sports/Girls-Soccer" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/soccer.png?ver=0f2j0pLBc2Lo-XC3dCwv8w%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="150" text="Softball" title="Softball | MHSAA Sports" url="https://www.mhsaa.com/Sports/Softball" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/baseball.png?ver=pPHie4QfJcn0GHWT05TkyQ%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="153" text="Boys Swimming &amp;amp; Diving" title="Boys Swimming &amp;amp; Diving | MHSAA Sports" url="https://www.mhsaa.com/Sports/Boys-Swimming-Diving" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/swimming.png?ver=9_nc6j_ARpW2vrvwfOyUYg%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="145" text="Girls Swimming &amp;amp; Diving" title="Girls Swimming &amp;amp; Diving | MHSAA Sports" url="https://www.mhsaa.com/Sports/Girls-Swimming-Diving" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/swimming.png?ver=9_nc6j_ARpW2vrvwfOyUYg%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="137" text="Boys Tennis" title="Boys Tennis | MHSAA Sports" url="https://www.mhsaa.com/Sports/Boys-Tennis" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="139" text="Girls Tennis" title="Girls Tennis | MHSAA Sports" url="https://www.mhsaa.com/Sports/Girls-Tennis" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="176" text="Boys Track &amp;amp; Field" title="Boys Track &amp;amp; Field | MHSAA Sports" url="https://www.mhsaa.com/Sports/Boys-Track-Field" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/crosscountry.png?ver=PFlApFNtZUs67s5WhxY7TQ%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="177" text="Girls Track &amp;amp; Field" title="Girls Track &amp;amp; Field | MHSAA Sports" url="https://www.mhsaa.com/Sports/Girls-Track-Field" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/crosscountry.png?ver=PFlApFNtZUs67s5WhxY7TQ%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="225" text="Girls Volleyball" title="Girls Volleyball | MHSAA Sports" url="https://www.mhsaa.com/Sports/Girls-Volleyball" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/volleyball.png?ver=ehOaJKFg5CTdK6I4IPounQ%3d%3d" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="152" text="Wrestling" title="Wrestling | MHSAA Sports" url="https://www.mhsaa.com/Sports/Wrestling" enabled="1" selected="0" breadcrumb="0" separator="0" largeimage="/Portals/0/images/SportsTitleIcons/wrestling.png?ver=Dh5ou21eHptCIaYwZTbk-Q%3d%3d" first="0" last="1" only="0" depth="1" /&gt;</div>&lt;/node&gt;</div>
+    <div style="margin-left:1em">
+      &lt;node id="58" text="Officials" title="Officials | Michigan High School Athletic Association" url="https://www.mhsaa.com/Officials" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="0"&gt;
+      <div style="margin-left:1em">
+      &lt;node id="1977" text="REGISTER NOW" title="REGISTER NOW" url="https://www.mhsaa.com/Officials/REGISTER-NOW" enabled="1" selected="0" breadcrumb="0" separator="0" first="1" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="1956" text="Sport-Specific Content" title="Sport-Specific Content | Officials | Michigan High School Athletic Association" url="https://www.mhsaa.com/Officials/Sport-Specific-Content" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="1954" text="New Officials" title="New Officials | Officials | Michigan High School Athletic Association" url="https://www.mhsaa.com/Officials/New-Officials" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="1978" text="Assigner Resources" title="Assigner Resources | Officials2 | Michigan High School Athletic Association" url="https://www.mhsaa.com/Officials/Assigner-Resources" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="1982" text="Association Resources" title="Association Resources | Officials2 | Michigan High School Athletic Association" url="https://www.mhsaa.com/Officials/Association-Resources" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="1983" text="Registered Observers" title="Officials Observer Handbook and Observation Forms | Officials | Michigan High School Athletic Association" url="https://www.mhsaa.com/Officials/Registered-Observers" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="1955" text="General Officiating Resources" title="General Officiating Resources | Officials | Michigan High School Athletic Association" url="https://www.mhsaa.com/Officials/General-Officiating" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="654" text="Officials Directory" title="Officials Dirctory | Officials | MHSAA" url="https://www.mhsaa.com/My-MHSAA/Official-Services/Officials-Directory" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="1" only="0" depth="1" /&gt;</div>&lt;/node&gt;</div>
+    <div style="margin-left:1em">
+      &lt;node id="60" text="Training &amp;amp; Education" title="Training &amp;amp; Education | Michigan High School Athletic Association" url="https://www.mhsaa.com/Training-Education" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="0"&gt;
+      <div style="margin-left:1em">
+      &lt;node id="485" text="Coaches Advancement Program" title="CAP | Training &amp;amp; Education" url="https://www.mhsaa.com/Training-Education/Coaches-Advancement-Program" enabled="1" selected="0" breadcrumb="0" separator="0" first="1" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="564" text="Women In Sports Leadership" title="WISL | Training &amp;amp; Education | MHSAA" url="https://www.mhsaa.com/Training-Education/Women-In-Sports-Leadership" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="627" text="Sportsmanship" title="Sportsmanship | Training &amp;amp; Education" url="https://www.mhsaa.com/Training-Education/Sportsmanship" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="628" text="Captains Clinics" title="Captains Clinics | Training &amp;amp; Education" url="https://www.mhsaa.com/Schools/Students/Captains-Clinics" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="575" text="Rules Meetings" title="Rules Meetings | Training &amp;amp; Education | MHSAA" url="https://www.mhsaa.com/Training-Education/Rules-Meetings" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="971" text="Health &amp;amp; Safety Resources" title="Health &amp;amp; Safety Resources | Schools | MHSAA" url="https://www.mhsaa.com/Schools/Health-Safety-Resources" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="1" only="0" depth="1" /&gt;</div>&lt;/node&gt;</div>
+    <div style="margin-left:1em">
+      &lt;node id="1402" text="News" title="News" url="https://www.mhsaa.com/News" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="1" only="0" depth="0"&gt;
+      <div style="margin-left:1em">
+      &lt;node id="508" text="MHSAA Network" title="MHSAA Network | News" url="https://www.mhsaa.com/News/MHSAA-Network" enabled="1" selected="0" breadcrumb="0" separator="0" first="1" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="66" text="Media Information" title="Media Information | News | Michigan High School Athletic Association" url="https://www.mhsaa.com/News/Media-Information" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="224" text="Press Releases" title="Press Releases | MHSAA News" url="https://www.mhsaa.com/News/Press-Releases" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="67" text="Blog: From the Director" title="From the Director | MHSAA Blog" url="https://www.mhsaa.com/News/Blog-From-the-Director" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="1644" text="This Week in High School Sports" title="This Week in High School Sports | News" url="https://www.mhsaa.com/News/This-Week-in-High-School-Sports" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="525" text="Publications" title="Publications | News" url="https://www.mhsaa.com/News/Publications" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="0" only="0" depth="1" /&gt;</div>
+      <div style="margin-left:1em">
+      &lt;node id="1426" text="Announcements" title="Announcements | News | Michigan High School Athletic Association" url="https://www.mhsaa.com/News/Announcements" enabled="1" selected="0" breadcrumb="0" separator="0" first="0" last="1" only="0" depth="1" /&gt;</div>&lt;/node&gt;</div>&lt;/root&gt;</div>&lt;/Root&gt;</div> -->
+
+<!-- footer start -->
+<footer class="colophon">
+    <div class="row-wrap">
+        <div id="dnn_footerLinksPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-383"><a name="383"></a>
+<h2 class="plain-title"><span id="dnn_ctr383_ctl00_titleLabel" class="Head">Helpful Information for:</span>
+
+
+</h2>
+<div id="dnn_ctr383_ContentPane"><!-- Start_Module_383 --><div id="dnn_ctr383_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr383_HtmlModule_lblContent" class="Normal">
+	<div class="row-wrap">
+<div class="footer-links">
+<h3>Students</h3>
+
+<ul>
+ <li><a href="/LinkClick.aspx?link=148&amp;tabid=65">SAC</a></li>
+ <li><a href="/LinkClick.aspx?link=183&amp;tabid=66">Scholar-Athlete</a></li>
+ <li><a href="/LinkClick.aspx?link=180&amp;tabid=65">Captains Clinics</a></li>
+ <li><a href="/LinkClick.aspx?link=149&amp;tabid=65">College Prep</a></li>
+ <li><a href="/LinkClick.aspx?link=627&amp;tabid=564">Sportsmanship</a></li>
+</ul>
+</div>
+
+<div class="footer-links">
+<h3>ADs</h3>
+
+<ul>
+ <li><a href="http://www.miaaa.com/" target="_blank">MIAAA</a></li>
+ <li><a href="/LinkClick.aspx?link=57&amp;tabid=130" target="_self">School Directory</a></li>
+ <li><a href="/Calendars.aspx" target="_blank">Quick Calendar</a></li>
+ <li><a href="/Schools/GamesWanted.aspx">Games Wanted</a></li>
+ <li><a href="/LinkClick.aspx?link=569&amp;tabid=38">Forms/Resources</a></li>
+</ul>
+</div>
+
+<div class="footer-links">
+<h3>Coaches</h3>
+
+<ul>
+ <li><a href="/LinkClick.aspx?link=485&amp;tabid=110">CAP</a></li>
+ <li><a href="/My-MHSAA/Coach-Services/Officials-Ratings#/contests" target="_blank">Rate Officials</a></li>
+ <li><a href="/LinkClick.aspx?link=575&amp;tabid=38">Rules Meetings</a></li>
+ <li><a href="/LinkClick.aspx?link=606&amp;tabid=57">Health/Safety</a></li>
+ <li><a href="/Schools/GamesWanted.aspx">Games Wanted</a></li>
+</ul>
+</div>
+
+<div class="footer-links">
+<h3>Media</h3>
+
+<ul>
+ <li><a href="/LinkClick.aspx?link=224&amp;tabid=63">Press Releases</a></li>
+ <li><a href="/LinkClick.aspx?link=515&amp;tabid=56">Credentials</a></li>
+ <li><a href="/LinkClick.aspx?link=516&amp;tabid=56">Broadcast App</a></li>
+ <li><a href="/news/this-week-in-high-school-sports" target="_blank">&quot;This Week&quot; Podcast</a></li>
+ <li><a href="/LinkClick.aspx?link=517&amp;tabid=518">Tournament Info</a></li>
+</ul>
+</div>
+</div>
+
+</div>
+
+</div><!-- End_Module_383 --></div>
+   </div></div>
+        <div class="address-information">
+            <div class="connect">
+                <h3 class="footer-connect-title">Connect</h3>
+                <ul class="footer-connect">
+                    <li><a href="https://www.facebook.com/MHSAASports" class="footer-fb" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com/mhsaa" class="footer-tw">Twitter</a></li>
+                    <li><a href="http://www.youtube.com/MHSAASPORTS" class="footer-yt">Youtube</a></li>
+                </ul>
+            </div>
+            <p class="address">
+                Michigan High School Athletic Association<br/>
+                1661 Ramblewood Drive<br/>
+                East Lansing, MI 48823<br/>
+                Office 517-332-5046<br/>Fax 517-332-4071<br/>
+                <a href="mailto:info@mhsaa.com">info@mhsaa.com</a>
+            </p>
+        </div>
+    </div>
+      <div class="site-credits">
+        2021 MHSAA, Inc. | <a href="/Home/PrivacyPolicyTermsofService.aspx" title="MHSAA Privacy Policy & Terms of Service">Privacy Policy and Terms of Service</a><a href="http://www.gravityworksdesign.com/" title="Michigan mobile development and web design" target="_blank" class="gw">Web Design by Gravity Works</a> | WEB2019
+    </div>
+</footer>
+
+<script src="/Portals/_default/Skins/mhsaathirteen/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3366792-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- End Google Analytics -->
+
+<!-- footer end -->
+
+
+
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" />
+        
+    </form>
+    <!--CDF(Javascript|/js/dnncore.js?cdv=294|DnnBodyProvider|100)--><!--CDF(Javascript|/js/dnn.modalpopup.js?cdv=294|DnnBodyProvider|50)--><!--CDF(Css|/Resources/Shared/stylesheets/dnndefault/7.0.0/default.css?cdv=294|DnnPageHeaderProvider|5)--><!--CDF(Css|/Portals/_default/Skins/mhsaathirteen/skin.css?cdv=294|DnnPageHeaderProvider|15)--><!--CDF(Css|/Portals/_default/Skins/mhsaathirteen/InsideSkin.css?cdv=294|DnnPageHeaderProvider|20)--><!--CDF(Css|/Portals/_default/Containers/mhsaa/container.css?cdv=294|DnnPageHeaderProvider|25)--><!--CDF(Css|/DesktopModules/HTML/module.css?cdv=294|DnnPageHeaderProvider|10)--><!--CDF(Css|/DesktopModules/HTML/module.css?cdv=294|DnnPageHeaderProvider|10)--><!--CDF(Css|/Portals/_default/Containers/mhsaa/container.css?cdv=294|DnnPageHeaderProvider|25)--><!--CDF(Css|/DesktopModules/HTML/module.css?cdv=294|DnnPageHeaderProvider|10)--><!--CDF(Css|/DesktopModules/HTML/module.css?cdv=294|DnnPageHeaderProvider|10)--><!--CDF(Css|/Portals/_default/Containers/mhsaa/container.css?cdv=294|DnnPageHeaderProvider|25)--><!--CDF(Css|/DesktopModules/GravityWorks-CustomLogin/module.css?cdv=294|DnnPageHeaderProvider|10)--><!--CDF(Css|/DesktopModules/GravityWorks-CustomLogin/module.css?cdv=294|DnnPageHeaderProvider|10)--><!--CDF(Css|/Portals/_default/Containers/mhsaathirteen/container.css?cdv=294|DnnPageHeaderProvider|25)--><!--CDF(Css|/DesktopModules/TanLDGoogleSearch/module.css?cdv=294|DnnPageHeaderProvider|10)--><!--CDF(Css|/DesktopModules/TanLDGoogleSearch/module.css?cdv=294|DnnPageHeaderProvider|10)--><!--CDF(Css|/Portals/_default/Containers/mhsaa/container.css?cdv=294|DnnPageHeaderProvider|25)--><!--CDF(Css|/DesktopModules/SmokeRanch.BannerDisplay/SmokeRanch.BannerDisplay/module.css?cdv=294|DnnPageHeaderProvider|10)--><!--CDF(Css|/DesktopModules/SmokeRanch.BannerDisplay/SmokeRanch.BannerDisplay/module.css?cdv=294|DnnPageHeaderProvider|10)--><!--CDF(Css|/Portals/0/portal.css?cdv=294|DnnPageHeaderProvider|35)--><!--CDF(Javascript|/Resources/libraries/jQuery-UI/01_12_01/jquery-ui.js?cdv=294|DnnPageHeaderProvider|10)--><!--CDF(Javascript|/Resources/libraries/jQuery/03_05_01/jquery.js?cdv=294|DnnPageHeaderProvider|5)-->
+    
+</body>
+</html>

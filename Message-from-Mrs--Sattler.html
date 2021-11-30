@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
+ <head> 
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"> 
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <!--[if gte mso 9]>
+<style id="ol-styles">
+/* OUTLOOK-SPECIFIC STYLES */
+li {
+text-indent: -1em;
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+ul, ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+sup {
+font-size: 85% !important;
+}
+sub {
+font-size: 85% !important;
+}
+</style>
+<![endif]--> 
+  <style id="template-styles-head" data-premailer="ignore">
+.footer-main-width {
+width: 610px!important;
+max-width: 610px;
+}
+table {
+border-collapse: collapse;
+table-layout: fixed;
+}
+.bgimage {
+table-layout: auto;
+}
+.preheader-container {
+color: transparent;
+display: none;
+font-size: 1px;
+line-height: 1px;
+max-height: 0px;
+max-width: 0px;
+opacity: 0;
+overflow: hidden;
+}
+/* LIST AND p STYLE OVERRIDES */
+.editor-text p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+.editor-text ul,
+.editor-text ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+.editor-text li {
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+/* ==================================================
+CLIENT/BROWSER SPECIFIC OVERRIDES
+================================================== */
+/* IE: correctly scale images with w/h attbs */
+img {
+-ms-interpolation-mode: bicubic;
+}
+/* Text Link Style Reset */
+a {
+text-decoration: underline;
+}
+/* iOS: Autolink styles inherited */
+a[x-apple-data-detectors] {
+text-decoration: underline !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+color: inherit !important;
+}
+/* FF/Chrome: Smooth font rendering */
+.editor-text, .MainTextFullWidth {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+/* Gmail/Web viewport fix */
+u + .body .template-body {
+width: 610px;
+}
+@media only screen and (max-width:480px) {
+u + .body .template-body {
+width: 100% !important;
+}
+}
+/* Office365/Outlook.com image reset */
+[office365] button, [office365] .divider-base div, [office365] .spacer-base div, [office365] .editor-image div { display: block !important; }
+</style> 
+  <style>@media only screen and (max-width:480px) {
+table {
+border-collapse: collapse;
+}
+.main-width {
+width: 100% !important;
+}
+.mobile-hidden {
+display: none !important;
+}
+td.OneColumnMobile {
+display: block !important;
+}
+.OneColumnMobile {
+width: 100% !important;
+}
+td.editor-col .editor-text {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-button-container {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-social td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .block-margin {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col td.block-margin .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.editor-button td > table tr > td {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-button td > table tr > td td {
+padding: 9px 15px 10px 15px !important;
+}
+.layout {
+padding: 15px 9px 15px 9px !important;
+}
+.layout-container-border {
+padding: 0px 0px 0px 0px !important;
+}
+.layout-container {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-image img {
+width: auto !important; margin-left: auto !important; margin-right: auto !important;
+}
+.editor-image .image-cell {
+padding-bottom: 15px !important;
+}
+.editor-text {
+font-size: 16px !important;
+}
+.section-headline-text {
+font-size: 24px !important;
+}
+.headline-text {
+font-size: 24px !important;
+}
+.subheadline-text {
+font-size: 20px !important;
+}
+.feature {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.layout-outer {
+padding: 0px 20px !important;
+}
+.feature-heading-text {
+font-size: 20px !important;
+}
+.feature-text {
+font-size: 16px !important;
+}
+.split.editor-col {
+margin-top: 0px !important;
+}
+.split.editor-col ~ .split.editor-col {
+margin-top: 10px !important;
+}
+.split-layout-margin {
+padding: 0px 20px !important;
+}
+.article {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.article-heading-text {
+font-size: 20px !important;
+}
+.article-text {
+font-size: 16px !important;
+}
+.social-container {
+text-align: center !important;
+}
+.social-text {
+font-size: 14px !important;
+}
+.cpn-heading-text {
+font-size: 28px !important;
+}
+.editor-cpn-heading-text {
+font-size: 28px !important;
+}
+td.col-divided .editor-col {
+border-right: 0px solid #B20838 !important; border-bottom: 1px solid #B20838 !important;
+}
+td.col-divided td.editor-col:last-of-type {
+border-bottom: 0 !important;
+}
+.col-divided {
+padding: 0 20px !important;
+}
+td.col-divided .editor-col .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .block-margin {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.action-block .poll-answer {
+width: 100% !important; display: block !important;
+}
+.action-block .poll-button {
+width: 100% !important;
+}
+div.MobileFooter {
+font-size: 11px !important;
+}
+td.FooterMobile {
+padding: 0px 10px 0px 10px !important;
+}
+td.MainCenter {
+width: 100% !important;
+}
+table.MainSide {
+display: none !important;
+}
+img.MainSide {
+display: none !important;
+}
+td.MainSide {
+display: none !important;
+}
+.rsvp-button-inner {
+padding: 0px 0px 10px 0px !important;
+}
+.rsvp-button-outer {
+width: 100% !important; max-width: 100% !important;
+}
+.footer-main-width {
+width: 100% !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-column {
+display: block !important;
+}
+.footer-mobile-stack {
+display: block !important;
+}
+.footer-mobile-stack-padding {
+padding-top: 3px;
+}
+}
+@media only screen and (max-width:320px) {
+.layout {
+padding: 0px 0px 0px 0px !important;
+}
+}
+@media screen {
+@font-face {
+font-family: ''; font-style: normal; font-weight: 400; src: local(''), local(''), url() format(''); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+}
+</style> 
+  <title>Message from Mrs. Sattler</title>
+ <script type="text/javascript">
+var __plink_targets = {
+"linkedin.post": "https://s.rs6.net/t?e=wN8n84GkndY&c=4&r=1",
+"addthis.share": "https://s.rs6.net/t?e=wN8n84GkndY&c=5&r=1",
+"facebook.like": "https://s.rs6.net/t?e=wN8n84GkndY&c=2&r=0",
+"twitter.tweet": "https://s.rs6.net/t?e=wN8n84GkndY&c=3&r=1",
+"facebook.share": "https://s.rs6.net/t?e=wN8n84GkndY&c=1&r=1",
+"facebook.send": "https://s.rs6.net/t?e=wN8n84GkndY&c=6&r=0",
+"permalink.view": "https://s.rs6.net/t?e=wN8n84GkndY&c=0&r=0"
+};
+</script>
+<script type="text/javascript" src="https://myemail.constantcontact.com/page/js/campaignPage.js?soid=1120321611596&visitorHost=https%3A%2F%2Fvisitor.constantcontact.com&pageName=Message+from+Mrs.+Sattler"></script>
+</head> 
+ <body class="body" align="center" style="width: 100%; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #FFFFFF; margin: 0px; padding: 0px;" bgcolor="#FFFFFF"> 
+  <table class="template-body" border="0" cellpadding="0" cellspacing="0" style="text-align: center; min-width: 100%;" width="100%"> 
+   <tbody>
+    <tr> 
+     <td class="preheader-container"> 
+      <div> 
+       <div id="preheader" style="display: none; font-size: 1px; color: transparent; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;"> 
+        <span data-entity-ref="preheader"></span> 
+       </div> 
+      </div> </td> 
+    </tr> 
+    <tr> 
+     <td class="template-shell-container" align="center"> 
+      <div class="bgcolor" style="background-color: #FFFFFF;"> 
+       <table class="bgimage" width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF;" bgcolor="#FFFFFF"> 
+        <tbody> 
+         <tr> 
+          <td align="center"> 
+           <table class="main-width" width="610" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 610px;"> 
+            <tbody> 
+             <tr> 
+              <td class="layout" align="center" valign="top" style="padding: 15px 5px;"> 
+               <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0"> 
+                <tbody> 
+                 <tr> 
+                  <td class="layout-container-border" align="center" valign="top" style="background-color: #B20838; padding: 0px;" bgcolor="#B20838"> 
+                   <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="background-color: #B20838;" bgcolor="#B20838"> 
+                    <tbody> 
+                     <tr> 
+                      <td class="layout-container" align="center" valign="top" style="background-color: #FFFFFF; padding: 0;" bgcolor="#FFFFFF"> 
+                       <div class=""> 
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;"> 
+                         <tbody> 
+                          <tr> 
+                           <td class=" editor-col OneColumnMobile" width="100%" align="" valign="top"> 
+                            <div class="gl-contains-image"> 
+                             <table class="editor-image editor-image  editor-image-vspace-on" style="min-width: 100%;" width="100%" cellpadding="0" cellspacing="0" border="0"> 
+                              <tbody> 
+                               <tr> 
+                                <td align="center" valign="top" style="padding-top: 10px; padding-bottom: 10px;"> 
+                                 <div class="publish-container"> 
+                                  <img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="600" border="0" hspace="0" vspace="0" src="https://files.constantcontact.com/c472f58d401/fbc159d5-b0fe-40de-8259-93bff6d6ca34.png"> 
+                                 </div> </td> 
+                               </tr> 
+                              </tbody> 
+                             </table> 
+                            </div> </td> 
+                          </tr> 
+                         </tbody> 
+                        </table> 
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;"> 
+                         <tbody> 
+                          <tr> 
+                           <td class="article editor-col OneColumnMobile" width="100%" align="left" valign="top"> 
+                            <div class="gl-contains-text"> 
+                             <table width="100%" style="min-width: 100%;" cellpadding="0" cellspacing="0" border="0"> 
+                              <tbody> 
+                               <tr> 
+                                <td class="editor-text article-text" align="left" valign="top" style="font-family: Arial,Verdana,Helvetica,sans-serif; font-size: 16px; color: #000000; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px;"> 
+                                 <div></div> 
+                                 <div class="text-container galileo-ap-content-editor">
+                                  <div> 
+                                   <div>
+                                    <span style="font-size: 14px; color: rgb(162, 144, 97); font-weight: bold; font-family: Verdana, Geneva, sans-serif; font-style: italic;">OFFICE OF THE PRINCIPAL</span>
+                                   </div> 
+                                   <div>
+                                    <br>
+                                   </div> 
+                                   <div>
+                                    <span style="font-size: 14px; font-family: Arial, Verdana, Helvetica, sans-serif;">May 1, 2020</span>
+                                   </div> 
+                                   <div>
+                                    <br>
+                                   </div> 
+                                   <div>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">Dear Mercy Family,</span>
+                                   </div> 
+                                   <div>
+                                    <br>
+                                   </div> 
+                                   <div>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">At every opportunity we let our students know how much we miss them. These incredible young women are the reason we are committed to offering so many experiences through our E-LEARNING program. We continue to learn, guide, pray, share ideas and laugh with students. During this time, we miss you - our Mercy families - as well! We prayerfully look forward to the time when we can once again personally connect.</span>
+                                   </div> 
+                                   <div>
+                                    <br>
+                                   </div> 
+                                   <div> 
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">We understand that our Mercy senior students and parents are anxiously awaiting news of senior celebrations and traditions. </span>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: bold;">We are working diligently behind the scenes to explore options and scenarios</span>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">. Please expect a detailed communication early next week.</span> 
+                                   </div> 
+                                   <div>
+                                    <br>
+                                   </div> 
+                                   <div>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; color: rgb(178, 8, 56); font-size: 14px; font-weight: bold;">E-LEARNING Survey Results</span>
+                                   </div> 
+                                   <div> 
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">Thank you for participating in our Mercy E-LEARNING Survey. We are pleased to share with you results from the </span>
+                                    <a href="https://www.mhsmi.org/sites/default/files/curriculum/parent_e-learning_survey.pdf" rel="noopener noreferrer" target="_blank" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; text-decoration: underline; color: rgb(178, 8, 56); font-weight: bold; font-style: normal;">Parent Survey</a>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;"> and the </span>
+                                    <a href="https://www.mhsmi.org/sites/default/files/curriculum/student_e-learning_survey.pdf" rel="noopener noreferrer" target="_blank" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; text-decoration: underline; color: rgb(178, 8, 56); font-weight: bold; font-style: normal;">Student Survey</a>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">. We greatly appreciate the supportive and encouraging words, and the suggestions to guide us in further enhancing the digital learning program for all students. As we learn together from this experience, we are proud of the incredible dedication of our Mercy teachers, the resilience of our students, and the support of our parents!</span> 
+                                   </div> 
+                                   <div>
+                                    <br>
+                                   </div> 
+                                   <div>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; color: rgb(178, 8, 56); font-size: 14px; font-weight: bold;">Unique Virtual Experiences</span>
+                                   </div> 
+                                   <div> 
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">On Tuesday, April 28 the Mercy Administration held our traditional </span>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: bold;">Catherine McAuley Tea Celebration</span>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;"> over Zoom to honor the Class of 2020 Valedictorian and Salutatorian Finalists and National Merit Scholars. A surprise package of cookies and tea was delivered to each student participant to enjoy during this special online celebration. Sr. Lisa Griffith, Executive Director of MESA (Mercy Education System of Americas) joined us for prayer and reflection. Sr. Lisa’s participation emphasized that our Mercy students are connected to a common global community of 54 schools in 6 countries and 1 territory. Sr. Lisa reminded the honorees that no matter where they may travel as their journey begins, they will be near a fellow Mercy girl!</span> 
+                                   </div> 
+                                   <div>
+                                    <br>
+                                   </div> 
+                                   <div> 
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">Mercy Dad Dr. Robert Sherwin, an emergency medicine physician and clinical researcher at the Detroit Medical Center, </span>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: bold;">presented to Mercy students, staff and parents about COVID-19</span>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">. This immensely informative presentation included an overview of COVID-19 along with a question and answer period. Dr. Sherwin not only works on the front lines during this crisis,&nbsp;yet is also part of research trials and is an Associate Professor of Emergency Medicine at Wayne State University School of Medicine. We are immensely grateful for </span>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: bold;">Dr. Sherwin’s generous gift of time</span>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;"> and expertise to help the Mercy community become better informed. Dr. Sherwin will also remotely visit our microbiology classes! A recording of the adult COVID-19 presentation can be found </span>
+                                    <a href="https://youtu.be/WePsWZuicJM" rel="noopener noreferrer" target="_blank" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; text-decoration: underline; color: rgb(178, 8, 56); font-weight: bold; font-style: normal;">here</a>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">.</span> 
+                                   </div> 
+                                   <div>
+                                    <br>
+                                   </div> 
+                                   <div> 
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; color: rgb(34, 34, 34); font-size: 14px;">Lawyer and Mercy Dad Mr. Morganti, is offering to co-host a </span>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; color: rgb(34, 34, 34); font-size: 14px; font-weight: bold;">virtual career webinar</span>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; color: rgb(34, 34, 34); font-size: 14px;"> to Mercy students who have an interest in a law career and would appreciate the opportunity to learn about international litigation. If your daughter might be interested in participating, please encourage her to check her email for a communication from Associate Principal Colleen McMaster.</span> 
+                                   </div> 
+                                   <div>
+                                    <br>
+                                   </div> 
+                                   <div>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; color: rgb(178, 8, 56); font-size: 14px; font-weight: bold;">Mercy Cares</span>
+                                   </div> 
+                                   <div>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">The Archdiocese of Detroit announced a new campaign to assist those in need during the</span>
+                                   </div> 
+                                   <div> 
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">coronavirus pandemic. This program is designed to help people know that they are not alone through this time of crisis. The </span>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: bold;">Calming the Storm</span>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;"> program provides assistance and resources for&nbsp; physical, mental, and spiritual support to help navigate thIs pandemic. Please help spread the word! Anyone who needs assistance can call 313-237-4646, text 'SOS' to 313-315-5758, or visit </span>
+                                    <a href="http://calmingthestorm.org/" rel="noopener noreferrer" target="_blank" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; text-decoration: underline; color: rgb(178, 8, 56); font-weight: normal; font-style: normal;">http://calmingthestorm.org/</a>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">.</span> 
+                                   </div> 
+                                   <div>
+                                    <br>
+                                   </div> 
+                                   <div> 
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">Michigan Virtual Learning has newly launched the </span>
+                                    <a href="https://michiganvirtual.org/sel/michigan-cares/?utm_campaign=Learning%20Continuity%20Plans&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=86609472&amp;_hsenc=p2ANqtz-9XycaPP-13WlmaAfffOPjV-aghWuFfw4fok_31y7DZv7Gh-yHHSThag-HxNzUSZc6ixD613_EMI6PZy0-ZlImkcVI6pQ&amp;_hsmi=86609472" rel="noopener noreferrer" target="_blank" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; text-decoration: underline; color: rgb(178, 8, 56); font-weight: bold; font-style: normal;">Michigan Cares</a>
+                                    <a href="https://michiganvirtual.org/sel/michigan-cares/?utm_campaign=Learning%20Continuity%20Plans&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=86609472&amp;_hsenc=p2ANqtz-9XycaPP-13WlmaAfffOPjV-aghWuFfw4fok_31y7DZv7Gh-yHHSThag-HxNzUSZc6ixD613_EMI6PZy0-ZlImkcVI6pQ&amp;_hsmi=86609472" rel="noopener noreferrer" target="_blank" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; text-decoration: none; color: rgb(17, 85, 204); font-weight: normal; font-style: normal;"> </a>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">program, offering free digital lessons to children, teachers and parents. These online modules focus on developing social, emotional, and mental wellbeing skills, which are especially important in this time of the COVID-19 crisis. The Michigan Cares program will be freely available to parents, students, and educators in Michigan until the end of the 20-21 school year. Further information may be found </span>
+                                    <a href="https://michiganvirtual.org/sel/michigan-cares/?utm_campaign=Learning%20Continuity%20Plans&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=86609472&amp;_hsenc=p2ANqtz-9XycaPP-13WlmaAfffOPjV-aghWuFfw4fok_31y7DZv7Gh-yHHSThag-HxNzUSZc6ixD613_EMI6PZy0-ZlImkcVI6pQ&amp;_hsmi=86609472" rel="noopener noreferrer" target="_blank" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; text-decoration: underline; color: rgb(178, 8, 56); font-weight: normal; font-style: normal;">here</a>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">.</span> 
+                                   </div> 
+                                   <div>
+                                    <br>
+                                   </div> 
+                                   <div> 
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">The American Red Cross is offering a free online course geared to providing support for an online only course designed to help individuals build resilience and support themselves and lend support to others during and following the COVID-19 outbreak. Information about the </span>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: bold;">Mental Health First Aid for COVID-19 course</span>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;"> can be found </span>
+                                    <a href="https://www.redcross.org/take-a-class/coronavirus-information/mental-health-first-aid-for-covid-19-course" rel="noopener noreferrer" target="_blank" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; text-decoration: underline; color: rgb(178, 8, 56); font-weight: normal; font-style: normal;">here</a>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">.</span> 
+                                   </div> 
+                                   <div>
+                                    <br>
+                                   </div> 
+                                   <div>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">There is much uncertainty during this time, yet the Mercy commitment to providing an education in support of the whole young woman remains constant. We are on an incredible journey and are blessed to be walking in partnership and support with our Mercy families.</span>
+                                   </div> 
+                                   <div>
+                                    <br>
+                                   </div> 
+                                   <div>
+                                    <span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px;">Praying for the health and safety of our entire Mercy community,&nbsp;</span>
+                                   </div> 
+                                   <div>
+                                    <br>
+                                   </div> 
+                                   <div>
+                                    <span style="font-size: 14px; font-family: Arial, Verdana, Helvetica, sans-serif; font-style: italic;">Mrs. Patricia Sattler</span>
+                                   </div> 
+                                   <div>
+                                    <span style="font-size: 14px; font-family: Arial, Verdana, Helvetica, sans-serif; font-style: italic;">Mercy High School Principal</span>
+                                   </div> 
+                                  </div>
+                                 </div> </td> 
+                               </tr> 
+                              </tbody> 
+                             </table> 
+                            </div> </td> 
+                          </tr> 
+                         </tbody> 
+                        </table> 
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;"> 
+                         <tbody> 
+                          <tr> 
+                           <td class=" editor-col OneColumnMobile" width="100%" align="" valign="top"> 
+                            <div class="gl-contains-divider"> 
+                             <table class="editor-divider" width="100%" cellpadding="0" cellspacing="0" border="0" style="min-width: 100%;"> 
+                              <tbody> 
+                               <tr> 
+                                <td class="" align="center" valign="top"> 
+                                 <table width="100%" class="galileo-ap-content-editor" style="cursor: default; min-width: 100%;"> 
+                                  <tbody> 
+                                   <tr> 
+                                    <td class="divider-base divider-solid" style="padding: 8px 0px 9px;" width="100%" valign="top" align="center"> 
+                                     <table cellspacing="0" cellpadding="0" border="0" align="center" style="width: 94%; min-width: 94%; height: 1px;"> 
+                                      <tbody> 
+                                       <tr> 
+                                        <td height="1" align="center" style="background-color: rgb(162, 144, 97); padding-bottom: 2px; border-bottom-style: none; height: 1px; line-height: 1px;" bgcolor="A29061"> 
+                                         <div>
+                                          <img alt="" src="https://imgssl.constantcontact.com/letters/images/1101116784221/S.gif" width="5" vspace="0" hspace="0" height="1" border="0" style="display: block; height: 1px; width: 5px;">
+                                         </div> </td> 
+                                       </tr> 
+                                      </tbody> 
+                                     </table> </td> 
+                                   </tr> 
+                                  </tbody> 
+                                 </table> </td> 
+                               </tr> 
+                              </tbody> 
+                             </table> 
+                            </div> </td> 
+                          </tr> 
+                         </tbody> 
+                        </table> 
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;"> 
+                         <tbody> 
+                          <tr> 
+                           <td class="social editor-col OneColumnMobile" width="50%" align="left" valign="top" style="background-color: #FFFFFF;" bgcolor="#FFFFFF"> 
+                            <div>
+                             <div class="column-resize-bar"> 
+                              <span class="line"></span> 
+                              <span class="grabber"></span> 
+                             </div>
+                            </div> 
+                            <div class="gl-contains-button"> 
+                             <table class="editor-button" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; min-width: 100%;"> 
+                              <tbody> 
+                               <tr> 
+                                <td class="editor-button-container " style="font-family: Verdana, Geneva, sans-serif; font-size: 12px; font-weight: bold; color: #FFFFFF; text-decoration: none; padding: 10px 10px 10px 20px;"> 
+                                 <table class="galileo-ap-content-editor" style="width: 100%; min-width: 100%;"> 
+                                  <tbody> 
+                                   <tr> 
+                                    <td align="left" valign="top" class="MainTextFullWidthTD" style="font-family: Verdana, Geneva, sans-serif; font-size: 12px; font-weight: bold; color: #FFFFFF; text-decoration: none; padding: 0px;"> 
+                                     <table border="0" cellpadding="0" cellspacing="0" style="width: initial; moz-border-radius: 5px; border-radius: 5px; border-spacing: 0; background-color: #B20838; min-width: initial; padding: 0; border: none;" bgcolor="#B20838"> 
+                                      <tbody> 
+                                       <tr> 
+                                        <td align="center" valign="top" class="MainTextFullWidthTD" style="font-family: Verdana, Geneva, sans-serif; font-size: 12px; font-weight: bold; color: #FFFFFF; text-decoration: none; padding: 9px 15px 10px;"> 
+                                         <div> 
+                                          <div class="MainTextFullWidth">
+                                           <a href="https://www.mhsmi.org/sites/default/files/curriculum/parent_e-learning_survey.pdf" style="font-family: Verdana, Geneva, sans-serif; font-size: 12px; font-weight: bold; color: #FFFFFF; text-decoration: none;">PARENT SURVEY RESULTS</a>
+                                          </div> 
+                                         </div> </td> 
+                                       </tr> 
+                                      </tbody> 
+                                     </table> </td> 
+                                   </tr> 
+                                  </tbody> 
+                                 </table> </td> 
+                               </tr> 
+                              </tbody> 
+                             </table> 
+                            </div> </td> 
+                           <td class="social editor-col OneColumnMobile" width="50%" align="left" valign="top" style="background-color: #FFFFFF;" bgcolor="#FFFFFF"> 
+                            <div class="gl-contains-spacer"> 
+                             <table class="editor-spacer" width="100%" cellpadding="0" cellspacing="0" border="0"> 
+                              <tbody> 
+                               <tr> 
+                                <td class="spacer-container" align="center" valign="top"> 
+                                 <table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+                                  <tbody> 
+                                   <tr> 
+                                    <td class="spacer-base" style="padding-bottom: 10px; height: 1px; line-height: 1px;" width="100%" align="center" valign="top"> 
+                                     <div>
+                                      <img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: 1px; width: 5px;">
+                                     </div> </td> 
+                                   </tr> 
+                                  </tbody> 
+                                 </table> </td> 
+                               </tr> 
+                              </tbody> 
+                             </table> 
+                            </div> </td> 
+                          </tr> 
+                         </tbody> 
+                        </table> 
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;"> 
+                         <tbody> 
+                          <tr> 
+                           <td class="social editor-col OneColumnMobile" width="50%" align="left" valign="top" style="background-color: #FFFFFF;" bgcolor="#FFFFFF"> 
+                            <div>
+                             <div class="column-resize-bar"> 
+                              <span class="line"></span> 
+                              <span class="grabber"></span> 
+                             </div>
+                            </div> 
+                            <div class="gl-contains-button"> 
+                             <table class="editor-button" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; min-width: 100%;"> 
+                              <tbody> 
+                               <tr> 
+                                <td class="editor-button-container " style="font-family: Verdana, Geneva, sans-serif; font-size: 12px; font-weight: bold; color: #FFFFFF; text-decoration: none; padding: 10px 10px 10px 20px;"> 
+                                 <table class="galileo-ap-content-editor" style="width: 100%; min-width: 100%;"> 
+                                  <tbody> 
+                                   <tr> 
+                                    <td align="left" valign="top" class="MainTextFullWidthTD" style="font-family: Verdana, Geneva, sans-serif; font-size: 12px; font-weight: bold; color: #FFFFFF; text-decoration: none; padding: 0px;"> 
+                                     <table border="0" cellpadding="0" cellspacing="0" style="width: initial; moz-border-radius: 5px; border-radius: 5px; border-spacing: 0; background-color: #B20838; min-width: initial; padding: 0; border: none;" bgcolor="#B20838"> 
+                                      <tbody> 
+                                       <tr> 
+                                        <td align="center" valign="top" class="MainTextFullWidthTD" style="font-family: Verdana, Geneva, sans-serif; font-size: 12px; font-weight: bold; color: #FFFFFF; text-decoration: none; padding: 9px 15px 10px;"> 
+                                         <div> 
+                                          <div class="MainTextFullWidth">
+                                           <a href="https://www.mhsmi.org/sites/default/files/curriculum/student_e-learning_survey.pdf" style="font-family: Verdana, Geneva, sans-serif; font-size: 12px; font-weight: bold; color: #FFFFFF; text-decoration: none;">STUDENT SURVEY RESULTS</a>
+                                          </div> 
+                                         </div> </td> 
+                                       </tr> 
+                                      </tbody> 
+                                     </table> </td> 
+                                   </tr> 
+                                  </tbody> 
+                                 </table> </td> 
+                               </tr> 
+                              </tbody> 
+                             </table> 
+                            </div> </td> 
+                           <td class="social editor-col OneColumnMobile" width="50%" align="left" valign="top" style="background-color: #FFFFFF;" bgcolor="#FFFFFF"> 
+                            <div class="gl-contains-spacer"> 
+                             <table class="editor-spacer" width="100%" cellpadding="0" cellspacing="0" border="0"> 
+                              <tbody> 
+                               <tr> 
+                                <td class="spacer-container" align="center" valign="top"> 
+                                 <table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+                                  <tbody> 
+                                   <tr> 
+                                    <td class="spacer-base" style="padding-bottom: 10px; height: 1px; line-height: 1px;" width="100%" align="center" valign="top"> 
+                                     <div>
+                                      <img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: 1px; width: 5px;">
+                                     </div> </td> 
+                                   </tr> 
+                                  </tbody> 
+                                 </table> </td> 
+                               </tr> 
+                              </tbody> 
+                             </table> 
+                            </div> </td> 
+                          </tr> 
+                         </tbody> 
+                        </table> 
+                       </div> </td> 
+                     </tr> 
+                    </tbody> 
+                   </table> </td> 
+                 </tr> 
+                </tbody> 
+               </table> </td> 
+             </tr> 
+            </tbody> 
+           </table> </td> 
+         </tr> 
+        </tbody> 
+       </table> 
+      </div> </td> 
+    </tr> 
+    <tr> 
+     <td></td> 
+    </tr> 
+   </tbody>
+  </table>   
+ </body>
+</html>

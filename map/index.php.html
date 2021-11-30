@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+  <meta http-equiv="content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" id="favicon" href="assets/icons/c3d.png" />
+
+  <meta name="robots" content="noindex,nofollow" />
+  <!-- Page title -->
+  <title>Oakland University</title>
+  
+  <!-- Initial tiny javascript load -->
+  <script type="text/javascript">
+  
+    var isCms = function () {
+    return Number(0);
+  };
+
+    var ac = {"supportEmail":"supportteam@concept3d.com","mapType":"leaflet","nfeDomain":"https:\/\/map.concept3d.com","nfeRedirect":true,"mapboxAccessToken":"pk.eyJ1IjoiY29uY2VwdDNkIiwiYSI6ImNpd2ducXF1czAwd3Yyb2tpcGthbThvNXkifQ.MeSor7axjgtk3P06O2C-5w","mapboxAccessTokenForStaticMaps":"pk.eyJ1IjoiY29uY2VwdDNkIiwiYSI6ImNqcnY3MzZjcTBrMGo0NG55M3ZtbmZjc2QifQ.W6livvYPDk7zgj0XuizCIg","defaultTileStyleId":"cjfjt9m0e0bpc2stjppee1zom","googleBusiness":true,"googleAnalyticsTrackerId":"UA-1238617-5","cmsUrl":"https:\/\/premigrationcms.concept3d.com\/","leafletGL":true,"leafletGLTileSource":"https:\/\/tileserver.concept3d.com\/styles\/","leafletGLTileStyle":"c3d_default_style","assetsDir":"\/mnt\/efs\/assets\/","imageCacheDir":"\/mnt\/cache\/","imagePrintDir":"\/mnt\/printmaps"};
+
+  var mapConfig = {"map_type_satellite":"true","map_type_default":"Map","map_type_map":"true","sidebarFooter":"<p style=\"text-align: center;\">201 Meadow Brook Road&nbsp;<\/p>\r\n<p style=\"text-align: center;\">Rochester, Michigan 48309-4451<\/p>\r\n<div class=\"phone\" style=\"text-align: center;\">(248) 370-2100 |&nbsp;<a href=\"https:\/\/www.oakland.edu\/contact-ou\/\">Contact OU<\/a><\/div>\r\n<p style=\"text-align: center;\"><a href=\"https:\/\/www.facebook.com\/oaklandu\/\" target=\"_blank\"><img class=\"sm-icon\" src=\"..\/..\/..\/..\/..\/..\/..\/assets\/library\/social_media\/facebook.png\" border=\"0\" \/><\/a> <a href=\"https:\/\/twitter.com\/oaklandu\" target=\"_blank\"><img class=\"sm-icon\" src=\"..\/..\/..\/..\/..\/..\/..\/assets\/library\/social_media\/twitter.png\" border=\"0\" \/><\/a> <a href=\"https:\/\/www.instagram.com\/oaklandu\/\" target=\"_blank\"><img class=\"sm-icon\" src=\"..\/..\/..\/..\/..\/..\/..\/assets\/library\/social_media\/instagram.png\" border=\"0\" \/><\/a> <a href=\"https:\/\/www.youtube.com\/user\/oaklanduniv\" target=\"_blank\"><img class=\"sm-icon\" src=\"..\/..\/..\/..\/..\/..\/..\/assets\/library\/social_media\/youtube.png\" border=\"0\" \/><\/a><\/p>","sidebarHeader":"","ga_id":"","gps_prompt":0,"printBtnName":"Downloadable Campus Maps","printBtn":1,"printUrl":"http:\/\/www.oakland.edu\/about\/map\/print\/","printType":"","balloonType":"infowindow","select_all":0,"tiltAngle":1,"markerClustering":0,"getThisView":1,"lsPosition":"bottom-right","solrAnd":0,"searchText":"Search by: Name, Keyword etc...","searchBarDisplay":"close","multiple_orientations":0,"default_media":"video","default_tab":"locations","mblpos":"","altitude":1024,"longitude":-83.209373,"latitude":42.6721,"mapId":566,"suggestions":false,"centerAlt":1024,"centerLat":42.6721,"centerLng":-83.209373,"pano_label":"1","pano_zoom":"15","hide_base":false,"hide_base_nfe":false,"google_streetview":"1","cat_tile":false,"wayfinding":false,"wfada_frontend":false,"wfada_cms":false,"frontend_wayfinding":false,"walking_directions":false,"level_selector":false,"frontend_walking_directions":false,"frontend_level_selector":false,"minLevel":0,"maxLevel":0,"default_level":0,"level_data":"","user_favorites":false,"maps360":false,"maps360fe":false,"custom_fields":false,"schedule":true,"print_rendering":true,"print_map":true,"print_map_frontend":false,"pm3":true,"authentication":null,"search_description":true,"auto_zoom":true,"idp":"","map_branding":"campusbird","bus":false,"busData":"","panoramas":false,"google_font":null,"visittrack":false,"tour_vt":true,"popups":false,"feed_embed":false,"search_geocode":false,"advanced_search":false,"collections":false,"collections_data":{"default":{"icon":"\/assets\/library\/icons\/default\/marker-star.png","list_icon":"\/assets\/library\/icons\/default\/list-star.png"}},"clp_config":null,"parking":false,"per_page":50,"map_tile_style_id":"","mapspacer":false,"mapbox_token":"pk.eyJ1IjoiY29uY2VwdDNkIiwiYSI6ImNqbm96Z2F4eDAzenMzcXBjN3luZ3h6eDQifQ._pYmvs1NBcLxNHhu-2Ki0w","edit_marker":false};
+  var publishedOptions = {"map_type_satellite":"true","map_type_default":"Map","map_type_map":"true","sidebarFooter":"<p style=\"text-align: center;\">201 Meadow Brook Road&nbsp;<\/p>\r\n<p style=\"text-align: center;\">Rochester, Michigan 48309-4451<\/p>\r\n<div class=\"phone\" style=\"text-align: center;\">(248) 370-2100 |&nbsp;<a href=\"https:\/\/www.oakland.edu\/contact-ou\/\">Contact OU<\/a><\/div>\r\n<p style=\"text-align: center;\"><a href=\"https:\/\/www.facebook.com\/oaklandu\/\" target=\"_blank\"><img class=\"sm-icon\" src=\"..\/..\/..\/..\/..\/..\/..\/assets\/library\/social_media\/facebook.png\" border=\"0\" \/><\/a> <a href=\"https:\/\/twitter.com\/oaklandu\" target=\"_blank\"><img class=\"sm-icon\" src=\"..\/..\/..\/..\/..\/..\/..\/assets\/library\/social_media\/twitter.png\" border=\"0\" \/><\/a> <a href=\"https:\/\/www.instagram.com\/oaklandu\/\" target=\"_blank\"><img class=\"sm-icon\" src=\"..\/..\/..\/..\/..\/..\/..\/assets\/library\/social_media\/instagram.png\" border=\"0\" \/><\/a> <a href=\"https:\/\/www.youtube.com\/user\/oaklanduniv\" target=\"_blank\"><img class=\"sm-icon\" src=\"..\/..\/..\/..\/..\/..\/..\/assets\/library\/social_media\/youtube.png\" border=\"0\" \/><\/a><\/p>","sidebarHeader":"","ga_id":"","gps_prompt":0,"printBtnName":"Downloadable Campus Maps","printBtn":1,"printUrl":"http:\/\/www.oakland.edu\/about\/map\/print\/","printType":"","balloonType":"infowindow","select_all":0,"tiltAngle":1,"markerClustering":0,"getThisView":1,"lsPosition":"bottom-right","solrAnd":0,"searchText":"Search by: Name, Keyword etc...","searchBarDisplay":"close","multiple_orientations":0,"default_media":"video","default_tab":"locations","mblpos":"","altitude":1024,"longitude":-83.209373,"latitude":42.6721,"mapId":566};
+  if (!isCms() && mapConfig.wayfinding && !mapConfig.frontend_wayfinding) {
+    mapConfig.wayfinding = false;
+  }
+
+  // override default token with client-specific one
+  ac.mapboxAccessToken = mapConfig.mapbox_token || ac.mapboxAccessToken;
+
+  // disable popups in CMS
+  if (isCms()) {
+    // if we want to edit we'd like to know if popups are on
+    // that's why we are saving the data before disabling them
+    mapConfig.popups_original = mapConfig.popups;
+    mapConfig.popups = false;
+    /*
+      Leaflet draw chrome touch detection issue
+      disable touch support for cms
+      necessary for leaflet draw as cross-browsers detection of touch screens devices is flawed at the moment
+    */
+    // L_NO_TOUCH = true;
+  }
+
+      ac.gk = false;
+  
+
+
+    </script>
+  
+  <script src="minified/preloader.js?v4.3.1"></script>
+  <script>
+    var mapId = 566;
+    var accId = 566;
+    var ap = AtlasPreloader();
+    ap.init();
+  </script>
+
+	<!-- specify -->
+	<script type="text/javascript">
+
+    window.mapProvider = "leaflet";
+
+        window.feeds = false;
+  
+  var GETem = 0;	</script>
+
+
+	<!-- three.js -->
+	    <script type="text/javascript" src="lib/threejs/three.min.64.js"></script>
+			<script type="text/javascript" src="lib/threejs/swfobject.js"></script>
+
+  
+  <!-- load frameworks. -->
+  	
+
+  <!-- init Leaflet -->
+  <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="lib/leaflet/leaflet.draw.css" />
+  <link rel="stylesheet" href="lib/leaflet/mapboxgl/mapbox-gl.css" />
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="lib/leaflet/leaflet.ie.css" />
+    <link rel="stylesheet" href="lib/leaflet/leaflet.draw.ie.css" />
+  <![endif]-->
+
+	<!-- Pass variables to Javascript -->
+	<script type="text/javascript">
+
+    // This should be deleted after PanoBuilder is live :murad
+    // to show it set it as true
+    var showPanoBuilder = true;
+
+
+		var mapCenter = {};
+		mapCenter.lat = 42.6721;
+		mapCenter.lng = -83.209373;
+		mapCenter.alt = 1024;
+		mapCenter.zoom = 16;
+		mapConfig['map_views']  = [{"id":66,"map":566,"name":"Directions to OU","url":"http:\/\/www.oakland.edu\/directions","lat":0,"lng":0,"zoom":0,"weight":0,"deleted":0},{"id":67,"map":566,"name":"Bear Bus Map","url":"http:\/\/www.oakland.edu\/bearbus\/routes","lat":0,"lng":0,"zoom":0,"weight":1,"deleted":0},{"id":68,"map":566,"name":"Locations in Macomb County","url":"http:\/\/www.oakland.edu\/map\/ou-macomb-locations","lat":0,"lng":0,"zoom":0,"weight":2,"deleted":0},{"id":69,"map":566,"name":"Parking","url":"http:\/\/www.oakland.edu\/parking","lat":0,"lng":0,"zoom":0,"weight":3,"deleted":0},{"id":70,"map":566,"name":"Printed Maps","url":"http:\/\/www.oakland.edu\/map\/print","lat":0,"lng":0,"zoom":0,"weight":4,"deleted":0}];
+		var mapStyle = [];
+    mapConfig.buttonPos = mapConfig.buttonPos || 'iframe';
+    mapConfig.maxZoom = 20;
+    mapConfig.nfe = 1;
+	</script>
+
+	<!-- Panoramas -->
+	<script type="text/javascript">
+	window.panoData = [];	</script>
+
+
+<!-- Load extension files -->
+<script type="text/javascript">
+	var extFacebook = true;var extShare = true;</script>
+
+  <!-- Prefetching -->
+  <link rel="dns-prefetch" href="//connect.facebook.net">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//themes.googleusercontent.com">
+  <link rel="dns-prefetch" href="//api.tiles.mapbox.com">
+  <link rel="stylesheet" href="lib/jquery/jquery-ui-resizeble.css">
+
+            <script src="minified/leaflet.js?v4.3.1"></script>
+      
+  
+	<!-- Custom Javascript -->
+	<script>
+		$(document).ready(function() {
+  var interval = setInterval(function() {
+    if ($('.map-view-buttons a').length) {
+      $('.map-view-buttons a').attr('target', '_parent');
+      clearInterval(interval);
+    }
+  }, 50);
+});	</script>
+	
+	<!-- load options -->
+	<script type="text/javascript">
+	var mapType = "map";	</script>
+
+  
+	<!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,700,600" rel='stylesheet' type='text/css'>
+
+
+
+	<!-- load css. -->
+	<link type="text/css" rel="stylesheet" href="stylesheets/base.css?v4.3.1" />
+
+	<!-- Clearfix -->
+	<style type="text/css">.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}</style>
+	<!--[if IE]><style type="text/css">.clearfix { zoom: 1; display: block; }</style><![endif]-->
+
+	<link type="text/css" rel="stylesheet" href="lib/jquery/colorbox/colorbox.css" />
+		<!-- <link type="text/css" rel="stylesheet" href="themes/default/default.default.theme.css?v4.3.1" media="screen" /> -->
+		<!-- <link type="text/css" rel="stylesheet" href="themes/default/default.balloon.print.theme.css?v4.3.1" media="print" /> -->
+
+  <link rel="stylesheet" href="stylesheets/desktop.css?v4.3.1" /><style type="text/css">#menu-bar .button.custom { background-color: #808080} #menu-bar .button.custom:hover { background-color: #363636}</style>
+  
+	<!-- load style css -->
+	<style type="text/css">
+	#balloon-wrapper .description { color: #363636; }#tour-wrapper #tour-list { color: #363636; }#balloon-wrapper .description { background-color: ; }#tour-wrapper #tour-list { background-color: ; }.menu-hover, .button.custom { color: #363636; }.srTxtBgHvr:hover {background-color: #363636}.srTxtHvr:hover {color: #363636}.srTxtBg {background-color: #363636}.srTxt {color: #363636}.srBgHvr:hover h3 {color: #363636}.menu-hover.hover, .button.custom:hover, .button.custom.active, #print:hover, #getView:hover, #help:hover { color: white; }.menu-hover, .button.custom, #content-bar-toggle, #content-bar-toggle.open { background-color: #dddddd; }.srBgHvr:hover {background-color: #dddddd}.srBgTxtHvr:hover {color: #dddddd}.srBg {background-color: #dddddd}.srBgTxt {color: #dddddd}.srBgHvr h3 {color: #dddddd}.menu-hover { background-image: url('assets/img/arrow-dark.png'); background-repeat: no-repeat; background-position: 90% 50%; }.slideshow-enlarge { background-image: url('assets/img/expand-dark.png'); }.map-view-buttons-home { background-image: url('assets/img/zoom-all-black.png'); background-repeat: no-repeat; background-position: 50% 50%; }.menu-hover.hover, .button.custom:hover, .button.custom.active, #content-bar-toggle:hover, #print:hover, #help:hover, #autocomplete-results .result:hover, .infowindow-tools.active { background-color: #363636; }#print:hover { background-image: url('assets/img/print-hover.png'); }#getView:hover { background-image: url('assets/img/gtv-light.png'); }#help:hover { background-image: url('assets/img/help-hover.png'); }.menu-hover.hover { background-image: url('assets/img/arrow-down-light.png'); background-repeat: no-repeat; background-position: 90% 50%; }.slideshow-enlarge:hover { background-image: url('assets/img/expand-light.png'); }.map-view-buttons-home:hover { background-image: url('assets/img/zoom-all-white.png'); background-repeat: no-repeat; background-position: 50% 50%; }#button-wrapper-mapType .button.custom{color:#fff; background-color:#979797;}#button-wrapper-mapType .button.custom:hover{color:#979797; background-color:#fff;}#button-wrapper-mapType .button.custom.active{color:#979797; background-color:#fff;}#button-wrapper-mapType .map-type-buttons-left{border-top-left-radius:2px; border-bottom-left-radius:2px;}#button-wrapper-mapType .map-type-buttons-right{border-top-right-radius:2px; border-bottom-right-radius:2px;}#button-wrapper-home .button.custom{border-radius:2px; color:#979797; background-color:#fff; background-image: url("assets/img/home-dark.png");}#button-wrapper-home .button.custom:hover{border-radius:2px; color:#fff; background-color:#979797; background-image: url("assets/img/home-light.png");}body { background-color: #808080; }#user-content-wrapper { background-color: #808080; }.content-bar-pane { background-color: #F8F8F8; }#menu-bar, #print, #getView, #menu-bar #menu-bar-right #gpm, #help, #load-screen { background-color: #b69b56; }#print { background-image: url('assets/img/print.png'); background-repeat: no-repeat; background-position: 2px 4px; }#getView { background-image: url('assets/img/gtv.png'); background-repeat: no-repeat; background-position: 2px 4px; }#help { background-image: url('assets/img/help.png'); background-repeat: no-repeat; background-position: 2px 4px; }#print, #getView, #menu-bar #menu-bar-right #gpm, #help { color: #000000; }#load-screen div { background-image: url('assets/img/spinner.gif'); background-repeat: no-repeat; background-position: 50% 80%; background-size: 20px 20px; }
+.map-view-buttons.button.custom, .map-view-buttons.button.custom a {
+  background: none;
+  color: #363636;
+}
+
+.map-view-buttons.button.custom:hover, .map-view-buttons.button.custom:hover a, .map-view-buttons.button.custom a:hover {
+  color: #b69b56;
+  background-color: #363636;
+}
+#logo { padding: 20px 0 10px; }#logo { background-color: #000000; }#sidebar-header, #mobile-logo { background-color: #000000; }#search input[type="text"], #autocomplete-results { color: #363636; }.triangle {border-top-color: #fff}#search input[type="text"] { border: 1px solid #f5f5f5; }#search input[type=text]:focus, #search input[type=text]:active, #autocomplete-results { border: 1px solid #363636; }.content-bar-title .toggle-inner, .content-bar-title .toggle.on .toggle-inner { background-color: #F8F8F8; }.content-bar-title .toggle.on .toggle-inner { background-image: url('assets/img/checkbox-checked.png'); background-repeat: no-repeat; }.content-bar-title .toggle.mixed .toggle-inner { background-image: url('assets/img/checkbox-mixed.png'); background-repeat: no-repeat; }.content-bar-pane .content-bar-title.level-1 .content-bar-wrapper { color: #363636; }.content-bar-pane .content-bar-title.level-2 .content-bar-wrapper { color: #363636; }.content-bar-pane .content-bar-title.level-3 .content-bar-wrapper { color: #363636; }.content-bar-pane .content-bar-title.level-4 .content-bar-wrapper { color: #363636; }.content-bar-pane .content-bar-title.level-5 .content-bar-wrapper { color: #363636; }#content-bar .list-only .content-bar-wrapper:hover { color: #363636; }.content-bar-pane .content-bar-title .content-bar-wrapper:hover { color: #363636; }.content-bar-pane ul .content-bar-title{ background-color: white; }.content-bar-pane ul .content-bar-title-hover .content-bar-wrapper { background:url('assets/img/arrow-down-dark.png') no-repeat 20px 15px;}.content-bar-pane ul .content-bar-title-hover .content-bar-wrapper-down { background:url('assets/img/arrow-up-dark.png') no-repeat 20px 15px;}.content-bar-pane ul .content-bar-title-hover:hover { background-color: #ddd; }.content-bar-pane ul .content-bar-title-hover .content-bar-wrapper:hover { background:url('assets/img/arrow-down-dark.png') no-repeat 20px 15px;}.content-bar-pane ul .content-bar-title-hover .content-bar-wrapper-down:hover { background:url('assets/img/arrow-up-dark.png') no-repeat 20px 15px;}.content-bar-title.content-bar-title-root .content-bar-wrapper{ color: #363636; }.content-bar-title-hover.content-bar-title-root .content-bar-wrapper:hover { color: #363636; }.content-bar-title.content-bar-title-root { background-color: white; }.content-bar-title-hover.content-bar-title-root .content-bar-wrapper { background:url('assets/img/arrow-down-dark.png') no-repeat 20px 15px;}.content-bar-title-hover.content-bar-title-root .content-bar-wrapper-down { background:url('assets/img/arrow-up-dark.png') no-repeat 20px 15px;}.content-bar-title-hover.content-bar-title-root:hover { background-color: #ddd; }.content-bar-title-hover.content-bar-title-root .content-bar-wrapper:hover { background:url('assets/img/arrow-down-dark.png') no-repeat 20px 15px;}.content-bar-title-hover.content-bar-title-root .content-bar-wrapper-down:hover { background:url('assets/img/arrow-up-dark.png') no-repeat 20px 15px;}.content-bar-pane ul li { color: #363636; }.content-bar-pane ul li:hover { color: #363636; }.content-bar-pane, .content-bar-pane ul li { background-color: #F8F8F8; }.content-bar-pane ul li:hover { background-color: #ddd; }#balloon-wrapper .balloon-header .title td { color: #363636; }#sidebar-header a:link, #sidebar-header a:visited, #balloon-wrapper .description a:link, #balloon-wrapper .description a:visited, div#footer-content p a:link, div#footer-content p a:visited, .marker-link { color: blue; }#sidebar-header a:hover, .balloon-wrapper .description a:hover, div#footer-content p a:hover, .marker-link:hover { color: blue; }#balloon-wrapper .media{ background-color: #ddd; }.tiptool { color: #363636; }.tiptool { background-color: ; }.tiptool { border: 1px solid #f5f5f5; }.infowindow-close { color: #000000; }#tvt-wrapper #tvt-header {background-color:#fff}#tvt-wrapper #header-text h1 {color:#630;font-family:'Trebuchet MS', sans-serif;font-size:22px;}#tvt-wrapper #header-text p {color:#363636;font-family:'Trebuchet MS', sans-serif;font-size:14px;}#btn-register {color:#630; border-color: #630}#btn-register:hover {background-color:#fff}#spinner-inner {background-position-x: 140px;}	</style>
+
+	<script type="text/javascript">
+    var styles = {"labelBorderColor":"#f5f5f5","labelBgColor":"","labelTxtColor":"#363636","mediaBgColor":"#ddd","defTxtBgHeadColor":"","defTxtHeadColor":"#363636","bltFontSize":"","bltFontFamily":"","balloonBorderThickness":0,"balloonBorderColor":"","balloonBgColor":"","topBarBgColor":"#b69b56","ftrBgColor":"","ftrTxtColor":"","checkBgColor":"#F8F8F8","categoryItemRollBgColor":"#ddd","categoryItemBgColor":"#F8F8F8","categoryItemRollColor":"#363636","categoryItemColor":"#363636","categoryRollBgColor":"#ddd","categoryBgColor":"white","categoryRollColor":"#363636","categoryColor":"#363636","gctFontSize":"","gctFontFamily":"","rootCategoryRollBgColor":"#ddd","rootCategoryBgColor":"white","rootCategoryRollColor":"#363636","rootCategoryColor":"#363636","pctFontSize":"","pctFontFamily":"","searchActiveBorderColor":"#363636","searchBorderColor":"#f5f5f5","searchBgColor":"","searchTxtColor":"#363636","stBorderColor":"","stTextColorInactive":"","stBgColorInactive":"","stTextColor":"","stBgColor":"","sideExpBgColor":"#F8F8F8","sideBgColor":"#808080","logoBgColor":"#000000","logoLinkParent":"on","logoLinkURL":"https:\/\/www.oakland.edu\/","clearLogo":"","tvtHeaderBackground":"#fff","tvdTextColor":"#363636","tvdFontSize":"14px","tvdFontFamily":"'Trebuchet MS', sans-serif","tvtTextColor":"#630","tvtFontSize":"22px","tvtFontFamily":"'Trebuchet MS', sans-serif","buttonRollBgColor":"#363636","buttonBgColor":"#dddddd","buttonRollColor":"white","buttonColor":"#363636","defLinkRollBgColor":"","defLinkBgColor":"","defLinkRollColor":"blue","defLinkColor":"blue","defTxtBgColor":"","defTxtColor":"#363636","genFontSize":"","genFontFamily":"","mapId":566,"logoUrl":"logo.png","ctiBulletUrl":"","mobileLoadScreenUrl":"","faviconUrl":"","balloonUrl":"","bannerUrl":""};
+      </script>
+
+	<link rel="shortcut icon" href="assets/img/c3d-brand/c3d32.png" />
+        <meta property="og:image" content="http://www.myatlascms.com/assets/566/logo.png"/>
+  
+  <script id="balloon-wrapper-template" type="text/x-handlebars-template">
+  <div id="content-bar-balloon-wrapper" class="cb-type-{{balloonType}}">
+    <div id="content-bar-balloon">{{content}}</div>
+  </div>
+</script>
+<script id="search-results-template" type="text/x-handlebars-template">
+  <ul id="mbl-search-list">
+  {{#each markers}}
+    <li id="sm-{{id}}">{{{name}}}</li>
+  {{/each}}
+  </ul>
+</script>
+<script id="print-template" type="text/x-handlebars-template">
+<div id="printMapContainer">
+
+{{#unless cms}}
+  <div id="close-pg" title="Close Print Map Generator">&times;</div>
+{{/unless}}
+
+<form id="formPrintPdf" method="get" target="down" action="pdf-map/">
+
+<input type="hidden" name="mapId" id="mapId" value="" />
+<div>&nbsp;</div>
+<div>
+  <div class="print-circle">1</div>
+  <div>Select your page size and orientation.</div>
+</div>
+
+
+<div>&nbsp;</div>
+<div style="padding-top:15px;" class="multi-options">
+    Page size: <select name="page_size" id="page_size" class="right">
+         <option data-ratio_p="1/1.29" data-ratio_l="1.29/1"  value="letter">Letter</option>
+         <option data-ratio_p="1/1.64" data-ratio_l="1.64/1" value="legal">Legal</option>
+         <option data-ratio_p="1/1.41" data-ratio_l="1.41/1" value="a4">A4</option>
+         </select>
+
+    <p>&nbsp;</p>
+    Orientation: <select name="orientation" id="orientation" class="right">
+         <option value="L">Landscape</option>
+         <option value="P">Portrait</option>
+         </select>
+    <div id="sortByAlphabet_wrapper">
+        <label>Sort legend alphabetically <input type="checkbox" value="1" name="sortByAlphabet" id="sortByAlphabet" /></label>
+    </div>
+</div>
+
+<div>&nbsp;</div>
+
+
+<div>
+  <div class="print-circle">2</div>
+  <div>Select the categories and locations you would like to include.</div>
+</div>
+
+
+<div style="margin-top:20px">&nbsp;</div>
+    <div id="show_locations_btn" class="active_gpm_btn">
+        <p>Locations</p>
+    </div>
+    <div id="show_tours_btn">
+        <p>Tours</p>
+    </div>
+    <div style="clear:both"></div>
+  <div id="show-print">
+    <div class="multi-options" id="print-category-list">
+      <ul id="catTree" class="treeview">
+      {{#each categories}}
+          <li class="catChild" id="licat-{{catId}}">
+            <div class="ddArrow ddIcon"></div>
+            <div class="ddArrow catToggle firstCat" id="trcat-{{catId}}" title="{{{name}}}">  {{name}}</div>
+            <input type="checkbox" name="catIds[]" class="nested_checkbox checkbox_category topCategory" value="{{{catId}}}" />
+            {{#if children}}
+              {{>printCategory}}
+            {{/if}}
+            {{#if markers}}
+            <ul class="markers_{{catId}}">
+              {{#each markers}}
+                <li>
+                    <input type="checkbox" name="" class="nested_checkbox checkbox_marker" value="{{this.id}}" /> {{{name}}}
+                </li>
+              {{/each}}
+            </ul>
+            {{/if}}
+          </li>
+      {{/each}}
+      </ul>
+      <div id="show_tours">
+        <ul id="all_tours">
+        </ul>
+      </div>
+    </div>
+  </div>
+<div>&nbsp;</div>
+
+
+<div>
+  <div class="print-circle">3</div>
+  <div>Select your view by panning and zooming the map to the right.</div>
+</div>
+<div>&nbsp;</div>
+
+
+<div>
+  <div class="print-circle">4</div>
+  <div>Select print options.</div>
+</div>
+<div>&nbsp;</div>
+<div class="multi-options">
+
+File type: <select name="output_type" id="output_type" class="right">
+         <option value="pdf">PDF</option>
+         <option value="png">PNG</option>
+         </select>
+<p>&nbsp;</p>
+Grid lines: <select name="grid_lines" id="grid_lines" class="right">
+         <option value="yes">Yes</option>
+         <option value="no">No</option>
+         </select>
+<p>&nbsp;</p>
+Legend Colors: <select name="colors" id="colors" class="right">
+         <option value="map">Use map colors</option>
+         <option value="bw">Black and white</option>
+         </select>
+
+<p>&nbsp;</p>
+
+<p>
+	Print title: &nbsp;<input type="text" name="print_title" style="width: 100%" value="" />
+</p>
+
+{{#if isLeaflet}}
+    <div id="generatePrintMap-turnOffStreetMap_wrapper">
+        <label>Turn off Open Street Maps <input type="checkbox" id="generatePrintMap-hidelabels" /></label>
+    </div>
+    <div id="generatePrintMap-unrender_wrapper">
+        <label>Turn Off Renderings <input type="checkbox" id="generatePrintMap-unrender" /></label>
+    </div>
+{{else}}
+    <div id="generatePrintMap-hidelabels_wrapper">
+        <label>Turn Off Google Maps<input type="checkbox" id="generatePrintMap-hidelabels" value="on" /></label>
+    </div>
+    <div id="generatePrintMap-unrender_wrapper">
+        <label>Turn Off Renderings <input type="checkbox" id="generatePrintMap-unrender" /></label>
+    </div>
+{{/if}}
+
+    <div id="generatePrintMap-nocoord_wrapper">
+        <label>Turn Off Coordinates <input type="checkbox" id="generatePrintMap-nocoord" /></label>
+    </div>
+
+<div>&nbsp;</div>
+
+<div><div class="print-circle">5</div> When you're ready,<br /> generate your print map!</div>
+
+
+{{#unless printMapAuthenticated}}
+  <div>&nbsp;</div>
+  <div>&nbsp;</div>
+  <div class="print-circle print-circle-red">!</div><div style="margin-left: 62px;">You're using the trial version of this feature, which will have a watermark.<br/><br/>To unlock the full version and remove the watermark, please contact us at <a href="support@concept3d.com?subject=Concept3D Print Map Feature" target="_blank">support@concept3d.com</a>. In the mean time, feel free to generate as many maps as you'd like to try out the feature. <strong>We're sure you'll like it!</strong></div>
+{{/unless}}
+
+<div>&nbsp;</div>
+ <div id="be_patient" class="right"><img src="./pdf-map/loading.gif" width="24" align="absmiddle" border="0" />&nbsp;&nbsp;Please be patient, it can take up to a minute!</div>
+
+<div id="png-too-many" class="df-hidden">Please note, PNGs will only print on one page. If your legend exceeds one page it will not be printed.</div>
+
+<div>&nbsp;</div>
+<input class="button blue tt-processed right" type="button" name="printButton" id="printButton" value="GENERATE PRINT MAP" />
+<div>&nbsp;</div>
+
+{{#if printMap3Enabled}}
+  <div>&nbsp;</div>
+  <input class="button green tt-processed right" type="button" name="printButton3.0" id="printButton3" value="GENERATE PRINT MAP 3.0" />
+  <div>&nbsp;</div>
+{{/if}}
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+ <input type="hidden" name="lat" id="lat" value="" />
+ <input type="hidden" name="lng" id="lng" value="" />
+ <input type="hidden" name="zoom" id="zoom" value="" />
+ <input type="hidden" name="mWidth" id="mWidth" value="" />
+ <input type="hidden" name="mHeight" id="mHeight" value="" />
+ <input type="hidden" name="legendWidth" id="legendWidth" value="" />
+ <input type="hidden" name="carry" id="carry" value="" />
+ <input type="hidden" name="markers" id="markers" value="" />
+ <input type="hidden" name="tourId" id="tourId" value="" />
+ <input type="hidden" name="offLabels" id="offLabels" value="" />
+ <input type="hidden" name="offRenderings" id="offRenderings" value="" />
+ <input type="hidden" name="offCoords" id="offCoords" value="" />
+ <input type="hidden" name="checkMarkersNumber" id="checkMarkersNumber" value="" />
+ <input type="hidden" name="level" id="level" value="0" />
+
+
+</form>
+</div>
+<iframe style="display:none;" id="down" name="down"></iframe>
+</script>
+
+<script id="print-category-partial" type="text/x-handlebars-template">
+    <ul class="markers_{{catId}} catParent">
+    {{#each children}}
+    <li class="catChild" id="licat-{{catId}}">
+    <div class="ddArrow2 ddIcon2"></div>
+    <div class="ddArrow2 catToggle" id="trcat-{{catId}}"> {{name}}</div>
+    <input type="checkbox" name="catIds[]" class="nested_checkbox checkbox_category catParentCheckbox" value="{{catId}}" />
+    {{#if children}}
+    {{>printCategory}}
+    {{/if}}
+    {{#if markers}}
+    <ul class="subcateg markers_{{catId}} ">
+    {{#each markers}}
+    <li>
+    <input type="checkbox" name="" class="nested_checkbox checkbox_marker" value="{{this.id}}" /> {{{name}}}
+    </li>
+    {{/each}}
+    </ul>
+
+    {{/if}}
+
+    </li>
+    {{/each}}
+    </ul>
+</script>
+<script id="balloon-template" type="text/x-handlebars-template">
+  <div id="infowindow-header" class="clearfix"></div>
+  <div id="balloon-wrapper" class="regular-balloon">
+
+    {{>header}}
+
+    {{#if hasMedia}}
+      {{> media}}
+    {{/if}}
+
+    {{#if description}}
+      <div class="description">{{{ description }}}</div>
+    {{/if}}
+
+    {{#if marker_feed}}
+      <div id="marker-feed-description"></div>
+    {{/if}}
+
+    {{#if feed_description}}
+      <div id="feed-description">{{{feed_description}}}</div>
+    {{/if}}
+
+    {{#unless popup_url}}
+      {{#if popup}}
+        <div id="marker-ad">{{{ popup }}}</div>
+      {{/if}}
+    {{else}}
+        <div id="marker-ad"></div>
+    {{/unless}}
+
+    {{#if cf}}
+      {{>customFields}}
+    {{/if}}
+
+    {{#if customProperties}}
+      {{>customProperties}}
+    {{/if}}
+
+
+    <div id="ext-content"></div>
+
+  </div><!--/balloon-wrapper-->
+  <div id="infowindow-footer"></div>
+
+  <!--
+  {{#if hasAudio}}
+    {{>audio}}
+  {{/if}}
+  -->
+
+</script>
+
+<script id="balloon-mls-template" type="text/x-handlebars-template">
+  <div id="infowindow-header" class="clearfix"></div>
+  <div id="balloon-wrapper" class="mls-balloon">
+
+    {{>header}}
+
+    {{#if hasMedia}}
+      {{> media}}
+    {{/if}}
+
+    {{#if description}}
+      <div class="description">{{{ description }}}</div>
+    {{/if}}
+
+
+    {{#if cf}}
+      {{>customMls}}
+    {{/if}}
+  </div><!--/balloon-wrapper-->
+  <div id="infowindow-footer"></div>
+</script>
+
+<script id="header-partial" type="text/x-handlebars-template">
+  {{#if description}}
+  <div class="balloon-header">
+  {{else}}
+  <div class="balloon-header title-only">
+  {{/if}}
+    <div class="title">
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          {{#if balloonUrl}}
+            <td id="image-cell">
+              <img src="{{pathOrigin}}/assets/{{mapId}}/{{balloonUrl}}" class="title-image" />
+            </td>
+          {{else}}
+            <td id="image-cell"></td>
+          {{/if}}
+
+          <td id="name-cell">{{{ name }}}</td>
+
+        </tr>
+      </table>
+    </div>
+  </div>
+</script>
+
+<script id="custom-fields" type="text/x-handlebars-template">
+  {{#each cf}}
+    <div class="description"><b>{{title}}:</b> {{value}}</div>
+  {{/each}}
+</script>
+
+<script id="custom-properties" type="text/x-handlebars-template">
+  <div class="custom-location-properties">
+    {{#each customProperties}}
+      {{#if value}}
+        {{#ifeq type "input"}}
+          <div class="description"><b>{{label}}:</b> {{value}}</div>
+        {{/ifeq}}
+        {{#ifeq type "select"}}
+          <div class="description"><b>{{label}}:</b> {{value}}</div>
+        {{/ifeq}}
+        {{#ifeq type "checkbox"}}
+          <div class="description">
+            <b>{{label}}:</b><br>
+            <ul>
+              {{#each value}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/ifeq}}
+      {{/if}}
+    {{/each}}
+  </div>
+</script>
+
+<script id="custom-mls" type="text/x-handlebars-template">
+  <div class="call-to-action">
+    <a href="http://www.google.com" target="_blank" class="button blue custom ">Contact an Agent</a>
+  </div>
+  {{#each cf}}
+    <div class="description"><b>{{title}}:</b> {{value}}</div>
+  {{/each}}
+</script>
+
+<script id="marker-feed-iframe" type="text/x-handlebars-template">
+  {{#if iframeUrl}}
+    <div class="marker-feed-wrapper">
+      {{{ iframeMarkup }}}
+    </div>
+  {{/if}}
+</script>
+
+<script id="audio-partial" type="text/x-handlebars-template">
+  <div class="tour-audio-wrapper">
+    <div class="tour-audio">
+      <div id="jp-progress">
+        <div id="audio-title">Listen</div>
+        <div id="audio-time">
+          <span id="audio-length"></span>
+        </div>
+      </div>
+      <div id="jp-progress-bar" class="progress-radial progress-0">
+        <div class="overlay"><div class="jplayer-control control play"><div></div></div></div>
+      </div>
+      <div class="jplayer" data-mrkid="{{id}}"></div>
+    </div>
+  </div>
+</script>
+
+<script id="media-partial" type="text/x-handlebars-template">
+  <div class="media">
+    <div class="media-wrapper">
+      <div class="media-slideshow" style="width: {{slideWidth}}px; visibility: visible">
+        {{#each media }}
+
+          <div id="msp-{{@index}}" class="media-slide enlargeable" style="height: {{../height}}px; line-height: {{../height}}px;">
+          {{#if isImage }}
+            <div data-type="image" class="colorbox-enlarge">
+              {{#if ../../isSidebar}}
+              <a rel="marker-group" class="colorbox-image" href="{{../../../path}}lib/image-cache/i.php?mapId={{../../../mapId}}&amp;image={{url}}&amp;w={{../../../largeWidth}}&amp;h={{../../../largeHeight}}&amp;r=1" id="cb-{{@index}}">
+              {{/if}}
+              {{#if ../../isInfowindow}}
+                <a class="infowindow-gallery-button" id="cb-{{@index}}">
+              {{/if}}
+              {{#if ../../isDesktop}}
+                <div class="colorbox-enlarge-button"></div>
+              {{/if}}
+              </a>
+            </div>
+            <img src="{{../../path}}lib/image-cache/i.php?mapId={{../../mapId}}&amp;image={{url}}&amp;w={{../../width}}&amp;h={{../../height}}&amp;r=1">
+          {{/if}}
+
+          {{#if isFlash }}
+            <div data-type="flash" class="colorbox-enlarge">
+              {{#if ../../isSidebar}}
+              <a rel="marker-group" class="colorbox-swf" href="{{../../pathOrigin}}/assets/{{../../mapId}}/{{url}}" id="cb-{{@index}}">
+              {{/if}}
+              {{#if ../../isInfowindow}}
+                <a class="infowindow-gallery-button" id="cb-{{@index}}">
+              {{/if}}
+              {{#if ../../isDesktop}}
+                <div class="colorbox-enlarge-button"></div>
+              {{/if}}
+              </a>
+            </div>
+            <embed src="{{../../pathOrigin}}/assets/{{../../mapId}}/{{url}}" type="application/x-shockwave-flash" wmode="transparent" allowscriptaccess="always" allowfullscreen="true" width="{{../../width}}" height="{{../../height}}">
+          {{/if}}
+
+          {{#if isPanorama }}
+            <div data-type="panorama" class="colorbox-enlarge">
+              {{#if ../../isSidebar}}
+              <a rel="marker-group" class="colorbox-video" href="{{url}}" id="cb-{{@index}}">
+              {{/if}}
+              {{#if ../../isInfowindow}}
+                <a class="infowindow-gallery-button" id="cb-{{@index}}">
+              {{/if}}
+              {{#if ../../isDesktop}}
+                <div class="colorbox-enlarge-button"></div>
+              {{/if}}
+              </a>
+            </div>
+            <iframe width="{{../../width}}" height="{{../../height}}" frameborder="0" src="{{url}}"></iframe>
+          {{/if}}
+
+          {{#if isVimeo }}
+            <div data-type="vimeo" class="colorbox-enlarge">
+              {{#if ../../isSidebar}}
+              <a rel="marker-group" class="colorbox-video" href="{{url}}" id="cb-{{@index}}">
+              {{/if}}
+              {{#if ../../isInfowindow}}
+                <a class="infowindow-gallery-button" id="cb-{{@index}}">
+              {{/if}}
+              {{#if ../../isDesktop}}
+                <div class="colorbox-enlarge-button"></div>
+              {{/if}}
+              </a>
+            </div>
+            <iframe width="{{../../width}}" height="{{../../height}}" frameborder="0" src="{{url}}?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179"></iframe>
+          {{/if}}
+
+          {{#if isYoutube }}
+            <div data-type="youtube" class="colorbox-enlarge">
+              {{#if ../../isSidebar}}
+              <a rel="marker-group" class="colorbox-video" href="//www.youtube.com/embed/{{ytId url}}" id="cb-{{@index}}">
+              {{/if}}
+              {{#if ../../isInfowindow}}
+                <a class="infowindow-gallery-button" id="cb-{{@index}}">
+              {{/if}}
+              {{#if ../../isDesktop}}
+                <div class="colorbox-enlarge-button"></div>
+              {{/if}}
+              </a>
+            </div>
+            {{#if ../../isDesktop}}
+            <iframe id="youtube{{@index}}" width="{{../../../width}}" height="{{../../../height}}" frameborder="0" src="//www.youtube.com/embed/{{ytId url}}?wmode=transparent&amp;rel=0&amp;html5=1" wmode="opaque" allowfullscreen></iframe>
+            {{else}}
+            <iframe width="{{../../../width}}" height="{{../../../height}}" frameborder="0" src="//www.youtube.com/embed/{{ytId url}}?enablejsapi=1&amp;html5=1" allowfullscreen></iframe>
+            {{/if}}
+          {{/if}}
+          </div>
+
+        {{/each}}
+        {{#if isInfowindow}}
+          <div class="colorbox-infowindow" style="display: none">
+          {{#each media}}
+            {{#if isImage}}
+              <a class="colorbox-image" id="cl-{{@index}}" href="{{../../../path}}lib/image-cache/i.php?mapId={{../../../mapId}}&amp;image={{url}}&amp;w={{../../../largeWidth}}&amp;h={{../../../largeHeight}}&amp;r=1" rel="marker=group"></a>
+            {{/if}}
+            {{#if isVimeo}}
+              <a class="colorbox-video" id="cl-{{@index}}" href="{{url}}?enablejsapi=1&amp;html5=1" rel="marker=group"></a>
+            {{/if}}
+            {{#if isYoutube}}
+              <a rel="marker-group" class="colorbox-video" href="//www.youtube.com/embed/{{ytId url}}" id="cb-{{@index}}">
+            {{/if}}
+            {{#if isFlash}}
+              <a class="colorbox-swf" id="cl-{{@index}}" href="{{../../pathOrigin}}/assets/{{../../mapId}}/{{url}}" rel="marker=group"></a>
+            {{/if}}
+            {{#if isPanorama}}
+              <a class="colorbox-panorama" id="cl-{{@index}}" href="{{../../pathOrigin}}/{{url}}" rel="marker=group"></a>
+            {{/if}}
+          {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+    {{#unless singleFile}}
+      <div class="button custom slideshow-prev"><div class="slideshow-middle">&lsaquo;</div></div>
+      <div class="button custom slideshow-next"><div class="slideshow-middle">&rsaquo;</div></div>
+    {{/unless}}
+  </div>
+</script>
+<script id="parking-template" type="text/x-handlebars-template">
+  <div id="parking-wrapper">
+  {{#each lots}}
+    <div class="parking-lot">
+      <h4 id="pl-{{id}}">{{name}}</h4>
+      {{{description}}}
+    </div>
+  {{/each}}
+  </div>
+</script>
+<script id="list-template" type="text/x-handlebars-template">
+  {{#if categories}}
+    {{#each categories}}
+      {{#unless isPrivate}}
+        <div id="{{catId}}" class="content-bar-title content-bar-title-root content-bar-title-hover content-bar-title-toggle-off off level-{{../../../level}}" tabindex="0">
+          <div class="content-bar-wrapper clearfix">
+            <div class="image-wrapper">
+              {{#if isUserFavs }}
+                <img class="image" alt="{{{name}}} Icon" src="{{list_icon}}">
+              {{else}}
+                {{#if list_icon}}
+                  <img class="image" alt="{{{name}}} Icon" src="{{imgCacheList list_icon 1 22 22}}">
+                {{else}}
+                  {{#if icon}}
+                    <img class="image" alt="{{{name}}} Icon" src="{{imgCacheList icon 1 22 22}}">
+                  {{else}}
+                    <img class="image" alt="{{{name}}} Icon" src="/assets/library/icons/default/default_sidebar.png" />
+                  {{/if}}
+                {{/if}}
+              {{/if}}
+            </div>
+            <div class="text-wrapper">
+              <span id="catId-{{catId}}" data-catiid="{{catIid}}" class="name" title="{{{name}}}">{{{name}}}</span>
+            </div>
+
+            {{#unless single_select}}
+              <div id="toggle-{{catId}}" class="toggle {{toggleClass}}">
+                <div class="toggle-inner"></div>
+              </div>
+            {{/unless}}
+
+            {{#if ../../isCms }}
+              <div class="edit-btn-wrapper">
+              {{#if ../../can }}
+                <div id="ec-{{catId}}-{{catIid}}" class="edit-category button blue">
+                  <span class="editCatList cms-txt-subheading">Edit</span>
+                </div>
+              {{/if}}
+              </div>
+              <div class="info-icons">
+              {{#if default_state }}
+                <div class="i-icon">Default</div>
+              {{/if}}
+              {{#unless visible }}
+                <div class="i-icon"><img src="assets/img/invisible.png">&nbsp;Invisible</div>
+              {{/unless}}
+              {{#if schedule }}
+                <div class="i-icon">Scheduled</div>
+              {{/if}}
+              {{#ifeq private 1}}
+                <div class="i-icon"><img src="assets/img/private.png">&nbsp;Private</div>
+              {{/ifeq}}
+              {{#ifeq hidden 1}}
+                <div class="i-icon">Hidden</div>
+              {{/ifeq}}
+              {{#ifeq type 'toggle'}}
+                <div class="i-icon">List None</div>
+              {{/ifeq}}
+              {{#ifeq locked 1}}
+                <div class="i-icon">Locked</div>
+              {{/ifeq}}
+              </div>
+            {{/if}}
+
+            {{#if isUserFavs }}
+              <div id="share-uf" class="button blue">
+                <span class="cms-txt-subheading">Share</span>
+              </div>
+            {{/if}}
+
+          </div>
+        </div>
+      {{/unless}}
+    {{/each}}
+  {{/if}}
+    {{#if markers}}
+      {{#each markers}}
+        {{#unless isPrivate}}
+          <li id="{{id}}-{{../../prtCatId}}" class="list-content-bar-marker level-{{../../level}}" tabindex="0">
+            <table cellspacing="0" cellpadding="0" border="0">
+              <tbody>
+                <tr>
+                  <td class="bullet-wrapper"><div class="bullet"></div></td>
+                  <td class="content-bar-marker" id="mrkId-{{id}}">{{{name}}}
+                    {{#if ../../isCms }}
+                      {{#ifeq feed "regular" }}
+                        <div class="info-icons">
+                        {{#canEditLocation id}}
+                          <div id="em-{{id}}" class="cms-edit-edit button blue">
+                            <span class="editLocList cms-txt-subheading">Edit</span>
+                          </div>
+                        {{/canEditLocation}}
+                        {{#ifeq visible 0}}
+                          <div class="i-icon"><img src="assets/img/invisible.png">&nbsp;Invisible</div>
+                        {{/ifeq}}
+                        {{#if schedule }}
+                          <div class="i-icon">Scheduled</div>
+                        {{/if}}
+                        {{#ifeq private 1}}
+                          <div class="i-icon"><img src="assets/img/private.png">&nbsp;Private</div>
+                        {{/ifeq}}
+                        </div>
+                      {{/ifeq}}
+                    {{/if}}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        {{/unless}}
+      {{/each}}
+    {{/if}}
+</script>
+
+<script id="uf-marker" type="text/x-handlebars-template">
+  <li id="{{id}}-userfavs" class="list-content-bar-marker level-0" tabindex="0">
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td class="bullet-wrapper"><div class="bullet"></div></td>
+          <td class="content-bar-marker" id="mrkId-{{id}}">{{{name}}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</script>
+
+<script id="list-pane" type="text/x-handlebars-template">
+  <div class="content-bar-pane" id="pane-{{catId}}" style="display:none">
+    <ul></ul>
+  </div>
+</script>
+<script id="regular-search" type="text/x-handlebars-template">
+  {{#each markers}}
+  <div id="m{{id}}" class="sr-item srBgHvr srTxtHvr">
+    {{#unless ../s}}
+      {{#if image}}
+        <div class="sr-image">
+          <img src="{{image}}" />
+        </div>
+      {{/if}}
+    {{/unless}}
+    <div class="sr-body">
+      <h3>{{{title}}}</h3>
+      <p class="sr-category">{{{catName}}}</p>
+      {{#unless ../s}}
+        <div class="sr-description">{{{description}}}</div>
+      {{/unless}}
+    </div>
+  </div>
+  {{/each}}
+</script>
+
+<script id="search-pagination" type="text/x-handlebars-template">
+    {{#each pages}}
+      <span id="page-{{this}}">{{this}}</span>
+    {{/each}}
+</script>
+<script id="advanced-search" type="text/x-handlebars-template">
+this is advanced search
+</script>
+<script id="directions-markup" type="text/x-handlebars-template">
+	<div class="directions-pane pane">
+    <div class="extension-title">Directions to this Location</div>
+    <div class="balloon-directions-form">
+      <div class="balloon-directions-from">
+        <form class="directions-form" method="post" action="">
+          <div id="transit-modes" class="btn-wrapper-full">
+            <p class="directions-label">Transit type</p>
+            <ul id="route-types" class="hz-menu">
+              <li id="driving" class="active">Driving</li>
+              <li id="bicycling">Bicycling</li>
+              {{!<li id="transit">Transit</li>}}
+              <li id="walking">Walking</li>
+            </ul>
+          </div>
+          <div class="btn-wrapper-full">
+            <p class="directions-label">Directions from</p>
+            <input class="helpText directions-from helpTextActive" id="directions-from" title="Address, City, State, Zip" type="text" placeholder="Address, City, State, Zip" value="Address, City, State, Zip"/>
+          </div>
+          <div class="btn-wrapper-full">
+            <span class="directions-submit button custom">Get Directions</span>
+            {{#if showMyLocation }}
+              <span id="balloon-directions-from-my-location" class="button custom">From My Location</span>
+            {{/if}}
+          </div>
+        </form>
+      </div>
+      <div id="directions-label" class="df-hidden">
+        Directions to: <span>{{markerName}}</span>
+      </div>
+      <div class="dir-warning" id="dir-message"></div>
+      <div id="balloon-directions"></div>
+    </div>
+	</div>
+</script>
+
+<script id="direction-details-template" type="text/x-handlebars-template">
+  <section id="direction-details">
+    <header>
+      {{#if from}}
+        <div id="from-line">{{from.longName}}</div>
+      {{/if}}
+      <b>{{formattedDistance}}</b>
+      - about {{formattedDuration}}
+    </header>
+    <div id="direction-steps">
+      {{#each stepNodes}}
+      <div class="step">
+        <span class="{{classes}}"></span>
+        <div class="instruction-wrapper">
+          <span class="instruction">{{instruction}}</span>
+          <span class="distance">{{distance}}</span>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    <div class="mapbox-attribution">Directions powered by
+      <a target="_blank" href="http://mapbox.com/about/maps"><img src="assets/mapbox-logo.svg" style="height:16px;vertical-align:middle" /></a>,
+      <a target="_blank" href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>
+    </div>
+  </section>
+</script>
+<script id="gk-login-template" type="text/x-handlebars-template">
+  <div class="gk-wrapper">
+    <div id="gk-header">
+      {{#if logo }}
+      <div id="gk-logo">
+        <img src="{{logo}}" />
+      </div>
+      {{/if}}
+      {{#if title }}
+      <h3>{{title}}</h3>
+      {{/if}}
+      {{#if description }}
+      <div class="description">{{{description}}}</div>
+      {{/if}}
+    </div>
+    <div id="error-wrapper">
+      <p id="fill">Please, fill all fields</p>
+      <p id="email">Email doesn't seem like correct one</p>
+      <p id="wrong">Your data is wrong</p>
+    </div>
+    <form id="gk-login-form">
+      <div class="field-wrapper">
+        <label>Email</label>
+        <input type="email" name="email" />
+      </div>
+      {{#if password }}
+      <div class="field-wrapper">
+        <label>Password</label>
+        <input type="password" name="password" />
+      </div>
+      {{/if}}
+      <div id="gk-login-submit" class="gk-btn">Sign In</div>
+    </form> 
+
+    <div id="gk-footer">
+      <img alt="Concept3D" src="/assets/img/concept3d-logo.png">
+    </div>
+  </div> 
+</script>
+
+<script id="gk-cta-template" type="text/x-handlebars-template">
+  <div id="gk-cta-wrapper">
+    {{#if cta}}
+      <div>{{{cta}}}</div>
+    {{/if}}
+    <div id="gk-register" class="blue button">Please, register!</div>
+    <div id="gk-login" class="link">Already registered?</div>
+  </div>
+</script>
+
+<script id="gk-register-template" type="text/x-handlebars-template">
+  <div class="gk-wrapper">
+    <div id="gk-header">
+      {{#if logo }}
+      <div id="gk-logo">
+        <img src="{{logo}}" />
+      </div>
+      {{/if}}
+      {{#if title }}
+      <h3>{{title}}</h3>
+      {{/if}}
+      {{#if description }}
+      <div class="description">{{{description}}}</div>
+      {{/if}}
+    </div>
+    <div id="error-wrapper">
+      <p id="fill">Please, fill all fields</p>
+      <p id="required">Please, fill all required fields</p>
+      <p id="email">Email doesn't seem like correct one</p>
+      <p id="failed">Email is already taken</p>
+    </div>
+    <form id="gk-form">
+      {{#each fields }}
+        <div class="field-wrapper">
+          {{#if required }}
+            <label class="required">{{label}}</label>
+          {{else}}
+            <label>{{label}}</label>
+          {{/if}}
+          {{#ifeq type "text" }}
+            <input type="text" name="{{name}}" />
+          {{/ifeq}}
+          {{#ifeq type "password" }}
+            <input type="password" name="password" />
+          {{/ifeq}}
+          {{#ifeq type "email" }}
+            <input type="email" name="email" />
+          {{/ifeq}}
+          {{#ifeq type "textarea" }}
+            <textarea name="{{name}}" rows="5"></textarea>
+          {{/ifeq}}
+          {{#ifeq type "list" }}
+            <select name="{{name}}">
+              <option value="">Please, choose</option>
+              {{#each options}}
+              <option value="{{value}}">{{label}}</option>
+              {{/each}}
+            </select>
+          {{/ifeq}}
+        </div>
+      {{/each}}
+      {{#if submit }}
+        <div id="gk-submit" class="gk-btn">{{submit}}</div>
+      {{ else }}
+        <div id="gk-submit" class="gk-btn">Submit</div>
+      {{/if}}
+    </form>
+
+    <div id="gk-footer">
+      <img alt="Concept3D" src="/assets/img/concept3d-logo.png">
+    </div>
+  </div>
+</script>
+<script id="tvt-template" type="text/x-handlebars-template">
+  <style>
+
+    #tvt-wrapper {
+      width: 400px;
+      position: relative;
+      background-color: #fff;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      border-radius: 6px;
+      float: left;
+      overflow: hidden;
+    }
+
+    #tvt-close {
+      margin-top: -24px;
+      float: right;
+      cursor: pointer;
+    }
+
+    #tvt-header {
+      text-align: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #tvt-logo img {
+      margin-bottom: 24px;
+    }
+
+    #tvt-logo img {
+      margin: 0 auto;
+    }
+
+    #tvt-fields {
+      width: 100%;
+      float: left;
+      margin-top: 10px;
+    }
+
+    .tvt-error {
+      display: none;
+      color: #ff0000;
+      margin-left: 33%;
+      width: 60%;
+      float: left;
+      clear: both;
+      font-size: 11px;
+      margin-bottom: 4px;
+    }
+
+    .tvt-or {
+      width: 100%;
+      float: left;
+      clear: both;
+      padding: 8px 0;
+      margin-top: 10px;
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    #tvt-wrapper h1 {
+      font-size: 22px;
+      margin: 0;
+      padding: 0;
+    }
+
+    #tvt-wrapper p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .tvt-field {
+      width: 100%;
+      float: left;
+      clear: both;
+      margin: 4px 0;
+    }
+
+    .tvt-field label {
+      float: left;
+      width: 30%;
+      text-align: right;
+      margin-right: 3%;
+      font-weight: bold;
+      line-height: 28px;
+    }
+
+    .tvt-field input {
+      width: 40%;
+      float: left;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      padding: 2px;
+      font-size: 15px;
+      line-height: 22px;
+      height: 22px;
+    }
+
+    .tvt-field.error input {
+      border-color: #f00;
+    }
+
+    .tvt-btn {
+      width: 18%;
+      height: 24px;
+      line-height: 24px;
+      margin: 0 0 0 3%;
+      text-align: center;
+      background-color: #fff;
+      color: #630;
+      border-radius: 4px;
+      border: 1px solid #630;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+
+    .tvt-btn:hover {
+      background-color: #630;
+      color: #fff;
+    }
+
+    #btn-register {
+      margin-top: 8px;
+    }
+
+    #tvt-login {
+      width: 100%;
+      float: left;
+      clear: both;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 4px 0;
+      text-align: center;
+    }
+
+    #tvt-footer {
+      text-align: center;
+      height: 26px;
+      margin-top: 10px;
+      padding: 4px 10px;
+      width: 100%;
+      float: left;
+      border-top: 1px solid #ddd;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background-color: #f5f5f5;
+    }
+
+    #tvt-footer img {
+      margin: 0 auto;
+    }
+
+    #header-text-success, #header-text-failure {
+      display: none;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    #tvt-video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    #tvt-video-wrapper iframe, #tvt-video-wrapper object, #tvt-video-wrapper embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgb(54,  25, 25);
+      background-color: rgba(54,  25, 25, .1);
+      background-image: url(assets/img/spinner.gif);
+      background-position: center center;
+      background-repeat: no-repeat;
+      display: none;
+    }
+
+		.tvt-enrollment {
+			clear: both;
+		}
+		.tvt-enrollment select {
+			display: block;
+			height: 29px;
+			padding: 6px 10px;
+			font-size: 12px;
+			line-height: 1.42857143;
+			color: #555;
+			background-color: #fff;
+			background-image: none;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+			-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+			-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+			transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+			float: left;
+		}
+		#enrollment_date_season {
+			width: 102px;
+			margin-right: 9px;
+		}
+
+  </style>
+  <div id="tvt-wrapper">
+
+    <div id="loading"></div>
+
+    <div id="tvt-header">
+      <!--<div id="tvt-close">Close</div>-->
+      {{#if logo }}
+      <div id="tvt-logo">
+        <img src="{{logo}}" />
+      </div>
+      {{/if}}
+
+      <div class="tvt-header-text" id="header-text">
+        <h1>{{vt_title}}</h1>
+        <p>{{vt_description}}</p>
+      </div>
+
+      <div class="tvt-header-text" id="header-text-success">
+        <h1>Registration Successful</h1>
+      </div>
+
+      <div class="tvt-header-text" id="header-text-failure">
+        <h1>Registration Failed</h1>
+        <p>Please, refresh your browser and try again.</p>
+      </div>
+
+    </div>
+
+    {{#if vt_video}}
+    <div id="tvt-video-wrapper">
+      {{#if isVimeo }}
+        <iframe frameborder="0" src="{{url}}?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179"></iframe>
+      {{/if}}
+
+      {{#if isYoutube }}
+        <iframe frameborder="0" src="//www.youtube.com/embed/{{ytId url}}?enablejsapi=1" allowfullscreen></iframe>
+      {{/if}}
+    </div>
+    {{/if}}
+
+    <div id="tvt-fields">
+      <form id="tvt-form">
+        <div id="tvt-errors">
+          <span class="tvt-error" id="err-fill">Please, fill all fields</span>
+        </div>
+        <div class="tvt-field">
+          <label>Email</label>
+          <input type="text" name="email" id="email" />
+          <span class="tvt-error" id="err-email">Email doesn't seem like correct one</span>
+          <span class="tvt-error" id="err-taken">Email is already taken</span>
+        </div>
+        {{#if fb.isNameField}}
+        <div class="tvt-field">
+          <label>Name</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        {{/if}}
+        {{#if fb.isAgeField}}
+        <div class="tvt-field">
+          <label>Age</label>
+          <input type="text" name="age" id="age" />
+					<span class="tvt-error" id="err-age">Age must be a numeric value</span>
+        </div>
+        {{/if}}
+				{{#if fb.isPhoneNumberField}}
+					<div class="tvt-field">
+						<label for="phone_number">Phone Number</label>
+						<input type="text" name="phone_number" id="phone_number" />
+					</div>
+				{{/if}}
+				{{#if fb.isZipCodeField}}
+					<div class="tvt-field">
+						<label>Zip Code</label>
+						<input type="text" name="zip_code" id="zip_code" />
+					</div>
+				{{/if}}
+				{{#if fb.isCountryField}}
+					<div class="tvt-field">
+						<label>Country</label>
+						<input type="text" name="country" id="country" />
+					</div>
+				{{/if}}
+				{{#if fb.isHighSchoolField}}
+					<div class="tvt-field">
+						<label>High School</label>
+						<input type="text" name="high_school" id="high_school" />
+					</div>
+				{{/if}}
+				{{#if fb.isMajorField}}
+					<div class="tvt-field">
+						<label>Major</label>
+						<input type="text" name="major" id="major" />
+					</div>
+				{{/if}}
+				{{#if fb.isEnrollmentDateField}}
+					<div class="tvt-field tvt-enrollment">
+						<label>Enrollment Date</label>
+						<select name="enrollment_date_season" id="enrollment_date_season">
+							<option value="Spring">Spring</option>
+							<option value="Summer">Summer</option>
+							<option value="Fall">Fall</option>
+							<option value="Winter">Winter</option>
+						</select>
+						<select name="enrollment_date_year" id="enrollment_date_year">
+							{{#each years}}
+								<option value="{{this}}">{{this}}</option>
+							{{/each}}
+						</select>
+					</div>
+				{{/if}}
+				{{#if fb.isCustomDropdownField}}
+					<input type="hidden" name="custom_field_name" id="custom_field_name" value="{{custom_field_name}}">
+					<div class="tvt-field tvt-custom">
+						<label>{{custom_field_name}}</label>
+            {{#if custom_dropdown_fields}}
+              <select name="custom_dropdown" id="custom_dropdown">
+                {{#each custom_dropdown_fields}}
+                  {{#if this}}
+                    <option value="{{this}}">{{this}}</option>
+                  {{/if}}
+                {{/each}}
+              </select>
+            {{else}}
+              <input id="cf-value" name="custom_field_value" type="text" />
+            {{/if}}
+					</div>
+				{{/if}}
+
+      </form>
+      <div class="clear"></div>
+      <div class="tvt-btn" id="btn-register">Submit</div>
+    </div>
+
+    <div id="tvt-footer">
+      <img alt="CampusBird" src="{{logo_text}}">
+    </div>
+
+  </div>
+</script>
+<script id="tour-template" type="text/x-handlebars-template">
+  <ol id="tours-wrapper" class="tour-wrapper frn normal">
+    {{#if hasTours }}
+      {{#each tours}}
+        {{>tour}}
+      {{/each}}
+    {{/if}}
+  </ol>
+  {{#if canSortTours}}
+    <div id="tour-btns">
+      <div id="tour-sort" class="blue button">Sort Map Tours</div>
+      <div class="tour-sorting sort-save">
+        <div id="tour-sort-save" class="blue button sort-save">Save</div>
+        <div id="tour-sort-cancel" class="grey button sort-save">Cancel</div>
+        <div id="tour-group-add" class="blue button">+ New Group</div>
+      </div>
+    </div>
+  {{/if}}
+</script>
+
+<script id="tour-partial" type="text/x-handlebars-template">
+  {{#ifeq type "group"}}
+    <li class="tw-group {{itemClass}}" id="t-{{id}}" data-type="group">
+      <div class="tour group clearfix expand" id="tec-{{id}}">
+        <h4 id="t-title-{{id}}">{{name}}</h4>
+      </div>
+      {{#if cms}}
+      <div class="tour-sort-placeholder" id="tsp-{{id}}">
+        <div class="overlay" id="o-{{id}}"></div>
+        <div class="tg-btns">
+          <p id="edit" data-id="{{id}}" class="blue button">Edit</p>
+          <p id="delete" data-id="{{id}}" class="grey button">Delete</p>
+        </div>
+      </div>
+      {{/if}}
+      {{#if children}}
+        <ol>
+          {{#each children}}
+            {{>tour}}
+          {{/each}}
+        </ol>
+      {{/if}}
+    </li>
+  {{ else }}
+    {{#unless isPrivate}}
+    {{#if vt_required}}
+    <li class="tw vt {{itemClass}}" id="t-{{id}}" data-type="tour">
+    {{else}}
+    <li class="tw {{itemClass}}" id="t-{{id}}" data-type="tour">
+    {{/if}}
+      <div class="tour clearfix">
+        <div id="torid-{{id}}" class="tour-box">
+          <div class="image">
+            {{#if image}}
+              <img src="{{imgCache image 0 100 100}}">
+            {{/if}}
+          </div>
+          <div class="copy">
+            <div class="name">{{{name}}}</div>
+            <div class="description">{{{description}}}</div>
+          </div>
+          <div class="hover-background"></div>
+          {{#if stops}}
+            <div class="play play-off">
+              <div></div>
+            </div>
+          {{/if}}
+        </div>
+        {{#if canEditTour}}
+          <div id="te-{{tourId}}" class="tour-edit blue button">Edit</div>
+        {{/if}}
+      </div>
+      {{#if cms}}
+        <div class="tour-sort-placeholder" id="tsp-{{id}}">
+          <div class="overlay" id="o-{{id}}">
+            <div class="no-sorting">Only published tours can be sorted</div>
+          </div>
+        </div>
+        <div class="info-icons">
+        {{#unless visible }}
+          <div class="i-icon"><img src="assets/img/invisible.png">&nbsp;Invisible</div>
+        {{/unless}}
+        {{#if vt_fields }}
+          <div class="i-icon">Form</div>
+        {{/if}}
+        {{#if schedule }}
+          <div class="i-icon">Scheduled</div>
+        {{/if}}
+        {{#ifeq private 1}}
+          <div class="i-icon"><img src="assets/img/private.png">&nbsp;Private</div>
+        {{/ifeq}}
+        </div>
+      {{/if}}
+    </li>
+    {{/unless}}
+  {{/ifeq}}
+</script>
+
+
+<script id="tour-group-template" type="text/x-handlebars-template">
+  <li class="tw-group published df-hidden" id="t-{{id}}" data-type="group">
+    <div class="tour group clearfix">
+      <div id="tg-save-tools">
+        <input type="text" class="tg-title" id="tt-{{id}}" />
+        <div id="save" class="blue button">Save</div>
+      </div>
+      <h4 id="t-title-{{id}}"></h4>
+    </div>
+    <div class="tour-sort-placeholder" id="tsp-{{id}}">
+      <div class="overlay" id="o-{{id}}"></div>
+      <div class="tg-btns">
+        <p id="edit" data-id="{{id}}" class="blue button">Edit</p>
+        <p id="delete" data-id="{{id}}" class="grey button">Delete</p>
+      </div>
+    </div>
+    <ol></ol>
+  </li>
+</script>
+
+<script id="tg-edit-template" type="text/x-handlebars-template">
+  <div id="tg-save-tools">
+    <input type="text" class="tg-title" id="tt-{{id}}" />
+    <div id="cancel" class="grey button">Cancel</div>
+    <div id="save" class="blue button">Save</div>
+  </div>
+</script>
+
+<script id="tg-delete-template" type="text/x-handlebars-template">
+  <div id="tg-delete-tools">
+    Are you sure?
+    <div id="no" class="grey button">No</div>
+    <div id="yes" class="blue button">Yes</div>
+  </div>
+</script>
+<script id="tour-audio" type="text/x-handlebars-template">
+  <div class="tour-audio-wrapper">
+    <div class="tour-audio">
+      <div id="jp-progress">
+        <div id="audio-title">Listen</div>
+        <div id="audio-time">
+          <span id="audio-length"></span>
+        </div>
+      </div>
+      <div id="jp-progress-bar" class="progress-radial progress-0">
+        <div class="overlay"><div class="jplayer-control control play"><div></div></div></div>
+      </div>
+      <div class="jplayer" data-mrkid="{{id}}"></div>
+    </div>
+  </div>
+</script>
+<script id="tournav" type="text/x-handlebars-template">
+  <div id="tourbar" class="tour-nav">
+    <div class="tour-prev">&lt;</div>
+    <div class="tour-name">{{name}}</div>
+    <div class="tour-stop-thumb-wrapper">
+      <div style="width: {{wrapperWidth}}px; left: 436px;" class="tour-stop-thumb-inner-wrapper">
+        <div class="tour-stop-thumb-slider">
+
+          {{#if stops}}
+            {{#each stops}}
+            <div class="tour-stop-thumb tour-stop-{{id}} active" data-point="{{point}}">
+              <img src="{{thumbnail}}">
+              <div class="tour-stop-thumb-number">{{point}}</div>
+            </div>
+            {{/each}}
+          {{/if}}
+
+        </div>
+      </div>
+    </div>
+    <div class="tour-next">&gt;</div>
+  </div>
+</script>
+<script id="buses-template" type="text/x-handlebars-template">
+  <div id="br-header">
+  </div>
+  <div id="br-list" class="clearfix">
+
+  </div>
+</script>
+<script id="kba-template" type="text/x-handlebars-template">
+  <div class="kba-wrapper">
+
+    <div class="kba-header">
+      <h1>Skip to Locations/Categories</h1>
+    </div>
+    <div class="kba-content">
+      <ul>
+        <li>Pressing <strong>TAB</strong> will enable keyboard accessibility.</li>
+        <li>Pressing <strong>ENTER</strong> will enable keyboard accessibility and will take you to the categories list.</li>
+        <li><strong>ANY OTHER ACTION</strong> will disable keyboard accessibility. You will still bennefit of basic kayboard accessibility support.</li>
+      </ul>
+    </div>
+
+    <div class="kba-footer">
+      <img alt="Concept3D" src="/assets/img/concept3d-logo.png">
+    </div>
+
+  </div>
+</script>
+  <script type="text/javascript">
+
+    $(document).on('click', "#gpm", function (e) {
+      var pg = hash.getParsed().pg, action;
+      action = pg === undefined ? 'add' : 'remove';
+      hash.act(action, 'pg');
+      e.stopPropagation();
+      return false;
+    });
+
+
+    $(document).on('click', "#close-pg", function (e) {
+      hash.act('remove', 'pg');
+      e.stopPropagation();
+      return false;
+    });
+
+  </script>
+    <script type="text/javascript">
+
+    // google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-26917100-1', 'auto');  // Replace with your property ID.
+    ga('send', 'pageview');
+    if (mapConfig.ga_id) {
+      ga('create', mapConfig.ga_id, 'auto', {'name': 'secondTracker'});
+      ga('secondTracker.send', 'pageview');
+    }
+  </script></head>
+
+
+<body id="body-566" class="body-regular sf-extra leaflet">
+
+  <div id="spinner"><div id="spinner-inner"></div></div>
+  <div id="extension-pane"><div class="extension-close">Close</div></div>
+  <div id="map">
+  <div id="frameOverMapContainer">
+      <div id="frameParent">
+          <div id="frameOverMap" style="display:none;"></div>
+      </div>
+  </div>
+    <div id="sv-wrapper"></div>
+    <div id="my-location">&curren;</div>
+
+    <div id="canvasContainer">
+      <div id="flashContainer">
+        <div id="flash"></div>
+      </div>
+      <div id="CSS3Container"></div>
+      <div class="pano-top pano-right">
+        <div class="pano-control-zoom pano-bar pano-control">
+          <a class="pano-control-zoom-in" href="#" title="Zoom in">+</a>
+          <a class="pano-control-zoom-out" href="#" title="Zoom out">-</a>
+        </div>
+      </div>
+      <div id="pano-header-center">
+        <div id="pano-header-title" class="pano-title"></div>
+      </div>
+      <canvas id="canvasID"></canvas>
+      <div id="pano-arrow"></div>
+    </div>
+
+  <div id="notificationContainer">
+    <p>&nbsp;</p>
+    <div style="margin:0 auto;width: 160px;margin-top: 10px;">
+      <button id="notification_yes_btn">Yes</button>
+      <button id="notification_no_btn">No</button>
+    </div>
+  </div>
+  </div>
+
+  
+<div id="user-content-wrapper"><div id="search-result-button"><p>R</p><p>E</p><p>S</p><p>U</p><p>L</p><p>T</p><p>S</p></div>      <div id="map-bar">
+        <div id="map-add-marker">
+          <div id="map-search" class="map-search">
+            <input id="mapSearchForm" type="text" name="mapSearchForm" style="width:250px;">
+          </div>
+          <div id="map-search-add-pin">
+            <img alt="Marker" src="//www.google.com/mapfiles/marker.png">
+          </div>
+          <div style="clear:both;height:1px;"></div>
+        </div>
+        <div id="pano-buttons">
+          <div id="share-pano" class="df-hidden pano-share">Share</div>
+          <div id="pano-conceal" class="df-hidden">< Back To Map</div>
+        </div></div><!--/map-bar--><div id="uc-content"><!-- Theme CSS -->
+<script type="text/javascript" src="themes/default/default.theme.js"></script>
+
+<div id="sidebar-header">
+  <div id="logo"><a href="https://www.oakland.edu/" target="_parent"><img alt="Oakland University" title="Oakland University" src="/assets/566/logo.png" /></a><a href="accessible.php?id=566" style="display: none" title="Text-Only Directory">Text-Only Directory</a></div>
+  <div id="header-content"></div>
+  <div id="search-wrapper">  <form id="search" class="desktop-search " method="post" action="">
+    <div class="search-field" id="main-search-key">
+      <input id="search-key" class="text" name="key" title="Search" type="text" value="Search...">
+      <p class="text no-search-result" id="search-failed">No results</p>
+      <p class="text no-search-result" id="search-geo">Found address</p>
+    </div><div id="search-button" class="button custom">Search</div></form><div id="sr-min-btn" class="srBgTxt">view search results</div></div>
+  <div id="content-bar-subcontent">
+    <div id="content-bar-subcontent-close">×</div>
+    <div id="content-bar-subcontent-search-term"></div>
+    <span id="content-bar-subcontent-inner"></span>
+  </div>
+</div>
+<div id="mobile-logo"><img alt="Oakland University" title="Oakland University" src="/assets/566/logo.png" /></div>
+<div id="content-bar-wrapper">
+  <div id="sidebar-toggle-buttons">
+    <div id="st-locations" class="st-button">
+      <div class="inner">Locations</div>
+    </div>
+    <div id="st-tours" class="st-button df-hidden inactive">
+      <div class="inner">Tours</div>
+    </div>
+    <div id="st-buses" class="st-button df-hidden">
+      <div class="inner">Transit</div>
+    </div>
+  </div>
+  <div id="buses"></div>
+  <div id="tours"></div>
+  <div id="tour-edit-wrapper"></div>
+  <div id="content-bar-inner-wrapper">
+    <div id="content-bar"><div id="5468" class="content-bar-title content-bar-title-root content-bar-title-hover content-bar-title-toggle-off off level-0" tabindex="0">  <div class="content-bar-wrapper clearfix" style="overflow: hidden;">    <div class="image-wrapper">      <img class="image" alt="Academics Icon" src="/map/lib/image-cache/i.php?mapId=566&image=566/Academic3key_bl.png&w=22&h=22&t=1&r=1" />    </div>    <div class="text-wrapper">      <span id="catId-5468" title="Academics" data-catiid="5489" class="name">Academics</span>    </div>    <div id="toggle-5468" class="toggle">      <div class="toggle-inner"></div>    </div>  </div></div><div id="43589" class="content-bar-title content-bar-title-root content-bar-title-hover content-bar-title-toggle-off off level-0" tabindex="0">  <div class="content-bar-wrapper clearfix" style="overflow: hidden;">    <div class="image-wrapper">      <img class="image" alt="Campus Life Icon" src="/map/lib/image-cache/i.php?mapId=566&image=566/Campus-LIfe_list.png&w=22&h=22&t=1&r=1" />    </div>    <div class="text-wrapper">      <span id="catId-43589" title="Campus Life" data-catiid="43610" class="name">Campus Life</span>    </div>    <div id="toggle-43589" class="toggle">      <div class="toggle-inner"></div>    </div>  </div></div><div id="41824" class="content-bar-title content-bar-title-root content-bar-title-hover content-bar-title-toggle-off off level-0" tabindex="0">  <div class="content-bar-wrapper clearfix" style="overflow: hidden;">    <div class="image-wrapper">      <img class="image" alt="Emergency Preparedness Icon" src="/map/lib/image-cache/i.php?mapId=566&image=566/EM_list_red.png&w=22&h=22&t=1&r=1" />    </div>    <div class="text-wrapper">      <span id="catId-41824" title="Emergency Preparedness" data-catiid="41845" class="name">Emergency Preparedness</span>    </div>    <div id="toggle-41824" class="toggle">      <div class="toggle-inner"></div>    </div>  </div></div><div id="43590" class="content-bar-title content-bar-title-root content-bar-title-hover content-bar-title-toggle-off off level-0" tabindex="0">  <div class="content-bar-wrapper clearfix" style="overflow: hidden;">    <div class="image-wrapper">      <img class="image" alt="Operations and Infrastructure Icon" src="/map/lib/image-cache/i.php?mapId=566&image=566/O_I_list.png&w=22&h=22&t=1&r=1" />    </div>    <div class="text-wrapper">      <span id="catId-43590" title="Operations and Infrastructure" data-catiid="43611" class="name">Operations and Infrastructure</span>    </div>    <div id="toggle-43590" class="toggle">      <div class="toggle-inner"></div>    </div>  </div></div><div id="6600" class="content-bar-title content-bar-title-root content-bar-title-hover content-bar-title-toggle-off off level-0" tabindex="0">  <div class="content-bar-wrapper clearfix" style="overflow: hidden;">    <div class="image-wrapper">      <img class="image" alt="Points of Interest Icon" src="/map/lib/image-cache/i.php?mapId=566&image=566/EventVenueKey.png&w=22&h=22&t=1&r=1" />    </div>    <div class="text-wrapper">      <span id="catId-6600" title="Points of Interest" data-catiid="6622" class="name">Points of Interest</span>    </div>    <div id="toggle-6600" class="toggle">      <div class="toggle-inner"></div>    </div>  </div></div></div>
+  </div>
+</div>
+
+<div id="ad-wrapper" class="df-hidden">
+  <p id="ad-close">×</p>
+  <div id="ad-content"></div>
+</div>
+
+<div id="footer">
+  <div id="footer-content"><p style="text-align: center;">201 Meadow Brook Road </p>
+<p style="text-align: center;">Rochester, Michigan 48309-4451</p>
+<div class="phone" style="text-align: center;">(248) 370-2100 | <a href="https://www.oakland.edu/contact-ou/">Contact OU</a></div>
+<p style="text-align: center;"><a href="https://www.facebook.com/oaklandu/" target="_blank"><img class="sm-icon" src="../../../../../../../assets/library/social_media/facebook.png" border="0" /></a> <a href="https://twitter.com/oaklandu" target="_blank"><img class="sm-icon" src="../../../../../../../assets/library/social_media/twitter.png" border="0" /></a> <a href="https://www.instagram.com/oaklandu/" target="_blank"><img class="sm-icon" src="../../../../../../../assets/library/social_media/instagram.png" border="0" /></a> <a href="https://www.youtube.com/user/oaklanduniv" target="_blank"><img class="sm-icon" src="../../../../../../../assets/library/social_media/youtube.png" border="0" /></a></p></div>
+</div>
+</div></div>
+
+    <div id="menu-bar">
+    <div id="menu-bar-right">
+                              <div id="print" class="button">Print</div>
+                          </div>
+      </div>
+  
+  <div id="modal">
+    <p id="modal-close">&times;</p>
+    <div id="modal-content"></div>
+  </div><!--/modal-->
+
+  <div id="content-bar-balloon-wrapper">
+    <div id="content-bar-balloon">
+    </div>
+  </div>
+
+  <div id="search-results-wrapper">
+    <div id="sr-header" class="srBg srTxt">
+      <span id="sr-triangle" class="triangle"></span>
+      <span id="sr-title">Search Results</span>
+      <div id="search-pages" class="df-hidden"></div>
+      <span id="sr-close" title="Close" class="srTxtBgHvr srBgTxtHvr">&times;</span>
+      <span id="sr-minimize" title="Minimize" class="srTxtBgHvr srBgTxtHvr">_</span>
+      <span id="sr-count"></span>
+    </div>
+    <div id="search-results"></div>
+  </div>
+
+  <div id="mbl-search-results" class="df-hidden"></div>
+
+  <div id="unminimize-infowindow" style="display: none;">Back To Marker</div>
+
+  <div id="vt-popup" class="df-hidden">
+    <p id="vt-close">&times;</p>
+    <div id="vt-content"></div>
+  </div>
+
+  <div id="mobile-fullscreen">
+    <div id="mf-close">&times;</div>
+    <div id="mf-content"></div>
+  </div>
+
+  <div id="footer-logo"></div>
+
+</body>
+
+</html>

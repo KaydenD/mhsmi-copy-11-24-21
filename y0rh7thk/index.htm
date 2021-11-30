@@ -1,0 +1,576 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+	<script type="text/javascript">
+		try {
+			Alert.render('');
+		} catch(err) {
+			//nothing to do here
+		}
+	</script>
+    	<title>SCHEDULE NOW!</title>
+	<meta name="description" content="Prestige Photography by Lifetouch Royal Oak, MI 48067" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="noindex, nofollow">
+	<link rel="canonical" href="https://booknow.appointment-plus.com/y0rh7thk/" />
+	<script type="text/javascript">
+		var CustomerView = new Object({
+			bookNowURL: 'https://booknow.appointment-plus.com/y0rh7thk/',
+			webRootRelativePath: '',
+			customerViewRelativePath: '/ap_ui_v2'
+		});
+	</script>
+	<script type="text/javascript" src="/ap_ui_v2/functions_index.js"></script>
+	<script type="text/javascript" src="/ap_ui_v2/functions1_index.js?v=20210107"></script>
+	
+	<!-- BL 5/8/10 add jquery -->
+	<script type="text/javascript" src="/SDK/jquery/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="/ap_admin_v2/jquery_format.js"></script>
+    <script type="text/javascript" src="/SDK/jquery/jquery-ui.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/SDK/jquery/styles/smoothness/jquery-ui-1.8.16.custom.css"/>
+	<script language="JavaScript" type="text/javascript" src="/ap_admin_v2/jquery_phone_formats.js"></script>
+	<script src="/ap_admin_v2/jquery.tools.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/SDK/jquery/blockui/jquery.blockUI.js"></script>
+
+    <style>
+        .loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('../../ap_images_v2/loading1.gif') 50% 50% no-repeat rgb(249,249,249);
+            background-size: 30px 30px;
+            opacity: .8;
+        }
+    </style>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $(".loader").fadeOut("slow");
+        });
+    </script>
+    <div class="loader"></div>
+	<!-- BEGIN CSRF Handling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('form').append('<input type="hidden" name="csrfToken" value="c58fadf4f1808ac4bc1d1aa93600117dffd53092">');
+		});
+	</script>
+	<!-- END CSRF Handling -->
+
+	<!-- Display spinner over grid while page is loading  -->
+    <script type="text/javascript">
+
+        $(function() {
+            //$('#hidegrid').css('display', 'none');
+            $('#gridcontainer').css('display', 'block');
+            $.unblockUI();
+        });
+    </script>
+
+    <script type="text/javascript" language="javascript">
+    $(document).ready(function() {
+		$("#packageInfo").click(function() {
+			$(".highlightPackage").effect( "highlight", 3000 );
+		});
+        $("#apptInfo").click(function() {
+			$(".highlightApptActivity").effect( "highlight", 3000 );
+		});
+	});
+	</script>
+		
+	<link href="/ap_ui_v2/style.css" rel="stylesheet" type="text/css" />
+	<style>
+	tr.customerFields, tr.loginFields {
+		text-align: left;
+	}
+	
+	html, body {
+		height: 100%;
+	}
+	</style>
+</head>
+<script language="JavaScript" type="text/javascript" src="/ap_admin_v2/functions_openwindows.js"></script>
+<body leftmargin="0" topmargin="0" rightmargin="0" marginheight="0" marginwidth="0"
+	bgcolor="#dccaa2"
+	link="#0000FF"
+	vlink=""
+	alink=""
+><style type="text/css">
+    #dialogoverlay{
+        display: none;
+        opacity: .8;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background: #ccc;
+        width: 100%;
+        z-index: 10;
+    }
+    #dialogbox{
+        display: none;
+        position: fixed;
+        background: #010101;
+        border-radius:0px;
+        width:560px;
+        z-index: 10;
+    }
+    #dialogbox > div{ background:#FFF; margin:0px; }
+    #dialogbox > div > #dialogboxhead{ background: #FFF; font-size:25px; font-family: Arial;  padding:60px; color:#010101; }
+    #dialogbox > div > #dialogboxbody{ background:#FFF; padding:0px;font-family: sans serif,lato-regular; color:#FFF; }
+    #dialogbox > div > #dialogboxfoot{ background: #8e9cff; font-size:25px; font-family: Arial; padding:25px; text-align:center; }
+	#dialogbox > div > #dialogboxfoot button { width:140px; height: 40px; font-size:25px; font-family: Arial; }
+</style>
+
+
+<div id="dialogoverlay"></div>
+<div id="dialogbox">
+    <div>
+        <div id="dialogboxhead"></div>
+        <div id="dialogboxbody"></div>
+        <div id="dialogboxfoot"></div>
+    </div>
+</div>
+
+
+<script>
+    function CustomAlert(){
+        var cookieEnabled = (navigator.cookieEnabled) ? true : false;
+
+        if (typeof navigator.cookieEnabled == "undefined" && !cookieEnabled) {
+            document.cookie = "testcookie";
+            cookieEnabled = (document.cookie.indexOf("testcookie") != -1) ? true : false;
+        }
+
+        this.render = function(dialog){
+			if(cookieEnabled == true){
+				return;
+			} else {
+				var winW = window.innerWidth;
+				var winH = window.innerHeight;
+				var dialogoverlay = document.getElementById('dialogoverlay');
+				var dialogbox = document.getElementById('dialogbox');
+				if (dialogoverlay) {
+					dialogoverlay.style.display = "block";
+					dialogoverlay.style.height = winH+"px";
+				}
+				if (dialogbox) {
+					dialogbox.style.left = (winW/2) - (550 * .5)+"px";
+					dialogbox.style.top = "100px";
+					dialogbox.style.display = "block";
+				}
+				if (!dialog || !dialog.length) {
+					dialog = "We have detected that cookies are disabled in your browser. ";
+					dialog += "Please update your browser settings or call us directly to schedule an appointment.";
+				}
+				document.getElementById('dialogboxhead').innerHTML = dialog;
+				document.getElementById('dialogboxbody').innerHTML = dialog;
+				document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Alert.ok();">Close</button>';
+			}
+        }
+        this.ok = function(){
+            document.getElementById('dialogbox').style.display = "none";
+            document.getElementById('dialogoverlay').style.display = "none";
+            window.location = "https://booknow.appointment-plus.com/y0rh7thk/";
+        }
+    }
+    var Alert = new CustomAlert();
+</script>	<div id="wrapper" style="min-height: 100%;">
+		<script type="text/javascript">
+    <!--
+    function confirmation(redirectUrl) {
+
+                    window.location = redirectUrl;
+
+            }
+    //-->
+</script>
+<style>
+.loginBoxOffset {
+	vertical-align:top;
+	display:block;
+	margin-top:10px;
+	margin-bottom:5px;
+	margin-right:12px;
+}
+.clientFontFace {
+	font-family:"Arial";
+}
+.clientFontColor {
+	color:"";
+}
+.formLabel {
+	display:block;
+	padding-top:6px;
+	color:#000000;
+}
+input.loginButton {
+	margin-top:0px !important;
+}
+</style>
+			<table cellpadding="1" cellspacing="0" border="0" width="100%" align="center" class="header-hidden">
+					<form method="post" class="login-form" action="https://booknow.appointment-plus.com/y0rh7thk/" autocomplete="off">
+                <input type="hidden" name="id" value="932">
+                <input type="hidden" name="d" value="appointplus160">
+                <input type="hidden" name="page" value="10">
+                <input type="hidden" name="m" value="2">
+                <input type="hidden" name="type" value="39">
+                <input type="hidden" name="auth" value="no">
+                <input type="hidden" name="action" value="log_in">
+                <input type="hidden" name="customer_id" value="">
+                <input type="hidden" name="event" value="">
+                <input type="hidden" name="show_services" value="">
+                <input type="hidden" name="temp_addon_id" value="">
+                <input type="hidden" name="customer_location_id" value="">
+                <input type="hidden" name="headquarters_id" value="692">
+                <input type="hidden" name="login_screen" value="yes">
+                <input type="hidden" name="e_id" value="">
+                <input type="hidden" name="location_id" value="932">
+									<tr class="loginBoxOffset">
+						<td width="92%" colspan="2" align="right">
+														&nbsp;&nbsp;&nbsp;
+							<span class="formLabel clientFontFace clientFontColor">
+								<font size="1">
+									<a class="login-forgot" href="javascript:newwindow1('https://booknow.appointment-plus.com/y0rh7thk/forgot_password','passwordwindow');">
+										I forgot my login information
+									</a>
+								</font>
+							</span>
+													<td width="2%" colspan="2" align="right" nowrap>
+							<span class="formLabel clientFontFace clientFontColor">
+								<font size="1">
+									<span class="formLabel">Login</span>
+								</font>
+							</span>
+						</td>
+						<td width="2%"><input type="text" name="loginname" size="10" autocomplete="off"></td>
+						<!-- disables autocomplete --><input type="text" style="display:none">
+						<!-- disables autocomplete --><input type="password" style="display: none">
+						<td width="2%" colspan="2" align="right" nowrap>
+							<span class="formLabel clientFontFace clientFontColor">
+								<font size="1">
+									<span class="formLabel">Password</span>
+								</font>
+							</span>
+						</td>
+						<td width="2%"><input type="password" class="novalidation" name="password" size="10" autocomplete="off"></td>
+						<td width="2%">
+							<input type="submit" value="Log In" class="button1 loginButton" />
+						</td>
+									</tr>
+		</form>
+					</table>
+					<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#FFFFFF">
+			<tr>
+				<td height="10">&nbsp;</td>
+			</tr>
+			<tr>
+				<td>
+					<p><center><img style="display: block; margin-left: auto; margin-right: auto;" src="https://prestigeportraits.com/appointment_plus_hero_banner_740x185.jpg" alt="" width="740" height="185" /></center></p>				</td>
+			</tr>
+			<tr>
+				<td height="10">&nbsp;</td>
+			</tr>
+		</table>
+		<table class="smooth" cellpadding="0" cellspacing="0" border="0" bgcolor="white" bordercolor="#000000" width="100%" align="center">
+			<tr class="smooth">
+				<td align="center" height="35" valign="middle" nowrap class="menu1">
+					&nbsp;							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a style="text-decoration: none;color:#FFFFFF;"
+								href="https://booknow.appointment-plus.com/y0rh7thk/appointments?action=">
+								Appointments							</a>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+														<a style="text-decoration: none;color:#FFFFFF;"
+									href="javascript:newwindow2('https://booknow.appointment-plus.com/y0rh7thk/services','mywindow4');">
+                                    Sessions								</a>
+												</td>
+			</tr>
+		</table>
+				<table cellspacing="0" border="0" width="95%" align="center">
+			<tr>
+				<td width="100%">
+					<font face="Arial" color="#090909" size="2">
+						<p style="text-align: center;"><strong style="font-size: 24px; text-align: center;">Prestige Portraits - Royal Oak Location</strong></p>
+<p style="text-align: center;"><span style="font-size: 10pt;"><strong style="text-align: center;">(For High School Senior Sessions, please make appointment under students name, one student per appointment)<br /><br /><span style="color: #e03e2d; font-size: 14pt;">ATTENTION:&nbsp; EFFECTIVE IMMEDIATELY- Our studios are now open and photographing!<br /></span></strong></span><span style="font-size: 10pt;"><strong style="text-align: center;"><span style="font-size: 12pt;">Thank You, Prestige Studios</span><br /></strong></span></p></font></td>
+			</tr>
+		</table>
+	
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+	<td>
+			</td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="1050px" align="center">
+<br/><tr>
+<td width="40%" valign="top" class="col1">
+<form method="post" name="myForm1" action="https://booknow.appointment-plus.com/y0rh7thk/">
+
+<!-- BL 8/17/10 variable to assist in resetting form for a user making consecutive appts -->
+<input type="hidden" name="selection_form" value="yes">
+
+<input type="hidden" name="wt_c_id" value="">
+<input type="hidden" name="wt_d" value="">
+<input type="hidden" name="page" value="10">
+<input type="hidden" name="auth" value="yes">
+<input type="hidden" name="action" value="log_in">
+<input type="hidden" name="action2" value="">
+<input type="hidden" name="customer_id" value="">
+<input type="hidden" name="show_services" value="">
+<input type="hidden" name="temp_addon_id" value="">
+<input type="hidden" name="customer_location_id" value="932">
+<input type="hidden" name="vo" value="">
+
+<input type="hidden" name="selected_pets" value="">
+<input type="hidden" name="pet_count" value="">
+<input type="hidden" name="pet_list" value="">
+
+<input type="hidden" name="selected_children" value="">
+<input type="hidden" name="child_count" value="">
+<input type="hidden" name="children_list" value="">
+<input type="hidden" name="staff_switch_loc" value="">
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:350px" id="table-left" bgcolor="white">
+<tr>
+	<td width="100%" colspan="2">
+		<!-- Column title-->
+		<font face="" color="#FFFFFF" size="" class="subtitle">
+			Appointment Locator		</font></td>
+</tr>
+<tr>
+<td valign="top"><input type="hidden" name="day_name" value="any">
+<table cellpadding="3" cellspacing="0" border="0" bgcolor="" width="100%">
+			<input type="hidden" name="rep_id" value="">
+			<input type="hidden" name="location_id" value="932">
+		<tr>
+		<td>
+			<span class="label">Location Address</span>
+			<font face="Arial" color="#090909"
+				size="2">
+				1107 Crooks Rd.<br>Royal Oak,MI 48067<br><br><i>(248) 548-7660</i>			</font>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" height="5" bgcolor="white">
+			<img src="/ap_images_v2/spacer.gif" />
+		</td>
+	</tr>
+			<input type="hidden" name="id" value="932">
+				<tr>
+			<td>
+				<span class="label">Select Studio Schedule</span>
+                				<select name="e_id" onChange="submitForm(this);"  >
+											<option value="">Select Studio Schedule</option>
+						<option value='7987'>IN-STUDIO</option>
+				</select>
+						</td>
+	</tr>
+							<tr>
+							<td colspan="2" height="5" bgcolor="white">
+								<img src="/ap_images_v2/spacer.gif">
+							</td>
+						</tr>
+										<tr><td><span class="label">Select session</span>
+				
+				<select class="dropdown" name="service_id" onChange="submitForm(this);">
+					<option value="">Select session</option>
+				<option value='8827'>Ultimate (4 Outfit) Senior Session ($50.00)</option>
+<option value='8829'>Deluxe (3 Outfit) Senior Session ($40.00)</option>
+<option value='8831'>Standard (2 outfit) Senior Session ($30.00)</option>
+<option value='8833'>Basic (1 outfit) Senior Session ($20.00)</option>
+<option value='8825'>Outdoor Environmental Senior Session ($40.00)</option>
+<option value='8945'>Studio-Families, Children, etc. ($50.00)</option>
+				</select>
+							</font>
+			</td>
+			</tr>
+							<tr>
+					<td colspan="2" height="5" bgcolor="white">
+						<img src="/ap_images_v2/spacer.gif" />
+					</td>
+				</tr>
+							<tr>
+				<td>
+				<span class="label"> Select add-on services</span>
+				<table cellpadding=0 cellspacing=0 border=0 width="100%">
+											<tr>
+							<td>
+								<input type="hidden" name="temp_addon_id" value="">
+								<table cellpadding=0 cellspacing=0 border=0 width="100%">
+									<tr>
+																					<td width="3%" valign="top">
+												<input type="checkbox"   onClick="submitForm(this);"
+													name="addonservice_8835" />
+											</td>
+											<td width="97%">
+												<font face="arial" size="2">
+													Additional Outfit ($10.00)											</font>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+										</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" height="5" bgcolor="white">
+				<img src="/ap_images_v2/spacer.gif" />
+			</td>
+		</tr>
+				<input type="hidden" name="next_date" value="20211201">
+		<input type="hidden" name="prev_date" value="20211001">
+
+				<tr>
+		<td valign="top" nowrap>
+						<span class="label">Date</span>
+			
+		<table cellpadding="2" cellspacing="0" bgcolor="white" align="left" id="calendar">
+		<tr class="calendar-header">
+			<th align="center" style="border-right: #ECEDF2;">
+				&nbsp;			</th>
+			<th align="center" colspan="5">
+				<span>November 2021</span></th>
+			<th align="center">
+											<a href="javascript:dosubmit1('no', 'yes', 'log_in')" class="right">
+								<img class="calendar-arrow" src="/ap_images_v2/right_triangle.gif" border="0"></a>
+									</th>
+		</tr>
+		<tr class="calendar-days">
+			<td>Sun</td>
+			<td>Mon</td>
+			<td>Tue</td>
+			<td>Wed</td>
+			<td>Thu</td>
+			<td>Fri</td>
+			<td>Sat</font></td>
+		</tr>
+		                    <td bgcolor="white"><img src="/ap_images_v2/spacer.gif">
+                    </td>
+                                        <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">01</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">02</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">03</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">04</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">05</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">06</font></td>
+                </tr><tr>                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">07</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">08</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">09</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">10</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">11</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">12</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">13</font></td>
+                </tr><tr>                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">14</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">15</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">16</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">17</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">18</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">19</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">20</font></td>
+                </tr><tr>                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">21</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">22</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">23</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">24</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">25</font></td>
+                                    <td align="center" bgcolor="#999999" id="cv-leftnav-item-calendar-notAvailable-id" class="calendar-notavailable">
+                        <font face="arial" size="2">26</font></td>
+                                    <td align="center" bgcolor="#999999" class="calendar-fullday">
+                        <font face="arial" size="2">27</font></td>
+                </tr><tr>                    <td align="center" bgcolor="#999999" class="calendar-fullday">
+                        <font face="arial" size="2">28</font></td>
+                                    <td align="center" bgcolor="#999999" class="calendar-fullday">
+                        <font face="arial" size="2">29</font></td>
+                                    <td align="center" bgcolor="#999999" class="calendar-fullday">
+                        <font face="arial" size="2">30</font></td>
+                				<td bgcolor="white"><img src="/ap_images_v2/spacer.gif"></td>
+			    				<td bgcolor="white"><img src="/ap_images_v2/spacer.gif"></td>
+			    				<td bgcolor="white"><img src="/ap_images_v2/spacer.gif"></td>
+			    				<td bgcolor="white"><img src="/ap_images_v2/spacer.gif"></td>
+			    		</tr>
+		</table>
+
+		</tr>
+			<input type="hidden" name="next_date" value="20211201">
+	<input type="hidden" name="prev_date" value="20211001">
+	<input type="hidden" name="starting_date" value="">
+	<input type="hidden" name="previous_service_id" value="0">
+	<input type="hidden" name="date_ymd" value="20211130">
+	<input type="hidden" name="view_prev_month">
+	<input type="hidden" name="view_next_month">
+			</table>
+			</td>
+			</tr>
+			</table>
+			<br/>
+				<input type="hidden" name="event" value="">
+	</form></td>
+<td width="1%">&nbsp;</td>
+<td valign="top" class="col2">
+		<div class="activity-link-wrapper">
+			</div>
+
+		<div class="gray-box margin-bottom-10">
+									<div class="welcome2">
+							<p><span style="font-family: 'arial black', 'avant garde'; font-size: small;"><strong>To schedule your session, please follow these steps:</strong></span>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Step 1&nbsp;</strong>- Select In-Studio (<a title="Prestige Location" href="https://www.google.com/maps/place/Prestige+Portraits/@42.499386,-83.1474589,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x535cc6ae813209dd!8m2!3d42.499386!4d-83.1452702" target="_blank" rel="noopener">map</a>) or Outdoor (<a href="https://www.google.com/maps/place/Quarton+Lake/@42.5469697,-83.2326967,15.75z/data=!4m5!3m4!1s0x0:0x63003b4a482e9e65!8m2!3d42.5487244!4d-83.2269101">map</a>) (Note: when scheduling both, schedule on separate days)</p>
+<p><strong>Step 2</strong>&nbsp;- Select your Session</p>
+<p><strong>Step 3</strong>&nbsp;- Select your Date. Open dates on calendar are indicated by&nbsp;<span style="color: blue;"><u>blue date links</u></span></p>
+<p><strong>Step 4</strong>&nbsp;- Select your time</p>
+<p><strong>Step 5</strong>&nbsp;- Complete the Registration Form</p>
+<p><strong>Step 6</strong>&nbsp;- Confirm your Appointment<br /><br /></p>
+<p><span style="font-family: 'arial black', 'avant garde'; font-size: small;"><strong>To reschedule or cancel an existing appointment, please use one of the below options:</strong></span>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Option 1&nbsp;</strong>- login above then select your session below</p>
+<p><strong>Option 2&nbsp;</strong>- call the studio at&nbsp;(248) 548-7660</p>
+<p>&nbsp;</p>
+<p><a title="Prestige Website" href="https://prestigeportraits.com/" target="_blank" rel="noopener">PrestigePortraits.com</a>&nbsp; |&nbsp;&nbsp;<a title="Get Prepared (Sessions, Checklist, etc.)" href="https://prestigeportraits.com/get-prepared/" target="_blank" rel="noopener">Get Prepared</a>&nbsp; |&nbsp;<a title="Photography Session Protocols" href="https://prestigeportraits.com/photography-session-safety-protocols/" target="_blank" rel="noopener">COVID19 Protocols</a>&nbsp; |&nbsp;&nbsp;<a title="Prestige Locations" href="https://local.prestigeportraits.com/" target="_blank" rel="noopener">Locations</a>&nbsp; |&nbsp;&nbsp;<a title="Privacy Policy" href="Privacy%20Policy%20%20|%20%20" target="_blank" rel="noopener">Privacy Policy</a>&nbsp;&nbsp;</p>						</div>
+							</div>
+		
+	
+	</td></tr></table>
+	</div>
+	
+
+<!-- START FOOTER -->
+<div class="footer">
+	<br/> &copy; Prestige Photography by Lifetouch<br/><div class='poweredByCustomerFooter' style='margin:4px 0px;'>Powered by Appointment-Plus online appointment scheduling</div><br/><br/>Are you a European Union citizen? If yes, please read our <a style="color: #2783BA;" href="http://www.appointmentplus.com/gdpr/" target="_blank">GDPR fact sheet</a>.</div>
+<div class="inactive-countdown ui-corner-all ui-widget" style="display:none; color:#000; padding:0px;font-size:14px;background-color:#fff;">
+    <div class=" ui-widget-header" style="font-size:14px; padding-top:3px; padding-bottom:3px;">
+        Online scheduler session will expire in:
+    </div>
+    <div id="countdown" style="font-size:35px; font-weight:bold;padding-top:10px;">60</div>
+    Seconds <br/> <br/>
+    <input type="button" id="inactiveCancel" value="Stay Logged in "> <br/> <br/>
+</div>
+<!-- END FOOTER -->
+
+</body>
+</html>

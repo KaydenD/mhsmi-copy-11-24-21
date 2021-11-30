@@ -1,0 +1,612 @@
+<style type="text/css">
+    .topnav {
+        overflow: hidden;
+        z-index: 100000;
+        position: absolute;
+        width: 100%;
+        top: 0;
+    }
+    
+    .topnav a {
+        float: left;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 16px 12px;
+        font-size: 12pt;
+    }
+    
+    .topnav a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    
+    @media screen and (max-width: 1000px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+            text-decoration: none;
+        }
+    
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+            clear: both;
+        }
+
+        .lp_container {
+            max-width:100%;
+            padding:0;
+        }
+    }
+
+    @media screen and (max-width: 812px) {
+        #myTopnav .nav-link-title {
+            display: block;
+            font-size: 12px;
+        }
+
+        .lp_nav {
+            display: block;
+        }
+    }
+
+    @media (max-width: 320px) {
+        #myTopnav .nav-link-title {
+            display: block;
+            font-size: 13px;
+        }
+    }
+
+    #myTopnav .nav-link-title {
+        display: none;
+        max-width: 75%;
+        text-align: left;
+        float: left;
+        color: #f2f2f2;
+        text-align: left;
+        padding: 9px 0px;
+        text-decoration: none;
+        font-size: 17px;
+        margin-left: 8px;
+    }
+
+    .lp_nav {
+        text-align: center;
+        display: table;
+    }
+
+    .lp_container {
+        max-width: 80%;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+    .topnav .icon {
+        display: none;
+    }
+
+    .login-register-btn::before {
+        content: "Login/Register";
+    }
+    
+    .continue-bidding-btn::before {
+        content: "Continue Bidding";
+    }
+
+    #myTopnav a, .nav-link-title {
+        color: #ffffff !important;
+    }
+    .icon {
+        color: #ffffff !important;
+    }
+    .header-h1,.header-h2 {
+        color: #ffffff !important;
+        text-shadow: 1px 1px 2px #000000;
+    }
+</style>
+
+<script>
+    var cookies = navigator.cookieEnabled;
+
+    if (!cookies) {
+                window.location.replace('cookies.php?slug=mercyhs');
+    }
+</script>
+
+<!DOCTYPE HTML>
+<html class="js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width = device-width, user-scalable=yes minimum-scale=1.0 initial-scale=1.0 maximum-scale=3.0" />
+<meta name="apple-mobile-web-app-capable" content="YES" />
+<meta name="apple-touch-fullscreen" content="YES" />
+
+    <link rel="icon" href="/images/favicon.ico">
+
+<link rel="stylesheet" href="../webroot/css/themes/default.17.css?v=210601" type="text/css" />
+<link rel="stylesheet" href="../webroot/css/themes/default.5.css?v=210617" type="text/css" />
+<link rel="stylesheet" href="../webroot/css/themes/normalize.css?v=210601" type="text/css" />
+<script src="../webroot/js/jquery/jquery1.11.1.js"></script>
+<script src="../webroot/js/slippry.min.js"></script>
+<script src="../webroot/js/jquery/jquery.fittext.js"></script>
+<link rel="stylesheet" href="../webroot/css/slippry.css" />
+<link rel="stylesheet" type="text/css" href="https://cboimages.com/css/design.css?v=210827"/>
+    <link rel="stylesheet" type="text/css" href="https://cboimages.com/ClickBidCSS/mercyhs-custom.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.4/css/froala_style.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "position": "bottom-right"
+})});
+</script>
+<link rel="stylesheet" href="../webroot/css/utils.css">
+<link rel="stylesheet" href="../webroot/tns/css/touchnswipe.min.css">
+<link rel="stylesheet" href="../webroot/css/flickity.css">
+<script src="../webroot/js/flickity.min.js"></script>
+<script src="../webroot/js/jquery.scrollTo.min.js"></script>
+<script src="../webroot/js/instafeed.min.js"></script>
+<script src="../webroot/js/handlebars.min-v4.7.6.js"></script>
+<script src="https://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+<script src="../webroot/js/waitforimages.min.js" ></script>
+<script src="../webroot/tns/js/hammer.min.js" type="text/javascript"></script>
+<script src="../webroot/tns/js/TweenMax.min.js" type="text/javascript"></script>
+<script src="../webroot/tns/js/jquery.touchnswipe.min.js" type="text/javascript"></script>
+<meta name="description" content="ClickBid Mobile Bidding Silent Auction for Mercy High School. Smartphone bidding web application.">
+<script type="application/x-javascript">
+    function navScroll(id){
+        if(id !== "none") {
+            document.getElementById("myTopnav").className = "topnav";
+            $.scrollTo(id, 800);
+        }
+    }
+</script>
+<script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
+<title>Mercy High School | ClickBid Mobile Bidding</title>
+</head>
+<body>
+<div class="modal_overlay hide" onClick="$('.modal_overlay').addClass('hide'); $('.tns-container').hide();"></div>
+<div id="sb-site">
+    <div class='container'>
+        <input type="hidden" id="category-sort-order" value="category">
+        <!-- HEADER START -->
+        <div class='header' style='background-color: #000000; color: #ffffff;'>
+            <!-- MENU START -->
+            <script type="application/x-javascript">
+    function checkNavScroll(id){
+        if(typeof navScroll == 'function') {
+            navScroll(id);
+        }
+        else {
+            location.assign('/bidapp/index.php?slug=mercyhs&id=' + escape(id));
+        }
+    }
+
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+<div class="topnav" id="myTopnav" style="background:#000000">
+    <div class="lp_container lp_nav">
+        <span class="nav-link-title">Mercy High School</span>
+        <a href="#" onClick="checkNavScroll('#blockA');" class="nav-link">EVENT DETAILS </a>
+                        <a href="#" onClick="checkNavScroll('#bidder_login')" class="nav-link login-register-btn"></a>
+                            <a href="https://cbo.io/tickets/purchase_tickets.php?slug=mercyhs&form_name=tickets" target="_blank" class="nav-link-external">BUY TICKETS </a>
+                                <a href="#" onClick="checkNavScroll('#blockD')" class="nav-link">SPONSORS</a>
+                            <a href="#" onClick="checkNavScroll('#auction_preview_container_top')" class="nav-link">
+                Auction Preview            </a>
+                        <a href="https://cbo.io/d/donate.php?slug=mercyhs" target="_blank" class="nav-link-external">DONATE </a>
+                    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">MENU</a>
+        <div style="clear:both;"></div>
+    </div>
+</div>
+            <!-- MENU END -->
+            <div class='special' id='org_name'><div class="lp_container">                    <h1 class="header-h1"></h1>
+                    <h2 class="header-h2"></h2>
+                    <img src="https://cboimages.com/ClickBidImages/49/block_f_577461.jpg" id="logo-image" /><div style="clear:both;"></div>                    <div style="clear:both; height:30px;"></div>
+                                    </div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <!-- HEADER END -->
+<div id="bidder_login">
+    <div class="lp_container bidder_login_form">
+        <form></form><form method='post' action='login.php' autocomplete='off' class='login_register_form'>
+            <input type='hidden' name='csrf' value='4e72338de66cb407d1bdc680dd99aa158feaf762255f1dbeccb6b241a31b9c6c' />
+            <input type='hidden' name='slug' value='mercyhs' />
+            <div class='row bg_color'>
+                <div class='bidder-login'>
+                    <h2>Welcome! Login Below.</h2><input name='user_name' type='text' size='11' id='user_name' placeholder='Phone, Email, Bid#' class='input_lg' autocomplete='off' />
+                    &nbsp;&nbsp;<input type='submit' class='login_button igreen' style='background:#3abad5;' value='GO'>
+                    <input type='button' class='input_lg question_login' value='&nbsp;&nbsp;?&nbsp;&nbsp;' onclick='location.href="forgot.php?slug=mercyhs"' />
+                    <div class='info_text' style='display:none; font-style:italic;'><small><a href='forgot.php?slug=mercyhs'>Need Help?</a></small></div>
+                </div>
+            </div>
+            </form>    </div>
+</div>            <!-- BLOCK A START -->
+            <div id="blockA" style='background-color: #ffffff; color: #000000;'>
+                <div id="blockA_content" class="block_content">
+                    <div class="block_inner fr-view">
+                        <h2 style="color: #000000">EVENT DETAILS </h2>
+                                                <p><div style="text-align: center;"><p align="center" style="margin: 0in 0in 0.0001pt; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="color: rgb(184, 49, 47); font-size: 18px;">If you would like to attend the 40th Annual Auction please contact Gina Gray at 248-893-3535 or ggray@mhsmi.org and she can assist you with your ticket purchase.&nbsp;</span></p><p align="center" style="margin: 0in 0in 0.0001pt; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><br></p><p align="center" style="margin: 0in 0in 0.0001pt; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><span style='font-size: 24px; font-family: "Century Gothic", sans-serif; color: rgb(0, 0, 0);'><strong>Saturday, February 23, 2019</strong></span></p><p align="center" style="margin: 0in 0in 0.0001pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="color: rgb(0, 0, 0);"><br></span></p><p align="center" style="margin: 0in 0in 12pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="color: rgb(184, 49, 47);"><span style='font-size: 14pt; font-family: "Century Gothic", sans-serif;'>St. Mary's Cultural Center, 18100 Merriman Road, Livonia, Michigan 48152</span></span><span style="color: rgb(0, 0, 0);"><span style='font-size: 14pt; font-family: "Century Gothic", sans-serif;'><br></span></span></p><hr><p style="margin: 0in 0in 0.0001pt; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="color: rgb(0, 0, 0);"><span style="font-size: 12pt; font-family: 'Century Gothic', sans-serif;">&nbsp;</span><span style="font-size: 14pt; font-family: 'Century Gothic', sans-serif;">5:00 P.M. Liturgical Celebration</span></span></p><p align="center" style="margin: 0in 0in 4pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="color: rgb(184, 49, 47);"><span style='font-size: 18px; font-family: "Century Gothic", sans-serif;'>Basilica of St. Mary, 18200 Merriman Road, Livonia, Michigan 48152</span></span></p><p align="center" style="margin: 0in 0in 4pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><br></p><p align="center" style="margin: 0in 0in 4pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="color: rgb(0, 0, 0);"><span style='font-size: 14pt; font-family: "Century Gothic", sans-serif;'>6:00 P.M. Hors D'oeuvres and Silent Auction&nbsp;</span></span></p><p align="center" style="margin: 0in 0in 4pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="color: rgb(0, 0, 0);"><span style='font-size: 14pt; font-family: "Century Gothic", sans-serif;'>8:00 P.M. Dinner and Live Auction&nbsp;</span></span></p><p align="center" style="margin: 0in 0in 4pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="color: rgb(0, 0, 0);"><span style='font-size: 18px; font-family: "Century Gothic", sans-serif;'><em>Cocktail Attire&nbsp;</em></span></span></p><p align="center" style="margin: 0in 0in 4pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="font-size: 18px;"><span style="color: rgb(0, 0, 0);"><span style='font-family: "Century Gothic", sans-serif;'><em>Complimentary Valet Parking</em></span></span></span></p><p align="center" style="margin: 0in 0in 4pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="color: rgb(0, 0, 0);"><span style='font-size: 14pt; font-family: "Century Gothic", sans-serif;'>&nbsp;</span></span></p><p align="center" style="margin: 0in 0in 4pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="color: rgb(184, 49, 47);"><span style='font-size: 14pt; font-family: "Century Gothic", sans-serif;'><strong><em>Cheers to 40 Years!&nbsp;</em></strong></span></span></p><p align="center" style="margin: 0in 0in 4pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="color: rgb(0, 0, 0);"><span style='font-size: 14pt; font-family: "Century Gothic", sans-serif;'><span style="color: rgb(0, 0, 0);"><span style='font-size: 14pt; font-family: "Century Gothic", sans-serif;'>Join us for a wonderful evening filled with food, friends, family and fun.&nbsp;</span></span>Auction proceeds will benefit a high quality Catholic education for growing Mercy minds by enhancing the academic programs and resources of Mercy High School.&nbsp;</span></span></p><p align="center" style="margin: 0in 0in 0.0001pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><br></p><p align="center" style="margin: 0in 0in 0.0001pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="color: rgb(0, 0, 0);"><span style='font-size: 14pt; font-family: "Century Gothic", sans-serif;'>Contact Gina Gray in the Special Events Office at <a href="mailto:ggray@mhsmi.org">ggray@mhsmi.org</a> or 248.893.3535 for more Auction information.&nbsp;</span></span></p><p align="center" style="margin: 0in 0in 0.0001pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><br></p><p align="center" style="margin: 0in 0in 0.0001pt; text-align: center; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif;"><a href="https://www.mhsmi.org/advancement/auction" rel="noopener noreferrer" target="_blank"><span style="color: rgb(0, 0, 0);"><span style='font-size: 14pt; font-family: "Century Gothic", sans-serif;'>https://www.mhsmi.org/advancement/auction</span></span></a></p></div></p>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <!-- BLOCK A END -->
+            
+                        <!-- BLOCK D START -->
+                <div id="blockD" style='background-color: #000000; color: #ffffff;'>
+                    <div id="blockD_content" class="block_content">
+                        <div class="block_inner fr-view">
+                            <h2 style="color: #ffffff">SPONSORS</h2>
+                                                        <p><p style="text-align: center;"><span style="color: rgb(184, 49, 47);"><span style="font-size: 36px;">Presenting Partner Sponsor&nbsp;</span></span></p><p style="text-align: center;"><span style="color: rgb(44, 130, 201);"><strong><span style="font-size: 36px;"><img src="https://cboimages.com/ClickBidImages/49/lpi_irt2ezjmqw.jpg" style="width: 400px;" class="fr-fic fr-dii"></span></strong></span></p><p style="text-align: center;"><span style="color: rgb(184, 49, 47);"><span style="font-size: 36px;">Presenting Sponsors <br></span></span></p><p style="text-align: center;"><span style="color: rgb(0, 0, 0);"><strong><span style="font-size: 18px;"><img src="https://cboimages.com/ClickBidImages/49/lpi_ba7eiz80t3.jpg" style="width: 371px;" class="fr-fic fr-dib"><img src="https://cboimages.com/ClickBidImages/49/lpi_rqplt34c1y.jpg" style="width: 563px;" class="fr-fic fr-dii"></span></strong></span></p><p style="text-align: center;"><span style="font-size: 36px; color: rgb(184, 49, 47);">Gold Sponsors</span></p><p style="text-align: center;"><img src="https://cboimages.com/ClickBidImages/49/lpi_9pdajzehls.png" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><img src="https://cboimages.com/ClickBidImages/49/lpi_l249c03dxo.jpg" style="width: 300px;" class="fr-fic fr-dib"><img src="https://cboimages.com/ClickBidImages/49/lpi_mj5906b17a.png" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><img src="https://cboimages.com/ClickBidImages/49/lpi_qjtw5nbg4v.png" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><img src="https://cboimages.com/ClickBidImages/49/lpi_gprdaq436w.png" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><span style="font-size: 36px; color: rgb(184, 49, 47);">Maroon Sponsors</span></p><p style="text-align: center;"><img src="https://cboimages.com/ClickBidImages/49/lpi_aduis6lz7v.jpg" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><span style="font-size: 48px; color: rgb(147, 101, 184);"><strong>The May Family</strong></span></p><p style="text-align: center;"><span style="font-size: 48px; color: rgb(147, 101, 184);"><strong><img src="https://cboimages.com/ClickBidImages/49/lpi_9p23ghiwqn.png" style="width: 300px;" class="fr-fic fr-dib"></strong><strong><img src="https://cboimages.com/ClickBidImages/49/lpi_o8tywrq3g5.jpg" style="width: 300px;" class="fr-fic fr-dib"></strong></span><span style="font-size: 36px; color: rgb(184, 49, 47);">Marlin Sponsors<img src="https://cboimages.com/ClickBidImages/49/lpi_nauki2oj0r.jpg" style="width: 300px;" class="fr-fic fr-dib"></span></p><p style="text-align: center;"><img src="https://cboimages.com/ClickBidImages/49/lpi_udpb9c8ix0.jpg" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><br><img src="https://cboimages.com/ClickBidImages/49/lpi_f1iqvs05zt.jpg" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><img src="https://cboimages.com/ClickBidImages//lpi_2pny904u8q.png" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><img src="https://cboimages.com/ClickBidImages/49/lpi_z7kjtx3b0l.png" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><img src="https://cboimages.com/ClickBidImages/49/lpi_q70dautli1.png" style="width: 299px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><img src="https://cboimages.com/ClickBidImages/49/lpi_gc6svnltyq.jpg" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><img src="https://cboimages.com/ClickBidImages/49/lpi_10ngr9cwkz.jpg" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><img src="https://cboimages.com/ClickBidImages/49/lpi_cxi7zrdeny.png" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><img src="https://cboimages.com/ClickBidImages/49/lpi_8ytrbhv1cg.jpg" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><span style="font-size: 36px; color: rgb(184, 49, 47);">Mercy Family Sponsors</span></p><p style="text-align: center;"><span style="font-size: 18px; color: rgb(209, 213, 216);"><strong>The Kreucher Family</strong></span></p><p style="text-align: center;"><strong><span style="color: rgb(209, 213, 216);"><span style="font-size: 18px;">Leslie White Colone '93 and Nick Colone<br></span></span></strong></p><p style="text-align: center;"><strong><span style="color: rgb(209, 213, 216);"><span style="font-size: 18px;">The Bellasario Family</span></span></strong></p><p style="text-align: center;"><strong><span style="color: rgb(209, 213, 216);"><span style="font-size: 18px;">Maria Dietz Scott '87 and Joe Scott</span></span></strong></p><p style="text-align: center;"><strong><span style="color: rgb(209, 213, 216);"><span style="font-size: 18px;">Michael and Sarah Gidlay</span></span></strong></p><p style="text-align: center;"><strong><span style="color: rgb(209, 213, 216);"><span style="font-size: 18px;">Dearborn Orthopedics and Sports Medicine</span></span></strong></p><p style="text-align: center;"><strong><span style="color: rgb(209, 213, 216);"><span style="font-size: 18px;">Plante Moran</span></span></strong></p><p style="text-align: center;"><span style="color: rgb(209, 213, 216); font-size: 18px;"><strong>Paul E. Marcus, D.D.S., P.C.</strong></span></p><p style="text-align: center;"><span style="color: rgb(209, 213, 216); font-size: 18px;"><strong><img src="https://cboimages.com/ClickBidImages/49/lpi_sfzu7g145y.jpg" style="width: 300px;" class="fr-fic fr-dib"></strong></span></p><p style="text-align: center;"><strong><span style="color: rgb(209, 213, 216);"><span style="font-size: 18px;">Jim Acho: Cummings, McClory, Davis & Acho, Attorneys at Law</span></span></strong><br><img src="https://cboimages.com/ClickBidImages/49/lpi_rjez9hqt40.png" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><strong><span style="color: rgb(26, 188, 156); font-size: 36px;">Kreger Chiropractic</span></strong></p><p style="text-align: center;"><br></p><p style="text-align: center;"><span style="font-size: 36px; color: rgb(184, 49, 47);">Special Thanks</span></p><p style="text-align: center;"><span style="font-size: 18px; color: rgb(209, 213, 216);"><strong>Sisters of Mercy</strong></span></p><p style="text-align: center;"><strong><span style="color: rgb(209, 213, 216);"><span style="font-size: 18px;">DuMouchelle Art Galleries</span></span></strong></p><p style="text-align: center;"><strong><span style="color: rgb(209, 213, 216);"><span style="font-size: 18px;">Camp Santa Maria</span></span></strong></p><p style="text-align: center;"><strong><span style="color: rgb(209, 213, 216);"><span style="font-size: 18px;">Neiman Marcus</span></span></strong></p><p style="text-align: center;"><strong><span style="color: rgb(209, 213, 216);"><span style="font-size: 18px;">Professional Movers</span></span></strong></p><p style="text-align: center;"><strong><span style="color: rgb(209, 213, 216);"><span style="font-size: 18px;">Livonia Italian Bakery and Cafe</span></span></strong></p><p style="text-align: center;"><strong><span style="color: rgb(209, 213, 216);"><span style="font-size: 18px;">Meadows Fine Wine and Liquor</span></span></strong></p><p style="text-align: center;"><span style="font-size: 18px; color: rgb(209, 213, 216);"><strong>Steve Garagiola</strong></span></p><p style="text-align: center;"><span style="font-size: 18px; color: rgb(209, 213, 216);"><strong>Portifino Restaurant & Cruise Center</strong></span></p><p style="text-align: center;"><span style="font-size: 18px; color: rgb(209, 213, 216);"><strong>Tim Hortons</strong></span></p></p>
+                        </div>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+                <!-- BLOCK D END -->
+                            <div id="auction_preview_container_top">
+                <h2>Auction Preview</h2>
+            </div>
+            <div id="auction_preview_ajax" class="auction_preview_container_top">
+                <div class="spinner_preload">
+                    <br /><br /><br />
+                  <small style="color:#ccc;">Loading Preview...</small><br />
+                  <div class="bounce1"></div>
+                  <div class="bounce2"></div>
+                  <div class="bounce3"></div>
+                    <br /><br /><br />
+                </div>
+            </div>
+            <div style="clear:both;"></div>
+            
+        <!-- AUCTION PREVIEW END -->
+    </div> <!-- CONTAINER END -->
+    <div class='footer' style="margin-top:10px; padding:0;">
+        <div id="footer_links" style="padding:0;">
+            <div id='contact_info' style="font-size:initial;">For questions, please contact <b>Erin Somerville</b> at <b><a href="mailto:payments@mhsmi.org">payments@mhsmi.org</b></a></div><br />
+            <img src="https://cboimages.com/images/cb_logo_2019_sm_web.png" class="mobile_bid_powered_by" /><br />
+            <small>Software by <a href="https://clickbidonline.com/" target="_blank" id='clickbid_link'>ClickBid Mobile Bidding</a></small>
+        </div>
+    </div>
+</div> <!-- sb-site END -->
+<a href="#" id="back_to_top" title="Back to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-83316670-1', 'auto');
+        ga('send', 'pageview');
+</script>
+<script language='javascript'>
+    var gStartInt = 0;
+    var gStopInt = 100;
+    var gResults = '';
+
+    function loadMore(startInt, stopInt, results, source, template) {
+        for (var i = startInt; i < results["items"].length; i++) {
+            item = results["items"][i];
+            if(i === stopInt) {
+                gStartInt = stopInt;
+                gStopInt = stopInt+100;
+                $('#auction_preview_ajax').waitForImages(function() {
+                    setTimeout(loadMore, 3000, gStartInt, gStopInt, results, source, template);
+                });
+                break;
+            }
+            var details_btn = '';
+            if(item["logos"].length > 0) {
+                details_btn = "img_details_btn";
+                if(item["logos"].length == 1) {
+                    var df = 'non-flickity';
+                    var has_img = 'item-has-img';
+                } else {
+                    var df = 'yes-flickity';
+                    var has_img = 'item-has-img-flkty';
+                }
+                var logo = '';
+                var tns_zoom = '';
+                item["logos"].forEach(function(l) {
+                    logo = logo + `
+                        <div class="img-gallery-container" style="width: 100%;height: 100%; text-align:center;">
+                            <img class="img-gallery-img" src="`+l+`" />
+                        </div>`;
+                    tns_zoom += l + ",";
+                        //<div data-elem="slide">
+        				//	<img data-src="`+l+`">
+        				//</div>`;
+                });
+                tns_zoom = tns_zoom.substring(0, tns_zoom.length - 1);
+                zoom = `
+                    <div class="zoom-gallery-icon" style="backface-visibility: hidden; height: 22px; padding-top: 10px;">
+                        <a href="javascript:openModal(`+item["id"]+`)" style="backface-visibility: hidden;">
+                            <i class="fa fa-search-plus" aria-hidden="true" style="backface-visibility: hidden;"></i>
+                        </a>
+                    </div>`;
+            } else {
+                var df = "img-gallery-noimg";
+                var img_css = "";
+                var logo = `<div class="img-gallery img-gallery-noimg">
+                    <img class="img-gallery-noimage-img" src="https://cboimages.com/images/noimage.png" />
+                </div>`;
+                var zoom = '';
+            }
+
+            if(item["winning_bid"]!== null) {
+                var winning_bid = parseFloat(item["winning_bid"].replace(/,/g, ''));
+            } else {
+                var winning_bid = 0;
+            }
+            if(item["starting_bid"]!== null) {
+                var starting_bid = parseFloat(item["starting_bid"].replace(/,/g, ''));
+            } else {
+                var starting_bid = 0;
+            }
+
+            if(item["item_type_id"] == 20 && results["show_preview"] == 1) {
+                if(isNaN(item["fmv"])) {
+                    var big_money = '<small>Value: </small>'+item["fmv"];
+                } else {
+                    var big_money = '<small>Value: </small>$'+parseInt(item["fmv"]).toLocaleString("en-US");
+                }
+            } else if(item["item_type_id"] == 40) {
+                if(item["quantities"].length > 1) {
+                    var big_money = item["quantities"][0].quantity + " for $"+parseFloat(item["quantities"][0].price).toLocaleString('en-US')+" <small>+ " + (item["quantities"].length - 1) + " more</small>";
+                } else if(item["quantities"].length == 1) {
+                    var big_money = item["quantities"][0].quantity + " for $"+parseFloat(item["quantities"][0].price).toLocaleString('en-US');
+                } else {
+                    var big_money = "<small>Pricing to be announced</small>";
+                }
+            } else if(winning_bid>=starting_bid&&winning_bid>0&&item["item_type_id"]==10) {
+                var big_money = "<small>Current Bid:</small> $"+item["winning_bid"];
+            } else if(item["item_type_id"] == 10) {
+                var big_money = "<small>Starting:</small> $"+item["starting_bid"];
+            } else {
+                var big_money = "";
+            }
+
+            if(results["show_preview"] == 1 && item["item_type_id"] != 20 && item.item_type_id != 30 && !(item.item_type_id == 40 && item.quantities.length > 1)) {
+                var fmv = "<div class='fmv_label' id='fmv_label-"+item["id"]+"'>";
+                if(item["fmv"] != '') {
+                    if(isNaN(item["fmv"])) {
+                        fmv += '<b>Value: </b>'+item["fmv"];
+                    } else {
+                        fmv += '<b>Value: </b>$'+parseInt(item["fmv"]).toLocaleString("en-US");
+                    }
+                } else {
+                    fmv += "&nbsp;";
+                }
+                fmv += "</div>";
+            } else {
+                var fmv = "<div class='fmv_label' id='fmv_label-"+item["id"]+"'>&nbsp;</div>";
+            }
+
+            if(results["show_item_share"]) {
+                var share = 1;
+            } else {
+                var share = 0;
+            }
+
+            if(item["donors"].length > 0) {
+                var donors = '';
+                item["donors"].forEach(function(d) {
+                    donors += d["donor_display_name"] + ", ";
+                });
+                donors = donors.slice(0, -2);
+            } else {
+                var donors = "";
+            }
+
+            var context = {
+                id: item.id,
+                item_name: truncate(item.item_name,103),
+                item_number: item.item_number,
+                category_id: item.category_id,
+                logo: logo,
+                zoom: zoom,
+                tns_zoom: tns_zoom,
+                current: item.current,
+                big_money: big_money,
+                fmv:fmv,
+                share:share,
+                details_btn:details_btn,
+                description: item.description,
+                exceptions:item.exceptions,
+                df: df,
+                donors: donors,
+                has_img:has_img,
+                category_name:item.category_name
+            };
+            var html = template(context);
+            $("#browser_container").append(html);
+        }
+        $('.yes-flickity').show().flickity({pageDots:false, imagesLoaded:true});
+    }
+    function truncate(str, n){
+      return (str.length > n) ? str.substr(0, n-1) + '&hellip;' : str;
+    }
+    function shareURL(hurl) {
+        $("#shareURL").val(hurl);
+        var copyText = document.getElementById("shareURL");
+        copyText.select();
+        document.execCommand("copy");
+        alert("Success! We copied a link to this item on your clipboard. Just paste into your message (CTRL+V) to use the link on Facebook, Twitter, text, email etc. Copied: " + copyText.value);
+    }
+    function openModal(itemId) {
+        $("#tns-container"+itemId).show();
+        $('.modal_overlay').removeClass('hide');
+
+        $('#tns-slider' + itemId).append('<div class="slideHolder" id="tns-slide-holder' + itemId + '"></div>');
+
+        var imgs = $('#tns-container'+itemId).data("imgs");
+        imgs = imgs.split(",");
+        for (var i = 0; i < imgs.length; i++) {
+            $('#tns-slide-holder' + itemId).append('<div data-elem="slide"><img data-src="' + imgs[i] + '"></div>');
+        }
+
+        $('#tns-slider'+itemId).attr("data-elem","touchnswipe");
+        $('#tns-slider'+itemId).attr("data-options","appendControls:false; appendControlHolder:false");
+        $('#tns-slide-holder'+itemId).attr("data-elem","slides");
+        $('#tns-slide-holder'+itemId).attr("data-options","slideOptions:{maxZoom:3;scaleMode:proportionalInside;fullscreenScaleMode:proportionalInside}");
+
+        $('#tns-slider' + itemId).append('<div data-elem="prev" class="prev tnsprev" style="border:1px solid #999; left:auto; right:45px; top:10px"></div>');
+        $('#tns-slider' + itemId).append('<div data-elem="next" class="next tnsnext" style="border:1px solid #999; left:auto; right:10px; top:10px"></div>');
+        $('#tns-slider' + itemId).append('<div data-elem="zoomOut" class="zoomOut" style="border:1px solid #999; left:auto; right:45px; top:10px"></div>');
+        $('#tns-slider' + itemId).append('<div data-elem="zoomIn" class="zoomIn" style="border:1px solid #999; left:auto; right:10px; top:10px"></div>');
+        $('#tns-slider' + itemId).append('<div data-elem="close" class="tnsClose" style="border:1px solid #999; top:10px; padding-top:5px; padding-top: 5px; padding-bottom: 5px; height: 20px;" onClick="closeModal('+itemId+')"><i class="fa fa-times" aria-hidden="true"></i></div>');
+
+        $("#tns-slider"+itemId).touchnswipe();
+        var tns = TouchNSwipe.get("tns-slider"+itemId),
+            slider = tns.slider;
+
+        var curImg = $("#img-gallery"+itemId).data('flickity');
+        if(typeof(curImg) != 'undefined') {
+            var thisIndex = curImg.selectedIndex;
+            slider.index(thisIndex);
+        }
+    }
+    function closeModal(itemId) {
+        TouchNSwipe.removeAll();
+        $('.tnsClose').remove();
+        $(".tns-container").hide();
+        $('.modal_overlay').click();
+    }
+    $(document).ready(function() {
+        let urlParams = new URLSearchParams(location.search);
+        if(urlParams.has('id')){
+            navScroll(urlParams.get('id'));
+        }
+        $.ajax({
+            type: "GET",
+            url: 'ajax/get_auction_preview_v2.php?slug=mercyhs',
+            success: function(data) {
+                var results = $.parseJSON( data );
+                var source = document.getElementById("item-template").innerHTML;
+                var template = Handlebars.compile(source);
+                var i = 0;
+                $(".spinner_preload").hide();
+                $("#auction_preview_ajax").append('<input type="text" name="shareURL" id="shareURL" style="position:absolute; top:-500px; left:-2000px;">');
+                $("#auction_preview_ajax").append('<div id="browser_container">');
+                $("#auction_preview_ajax").append('</div>');
+                $("#auction_preview_ajax").append('<div style="clear:both;">&nbsp;</div>');
+                loadMore(gStartInt,gStopInt,results,source,template);
+                //TODO: Add listener to load the next 100 items if we hit the bottom of the #auction_preview_ajax div
+            }
+        });
+        if ($('#back_to_top').length) {
+            var scrollTrigger = 100;
+
+            backToTop = function() {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > scrollTrigger) {
+                    $('#back_to_top').addClass('show');
+                }
+                else {
+                    $('#back_to_top').removeClass('show');
+                }
+            };
+
+            backToTop();
+
+            $(window).on('scroll', function() {
+                backToTop();
+            });
+
+            $('#back_to_top').on('click', function(e) {
+                e.preventDefault();
+                $('html,body').scrollTo(0, 800, {queue:true});
+            });
+        }
+    });
+
+
+</script>
+<script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>
+/*
+    Weglot.initialize({
+        api_key: 'wg_2d097a3be34cdb1a8dd80d85251112f82'
+    });
+*/
+</script>
+<script id="item-template" type="text/x-handlebars-template">
+<div class="tns-container" id="tns-container{{id}}" data-imgs="{{{tns_zoom}}}">
+	<div class="tns-ratio-holder">
+		<div class="slider tns-slider" id="tns-slider{{id}}"></div>
+	</div>
+</div>
+<div class='item activity_item all {{category_id}}'>
+    <div class='item_number_corner'>{{item_number}}</div>
+    <div class='item_inner_container'>
+        <div class="img-gallery {{df}}" id="img-gallery{{id}}">
+            {{{logo}}}
+        </div>
+        <div id="zoom-gallery{{id}}" class="zoom-gallery-ph" style="backface-visibility: hidden;">
+            {{{zoom}}}
+        </div>
+        <div class='item_content_container item_preview'>
+            <div class='title {{has_image}} preview_title' id="title{{id}}">{{{item_name}}}</div>
+            <div class="history_current h1"><span class="history_current_lg">{{{big_money}}}</span></div>
+            {{{fmv}}}
+            {{#if share}}
+            <ul class="share-buttons">
+                <li><a href="https://www.facebook.com/sharer/sharer.php?u=&quote=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('https://cbo.io/i/{{id}}') + '&quote=' + encodeURIComponent('https://cbo.io/i/{{id}}')); return false;"><img alt="Share on Facebook" src="../webroot/images/simple_icons_black/Facebook.png" /></a></li>
+                <li><a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent('A great item from Mercy High School') + ':%20'  + encodeURIComponent('https://cbo.io/i/{{id}}')); return false;"><img alt="Tweet" src="../webroot/images/simple_icons_black/Twitter.png" /></a></li>
+                <li><a href="javascript:shareURL('https://cbo.io/i/{{id}}')" title="Send message"><img alt="Send email" src="../webroot/images/simple_icons_black/Email.png" /></a></li>
+            </ul>
+            {{/if}}
+            <div class="detail-preview-button {{details_btn}}" onclick="$('#description-{{item_number}}').toggle();"> Details </div>
+                {{#if category_name}}
+                <div class='category_name'><i class='fa fa-tag' aria-hidden='true'></i> {{{category_name}}}</div>
+                {{/if}}
+                <div class='preview-description' id='description-{{item_number}}'>
+                <div class="preview-description-close" onClick="$(this).parent().fadeOut();"><i class="fa fa-times-circle fa-lg" aria-hidden="true"></i></div>
+                <h1>{{item_number}} - {{{item_name}}}</h1>
+                {{#if description}}
+                <p><b>Details: </b><br> {{{description}}}</p>
+                {{/if}}
+                {{#if donors}}
+                <div class='donor_label'><b>Donated by:</b> {{{donors}}}</div>
+                {{/if}}
+                {{#if exceptions}}
+                <p><b>Exceptions: </b><br> {{{exceptions}}}</p>
+                {{/if}}
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+</div>
+</script>
+</body>
+</html>

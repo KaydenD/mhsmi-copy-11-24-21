@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PTCFast.com</title>
+          <base href="https://ptcfast.com/">
+        <!--<link href="css/style.201503.css" rel="stylesheet" type="text/css"/>-->
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="/js/jquery.201309.js"></script>
+    <script src="/js/jquery-ui.js"></script>
+    <script>
+    function pu(url) {
+      w=window.open(url,null,'left=100,top=100,width=800,height=600,status=no,toolbar=no,menubar=no,location=no');
+      w.focus();
+    }
+    </script>
+      <script language="javascript">
+    function logout()
+    {
+      document.frm_logout.submit();
+    }
+  function go_back_to_email()
+  {
+    document.frm_parentletter.action="email_text.php";
+    document.frm_parentletter.mode.value="";
+    document.frm_parentletter.submit();
+  }
+  </script>
+    <script language="javascript">
+      if (top.location!=location) {
+        top.location.href=document.location.href;
+      }
+      function hideNewMessage(){
+        $('#new-message-link').hide();
+      }
+      function bannerManage(opt)
+	 {
+	    document.banner_frm_manage.target="";
+		document.banner_frm_manage.action ='editconferenceinfo.php';
+		document.banner_frm_manage.mode.value = opt;
+		document.banner_frm_manage.setting_status.value = 1;
+	    document.banner_frm_manage.submit();
+	 }
+    </script>
+    </head>
+    <body bgcolor="#e7e7e7">
+        <form name="banner_frm_manage" method="post">
+            <input type="hidden" name="action" />
+            <input type="hidden" name="mode" />
+            <input type="hidden" name="setting_status" />
+        </form>
+    <noscript><div style="background:red;color:white;font-size:8pt;font-family:sans-serif;font-weight:bold;padding:2px 10px; margin:0px; margin-bottom:5px; border-bottom:1px solid black;">This site requires javascript support to function correctly; please ensure that this is enabled in your browser.</div></noscript>
+    <form name="frm_logout" action="adminlogin.php" method="post"> <input type="hidden" name="mode" value="logout"> <input type="submit" style="visibility:hidden "> </form>
+    <table width="796" height="600" align="center" class="border" cellpadding="0" cellspacing="0">
+        <tr>
+        <td colspan="2"  bgcolor="#003163" height="100" style="padding-left:10px;padding-right:10px" class="sitename" valign="middle">
+    <div align="right"></div><script type="text/javascript">function getTranslation(lang){
+			var date = new Date(new Date().getTime() + 86400 * 30 * 1000);
+			document.cookie = "lang=" + lang + "; path=/; expires=" + date.toUTCString();
+			location.reload(true);
+			//window.location = "/schools/Mercy_High_School_1?"
+			return false;}</script><style>.lang_link{font-size:13px;color:#FFFFFF;margin-left:6px}.lang_link:active{color:#FFFFFF}</style><div style="margin-top:-3px; margin-bottom:6px; font-size:32px">Mercy High School      <br /><span style='font-size:25px;'>Farmington Hills, MI</span>      </div>    <div style="font-size:25px" onclick="location.href='index.html'" onmouseover="document.body.style.cursor='pointer'" onmouseout="document.body.style.cursor='default'">
+      Conference Scheduler      </div>
+        </td>
+    </tr>
+    <tr>
+    <td colspan="2" style="padding-left:30px;" bgcolor="#003163" valign="bottom">
+    <table cellpadding="0" align="left" cellspacing="0" height="20" bgcolor="#003163">
+          <td width="10" class="linktabtd">&nbsp;
+      </td>
+                  <td width="11" class="linktabtd">&nbsp;	</td>
+                    </tr>
+        </table>
+        </td></tr>
+              <tr><td  style="padding-top:10px; padding-left:10px; " valign="top" align="left" >
+        <style>
+
+  div.schoolpagetext {
+    font-size:110%;
+      }
+
+/*div.schoolpagetext p b {
+  font-weight:900;
+  color: #7f0000;
+}*/
+</style>
+
+  <div class="schoolpagetext"><p>Welcome to the Mercy High School Virtual Parent/Teacher Conference Scheduling System.
+ 
+Parent/Teacher Conferences will be conducted using Zoom. Select your Daughter's teachers to make an appointment. Once you have made the appointment, the Zoom access code will appear in your confirmation email. <p>Please indicate a name on your Zoom account so that teachers can easily identify you in order to admit you.  Please honor the (5) minute time limit when meeting with each teacher. <p>We encourage you to schedule your appointments as soon as possible. You will be able to make appointments until the day of the conferences, if appointments are still available.<p>You may check for teacher availability on the day of the conference until 11:00 a.m. by emailing Pat Scheid at pmscheid@mhsmi.org.  <!--0-->
+    </p><p/><p style="font-size:100%"><i>Sorry, no times are available now.  Please contact us if you have any questions.</i></p> 
+    
+
+          <div style="border:1px solid black; margin:50px 5px; padding:15px 8px; display: none">
+      <script>
+      function show_returning_info() {
+        document.getElementById('par_returning').style.display = 'block';
+        document.getElementById('par_returning_link').style.display = 'none';
+      }
+
+      </script>
+      
+      <div style="display:none; color:black; text-align:center;" id="par_returning_link">
+        If you have already registered for this semester (note, you must re-register each semester):<br/><br/>
+        <a href="javascript:void(0);" onclick="show_returning_info()">click here to login to your registration</a>
+      </div>
+            <div style="display:none; color:black;" id="par_returning">
+        If you have already registered this semester, please do NOT register again. You should have received an email with a link to select a time. Use that link, or click on the link below:
+        <ul>
+          <li><a href="/parent_forgot_code.php">Click here to resend an email with your link</a></li>
+        </ul>
+      </div>
+          </div>   </td></tr>
+    <tr><td colspan="2" height="30" class="copyright" valign="middle" align="center">Copyright &copy; 2009-2021 PTCFast, LLC. All rights reserved.    </td></tr>
+    </table>
+    </body>
+    </html>
+    

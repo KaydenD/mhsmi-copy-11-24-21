@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.mhsmi.org/taxonomy/term/169/all" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Counseling</title>
+    <link>https://www.mhsmi.org/taxonomy/term/169/all</link>
+    <atom:link href="https://www.mhsmi.org/taxonomy/term/169/all" rel="self" type="application/rss+xml" />
+    <description></description>
+    <language>en</language>
+    <atom:link href="https://www.mhsmi.org/taxonomy/term/169/all/feed" rel="self" type="application/rss+xml" />
+      <item>
+    <title>Graduation Verification</title>
+    <link>https://www.mhsmi.org/counseling/graduation-verification</link>
+    <description>&lt;form class=&quot;webform-client-form-26544 webform-client-form webform-client-form webform-client-form-26544&quot; action=&quot;/counseling/graduation-verification&quot; method=&quot;post&quot; id=&quot;webform-client-form-26544&quot; accept-charset=&quot;UTF-8&quot;&gt;&lt;div&gt;&lt;div class=&quot;webform-progressbar&quot;&gt;
+  
+
+  
+  &lt;/div&gt;
+&lt;div  class=&quot;form-item webform-component webform-component-textfield webform-component--company-requesting&quot;&gt;
+  &lt;label class=&quot;element-invisible&quot; for=&quot;edit-submitted-company-requesting&quot;&gt;Company Requesting &lt;abbr class=&quot;form-required&quot; title=&quot;This field is required.&quot;&gt;*&lt;/abbr&gt;&lt;/label&gt;
+ &lt;input required=&quot;required&quot; placeholder=&quot;Company Requesting Verification *&quot; type=&quot;text&quot; id=&quot;edit-submitted-company-requesting&quot; name=&quot;submitted[company_requesting]&quot; value=&quot;&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-text required&quot; /&gt;
+&lt;/div&gt;
+&lt;div  class=&quot;form-item webform-component webform-component-textfield webform-component--requestors-name&quot;&gt;
+  &lt;label class=&quot;element-invisible&quot; for=&quot;edit-submitted-requestors-name&quot;&gt;Requestor&#039;s Name &lt;abbr class=&quot;form-required&quot; title=&quot;This field is required.&quot;&gt;*&lt;/abbr&gt;&lt;/label&gt;
+ &lt;input required=&quot;required&quot; placeholder=&quot;Requestor&amp;#039;s Name *&quot; type=&quot;text&quot; id=&quot;edit-submitted-requestors-name&quot; name=&quot;submitted[requestors_name]&quot; value=&quot;&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-text required&quot; /&gt;
+&lt;/div&gt;
+&lt;div  class=&quot;form-item webform-component webform-component-textfield webform-component--request-id&quot;&gt;
+  &lt;label class=&quot;element-invisible&quot; for=&quot;edit-submitted-request-id&quot;&gt;Request ID &lt;/label&gt;
+ &lt;input placeholder=&quot;Request ID/case # (if applicable)&quot; type=&quot;text&quot; id=&quot;edit-submitted-request-id&quot; name=&quot;submitted[request_id]&quot; value=&quot;&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-text&quot; /&gt;
+&lt;/div&gt;
+&lt;div  class=&quot;form-item webform-component webform-component-textfield webform-component--student-first-name&quot;&gt;
+  &lt;label class=&quot;element-invisible&quot; for=&quot;edit-submitted-student-first-name&quot;&gt;Student First Name &lt;abbr class=&quot;form-required&quot; title=&quot;This field is required.&quot;&gt;*&lt;/abbr&gt;&lt;/label&gt;
+ &lt;input required=&quot;required&quot; placeholder=&quot;Student&amp;#039;s First Name *&quot; type=&quot;text&quot; id=&quot;edit-submitted-student-first-name&quot; name=&quot;submitted[student_first_name]&quot; value=&quot;&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-text required&quot; /&gt;
+&lt;/div&gt;
+&lt;div  class=&quot;form-item webform-component webform-component-textfield webform-component--student-current-last-name&quot;&gt;
+  &lt;label class=&quot;element-invisible&quot; for=&quot;edit-submitted-student-current-last-name&quot;&gt;Student Current Last Name &lt;abbr class=&quot;form-required&quot; title=&quot;This field is required.&quot;&gt;*&lt;/abbr&gt;&lt;/label&gt;
+ &lt;input required=&quot;required&quot; placeholder=&quot;Student&amp;#039;s Current Last Name *&quot; type=&quot;text&quot; id=&quot;edit-submitted-student-current-last-name&quot; name=&quot;submitted[student_current_last_name]&quot; value=&quot;&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-text required&quot; /&gt;
+&lt;/div&gt;
+&lt;div  class=&quot;form-item webform-component webform-component-textfield webform-component--student-last-name-graduation&quot;&gt;
+  &lt;label class=&quot;element-invisible&quot; for=&quot;edit-submitted-student-last-name-graduation&quot;&gt;Student Last Name Graduation &lt;abbr class=&quot;form-required&quot; title=&quot;This field is required.&quot;&gt;*&lt;/abbr&gt;&lt;/label&gt;
+ &lt;input required=&quot;required&quot; placeholder=&quot;Student&amp;#039;s Last Name at Graduation *&quot; type=&quot;text&quot; id=&quot;edit-submitted-student-last-name-graduation&quot; name=&quot;submitted[student_last_name_graduation]&quot; value=&quot;&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-text required&quot; /&gt;
+&lt;/div&gt;
+&lt;div  class=&quot;form-item webform-component webform-component-textfield webform-component--other-last-names-used&quot;&gt;
+  &lt;label class=&quot;element-invisible&quot; for=&quot;edit-submitted-other-last-names-used&quot;&gt;Other Last Names Used &lt;/label&gt;
+ &lt;input placeholder=&quot;Other Last Names Used (if applicable)&quot; type=&quot;text&quot; id=&quot;edit-submitted-other-last-names-used&quot; name=&quot;submitted[other_last_names_used]&quot; value=&quot;&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-text&quot; /&gt;
+&lt;/div&gt;
+&lt;div  class=&quot;form-item webform-component webform-component-textfield webform-component--student-graduation-year&quot;&gt;
+  &lt;label class=&quot;element-invisible&quot; for=&quot;edit-submitted-student-graduation-year&quot;&gt;Student Graduation Year &lt;abbr class=&quot;form-required&quot; title=&quot;This field is required.&quot;&gt;*&lt;/abbr&gt;&lt;/label&gt;
+ &lt;input required=&quot;required&quot; placeholder=&quot;Student&amp;#039;s Graduation Year *&quot; type=&quot;text&quot; id=&quot;edit-submitted-student-graduation-year&quot; name=&quot;submitted[student_graduation_year]&quot; value=&quot;&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-text required&quot; /&gt;
+&lt;/div&gt;
+&lt;div  class=&quot;form-item webform-component webform-component-checkboxes webform-component--send-verification-via webform-container-inline&quot;&gt;
+  &lt;label for=&quot;edit-submitted-send-verification-via&quot;&gt;Send Verification to Requestor Via &lt;abbr class=&quot;form-required&quot; title=&quot;This field is required.&quot;&gt;*&lt;/abbr&gt;&lt;/label&gt;
+ &lt;div id=&quot;edit-submitted-send-verification-via&quot; class=&quot;form-wrapper&quot;&gt;&lt;div class=&quot;form-item form-type-checkbox form-item-submitted-send-verification-via-requestor-phone&quot;&gt;
+ &lt;input type=&quot;checkbox&quot; id=&quot;edit-submitted-send-verification-via-1&quot; name=&quot;submitted[send_verification_via][requestor_phone]&quot; value=&quot;requestor_phone&quot; class=&quot;form-checkbox&quot; /&gt;  &lt;label class=&quot;option&quot; for=&quot;edit-submitted-send-verification-via-1&quot;&gt;Requestor&#039;s Phone &lt;/label&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;form-item form-type-checkbox form-item-submitted-send-verification-via-requestor-email&quot;&gt;
+ &lt;input type=&quot;checkbox&quot; id=&quot;edit-submitted-send-verification-via-2&quot; name=&quot;submitted[send_verification_via][requestor_email]&quot; value=&quot;requestor_email&quot; class=&quot;form-checkbox&quot; /&gt;  &lt;label class=&quot;option&quot; for=&quot;edit-submitted-send-verification-via-2&quot;&gt;Requestor&#039;s Email &lt;/label&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;form-item form-type-checkbox form-item-submitted-send-verification-via-requestor-fax&quot;&gt;
+ &lt;input type=&quot;checkbox&quot; id=&quot;edit-submitted-send-verification-via-3&quot; name=&quot;submitted[send_verification_via][requestor_fax]&quot; value=&quot;requestor_fax&quot; class=&quot;form-checkbox&quot; /&gt;  &lt;label class=&quot;option&quot; for=&quot;edit-submitted-send-verification-via-3&quot;&gt;Requestor&#039;s Fax &lt;/label&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+ &lt;div class=&quot;description&quot;&gt;Please select at least one option and complete appropriate field below.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div  class=&quot;form-item webform-component webform-component-textfield webform-component--requestor-phone&quot;&gt;
+  &lt;label for=&quot;edit-submitted-requestor-phone&quot;&gt;Requestor Phone &lt;/label&gt;
+ &lt;input placeholder=&quot;Requestor Phone&quot; type=&quot;text&quot; id=&quot;edit-submitted-requestor-phone&quot; name=&quot;submitted[requestor_phone]&quot; value=&quot;&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-text&quot; /&gt;
+&lt;/div&gt;
+&lt;div  class=&quot;form-item webform-component webform-component-textfield webform-component--requestor-email&quot;&gt;
+  &lt;label class=&quot;element-invisible&quot; for=&quot;edit-submitted-requestor-email&quot;&gt;Requestor Email &lt;/label&gt;
+ &lt;input placeholder=&quot;Requestor Email&quot; type=&quot;text&quot; id=&quot;edit-submitted-requestor-email&quot; name=&quot;submitted[requestor_email]&quot; value=&quot;&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-text&quot; /&gt;
+&lt;/div&gt;
+&lt;div  class=&quot;form-item webform-component webform-component-textfield webform-component--requestor-fax&quot;&gt;
+  &lt;label class=&quot;element-invisible&quot; for=&quot;edit-submitted-requestor-fax&quot;&gt;Requestor Fax &lt;/label&gt;
+ &lt;input placeholder=&quot;Requestor Fax&quot; type=&quot;text&quot; id=&quot;edit-submitted-requestor-fax&quot; name=&quot;submitted[requestor_fax]&quot; value=&quot;&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-text&quot; /&gt;
+&lt;/div&gt;
+&lt;div  class=&quot;form-item webform-component webform-component-textarea webform-component--notes-special-instructions&quot;&gt;
+  &lt;label class=&quot;element-invisible&quot; for=&quot;edit-submitted-notes-special-instructions&quot;&gt;Notes / Special Instructions &lt;/label&gt;
+ &lt;div class=&quot;form-textarea-wrapper resizable&quot;&gt;&lt;textarea placeholder=&quot;Special Instructions or Notes&quot; id=&quot;edit-submitted-notes-special-instructions&quot; name=&quot;submitted[notes_special_instructions]&quot; rows=&quot;5&quot; cols=&quot;60&quot; class=&quot;form-textarea&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;details[sid]&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;details[page_num]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;details[page_count]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;details[finished]&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;form_build_id&quot; value=&quot;form-_6wT9Fr-lmt6GKnX4eDfd3h4C9doJjp_1UNyELs4mNQ&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;form_id&quot; value=&quot;webform_client_form_26544&quot; /&gt;
+&lt;div class=&quot;url-textfield&quot;&gt;&lt;div class=&quot;form-item form-type-textfield form-item-url&quot;&gt;
+  &lt;label for=&quot;edit-url&quot;&gt;Leave this field blank &lt;/label&gt;
+ &lt;input type=&quot;text&quot; id=&quot;edit-url&quot; name=&quot;url&quot; value=&quot;&quot; size=&quot;20&quot; maxlength=&quot;128&quot; class=&quot;form-text&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;fieldset class=&quot;captcha form-wrapper&quot;&gt;&lt;legend&gt;&lt;span class=&quot;fieldset-legend&quot;&gt;CAPTCHA&lt;/span&gt;&lt;/legend&gt;&lt;div class=&quot;fieldset-wrapper&quot;&gt;&lt;div class=&quot;fieldset-description&quot;&gt;This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.&lt;/div&gt;&lt;input type=&quot;hidden&quot; name=&quot;captcha_sid&quot; value=&quot;19337&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;captcha_token&quot; value=&quot;4b4aa56923de39b207592bf960069023&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;captcha_response&quot; value=&quot;Google no captcha&quot; /&gt;
+&lt;div class=&quot;g-recaptcha&quot; data-sitekey=&quot;6Ld9-cMUAAAAAGb7nPIIL7OWf9k0ndeeNo1Sj8UY&quot; data-theme=&quot;light&quot; data-type=&quot;image&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/fieldset&gt;
+&lt;div class=&quot;form-actions&quot;&gt;&lt;input class=&quot;webform-submit button-primary button-primary form-submit&quot; type=&quot;submit&quot; name=&quot;op&quot; value=&quot;Submit&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/form&gt;</description>
+    <pubDate>Tue, 15 Sep 2020 15:03:29 +0000</pubDate>
+<dc:creator>Brainwrap</dc:creator>
+<guid isPermaLink="false">26544 at https://www.mhsmi.org</guid>
+  </item>
+  <item>
+    <title>Testing</title>
+    <link>https://www.mhsmi.org/counseling/testing</link>
+    <description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;&lt;strong&gt;Testing Information&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/e/2PACX-1vRA9SOrvKbIEhzbJq3QNyv1O5pEYSqwqfEjS9YjZ30Y2TcOlmsj47ydZlFWpFkY2X_KrFKHROItHGzl/pub?start=false&amp;amp;loop=false&amp;amp;delayms=10000&quot;&gt;AP Exams 2020 Student Instruction Presentation &amp;amp; Guide&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.actstudent.org/&quot;&gt;ACT Information&lt;/a&gt;: The official website for information on the ACT test and where to register online. It also includes information on test preparation and test questions, as well as information on college searches and applications.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+    <pubDate>Fri, 07 Aug 2020 18:21:05 +0000</pubDate>
+<dc:creator>Mercy High School</dc:creator>
+<guid isPermaLink="false">24854 at https://www.mhsmi.org</guid>
+  </item>
+  <item>
+    <title>Counseling Forms</title>
+    <link>https://www.mhsmi.org/counseling/counseling-forms</link>
+    <description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;div&gt;&lt;strong&gt;MISCELLANEOUS FORMS&lt;/strong&gt;
+&lt;p&gt;&lt;a href=&quot;/files/counseling/non-college_consent_to_release_records-rev._8-18.docx_1.pdf&quot;&gt;Non-College Transcript Request Form&lt;/a&gt; - &lt;em&gt;Transcripts for scholarships, summer programs, clubs/organizations, and internships. Not to be used for college applications.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/files/counseling/athletic_transcript_request-_8-18.pdf&quot;&gt;Consent to Release Records - Athletics&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/files/counseling/forms/schedule_change_request_form_rev_0817.pdf&quot;&gt;Schedule Change Request Form&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+    <pubDate>Fri, 07 Aug 2020 18:21:05 +0000</pubDate>
+<dc:creator>Mercy High School</dc:creator>
+<guid isPermaLink="false">24855 at https://www.mhsmi.org</guid>
+  </item>
+  <item>
+    <title>Counseling</title>
+    <link>https://www.mhsmi.org/counseling/counseling</link>
+    <description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;&quot;&gt;&lt;strong&gt;Mercy High School Counseling Department Vision Statement&lt;/strong&gt;&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;The Mercy High School Counseling Department strives to provide a safe and encouraging environment that celebrates and supports each student’s individual gifts, goals, and growth. This department recognizes the potential in every child and envisions a promising future for all Mercy students; filled with academic and professional achievement, meaningful personal development, and emotional well-being.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+    <pubDate>Fri, 07 Aug 2020 18:21:05 +0000</pubDate>
+<dc:creator>Mercy High School</dc:creator>
+<guid isPermaLink="false">24868 at https://www.mhsmi.org</guid>
+  </item>
+  <item>
+    <title>Online Courses</title>
+    <link>https://www.mhsmi.org/counseling/online-courses</link>
+    <description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;&lt;strong&gt;Online Course Providers&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+    <pubDate>Fri, 07 Aug 2020 18:21:04 +0000</pubDate>
+<dc:creator>Mercy High School</dc:creator>
+<guid isPermaLink="false">24844 at https://www.mhsmi.org</guid>
+  </item>
+  <item>
+    <title>Webinars</title>
+    <link>https://www.mhsmi.org/counseling/webinars</link>
+    <description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;&lt;em&gt;The Counseling Office has hosted some informational webinars to provide additional support for our parents and students.&lt;/em&gt; &lt;/p&gt;
+&lt;p dir=&quot;ltr&quot; id=&quot;docs-internal-guid-82dedcd7-7fff-9013-888a-8b86b47779fa&quot;&gt;&lt;strong&gt;Financial Aid Presentations&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+    <pubDate>Fri, 07 Aug 2020 18:21:04 +0000</pubDate>
+<dc:creator>Mercy High School</dc:creator>
+<guid isPermaLink="false">24825 at https://www.mhsmi.org</guid>
+  </item>
+  <item>
+    <title>Mercy Link Crew</title>
+    <link>https://www.mhsmi.org/counseling/mercy-link-crew</link>
+    <description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;&lt;strong&gt;The Mercy Link Crew Team&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;We are changing the world, one Freshwoman at a time!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What is Link Crew?&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+    <pubDate>Wed, 29 Jan 2020 15:48:23 +0000</pubDate>
+<dc:creator>Brainwrap</dc:creator>
+<guid isPermaLink="false">24817 at https://www.mhsmi.org</guid>
+  </item>
+  <item>
+    <title>Summer Enrichment</title>
+    <link>https://www.mhsmi.org/counseling/summer-enrichment</link>
+    <description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;&lt;strong&gt;Summer Programs For College Credit and/or Enrichment&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Mercy High School receives information throughout the year regarding various summer programs, classes and camps. Many of them are for enrichment and some also offer college credits. Most programs have spring deadlines but all information and applications should be available online through the programs.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+    <pubDate>Thu, 09 Jan 2020 21:12:33 +0000</pubDate>
+<dc:creator>Mercy High School</dc:creator>
+<guid isPermaLink="false">24690 at https://www.mhsmi.org</guid>
+  </item>
+  <item>
+    <title>College Application Presentations &amp; Video Tutorials</title>
+    <link>https://www.mhsmi.org/counseling/college-application-presentations-video-tutorials</link>
+    <description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;&lt;strong&gt;College Application Presentation 2020-21&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Coming soon.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Common Application Tutorial Videos &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=nPP2mwq1ojY&amp;amp;list=PL8KEAorkN10CzbZnllkklg4N-JZ9IVVGC&amp;amp;index=1&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;How to Create a First-Year Common Application Account&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+    <pubDate>Thu, 09 Jan 2020 21:12:33 +0000</pubDate>
+<dc:creator>Mercy High School</dc:creator>
+<guid isPermaLink="false">24631 at https://www.mhsmi.org</guid>
+  </item>
+  <item>
+    <title>College Planning Resources</title>
+    <link>https://www.mhsmi.org/counseling/college-planning-resources</link>
+    <description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;&lt;strong&gt;College Planning &amp;amp; Meetings&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CLASS OF 2022&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/e/2PACX-1vS852oXaW6FmndJRXXeI7U8SrF0HqHQH5o3iv6esmtrae20_bJQs7YP3JEdv2vhlgc2ThHCU-WGTh30/pub?start=false&amp;amp;loop=false&amp;amp;delayms=5000&quot;&gt;Class of 2022 college planning presentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;/counseling/college-application-presentations-video-tutorials&quot;&gt;&lt;strong&gt;College Application Tutorials&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+    <pubDate>Thu, 09 Jan 2020 21:12:33 +0000</pubDate>
+<dc:creator>Mercy High School</dc:creator>
+<guid isPermaLink="false">24692 at https://www.mhsmi.org</guid>
+  </item>
+  </channel>
+</rss>

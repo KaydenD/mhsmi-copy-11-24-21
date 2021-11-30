@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>BidPal One</title>
+  <base href="/">
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NQWM9X9');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/x-icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/x-icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/x-icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/x-icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/x-icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/x-icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/x-icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/x-icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/x-icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/x-icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/x-icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/x-icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/x-icon/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/x-icon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Polyfill needed to support Promises in IE11-->
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script>
+  <script>
+    window.googleLoadedPromise = new Promise(function (resolve) {
+      window.onGoogleLoad = function () {
+        resolve(gapi);
+      };
+    });
+  </script>
+  <script async defer type="text/javascript" src="https://connect.facebook.net/en_US/sdk.js"></script>
+  <script async defer type="text/javascript" src="https://apis.google.com/js/platform.js?onload=onGoogleLoad"></script>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fundraising Powered by OneCause, creator of BidPal" />
+  <meta property="og:description" content="&nbsp;" />
+  <meta property="og:image" content="https://s3.amazonaws.com/bidpal/public/onecause-ocl.png" />
+
+  <style>
+    body {
+      font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .loadingContainer {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+      color: #0C0916;
+      background-color: #ffffff;
+    }
+
+    .loadingH1 {
+      opacity: 0.6;
+      font-size: 16px;
+      font-weight: 400;
+      font-style: italic;
+      margin-top: 0px;
+    }
+  </style>
+<link href="styles.2ee073a69940ca745f9d.bundle.css" rel="stylesheet"/></head>
+
+<body>
+  <one-root>
+    <div class="loadingContainer">
+      <h1 class="loadingH1">&nbsp;</h1>
+      <img alt="Loading image" src="assets/loading.gif" />
+    </div>
+  </one-root>
+<script type="text/javascript" src="inline.339483c63718442eee56.bundle.js"></script><script type="text/javascript" src="polyfills.59ad331eacf02dcf9377.bundle.js"></script><script type="text/javascript" src="vendor.4fb24f9b7688cbf3f9d1.bundle.js"></script><script type="text/javascript" src="main.bbb24b15b9886afab4cf.bundle.js"></script></body>
+
+</html>

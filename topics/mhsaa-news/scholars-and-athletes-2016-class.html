@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={xpid:"VwUDWVBXDRABVFlSBggHXlQI",licenseKey:"NRJS-99787f100cdf2d99b29",applicationID:"1080190809"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(32),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(33),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError";if(!c.disabled){var l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(14),t(13),"addEventListener"in window&&t(7),c.xhrWrappable&&t(15),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){U++,L=g.hash,this[u]=y.now()}function o(){U--,g.hash!==L&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable&&!y.disabled){var x=t(11),b=t(12),E=t(9),R=t(7),O=t(14),T=t(8),P=t(15),S=t(10),M=t("ee"),N=M.get("tracer"),C=t(23);t(17),y.features.spa=!0;var L,U=0;M.on(u,r),b.on(p,r),S.on(p,r),M.on(d,o),b.on(l,o),S.on(l,o),M.buffer([u,d,"xhr-resolved"]),R.buffer([u]),O.buffer(["setTimeout"+c,"clearTimeout"+s,u]),P.buffer([u,"new-xhr","send-xhr"+s]),T.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),N.buffer([u,"no-"+u]),S.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,m+s),a(T,m+"-done"),a(S,"new-jsonp"),a(S,"jsonp-end"),a(S,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,C(!0)),w[v]("load",i,C(!0)),w[v]("popstate",function(){i(0,U>1)},C(!0))}},{}],5:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function o(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+p])try{window.performance[h](m,o,!1)}catch(t){}else try{window.performance[h]("webkit"+m,o,!1)}catch(t){}}function i(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(14),f=t(13),u=t(6),d=t(23),p="learResourceTimings",l="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",O=t("loader");if(!O.disabled){O.features.stn=!0,t(9),"addEventListener"in window&&t(7);var T=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof T&&(this.bstStart=O.now())}),a.on(b,function(t,e){var n=t[0];n instanceof T&&s("bst",[n,e,this.bstStart,O.now()])}),c.on(x,function(t,e,n){this.bstStart=O.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,O.now(),this.bstType])}),f.on(x,function(){this.bstStart=O.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,O.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=O.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):l in window.performance&&(window.performance["c"+p]?window.performance[l](m,o,d(!1)):window.performance[l]("webkit"+m,o,d(!1))),document[l]("scroll",i,d(!1)),document[l]("keypress",i,d(!1)),document[l]("click",i,d(!1))}}},{}],6:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],7:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],8:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(33),a=t(32);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,p=s.Response,l=s.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],9:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],10:[function(t,e,n){function r(t){function e(){f.emit("jsonp-end",[],l),t.removeEventListener("load",e,c(!1)),t.removeEventListener("error",n,c(!1))}function n(){f.emit("jsonp-error",[],l),f.emit("jsonp-end",[],l),t.removeEventListener("load",e,c(!1)),t.removeEventListener("error",n,c(!1))}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var d=s(a),p="function"==typeof d.parent[d.key];if(p){var l={};u.inPlace(d.parent,[d.key],"cb-",l),t.addEventListener("load",e,c(!1)),t.addEventListener("error",n,c(!1)),f.emit("new-jsonp",[t.src],l)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(d);return e?e[1]:null}function a(t,e){var n=t.match(l),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(p);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t(23),f=t("ee").get("jsonp"),u=t("wrap-function")(f);if(e.exports=f,o()){var d=/[?&](?:callback|cb)=([^&#]+)/,p=/(.*)\.([^.]+)/,l=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?u.inPlace(Node.prototype,h,"dom-"):(u.inPlace(HTMLElement.prototype,h,"dom-"),u.inPlace(HTMLHeadElement.prototype,h,"dom-"),u.inPlace(HTMLBodyElement.prototype,h,"dom-")),f.on("dom-start",function(t){r(t[0])})}},{}],11:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],12:[function(t,e,n){function r(t){var e=i.context(),n=s(t,"executor-",e,null,!1),r=new f(n);return i.context(r).getCtx=function(){return e},r}var o=t("wrap-function"),i=t("ee").get("promise"),a=t("ee").getOrSetContext,s=o(i),c=t(32),f=NREUM.o.PR;e.exports=i,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){i.emit("propagate",[null,!o],a,!1,!1),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var a=e.apply(f,arguments),s=f.resolve(a);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&i.emit("propagate",[t,!0],n,!1,!1),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),o.wrapInPlace(f.prototype,"then",function(t){return function(){var e=this,n=o.argsToArray.apply(this,arguments),r=a(e);r.promise=e,n[0]=s(n[0],"cb-",r,null,!1),n[1]=s(n[1],"cb-",r,null,!1);var c=t.apply(this,n);return r.nextPromise=c,i.emit("propagate",[e,!0],c,!1,!1),c}}),i.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this,null,!1),t[1]=s(t[1],"resolve-",this,null,!1)}),i.on("executor-err",function(t,e,n){t[1](n)}),i.on("cb-end",function(t,e,n){i.emit("propagate",[n,!0],this.nextPromise,!1,!1)}),i.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=i.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],13:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],14:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],15:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,O.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(7);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=t(23),l=NREUM.o,h=l.XHR,m=l.MO,v=l.PR,w=l.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,o,p(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,O=document.createTextNode(R);new m(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],16:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=l.generateSpanId(),m=l.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&p())&&(w.traceContextParentHeader=o(h,m),w.traceContextStateHeader=i(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function o(t,e){return"00-"+e+"-"+t+"-01"}function i(t,e,n,r,o){var i=0,a="",s=1,c="",f="";return o+"@nr="+i+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var o=h(n.allowed_origins[r]);if(t.hostname===o.hostname&&t.protocol===o.protocol&&t.port===o.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function p(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var l=t(29),h=t(18);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],17:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this))}}function o(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(18),f=t(16).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],p=d.length,l=t("id"),h=t(24),m=t(22),v=t(19),w=t(23),g=NREUM.o.REQ,y=window.XMLHttpRequest;a.features.xhr=!0,t(15),t(8),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){i(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<p;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof y&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof y&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof y&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var o=f(this.parsedOrigin);if(o&&(o.newrelicHeader||o.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),e(i.headers,o)&&(this.dt=o),t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&e(t[0].headers,o)&&(this.dt=o)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},i=this.target;"string"==typeof i?n=i:"object"==typeof i&&i instanceof g?n=i.url:window.URL&&"object"==typeof i&&i instanceof URL&&(n=i.href),o(this,n);var s=(""+(i&&i instanceof g&&i.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}),u.on("fetch-done",function(t,e){this.endTime=a.now(),this.params||(this.params={}),this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],18:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],19:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(22);e.exports=r},{}],20:[function(t,e,n){function r(){}function o(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),i(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var i=t("handle"),a=t(32),s=t(33),c=t("ee").get("tracer"),f=t("loader"),u=t(25),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",h=l+"ixn-";a(p,function(t,e){d[e]=o(l,e,!0,"api")}),d.addPageAction=o(l,"addPageAction",!0),d.setCurrentRouteName=o(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=o(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),i("err",[t,f.now(),!1,e])}},{}],21:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],22:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],23:[function(t,e,n){var r=!1;try{var o=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,o),window.removeEventListener("testPassive",null,o)}catch(i){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],24:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],25:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return i("storeMetric",n,null,"api"),n}function o(t,e){var n=[s,t,{name:t},e];return i("storeEventMetrics",n,null,"api"),n}var i=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:o}},{}],26:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(i=Math.max((new Date).getTime(),i))-a}function o(){return i}var i=(new Date).getTime(),a=i,s=t(34);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=o},{}],27:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],28:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(c&&c<r.startTime)return;p("lcp",[r])}}function i(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof v&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),g=!0,p("timing",["fi",e,n])}}function s(t){"hidden"===t&&(c=l.now(),p("pageHide",[c]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,f,u,d,p=t("handle"),l=t("loader"),h=t(31),m=t(23),v=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(w){}u=new PerformanceObserver(o);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(w){}d=new PerformanceObserver(i);try{d.observe({type:"layout-shift",buffered:!0})}catch(w){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(t){document.addEventListener(t,a,m(!1))})}h(s)}},{}],29:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){return a(16)}function i(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,o=window.crypto||window.msCrypto;o&&o.getRandomValues&&Uint8Array&&(n=o.getRandomValues(new Uint8Array(31)));for(var i=[],a=0;a<t;a++)i.push(e().toString(16));return i.join("")}e.exports={generateUuid:r,generateSpanId:o,generateTraceId:i}},{}],30:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],31:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[i]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,o(!1))}var o=t(23);e.exports=r;var i,a,s;"undefined"!=typeof document.hidden?(i="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],32:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],33:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],34:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,o,i,a){if(a!==!1&&(a=!0),!l.aborted||i){t&&a&&t(n,r,o);for(var s=e(o),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var p=d[y[n]];return p&&p.push([x,n,r,s]),s}}function i(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return p[t]=p[t]||o(n)}function w(t,e){l.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:i,addEventListener:i,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function i(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",f=t("gos"),u=t(32),d={},p={},l=e.exports=o();e.exports.getOrSetContext=i,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=T.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(R,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+T.offset],null,"api"),s("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=h+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function o(){"complete"===v.readyState&&i()}function i(){s("mark",["domContent",a()+T.offset],null,"api")}var a=t(26),s=t("handle"),c=t(32),f=t("ee"),u=t(30),d=t(27),p=t(21),l=t(23),h=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,w="addEventListener",g="attachEvent",y=m.XMLHttpRequest,x=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var E=""+location,R={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1212.min.js"},O=y&&x&&x[w]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:u,disabled:b};if(!b){t(20),t(28),v[w]?(v[w]("DOMContentLoaded",i,l(!1)),m[w]("load",r,l(!1))):(v[g]("onreadystatechange",o),m[g]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var i,a,u,p;try{a=this,i=d(arguments),u="function"==typeof r?r(i,a):r||{}}catch(l){o([l,"",[i,a,c],u],t)}s(n+"start",[i,a,c],u,f);try{return p=e.apply(a,i)}catch(h){throw s(n+"err",[i,a,h],u,f),h}finally{s(n+"end",[i,a,p],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,i(e,nrWrapper,t),nrWrapper)}function r(t,e,r,o,i){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,o,c,i))}function s(n,r,i,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,i,e,a)}catch(c){o([c,n,r,i],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=p,n}function o(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function i(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(i){o([i],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function s(t,e){var n=e(t);return n[p]=t,i(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(33),p="nr@original",l=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,17,5,3,4]);</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-67688371-1"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("config", "UA-67688371-1", {"groups":"default","anonymize_ip":true});</script>
+<link rel="canonical" href="https://secondhalf.mhsaa.com/topics/mhsaa-news/scholars-and-athletes-2016-class" />
+<meta name="robots" content="index, follow" />
+<link rel="image_src" href="https://secondhalf.mhsaa.com/sites/default/files/imported/Photos/160215_ClassA.jpg" />
+<meta name="description" content="By Geoff Kimmerly  Second Half editor
+The Michigan High School Athletic Association has selected 14 student-athletes from Class A member schools to receive scholarships through the Farm Bureau Insurance Scholar-Athlete Award program.  " />
+<meta property="og:site_name" content="SecondHalf" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://secondhalf.mhsaa.com/topics/mhsaa-news/scholars-and-athletes-2016-class" />
+<meta property="og:title" content="Scholars and Athletes 2016: Class A" />
+<meta property="og:description" content="By Geoff Kimmerly  Second Half editor
+The Michigan High School Athletic Association has selected 14 student-athletes from Class A member schools to receive scholarships through the Farm Bureau Insurance Scholar-Athlete Award program.  " />
+<meta property="og:image" content="https://secondhalf.mhsaa.com/sites/default/files/imported/Photos/160215_ClassA.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mhsaa" />
+<meta name="twitter:title" content="Scholars and Athletes 2016: Class A" />
+<meta name="twitter:url" content="https://secondhalf.mhsaa.com/topics/mhsaa-news/scholars-and-athletes-2016-class" />
+<meta name="twitter:image" content="https://secondhalf.mhsaa.com/sites/default/files/imported/Photos/160215_ClassA.jpg" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/default/files/favicon_0_0.png" type="image/png" />
+<link rel="revision" href="https://secondhalf.mhsaa.com/topics/mhsaa-news/scholars-and-athletes-2016-class" />
+
+    <title>Scholars and Athletes 2016: Class A | SecondHalf</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_XaXc84R4UUk37e3-rAbycm3XMJGE2j3nIXzx-DW7Td0.css" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;700&amp;family=Roboto:wght@100;400;700&amp;family=Roboto+Mono&amp;display=swap&quot;" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__if1ZN20vRTOHVZzpVw9k4QiMiMstJmBaNX0012BL5I.css" />
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es5%2Ces6%2CCustomEvent%2CElement.prototype.inert"></script>
+
+  </head>
+  <body class="node--article page-topics-mhsaa-news-scholars-and-athletes-2016-class section-topics internal-page">
+    <svg xmlns="http://www.w3.org/2000/svg">
+<symbol id="icon-article" viewBox="0 0 576 512"><title>article</title><path fill="currentColor" d="M552 64H88c-13.255 0-24 10.745-24 24v8H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h472c26.51 0 48-21.49 48-48V88c0-13.255-10.745-24-24-24zM56 400a8 8 0 0 1-8-8V144h16v248a8 8 0 0 1-8 8zm236-16H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm-208-96H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm0-96H140c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h360c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12z"/></symbol>
+<symbol id="icon-chevron-down" viewBox="0 0 448 512"><title>chevron-down</title><path fill="currentColor" d="M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z"/></symbol>
+<symbol id="icon-chevron-left" viewBox="0 0 256 512"><title>chevron-left</title><path fill="currentColor" d="M238.475 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L50.053 256 245.546 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L10.454 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z"/></symbol>
+<symbol id="icon-chevron-right" viewBox="0 0 256 512"><title>chevron-right</title><path fill="currentColor" d="M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z"/></symbol>
+<symbol id="icon-chevron-up" viewBox="0 0 448 512"><title>chevron-up</title><path fill="currentColor" d="M4.465 366.475l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L224 178.053l195.494 195.493c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-211.05-211.051c-4.686-4.686-12.284-4.686-16.971 0L4.465 349.505c-4.687 4.686-4.687 12.284 0 16.97z"/></symbol>
+<symbol id="icon-close-x" viewBox="0 0 320 512"><title>close-x</title><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/></symbol>
+<symbol id="icon-close" viewBox="0 0 512 512"><title>close</title><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z"/></symbol>
+<symbol id="icon-gravity-works" viewBox="0 0 26 25"><title>gravity-works</title> <path fill="currentColor" d="M24.8853 10.5517C24.8577 10.3773 24.7292 10.2396 24.564 10.2029L23.2605 9.89077C22.5078 9.70718 21.9479 9.28493 21.7092 8.70663C21.4614 8.11915 21.5531 7.4307 21.9662 6.76978L22.6639 5.63154C22.7556 5.48467 22.7465 5.2919 22.6455 5.15421C21.8744 4.08941 20.9473 3.16229 19.8825 2.39122C19.7448 2.29025 19.552 2.28107 19.4052 2.37287L18.2669 3.0705C17.8539 3.32752 17.4133 3.45603 17.0094 3.45603C16.1098 3.45603 15.3938 2.81348 15.146 1.77621L14.8339 0.472737C14.788 0.307509 14.6503 0.178998 14.485 0.15146C13.1999 -0.0504865 11.8689 -0.0504865 10.5746 0.15146C10.4002 0.178998 10.2625 0.307509 10.2258 0.472737L9.91371 1.77621C9.66587 2.81348 8.94988 3.45603 8.0503 3.45603C7.63723 3.45603 7.2058 3.31834 6.79273 3.0705L5.65449 2.37287C5.50762 2.28107 5.31485 2.29025 5.17716 2.39122C4.10318 3.15311 3.16688 4.08023 2.39581 5.14503C2.29484 5.28272 2.28566 5.47549 2.37746 5.62236L3.07509 6.7606C3.47898 7.42152 3.57077 8.10997 3.33211 8.69745C3.09345 9.28493 2.54268 9.698 1.7808 9.88159L0.477327 10.1937C0.312098 10.2396 0.183587 10.3681 0.156049 10.5425C0.0550763 11.1851 0 11.846 0 12.4977C0 13.1494 0.0550763 13.8104 0.156049 14.4529C0.183587 14.6273 0.312098 14.765 0.477327 14.8017L1.7808 15.1138C2.54268 15.2974 3.09345 15.7197 3.33211 16.298C3.57077 16.8854 3.48816 17.5739 3.07509 18.2348L2.37746 19.3731C2.28566 19.5199 2.29484 19.7127 2.39581 19.8504C3.16688 20.9152 4.094 21.8423 5.1588 22.6134C5.29649 22.7143 5.48926 22.7235 5.63613 22.6317L6.77437 21.9341C7.18744 21.6771 7.62805 21.5486 8.03194 21.5486C8.93152 21.5486 9.64751 22.1911 9.89536 23.2284L10.2075 24.5319C10.2442 24.6971 10.3819 24.8256 10.5563 24.8531C11.1988 24.9541 11.8597 25 12.5115 25C13.1632 25 13.8241 24.9449 14.4667 24.8531C14.6411 24.8256 14.7788 24.6971 14.8155 24.5319L15.1276 23.2284C15.3754 22.1911 16.0914 21.5486 16.991 21.5486C17.4041 21.5486 17.8355 21.6863 18.2486 21.9341L19.3868 22.6317C19.5337 22.7235 19.7265 22.7143 19.8641 22.6134C20.929 21.8423 21.8561 20.9152 22.6271 19.8504C22.7281 19.7127 22.7373 19.5199 22.6455 19.3731L21.9479 18.2348C21.544 17.5647 21.443 16.8854 21.6908 16.298C21.9295 15.7105 22.4803 15.2974 23.2422 15.1138L24.5456 14.8017C24.7109 14.765 24.8394 14.6273 24.8669 14.4529C24.9679 13.8104 25.0138 13.1494 25.0138 12.4977C25.0321 11.846 24.9862 11.1942 24.8853 10.5517ZM24.0775 14.0398L23.0586 14.2877C22.0305 14.5355 21.2686 15.1322 20.9198 15.9767C20.571 16.8212 20.6811 17.785 21.2411 18.6846L21.7918 19.5842C21.1676 20.4011 20.4333 21.1355 19.6071 21.7597L18.7075 21.2089C18.1568 20.8693 17.5693 20.6949 17.0002 20.6949C15.7059 20.6949 14.6503 21.6128 14.3015 23.0356L14.0536 24.0545C13.0347 24.183 11.9883 24.183 10.9693 24.0545L10.7215 23.0356C10.3819 21.6128 9.31705 20.6949 8.02276 20.6949C7.45364 20.6949 6.86617 20.8693 6.3154 21.2089L5.41583 21.7597C4.59886 21.1355 3.86451 20.4011 3.24032 19.5842L3.7819 18.6846C4.33266 17.7758 4.45199 16.8212 4.10318 15.9767C3.75436 15.1322 2.99247 14.5355 1.96438 14.2877L0.945475 14.0398C0.881219 13.5258 0.844502 13.0118 0.844502 12.4977C0.844502 11.9837 0.87204 11.4696 0.945475 10.9556L1.96438 10.7077C2.99247 10.4599 3.75436 9.86323 4.10318 9.01873C4.45199 8.17422 4.34184 7.21039 3.7819 6.31081L3.24032 5.41124C3.86451 4.59427 4.59886 3.85992 5.41583 3.22655L6.3154 3.77731C6.86617 4.11695 7.45364 4.29135 8.02276 4.29135C9.31705 4.29135 10.3727 3.37342 10.7215 1.95062L10.9693 0.931705C11.9883 0.794015 13.0347 0.794015 14.0536 0.931705L14.3015 1.95062C14.6503 3.3826 15.7059 4.30053 17.0002 4.30053C17.5693 4.30053 18.1568 4.12612 18.7075 3.78649L19.6071 3.23573C20.4241 3.85992 21.1584 4.59427 21.7918 5.42041L21.2411 6.31999C20.6903 7.21957 20.5801 8.1834 20.9198 9.02791C21.2686 9.87241 22.0305 10.4691 23.0586 10.7169L24.0775 10.9648C24.1417 11.4696 24.1784 11.9928 24.1784 12.5069C24.1784 13.0209 24.1417 13.535 24.0775 14.0398Z"/> <path fill="currentColor" d="M12.519 3.89661C7.7733 3.89661 3.91797 7.76112 3.91797 12.4977C3.91797 17.2342 7.78248 21.0987 12.519 21.0987C17.2556 21.0987 21.1201 17.2342 21.1201 12.4977C21.1201 7.76112 17.2648 3.89661 12.519 3.89661ZM18.7151 7.86209C19.6422 9.09213 20.2022 10.6067 20.2572 12.2498H15.6584C15.6308 12.2498 15.5941 12.2498 15.5666 12.259C15.3463 12.259 15.1627 12.4426 15.1627 12.6629C15.1627 12.8281 15.2545 12.9658 15.3922 13.0301C15.4656 13.0852 15.5574 13.1219 15.6584 13.1219H17.9165C17.788 14.2693 17.2923 15.3066 16.5671 16.1235L12.6934 13.1769C12.6108 13.1127 12.519 13.0852 12.4181 13.0852C12.3171 13.0852 12.2253 13.1127 12.1427 13.1678L8.26899 15.8114C7.56218 14.9027 7.13993 13.7644 7.13993 12.5252C7.13993 11.3503 7.52546 10.2579 8.16802 9.36751L12.1794 12.3967C12.262 12.461 12.363 12.4885 12.4548 12.4885C12.5558 12.4885 12.6475 12.461 12.7302 12.3967L18.7151 7.86209ZM15.9062 16.7477C14.9791 17.4821 13.8133 17.9319 12.5466 17.9319C11.1238 17.9319 9.83866 17.3811 8.87483 16.4815L12.3905 14.0765L15.9062 16.7477ZM8.76467 8.6607C9.73769 7.70604 11.0779 7.10938 12.5466 7.10938C13.9786 7.10938 15.2728 7.66933 16.2367 8.57808L12.4548 11.4512L8.76467 8.6607ZM12.519 4.75029C14.7221 4.75029 16.714 5.6774 18.1184 7.15528L16.9343 8.04568L16.8976 8.01814C16.8976 8.01814 16.8976 8.01814 16.9068 8.01814C15.7777 6.91662 14.2356 6.24652 12.5374 6.24652C10.7841 6.24652 9.1961 6.97169 8.05786 8.13747L6.84619 7.21954C8.26899 5.70494 10.2884 4.75029 12.519 4.75029ZM6.26789 7.93553L7.47038 8.84428C6.71767 9.88155 6.26789 11.1483 6.26789 12.5252C6.26789 13.948 6.74521 15.2515 7.54382 16.3071L6.32296 17.1424C5.34995 15.8481 4.78083 14.2417 4.78083 12.5069C4.77165 10.7903 5.33159 9.21146 6.26789 7.93553ZM6.89208 17.8217L8.1313 16.9772C9.26954 18.0971 10.83 18.7947 12.5466 18.7947C14.0979 18.7947 15.5207 18.2256 16.613 17.2893L17.7788 18.1797C16.3927 19.4648 14.5477 20.2542 12.5099 20.2542C10.3068 20.2451 8.30571 19.3179 6.89208 17.8217ZM18.403 17.528L17.2556 16.6559C18.1001 15.6921 18.66 14.4712 18.7885 13.1219H20.2297C20.1012 14.8017 19.4311 16.3255 18.403 17.528Z"/> </symbol>
+<symbol id="icon-home" viewBox="0 0 576 512"><title>home</title><path fill="currentColor" d="M570.69 236.28L512 184.45V48a16 16 0 0 0-16-16h-64a16 16 0 0 0-16 16v51.69L314.75 10.31a39.85 39.85 0 0 0-53.45 0l-256 226a16 16 0 0 0-1.21 22.6L25.5 282.7a16 16 0 0 0 22.6 1.21L277.42 81.63a16 16 0 0 1 21.17 0L527.91 283.9a16 16 0 0 0 22.6-1.21l21.4-23.82a16 16 0 0 0-1.22-22.59zM288 115L69.47 307.71c-1.62 1.46-3.69 2.14-5.47 3.35V496a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16V368a16 16 0 0 1 16-16h96a16 16 0 0 1 16 16v128a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16V311.1c-1.7-1.16-3.72-1.82-5.26-3.2z"/></symbol>
+<symbol id="icon-menu" viewBox="0 0 448 512"><title>menu</title><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class=""/></symbol>
+<symbol id="icon-play-media" viewBox="0 0 512 512"><title>play-media</title><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"/></symbol>
+<symbol id="icon-school" viewBox="0 0 640 512"><title>school</title><path fill="currentColor" d="M0 224v272c0 8.84 7.16 16 16 16h80V192H32c-17.67 0-32 14.33-32 32zm360-48h-24v-40c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v64c0 4.42 3.58 8 8 8h48c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm137.75-63.96l-160-106.67a32.02 32.02 0 0 0-35.5 0l-160 106.67A32.002 32.002 0 0 0 128 138.66V512h128V368c0-8.84 7.16-16 16-16h96c8.84 0 16 7.16 16 16v144h128V138.67c0-10.7-5.35-20.7-14.25-26.63zM320 256c-44.18 0-80-35.82-80-80s35.82-80 80-80 80 35.82 80 80-35.82 80-80 80zm288-64h-64v320h80c8.84 0 16-7.16 16-16V224c0-17.67-14.33-32-32-32z"/></symbol>
+</svg>
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+  <header role="banner"  id="site-header">
+    <div class="container">
+      <div class="width-child--auto" grid="collapse">
+        
+<div class="margin-r--auto margin-b flex--first">
+  <div id="block-mhsaa-branding">
+    
+          
+
+          <a href="/" rel="home">
+        <img src="/sites/default/files/logo.png" alt="Home" />
+      </a>
+            
+  </div>
+</div><div class="flex--middle">
+  <div class="container">
+    <nav role="navigation" aria-labelledby="block-headernavigation-menu" id="block-headernavigation" class="visible@m">
+                                
+      <h2 class="visually-hidden" id="block-headernavigation-menu">Header Navigation</h2>
+      
+
+                    
+
+    <ul class="menu menu-level-0">
+      
+    <li class="menu-item">
+      
+
+  
+  
+  <a href="https://www.mhsaa.com/">    <span class="menu-link-title  ">MHSAA.com</span>
+    
+  </a>
+
+
+
+    </li>
+      
+    <li class="menu-item">
+      
+
+  
+  
+  <a href="http://www.mhsaa.tv/">    <span class="menu-link-title  ">MHSAA.TV</span>
+    
+  </a>
+
+
+
+    </li>
+      
+    <li class="menu-item">
+      
+
+  
+  
+  <a href="https://www.meridix.com/group/index.php?liveid=MHSAA#/">    <span class="menu-link-title  ">Audio</span>
+    
+  </a>
+
+
+
+    </li>
+      
+    <li class="menu-item">
+      
+
+  
+  
+  <a href="/search">    <span class="menu-link-title visually-hidden ">Search</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45ZM29.7915 26.7464L34.66 31.6141C35.1141 32.073 35.1141 32.8152 34.6551 33.2741L33.2732 34.6558C32.8191 35.1147 32.0768 35.1147 31.6178 34.6558L26.7493 29.7881C26.5295 29.5684 26.4074 29.2706 26.4074 28.9581V28.1623C24.6837 29.5098 22.5156 30.3105 20.157 30.3105C14.5462 30.3105 10 25.7651 10 20.1553C10 14.5455 14.5462 10 20.157 10C25.7678 10 30.314 14.5455 30.314 20.1553C30.314 22.5134 29.5131 24.6812 28.1654 26.4046H28.9613C29.2739 26.4046 29.5717 26.5267 29.7915 26.7464ZM13.9065 20.1553C13.9065 23.612 16.7046 26.4046 20.157 26.4046C23.6143 26.4046 26.4074 23.6071 26.4074 20.1553C26.4074 16.6986 23.6094 13.9059 20.157 13.9059C16.6997 13.9059 13.9065 16.7034 13.9065 20.1553Z" fill="currentColor"></path>
+</svg>
+
+
+
+  </a>
+
+
+
+    </li>
+    </ul>
+
+
+
+          </nav>
+  </div>
+</div>
+<div class="flex--middle">
+  <div class="container">
+    <nav role="navigation" aria-labelledby="block-socialmedia-menu" id="block-socialmedia" class="visible@m">
+                                
+      <h2 class="visually-hidden" id="block-socialmedia-menu">Social Media</h2>
+      
+
+                    
+
+    <ul class="menu menu-level-0">
+      
+    
+    <li class="menu-item">
+      <a href="https://www.facebook.com/MHSAASports">      <span class="visually-hidden menu-link-title">Facebook</span>
+                    
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 320 512">
+  <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+</svg>
+
+
+
+    
+
+
+          </a>
+    </li>
+      
+    
+    <li class="menu-item">
+      <a href="https://instagram.com/mhsaasports">      <span class="visually-hidden menu-link-title">Instagram</span>
+                    
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512">
+  <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+</svg>
+
+
+
+    
+
+
+          </a>
+    </li>
+      
+    
+    <li class="menu-item">
+      <a href="https://twitter.com/mhsaa">      <span class="visually-hidden menu-link-title">Twitter</span>
+                    
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 512 512">
+  <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+</svg>
+
+
+
+    
+
+
+          </a>
+    </li>
+      
+    
+    <li class="menu-item">
+      <a href="http://www.youtube.com/MHSAASPORTS">      <span class="visually-hidden menu-link-title">Youtube</span>
+                    
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 576 512">
+  <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+</svg>
+
+
+
+    
+
+
+          </a>
+    </li>
+    </ul>
+
+
+
+          </nav>
+  </div>
+</div>
+<div class="width--1-1" id="block-mhsaa-main-menu">
+  <div class="container-break">
+    <div class="container">
+      <nav role="navigation" aria-labelledby="block-mhsaa-main-menu-menu">
+                                          
+        <h2 class="visually-hidden" id="block-mhsaa-main-menu-menu">Main navigation</h2>
+        
+
+                          
+              <ul>
+              <li>
+        <a href="/topics" data-drupal-link-system-path="node/2">Topics</a>
+              </li>
+          <li>
+        <a href="/videos" data-drupal-link-system-path="node/3">Videos</a>
+              </li>
+          <li>
+        <a href="/rankings" data-drupal-link-system-path="node/5">Rankings</a>
+              </li>
+          <li>
+        <a href="/submit-idea" data-drupal-link-system-path="node/6">Submit An Idea</a>
+              </li>
+          <li>
+        <a href="/about" data-drupal-link-system-path="node/7">About</a>
+              </li>
+        </ul>
+  
+
+
+              </nav>
+    </div>
+  </div>
+</div>
+
+<div class="views-exposed-form bef-exposed-form width--1-1 margin--remove" data-drupal-selector="views-exposed-form-search-page-1" id="block-header-search">
+  
+      
+      <form action="/search" method="get" id="views-exposed-form-search-page-1" accept-charset="UTF-8" class="width-child--1-1" grid="small">
+  <fieldset data-drupal-selector="edit-search-wrapper" id="edit-search-wrapper" class="js-form-item form-item js-form-wrapper form-wrapper">
+      <legend>
+    <span class="visually-hidden fieldset-legend">Search</span>
+  </legend>
+  <div class="fieldset-wrapper">
+            <div grid="small" class="width-child--1-1 js-form-wrapper form-wrapper" data-drupal-selector="edit-custom-wrapper" id="edit-custom-wrapper"><div class="width--1-1 width--auto@m js-form-item form-item js-form-type-select form-item-inc js-form-item-inc form-no-label">
+      <label for="edit-inc" class="visually-hidden">Search Operator</label>
+        <select data-drupal-selector="edit-inc" id="edit-inc" name="inc" class="form-select"><option value="and">Contains all of these words</option><option value="or" selected="selected">Contains any of these words</option></select>
+        </div>
+<div class="width--1-1 width--expand@m js-form-item form-item js-form-type-textfield form-item-search js-form-item-search form-no-label">
+          <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" placeholder="Search" class="form-text" />
+
+
+        </div>
+<div class="width--1-1 width--auto@m flex--stretch form-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions">  <button  class="button--primary button js-form-submit form-submit" data-drupal-selector="edit-submit-search" type="submit" id="edit-submit-search">Search</button>
+
+</div>
+</div>
+
+          </div>
+</fieldset>
+
+
+</form>
+
+  </div>
+<div id="block-mhsaa-breadcrumbs" class="width--1-1">
+  <div class="container-break">
+    <div class="container">
+      
+              
+                <nav role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol>
+          <li><a href="/"><svg width="18" height="18" class="margin-r--xs"><use xlink:href="#icon-home"></use></svg>Home
+          </a></li>
+          <li><a href="/topics">
+            Topics
+          </a></li>
+          <li><a href="/topics/mhsaa-news">
+            MHSAA News
+          </a></li>
+          <li><span>Scholars and Athletes 2016: Class A</span></li>
+        </ol>
+  </nav>
+
+          </div>
+  </div>
+</div>
+
+        <div class="flex--middle hidden@m flex--first">
+          <button class="offcanvas-toggle plain">
+            <svg width="35" height="35"><use xlink:href="#icon-menu"></use></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="container">
+  <div class="width-child--1-1" grid="small">
+      <div  id="region-pre_content" class="margin-t" role="region">
+    <div grid="small" class="width-child--1-1">
+      <div>
+  <div id="block-views-block-banner-advertisement-block-1">
+    
+          
+          
+<div class="views-element-container">
+  <div class="js-view-dom-id-60ef22ad75567b95a790a0c0f76c6422d4aa639fcf3c200b7ccfa1e08f3ce474">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row"><div><div><a href="https://www.michigan.gov/ok2say/" rel="nofollow"><img data-src="/sites/default/files/styles/banner_ad/public/banner-ads/2021-09/OK2SAYbanner.png?itok=KzZLNVdU" alt="OK2SAY " width="1200" height="80" class="b-lazy"></a></div></div></div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+
+</div>
+
+      </div>
+</div>
+<div data-drupal-messages-fallback class="hidden"></div>
+
+    </div>
+  </div>
+
+    <main class="width--expand" role="main">
+  <a id="main-content" tabindex="-1"></a>
+  <div>
+  <div id="block-mhsaa-content">
+    
+          
+          
+<article  role="article" about="/topics/mhsaa-news/scholars-and-athletes-2016-class" typeof="schema:Article" class="article full" data-title="Scholars and Athletes 2016: Class A" data-url="/topics/mhsaa-news/scholars-and-athletes-2016-class" data-nid="11922">
+
+    <article>
+  
+          <img src="/themes/custom/mhsaa/assets/img/placeholder.png" width="1000" height="670" loading="lazy" typeof="foaf:Image" data-src="/sites/default/files/styles/teaser_horizontal/public/imported/Photos/160215_ClassA.jpg?h=af7d2c6d&amp;itok=GgixI5aD" class="b-lazy" />
+
+
+
+
+  </article>
+
+
+
+  
+    <span property="schema:name" content="Scholars and Athletes 2016: Class A" class="hidden"></span>
+
+
+  <header>
+          <p class="primary-topics">
+                  <a href="/topics/mhsaa-news">MHSAA News</a>, 
+                  <a href="/topics/sportsmanship">Sportsmanship</a>
+              </p>
+        <h2 id="aricle-11922-title" class="article-title"><span property="schema:name">Scholars and Athletes 2016: Class A</span>
+</h2>
+        <p id="article-11922-published" class="publish-date">February 15, 2016</p>
+  </header>
+
+  <div class="body-content">
+      <p><strong>By Geoff Kimmerly<br />  Second Half editor</strong></p>
+<p>The Michigan High School Athletic Association has selected 14 student-athletes from Class A member schools to receive scholarships through the Farm Bureau Insurance Scholar-Athlete Award program.  </p>
+<p><a href="https://www.farmbureauinsurance-mi.com/" target="_blank"><img alt="" src="/sites/default/files/imported/Photos/FarmBureau2H.jpg?ver=2015-08-14-131853-750" style="float: right; margin-top: 5px; margin-bottom: 5px; margin-left: 10px;" /></a>Farm Bureau Insurance, in its 27th year of sponsoring the award, will give $1,000 college scholarships to 32 individuals who represent their member schools in at least one sport in which the Association sponsors a postseason tournament. The first 30 scholarships are awarded proportionately by school classification and the number of student-athletes involved in those classes; also, there are two at-large honorees who can come from any classification.</p>
+<p>Students applying for the Scholar-Athlete Award must be carrying at least a 3.5 (on a 4.0 scale) grade-point average and have previously won a letter in a varsity sport in which the Michigan High School Athletic Association sponsors a postseason tournament. Other requirements for the applicants were to show active participation in other school and community activities and produce an essay on the importance of sportsmanship in educational athletics.</p>
+<p>Each of the scholarship recipients will be honored at halftime ceremonies of the Class C Boys Basketball Final game March 26 at the Breslin Student Events Center in East Lansing. Commemorative medallions will be given to the finalists in recognition of their accomplishments.</p>
+<p>The Class A Scholar-Athlete Award honorees are: <span>Drew Blakely, Richland Gull Lake; Kobe Burse, Muskegon Mona Shores; Riley Costen, Hudsonville; Zaven Dadian, Birmingham Seaholm; Kayla Dobies, Macomb Dakota; Kelsey Emmanuel, Lowell; Lars Hornburg, Traverse City Central; Marie Lachance, East Grand Rapids; Anna Laffrey, East Grand Rapids; Allia Marie McDowell, Farmington Hills Mercy; Jason Ren, Canton; Easton Schultz, East Grand Rapids; Genevieve Soltesz, Mattawan; and Mallak Taleb, Dearborn Heights Crestwood.</span></p>
+<p><strong>Overviews of the scholarship recipients of the Class A Scholar-Athlete Award follow. A quote from each recipient's essay also is included:</strong></p>
+<p><strong>Kayla Dobies, Macomb Dakota</strong><br />  Ran four seasons of varsity cross country, will run her fourth of varsity track and field and played varsity basketball as a sophomore. Owns school records in high jump, as part of 3,200 and 1,600-meter relays, and also for fastest cross country 5K. Served as cross country team’s captain three years and made the MHSAA Finals twice. Qualified for the last three MHSAA Track &amp; Field Finals, placing twice. Earned academic all-state in cross country twice and track and field three times. Serves as treasurer in her second year of National Honor Society, is in her third year as a Joyce Ivy Foundation fellow and member of the Mu Alpha Theta mathematics honors society. Also has participated in Science Olympiad and First Robotics. Mentors middle school track athletes and created and directs a youth summer track and field camp. Will attend Princeton University and study neuroscience with aspirations of becoming a neurosurgeon.</p>
+<p><em>Essay Quote: “For most athletes, sportsmanship is high-fiving your opponents at the end of a game. Constantly repeating, ‘good game,’ just to be polite. … Sportsmanship means much more than a pat on the back, more than a ‘good game.’ Sportsmanship is showing love for the people who face the same hardships as you, regardless of what team they play for.”</em></p>
+<p><strong>Kelsey Emmanuel, Lowell</strong><br />  Played two years of varsity volleyball, will run her third of varsity track and field this spring, ran two seasons of varsity cross country and played two seasons of subvarsity basketball. Served as volleyball captain in the fall and junior varsity basketball captain as a sophomore, and earned sportsmanship awards in two sports. Participating in third year of Lowell Youth Advisory Council, this year as treasurer, and is secretary in her second year of student council. Also is in her second year of National Honor Society and fourth of Lady Arrows Varsity Club, and was part of a State Farm “Celebrate my Drive” safe driving campaign in 2013 that placed among the top 50 nationally. Participated in her school’s musical and Christmas play as a junior. Will attend New York University and study international relations.</p>
+<p><em>Essay Quote: “A person who is able to take away a lesson from a loss is a teammate who shows dedication to lead others toward improvement and reaching their goals. When someone notices good camaraderie amongst teammates, there is no question that there is an athlete encouraging and positively leading them behind the scenes. Sportsmanship is like an identical twin to leadership. When an athlete represents sportsmanship on the field, she is also representing herself as a role model and leader in her community and school.”</em></p>
+<p><strong>Marie Lachance, East Grand Rapids<br />  </strong>Swam four seasons on varsity, helping East Grand Rapids to MHSAA team titles in 2013 and 2014; will compete in her second season as a varsity pole vaulter this spring. Earned all-state honorable mention in swimming as a sophomore and junior and made the MHSAA Finals in track and field as a junior. Served or will serve as captain of both teams as a senior. Also coached We the People constitutional debate team that was first in state and eighth nationally. Serves as co-president of National Honor Society chapter and has held leadership positions as part of a number of school groups. Earned AP Scholar Award, Harvard Book Award and is a Joyce Ivy Foundation fellow. Founded and organized a TEDx event at her school and participated in both the Brown University Leadership Institute and Eileen Fisher Leadership Institute. Volunteers with Orchard Hills Swim Team youth program, East Grand Rapids recreation department and Grand Rapids’ Comprehension Therapy Center. Will attend Brown University and study business with a concentration in entrepreneurship and organizations.</p>
+<p><em>Essay Quote: “I am a swift swimmer. I am a fierce pole vaulter. But above all, I am an incredible teammate. Although there are no medals or podium for this feat, throughout my 11 years of being a competitive swimmer, I have learned that displaying sportsmanship is the true reward of competitive athletics.”</em></p>
+<p><strong>Anna Laffrey, East Grand Rapids</strong><br />  Ran four seasons of varsity cross country and will run third of varsity track and field this spring;  also played junior varsity lacrosse. Qualified for the MHSAA Finals her final three seasons in cross country and the last two in track. Earned all-state on a 3,200-meter relay Finals champion in 2015 and helped the cross country team to a Finals runner-up finish in the fall. Captained the cross country team and will captain the track and field team this spring. Served as opinion editor and then editor-in-chief of student newspaper,  winning multiple awards from the Michigan Interscholastic Press Association, and was public relations head for school’s TEDx event committee. Coached We the People constitutional debate team that was first in state and eighth nationally. Served multiple leadership roles for school’s Leadership &amp; Youth Development group. Selected as only member of graduating class to her school district’s foundation board. Is undecided where she will attend college but intends to study journalism.</p>
+<p><em>Essay Quote: “I realized that the team from down the street had made me a stronger person. (It) had taught me to face defeat with optimism and combat failure with hard work. More importantly, however, it had taught me integrity. … Great rivalries aren’t made from trash talk and aggression. Rather, they’re fostered from mutual respect and shared passion: epitomizing the characteristics of sportsmanship.”</em></p>
+<p><strong>Allia Marie McDowell, Farmington Hills Mercy</strong><br />  Will play her third full season of varsity soccer this spring and played three seasons on the school’s varsity field hockey team; also played subvarsity basketball as a freshman. Helped her soccer team to Regional Finals in 2013 and 2014 and earned all-area honors last spring. Served as varsity soccer captain and also captain of soccer and field hockey junior varsities. Served as editor-in-chief of school newspaper that received the highest honor by the Michigan Interscholastic Press Association, and also won individual awards. Selected for National Honor Society and is a member of the Mercy Junior Classical League and a number of additional school clubs. Has volunteered throughout high school for Our Lady of Victory events, Detroit Red Wings games and camps and St. Joseph Mercy Hospital/The Farm at St. Joe’s projects, taking leadership roles with all three organizations. Is undecided where she will attend college but will study journalism and business.</p>
+<p><em>Essay Quote: “Sportsmanship gets a lot of lip service by players. They talk about being good sports, and then sometimes they aren’t. They talk about poor attitude of other teams, but sometimes don’t encourage their own teammates on the field. … But high school athletes are scholar-athletes. That means athletics are meant to be an extension of learning. And sportsmanship is something that is taught.”</em></p>
+<p><strong>Genevieve Soltesz, Mattawan</strong><br />  Ran four seasons of varsity cross country and will play her fourth of varsity softball this spring; also played subvarsity basketball as a freshman. Played key roles on softball teams that won an MHSAA championship in 2013 and made the Semifinals in 2015, earning all-state in that sport as a junior and all-division honors in cross country. Served as captain of both varsity teams. Ranks first academically in her school’s graduating class and scored a perfect score on her ACT college entrance exam. Earned AP Scholar with Distinction and was named National Merit Award semifinalist. Participating in National Honor Society for third year and is president of Mattawan High School History Club. Volunteers with local food drive and elementary school Battle of the Books, and has served as a youth softball instructor and high school peer tutor. Will attend Columbia University in New York and study operations research and financial engineering.</p>
+<p><em>Essay Quote: “As vital as sportsmanship is, it is not innate; it must be learned over time. Unfortunately, in the midst of competition, athletes sometimes abandon this skill in favor of anger or selfishness. It is the ability to resist this urge that shows true sportsmanship. … By participating in high school sports, athletes are able to witness and practice sportsmanship in ways that their peers are not.”</em></p>
+<p><strong>Mallak Taleb, Dearborn Heights Crestwood</strong><br />  Ran two seasons of varsity cross country as a freshman and sophomore, also played varsity basketball as  a sophomore, and will play her fourth season of varsity soccer this spring. Has served as captain of soccer team since sophomore season and also was basketball captain that year. Helped soccer team to back-to-back league championships and qualified for Regional competition in cross country as a freshman. Participating in fourth year of student congress and as president, and serves on the board of directors for her school’s Students Against Destructive Decisions chapter. Also participates in National Honor Society, Link Crew and was co-founder of Books for a Benefit program to assist needy schools; also launched multiple fundraisers to assist needy and refugees. Earned various academic achievement and service and leadership awards, and was selected for the American Legion Auxiliary Girls State program and nominated for the U.S. National Chemistry Olympiad team. Has not chosen where she’ll attend college, but will study biomedical engineering.</p>
+<p><em>Essay Quote: “The value of sportsmanship … includes the sacrifices you make for your teammates and the examples you serve to those who look up to you. For me, sportsmanship is an act – a decision to encourage, inspire, motivate and respect others and opponents.</em></p>
+<p><strong>Drew Blakely, Richland Gull Lake<br />  </strong>Played three seasons of varsity baseball and will play his fourth this spring. Earned all-state honors his first three seasons including making the Dream Team, which includes the best regardless of division, in 2015. Served as team captain last season.  Participating in National Honor Society for the second year and also his second year in the school’s PAL program to mentor and tutor middle school students; served on the school’s Captain’s Council as a junior. Earned a 4.1 grade-point average and became the only freshman in school history to score a 5 on the AP U.S. History exam. Volunteers as part of the baseball program, his church and with middle school students with disabilities and also with Relay for Life. Chosen to speak at local church and Rotary Club. Will attend the University of Virginia and study kinesiology.</p>
+<p><em>Essay Quote: “I have learned that when you encourage your teammates and show dignity to your opponents, your performance tends to improve as well. Many players look up to me because of my talent, but I think it is more important they look up to me for my character on and off the field. … I want to leave a legacy for my sportsmanship and have my talent be nothing more than an additional bonus.”</em></p>
+<p><strong>Kobe Burse, Muskegon Mona Shores</strong><br />  Played three seasons of varsity football, four of varsity basketball and will participate in his third of varsity track and field this spring. Earned all-league honors in football and basketball and all-state honorable mention as well in basketball; captained both teams including the basketball team his final two seasons. Helped football team to three playoff appearances and an appearance in the 2014 Division 2 Final, and qualified for the MHSAA Finals for track and field as a junior. Has participated with Kids Food Basket and as a reader to his district’s elementary school students the last four years and also as a peer tutor as a senior. Also participates with his church youth group and serves as instructor for junior basketball and youth football programs. Will attend Miami University in Ohio and study psychology.</p>
+<p><em>Essay Quote: “Participation in sports – or any group, for that matter – teaches a number of lessons. Whether it is time management, hard work, or perseverance, student-athletes – upon walking across that graduation stage – seem to take away more from their time in athletics than they give. … More than anything else, my participation in educational athletics has taught me how to be a sportsmanlike teammate – an emphatic partner, encouraging leader and selfless individual to lean upon throughout all phases of competition.”</em></p>
+<p><strong>Riley Costen, Hudsonville</strong><br />  Played two seasons of varsity tennis and two of varsity basketball and also played subvarsity baseball and football. Earned all-league honors in tennis as a junior after winning a flight championship and helped his basketball team to a District title in 2015. Served as captain for both varsity teams and also his freshman football team. Earned AP Scholar with Honor award and is a member of his school’s Eagle Gold Renaissance academic program; ranks third in graduating class academically with a 4.231 grade-point average. Participating on student council for fourth year and with National Honor Society for second, and also is a Links mentor and member of his church youth group. Selected twice for interview team for new teacher hires. Serves as community education coach and has umpired baseball and softball games; also initiated and planned a community-wide fundraiser that raised more than $20,000 for a young boy with cancer. Is undecided where he will attend college and what field of study he will pursue.</p>
+<p><em>Essay Quote: “I believe if athletes realize the true honor it is to be called a student-athlete, the participants themselves and whole programs will become more successful. When I say ‘successful,’ I’m not talking about the win/loss record. Rather, I’m talking about displays of good character, mutual respect between teammates, opponents and officials; honesty, integrity and discipline; or simply, the core values of sportsmanship.”</em></p>
+<p><strong>Zaven Dadian, Birmingham Seaholm<br />  </strong>Played four seasons of varsity tennis and will play his third of varsity golf this spring; also played subvarsity basketball as a freshman. Earned all-state honors in tennis and won three individual Regional championships while helping his team to four Regional team titles; served as captain of the tennis team two seasons. Earned golf team’s Sportsmanship Award. Playing in fourth year of band and as principle chair for concert and symphony, receiving Division I ratings for solo and ensemble for piano; also has served two years as marching band section leader. Participating in second year of National Honor Society and iMatter for Kids, and has been a member all four years of the Armenian Christian Youth Organization of America. Participates in various service projects through his church and received an ACYOA service award. Will attend University of Michigan and study business.</p>
+<p><em>Essay Quote: “Sportsmanship is not always about winning the match, but how you conduct yourself both in times of victory and defeat. I play each match knowing that whatever the outcome may be, I will hold my composure and be the first man at the net to shake hands. When people think of me, they may not remember whether I won the big match, but that I was honorable.”</em></p>
+<p><strong>Lars Hornburg, Traverse City Central<br />  </strong>Played two seasons of varsity soccer and competed four seasons on varsity ski team; also participated in varsity track and field as a sophomore. Earned a Regional championship and finished MHSAA Finals runner-up individually in skiing and helped his soccer team to a District title. Earned all-league honors in both sports and all-state in skiing and also served as captain of both soccer and ski teams. Named Junior Olympian three times by U.S. Ski Association Rocky/Central division. Participating in second year of National Honor Society and fourth in school’s select choir, for which he is a section leader; earned top scores at state choral festival. Earned AP Scholar award has participated three years in his district’s Sci-Ma-Tech advanced science/math/technology program, earning a second place at a regional science symposium. Also is participating for third year in G.1.F.T. student-run community charity. Will attend Harvard University and intends to study environmental science.</p>
+<p><em>Essay Quote: “Sportsmanship is about respect for others as individuals in the face of competition, recognizing not only our opponents’ but also our teammates’ unique personal challenges and strengths. Just as we shape each other and hone each other on the field, true sportsmen look to build each other up on and off the field.”</em></p>
+<p><strong>Jason Ren, Canton</strong><br />  Played four seasons of varsity soccer and helped his team to an MHSAA championship in 2014 and runner-up finish in 2015. Earned all-state honorable mention in addition to all-league and other honors and received scholar-athlete honors three seasons. Served as co-captain as a senior in the fall. Participating in second year of National Honor Society and currently as president, and is also in his second year as co-captain of the school’s Math Olympiad team. Earned AP Scholar and Scholar with Distinction awards and is a National Merit Award semifinalist. Also earned certificate of distinction from American Mathematics Competition and honorable mention from the Michigan Math Prize Competition as a two-time finalist. Provides ACT/SAT instruction and also contributes in his community as a member of Key Club and as a volunteer soccer referee for Special Olympics and youth soccer coach. Is undecided where he will attend college but will study computer science and business.</p>
+<p><em>Essay Quote: “The camaraderie developed among teammates and the life lessons taught by educational athletics outweigh winning or losing by a long shot. Ultimately, educational athletics give us a unique opportunity to grow as people – developing, understanding and exhibiting sportsmanship are the best ways to take full advantage of that opportunity.”</em></p>
+<p><strong>Easton Schultz, East Grand Rapids<br />  </strong>Ran three seasons of varsity cross country and will run third of varsity track and field; also played subvarsity basketball and football. Helped cross country team to best two MHSAA Finals finishes in school history. Earned all-league honorable mention as a junior and academic all-state three years. Served or will serve as captain of both cross country and track and field varsity teams. Participating in fourth year of student council and is a member of National Honor Society. Earned AP Scholar with Distinction; also honored by the Native American Financial Officers Association and received the Tribal Economic Development National Leader Award. Works as a paid intern for his tribe, the Nottawaseppi Huron Band of the Potawatomi, and hosted a youth camp to teach tribal history and cultural arts and crafts. Raised $5,000 for the American Cancer Society over five years as captain of Relay for Life team. Will attend Harvard University and study economics with a dual study of finance at the Massachusetts Institute of Technology Sloan School of Management.</p>
+<p><em>Essay Quote: “Through encouragement from a rival and my assistance paid in return, my seemingly dreary senior season became an enjoyable learning experience. Before my injury, I had downplayed the importance of sportsmanship, but I now recognize its vital role in the character development of young adults and hope that other high school athletes will be as positively affected by sportsmanship as I was.”</em></p>
+<p>Other Class A girls finalists for the Scholar-Athlete Award were: <span>Clare Brush, Ann Arbor Pioneer; Catherine Markley, Birmingham Seaholm; Lauren McLeod, Birmingham Seaholm; Cameron Peek, Caledonia; Jaime Freas, Dearborn Edsel Ford; Sarah Hartshorn, Dearborn Edsel Ford; Mackenzie Cole, East Grand Rapids; Brianna Costigan, Fenton; Ally Stapleton, Grand Rapids Forest Hills Central; Catherine Stapleton, Grand Rapids Forest Hills Central; Meredith Howe, Grand Rapids Forest Hills Northern; Erin Armbruster, Grosse Pointe North; Lindsey Rudden, Marquette; Olivia Arends, Mt. Pleasant; Mary Catherine McLaughlin, Northville; Ellen Wegener, Rochester; and Jennifer Eaton, St. Johns.</span></p>
+<p>Other Class A boys finalists for the Scholar-Athlete Award were: <span>Jack Eisentrout, Ann Arbor Pioneer; Nathan Lazor, Birmingham Groves; Brendan Oosse, East Grand Rapids; Jared Char, Farmington Hills Harrison; Charles R. Perkins Jr., Farmington Hills Harrison; Santino J. Guerra, Flint Kearsley; Garrett Farney, Grandville; Noah Andrew Weigle, Grandville; Jeremy Tervo, Hartland; Eric Mettetal, Howell; Daniel Karel, Hudsonville; Traver Parlato, Kalamazoo Loy Norrix; Kevin Hansen, Lake Orion; Alexander Oquist, Livonia Stevenson; Benjamin G. Cole, Marquette; Joseph Weber, Marquette; Kyle Jones, Swartz Creek.</span></p>
+<p>The Class C and D scholarship award recipients were announced Feb. 2, and the Class B honorees were announced Feb. 9. All can be found on the MHSAA Website by clicking the “Scholar-Athlete” link at the bottom of the page under “Students.”</p>
+<p>Farm Bureau Insurance of Michigan was founded in 1949 by Michigan farmers who wanted an insurance company that worked as hard as they did. Those values still guide the company today and are a big reason why it is known as Michigan’s Insurance Company, dedicated to protecting the farms, families, and businesses of this great state. Farm Bureau Insurance agents across Michigan provide a full range of insurance services—life, home, auto, farm, business, retirement, Lake Estate®, and more—protecting nearly 500,000 Michigan policyholders.</p>
+<p>The MHSAA is a private, not-for-profit corporation of voluntary membership by more than 1,400 public and private senior high schools and junior high/middle schools which exists to develop common rules for athletic eligibility and competition. No government funds or tax dollars support the MHSAA, which was the first such association nationally to not accept membership dues or tournament entry fees from schools. Member schools which enforce these rules are permitted to participate in MHSAA tournaments, which attract more than 1.4 million spectators each year.</p>
+
+
+  </div>
+
+
+    <footer>
+      
+              <p>
+          Tags:
+                      <a href="/taxonomy/term/219">Scholar-Athlete Awards</a>, 
+                      <a href="/taxonomy/term/282">Traverse City Central</a>, 
+                      <a href="/taxonomy/term/371">Richland Gull Lake</a>, 
+                      <a href="/taxonomy/term/162">East Grand Rapids</a>, 
+                      <a href="/taxonomy/term/285">Macomb Dakota</a>, 
+                      <a href="/taxonomy/term/410">Birmingham Seaholm</a>, 
+                      <a href="/taxonomy/term/195">Lowell</a>, 
+                      <a href="/taxonomy/term/220">Canton</a>, 
+                      <a href="/taxonomy/term/184">Hudsonville</a>, 
+                      <a href="/taxonomy/term/360">Muskegon Mona Shores</a>, 
+                      <a href="/taxonomy/term/1135">Dearborn Heights Crestwood</a>, 
+                      <a href="/taxonomy/term/416">Mattawan</a>, 
+                      <a href="/taxonomy/term/179">Farmington Hills Mercy</a>
+                  </p>
+          </footer>
+
+</article>
+
+<span
+  autoloader
+  tag="113"
+  created="1455552122"
+  >
+  <!-- Fetches Next Article -->
+</span>
+
+      </div>
+</div>
+
+
+</main>
+      <div class="width--1-3 visible@m">
+    <aside  role="complementary">
+      <div>
+  <div id="block-views-block-more-stories-block-1">
+    
+              <h2 class="heading-4">More Stories</h2>
+          
+          
+<div class="views-element-container">
+  <article role="article" about="/topics/boys-tennis/team-month-birmingham-groves-boys-tennis" typeof="schema:Article" class="article teaser-h block-link" gender="boys">
+
+  
+    <span property="schema:name" content="Team of the Month: Birmingham Groves Boys Tennis" class="hidden"></span>
+
+
+          <span class="topic">
+                    Boys Tennis
+              </span>
+    
+  <a class="title" href="/topics/boys-tennis/team-month-birmingham-groves-boys-tennis"><span property="schema:name">Team of the Month: Birmingham Groves Boys Tennis</span>
+</a>
+  <p class="date">Posted: 11/23/21</p>
+
+</article><article role="article" about="/topics/viewpoints/week-high-school-sports-112321" typeof="schema:Article" class="article teaser-h block-link">
+
+  
+    <span property="schema:name" content="This Week In High School Sports: 11/23/21" class="hidden"></span>
+
+
+          <span class="topic">
+                    Viewpoints
+              </span>
+    
+  <a class="title" href="/topics/viewpoints/week-high-school-sports-112321"><span property="schema:name">This Week In High School Sports: 11/23/21</span>
+</a>
+  <p class="date">Posted: 11/23/21</p>
+
+</article><article role="article" about="/topics/volleyball/title-ix-50-marysville-builds-winning-streak-yet-be-challenged" typeof="schema:Article" class="article teaser-h block-link">
+
+  
+    <span property="schema:name" content="Title IX at 50: Marysville Builds Winning Streak Yet to be Challenged" class="hidden"></span>
+
+
+          <span class="topic">
+                    Volleyball
+              </span>
+    
+  <a class="title" href="/topics/volleyball/title-ix-50-marysville-builds-winning-streak-yet-be-challenged"><span property="schema:name">Title IX at 50: Marysville Builds Winning Streak Yet to be Challenged</span>
+</a>
+  <p class="date">Posted: 11/23/21</p>
+
+</article><article role="article" about="/topics/football/father-son-bond-helps-set-foundation-hudsons-dominating-defense" typeof="schema:Article" class="article teaser-h block-link">
+
+  
+    <span property="schema:name" content="Father-Son Bond Helps Set Foundation for Hudson&#039;s Dominating Defense" class="hidden"></span>
+
+
+          <span class="topic">
+                    Football
+              </span>
+    
+  <a class="title" href="/topics/football/father-son-bond-helps-set-foundation-hudsons-dominating-defense"><span property="schema:name">Father-Son Bond Helps Set Foundation for Hudson&#039;s Dominating Defense</span>
+</a>
+  <p class="date">Posted: 11/23/21</p>
+
+</article>
+  <div class="article teaser-h block-link">
+    <a class="title" href="/articles">See All Articles &raquo;</a>
+  </div>
+
+</div>
+
+      </div>
+</div>
+
+    </aside>
+  </div>
+
+  </div>
+</div>
+  <footer  id="site-footer" class="padding-v--l" role="contentinfo">
+    <div class="container">
+      <div grid="">
+        
+<div class="width--1-1 flex--between">
+  <div>
+        <address class="flex--column">
+      <span>Michigan High School Athletic Association</span>
+      <span>1661 Ramblewood Drive</span>
+      <span></span>
+      <span>
+        East Lansing,
+        MI
+        48823
+      </span>
+    </address>
+  </div>
+
+  <div>
+                <div class="flex--column">
+      <span>
+        <span aria-hidden="true">E.</span>
+        <span class="visually-hidden">Email:</span>
+        <a href="mailto:secondhalf@mhsaa.com">secondhalf@mhsaa.com</a>
+      </span>
+      <span>
+        <span aria-hidden="true">P.</span>
+        <span class="visually-hidden">Phone:</span>
+        <a href="tel:+517-332-5046">517-332-5046</a>
+      </span>
+      <span>
+        <span>
+        <span aria-hidden="true">F.</span>
+        <span class="visually-hidden">Fax:</span>
+        <span>517-332-4071</span>
+      </span>
+      </span>
+    </div>
+  </div>
+
+  <hr class="width--1-1 margin-v">
+
+  <div>
+    <a href="/user/login">Admin Login</a>
+  </div>
+
+  <div>
+    <a class="flex--middle" href="https://www.gravityworksdesign.com">
+      <svg width="20" height="20">
+        <use xlink:href="#icon-gravity-works"></use>
+      </svg>
+      &nbsp;
+      Website Design By Gravity Works
+    </a>
+  </div>
+</div>
+
+
+
+      </div>
+    </div>
+  </footer>
+
+  <div id="offcanvas-overlay" class="hidden@m">
+    <div  id="region-offcanvas" role="banner">
+      <div class="width-child--1-1 container" grid="small">
+        <div class="width--1-1 flex--first flex--right">
+          <button class="offcanvas-toggle plain">
+            <svg width="35" height="35"><use xlink:href="#icon-close"></use></svg>
+          </button>
+        </div>
+        
+<div class="margin-r--auto margin-b flex--first">
+  <div id="block-sitebranding">
+    
+          
+
+          <a href="/" rel="home">
+        <img src="/sites/default/files/logo.png" alt="Home" />
+      </a>
+            
+  </div>
+</div><div class="flex--middle">
+  <div class="container">
+    <nav role="navigation" aria-labelledby="block-oc-header-navigation-menu" id="block-oc-header-navigation">
+                                
+      <h2 class="visually-hidden" id="block-oc-header-navigation-menu">Header Navigation</h2>
+      
+
+                    
+
+    <ul class="menu menu-level-0">
+      
+    <li class="menu-item">
+      
+
+  
+  
+  <a href="https://www.mhsaa.com/">    <span class="menu-link-title  ">MHSAA.com</span>
+    
+  </a>
+
+
+
+    </li>
+      
+    <li class="menu-item">
+      
+
+  
+  
+  <a href="http://www.mhsaa.tv/">    <span class="menu-link-title  ">MHSAA.TV</span>
+    
+  </a>
+
+
+
+    </li>
+      
+    <li class="menu-item">
+      
+
+  
+  
+  <a href="https://www.meridix.com/group/index.php?liveid=MHSAA#/">    <span class="menu-link-title  ">Audio</span>
+    
+  </a>
+
+
+
+    </li>
+      
+    <li class="menu-item">
+      
+
+  
+  
+  <a href="/search">    <span class="menu-link-title visually-hidden ">Search</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45ZM29.7915 26.7464L34.66 31.6141C35.1141 32.073 35.1141 32.8152 34.6551 33.2741L33.2732 34.6558C32.8191 35.1147 32.0768 35.1147 31.6178 34.6558L26.7493 29.7881C26.5295 29.5684 26.4074 29.2706 26.4074 28.9581V28.1623C24.6837 29.5098 22.5156 30.3105 20.157 30.3105C14.5462 30.3105 10 25.7651 10 20.1553C10 14.5455 14.5462 10 20.157 10C25.7678 10 30.314 14.5455 30.314 20.1553C30.314 22.5134 29.5131 24.6812 28.1654 26.4046H28.9613C29.2739 26.4046 29.5717 26.5267 29.7915 26.7464ZM13.9065 20.1553C13.9065 23.612 16.7046 26.4046 20.157 26.4046C23.6143 26.4046 26.4074 23.6071 26.4074 20.1553C26.4074 16.6986 23.6094 13.9059 20.157 13.9059C16.6997 13.9059 13.9065 16.7034 13.9065 20.1553Z" fill="currentColor"></path>
+</svg>
+
+
+
+  </a>
+
+
+
+    </li>
+    </ul>
+
+
+
+          </nav>
+  </div>
+</div>
+<div class="width--1-1" id="block-oc-main-navigation">
+  <nav role="navigation" aria-labelledby="block-oc-main-navigation-menu">
+                      
+    <h2 class="visually-hidden" id="block-oc-main-navigation-menu">Main navigation</h2>
+    
+
+              
+              <ul>
+              <li>
+        <a href="/topics" data-drupal-link-system-path="node/2">Topics</a>
+              </li>
+          <li>
+        <a href="/videos" data-drupal-link-system-path="node/3">Videos</a>
+              </li>
+          <li>
+        <a href="/rankings" data-drupal-link-system-path="node/5">Rankings</a>
+              </li>
+          <li>
+        <a href="/submit-idea" data-drupal-link-system-path="node/6">Submit An Idea</a>
+              </li>
+          <li>
+        <a href="/about" data-drupal-link-system-path="node/7">About</a>
+              </li>
+        </ul>
+  
+
+
+      </nav>
+</div>
+<div class="flex--middle">
+  <div class="container">
+    <nav role="navigation" aria-labelledby="block-oc-social-media-menu" id="block-oc-social-media">
+                                
+      <h2 class="visually-hidden" id="block-oc-social-media-menu">Social Media</h2>
+      
+
+                    
+
+    <ul class="menu menu-level-0">
+      
+    
+    <li class="menu-item">
+      <a href="https://www.facebook.com/MHSAASports">      <span class="visually-hidden menu-link-title">Facebook</span>
+                    
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 320 512">
+  <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+</svg>
+
+
+
+    
+
+
+          </a>
+    </li>
+      
+    
+    <li class="menu-item">
+      <a href="https://instagram.com/mhsaasports">      <span class="visually-hidden menu-link-title">Instagram</span>
+                    
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512">
+  <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+</svg>
+
+
+
+    
+
+
+          </a>
+    </li>
+      
+    
+    <li class="menu-item">
+      <a href="https://twitter.com/mhsaa">      <span class="visually-hidden menu-link-title">Twitter</span>
+                    
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 512 512">
+  <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+</svg>
+
+
+
+    
+
+
+          </a>
+    </li>
+      
+    
+    <li class="menu-item">
+      <a href="http://www.youtube.com/MHSAASPORTS">      <span class="visually-hidden menu-link-title">Youtube</span>
+                    
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 576 512">
+  <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+</svg>
+
+
+
+    
+
+
+          </a>
+    </li>
+    </ul>
+
+
+
+          </nav>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/11922","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"google_analytics":{"account":"UA-67688371-1","trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"ajaxTrustedUrl":{"\/search":true},"user":{"uid":0,"permissionsHash":"5c729e7d8cf112ec39638210696f4171c36ccefc26a8ae5dca004c064f1a2426"}}</script>
+<script src="/sites/default/files/js/js_ROlS5rAY_1-OkVCjWBeK54mwysY0Cp3OI_xefAzwvM8.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dinbror/blazy@1.8.2/blazy.min.js"></script>
+<script src="/sites/default/files/js/js_xoH_KkIgYH4l_B6Ofr7DNgCcF-ExmRKtGwpl1NpRQLE.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-99787f100cdf2d99b29","applicationID":"1080190809","transactionName":"YlMDY0RTXEVQURFbW1sZIFRCW11YHkIEVVFqVQBUXlc=","queueTime":0,"applicationTime":23,"atts":"ThQAFQxJT0s=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

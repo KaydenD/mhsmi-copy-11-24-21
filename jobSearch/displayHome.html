@@ -1,0 +1,812 @@
+<!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8">    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    <meta name="description" content="">    <meta name="author" content="">	    <link rel="icon" type="img/svg" href="/images/icons/herff-jones-vector-icon.svg">	<title>Yearbook Order Center</title>	<link href="/includes/fontawesome-5.14.0/css/all.min.css" rel="stylesheet">    <link href="/includes/style/dist/style.css" rel="stylesheet">	<link href="/includes/style/jquery-ui.1.12.1.css" rel="stylesheet">    <link href="https://fonts.googleapis.com/css?family=Oswald:500,600,700|Lato:400,700,900&display=swap" rel="stylesheet">	<link href="/includes/style/custom.css" rel="stylesheet">    <script src="/includes/javascript/jquery.min-3.4.1.js"></script>	<script src="/includes/javascript/bootstrap.min-4.4.1.js"></script>	<script src="/includes/javascript/jquery-ui-1.12.1.js"></script>	<script type="text/javascript" src="/includes/javascript/library.js?v=20211124034127"></script>	<script type="text/javascript" src="/includes/javascript/spin.min-2.3.1.js"></script>						</head><body><!-- Layout.Portal.cfm -->
+	<!-- schoolHomeHelper.cfm -->
+	<script language = "javascript" type = "text/javascript">
+	var cityState = "";
+	$(function(){
+		$("input[type=text]").val('');
+		$('#getOrderErrorContainer').hide();	
+		$("input[name='jobNumber']").focus();
+		
+		$('#schoolName').keypress(
+			function(event){
+			// prevent enter key on school name autocomplete
+			if (event.which == '13') {	
+	    		event.preventDefault();
+			}
+		});
+	
+		$('#schoolName').autocomplete({
+			minLength: 3, //Controls how many characters they have to type before search happens
+			delay: 600, //IMPORTANT - this ensures every time they type something it doesn't start a search
+
+			source: function( request, response ) {
+				$('.error').html("");
+				cityState = "";
+				$('#schoolName').addClass('waiting');
+				$(".loading").show();
+				
+				$('#getOrderBySchoolContainer').html('');
+				//This is the ajax call for the search
+				$.ajax({
+					url: "https://www.yearbookordercenter.com/jobsearch/findSchools",
+					dataType: "json",
+					data: {
+						term: request.term //IMPORTANT - this will be the rc value you look for in the method the ajax calls
+					},
+					success: function(data){
+						//Happens when the search completes successfully (meaning status 200 OK, not that the error failed, you need to handle that)
+						$( "#schoolName" ).removeClass('waiting');
+						$(".loading").hide();
+						response($.map(data, function(item){
+							return {
+								label: item.label,
+								citystate: item.citystate, //Basically this sets up the dropdown item values - must have label and value at a minimum
+								value: item.label,
+								id: item.id
+							};
+						}));
+					}
+				});
+			},
+	
+			select: function( event, ui ) {
+					if (ui.item.id == 0) {
+						$('#schoolName').val("");
+						window.location.href = "https://www.yearbookordercenter.com/jobsearch/displayHome?findSchool=0";
+					} else {
+						showLoadingInProgress('');
+						cityState = ui.item.citystate;
+						var url = '/ProxyFactory.cfc';
+						var data = {
+							method: 'subProcess',
+							service: 'jobsearch.JobSearchService',
+							remoteMethod: 'getJobBySchool',
+							target: '#getOrderBySchoolContainer',
+							error: '#getOrderErrorContainer',
+							argumentCollector: '{"custNumber":"' + ui.item.id + '"}'
+						}; //Instead of using the old dropdown customer number, use the ui.item.id value we set up in the success listener above
+						var completeFunction = handleJobResult; //method that is called after ajax call completes
+						resultAJAX(url, data, completeFunction);
+					}
+	
+			}
+	
+		}).data('ui-autocomplete')._renderItem = function( ul, item ) {
+			//This listener styles the dropdown data the way we want, here is where you can add styles and space things out properly
+			item.label = item.label.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + $.ui.autocomplete.escapeRegex(this.term) + ")(?![^<>]*>)(?![^&;]+;)", "gi"), "$1");
+			return $( "<li class='w-100' style='border-bottom: 1px solid #bec0c0; margin-bottom: 10px;'><a href='#' class='btn btn-primary float-right'>Select</a><p class='mb-0 box-title selection-title'>" )
+				.data("item.autocomplete", item)
+				.append( item.label + "</p><p class='box-description selection-description'>" + item.citystate +  "</p></li>" )
+				.appendTo( ul );
+		};
+	
+		//End autocomplete configuration
+	
+		$('#search-school-job').submit(function(e){
+			setSchoolFormSubmit(e);
+		});
+	
+		$('#enter-order-number').submit(function(e){
+			getOrderNumberExisted(e)
+		});
+	
+	
+		$(".confirmContinue").click(function() {
+			$("#orderInformation").addClass('waiting');
+			$(".loading").show();
+			var jobNbr = $('#schoolJobNbr').val();
+			if(jobNbr == "") {
+				alert("Please select an order number from the dropdown.");
+				$('#orderInformation').removeClass('waiting');
+				//$('#orderInformation').html("");
+				$(".loading").hide();
+			}
+			else {
+				sendTracking("Homepage", "SchoolPostSelect", "Selected School Job");
+				var url = '/ProxyFactory.cfc';
+				var data = {method: 'verifyJobNbr',
+						 service: 'orm.hibernate.ORMServiceFactory',
+						 ORMObject: 'YearlySetting',
+						 remoteMethod: 'criteriaQuery',
+						 target: '#schoolNameSearchForm',
+						 error: '#getOrderErrorContainer',
+						 searchby:"schoolname",
+						 argumentCollector: '{"criteria": [{"eval":"EQ","type":"int","field":"jobNumber","value":' + jobNbr + '}]}'};
+				var completeFunction = handleResult;
+				resultAJAX(url,data,completeFunction);
+			}
+		});
+	
+		$(".confirmCancel").click(function() {
+			$('#schoolName').val("")
+			$('.error').html("");
+			$('#loginBox').hide();
+			$('#search-school-name').show();
+		});
+	
+	});
+	
+
+	function getOrderNumberExisted(e) {
+		e.preventDefault();
+		var confNumber = $('#confirmationNumber').val().toUpperCase();
+		if(confNumber == ''){
+			$('#getOrderErrorContainer').show();
+			$('#getOrderErrorContainer').html('Please enter your Confirmation Number to continue.');
+		} else {
+			$("#confirmationNumber").addClass('waiting');
+			$(".loading").show();
+			sendTracking("Homepage", "ConfNbrSearch", "Conf Number Search");
+			$('#getOrderErrorContainer').hide();
+			var url = '/ProxyFactory.cfc';
+			var data = {method: 'verifyOrderNbr',
+				 service: 'orm.hibernate.ORMServiceFactory',
+				 ORMObject: 'Order',
+				 remoteMethod: 'criteriaQuery',
+				 target: '#enter-order-number',
+				 error: '#getOrderErrorContainer',
+				 argumentCollector: '{"criteria": [{"eval":"EQ","type":"string","field":"confirmation","value":"' + confNumber + '"}]}'};
+			var completeFunction = handleResult;
+			resultAJAX(url,data,completeFunction);
+		}
+	}
+	
+	function setSchoolFormSubmit(e) {
+		e.preventDefault();
+		var $jobNbr = $("input[name='jobNumber']").val().toUpperCase();
+		if ($jobNbr == '') {
+			$('#getOrderErrorContainer').show();
+			$('#getOrderErrorContainer').html('Please enter your Order Number or select a school to continue.');
+		} else if (!is_int($jobNbr)) {
+			$('#getOrderErrorContainer').show();
+			$('#getOrderErrorContainer').html('Please enter a valid school number.');
+		} else {
+			$( "#jobNumber" ).addClass('waiting');
+			$(".loading").show();
+			$('#getOrderErrorContainer').hide();
+			var url = '/ProxyFactory.cfc';
+			var data = {
+				method: 'verifyJobNbr',
+				service: 'orm.hibernate.ORMServiceFactory',
+				ORMObject: 'YearlySetting',
+				remoteMethod: 'criteriaQuery',
+				target: '#search-school-job',
+				error: '#getOrderErrorContainer',
+				argumentCollector: '{"criteria": [{"eval":"EQ","type":"int","field":"jobNumber","value":"' + $jobNbr + '"}]}'
+			};
+			var completeFunction = handleResult;
+			resultAJAX(url, data, completeFunction);
+		}
+	}
+	
+	function handleJobResult(data, textStatus){
+		//This method builds the job number lookup flow
+		if (data.success) {
+			$(data.error).hide();
+			$('#jobSelectContainer').remove();
+			var jobNbrHandler = '<div id="jobSelectContainer">';
+			if (data.value.DATA.length >= 1) {
+				if(data.value.DATA.length > 1){
+					jobNbrHandler += '<input type="hidden" name="searchNbr" value="jobNbr"><select name="jobNbr" id="schoolJobNbr" class="form-control school-drop"><option value="">Select Your Order Number</option>';
+					for(var i in data.value.DATA){
+						jobNbrHandler += '<option value="' + data.value.DATA[i][0] + '">' + data.value.DATA[i][0];
+						if(data.value.DATA[i][1].length) {
+							jobNbrHandler += ' - ' + data.value.DATA[i][1];
+						}
+						jobNbrHandler += '</option>';
+					}
+					jobNbrHandler += '</select>';
+				} else if(data.value.DATA.length == 1) {
+					console.log(data.value);
+					jobNbrHandler += '<input type="hidden" name="searchNbr" value="jobNbr"><input type="hidden" name="txtSearchNbr" id="schoolJobNbr" value="' + data.value.DATA[0][0] + '"><div class="h4 text-14 text-uppercase">' + data.value.DATA[0][1] + ' &#8226; ' + cityState + ' &#8226; JOB# ' + data.value.DATA[0][0] + "</div>";
+				}
+	
+				jobNbrHandler += '</div></div>'
+				$('.credential').append(jobNbrHandler);
+				$('#loginBox').show();
+				$('#search-school-name').hide();
+				$( "#loginBox" ).removeClass('waiting');
+				$(".loading").hide();
+			} else {
+				$('#loginBox').removeClass('waiting');
+				$(".loading").hide();
+				$('#loginBox').hide();
+				$('.confirmation').hide();
+				$(data.error).show();
+				$(data.error).html("We're sorry. No order found for the selected school.");
+			}
+	
+		} else {
+			alert(data.value);
+			removeLoadingInProgress();
+		}
+	}
+	
+	function handleResult(data, textStatus){
+		if(data.success){
+			$(data.error).hide();
+			console.log(data.target);
+			$(data.target).unbind('submit');
+			$(data.target)[0].submit();
+		} else {
+			$(".loading").hide();
+			if($('#jobNumber').hasClass('waiting')) {
+				$('#jobNumber').removeClass('waiting');
+				$('#jobSearchButton').prop('disabled', false); 
+			}
+			if ($('#confirmationNumber').hasClass('waiting')) {
+				$('#confirmationNumber').removeClass('waiting');
+			}
+			if($("#orderInformation").hasClass('waiting')) {
+				$('#orderInformation').removeClass('waiting');
+				//$('#orderInformation').html("");
+				$('#loginBox').show();
+				$('.confirmation').hide();
+			}
+			$(data.error).show();
+			$(data.error).html( data.value );
+		}
+	}
+
+	function searchByJobNumber() {
+		$('.error').html("");
+		var jobNumber = $('#jobNumber').val().length;
+		if( jobNumber > 0 ) {
+			$('#jobSearchButton').prop('disabled', true);
+			$('#search-school-job').submit();
+		} 
+	}
+	
+	function searchExisting() {
+		$('#enter-order-number').submit();
+	}
+	
+	// toggles between the existing order look up form and new order form.
+	function showExistingOrderSearch(){
+		$('#search-school-job').hide();
+		$('#search-school-name').hide();
+		$('#enter-order-number').show();
+	}
+	
+	function hideExistingOrderButton() {
+		$('#existing-order').hide();
+		$('#school-order').show();
+		clearErrors();
+	}
+	
+	function hideSchoolOrderButton() {
+		$('#school-order').hide();
+		$('#existing-order').show();
+		clearErrors();
+	}
+	
+	function clearErrors() {
+		$('#getSchoolErrorContainer').html('');
+		$('#getOrderErrorContainer').html('');
+	}
+	</script>
+
+
+	<main id="landing-page" class="content">
+		<div class="container">
+      		<div class="row">
+             	<div class="col-12">
+	                <div class="text-center mb-4 mt-5 mt-md-4">
+	                    <h1 class="mb-3 font-weight-normal text-white text-uppercase mb-5">Yearbook Order Center</h1>
+	          		</div>
+          		</div>
+      		</div>
+      		<div class="row">
+        		<div class="col-12 col-md-8 offset-md-2">
+        			<div id="landing-form-outer" class="bg-white text-center">
+        				<div id="landing-forms-accordion" class="landing-forms accordion">
+        					
+        					<div id="orderInformation"></div>
+        					
+    						<div id="getOrderErrorContainer" class="h6 text-14 text-red error">
+								<noscript>
+									This site requires Javascript to function.  Please enable Javascript and reload this page.
+								</noscript>
+								
+							</div>
+        					<form name="search-school-job" id="search-school-job" class="form dropdown landing-search-form search-form-school collapse fade show" data-parent="#landing-forms-accordion" action="https://www.yearbookordercenter.com/general/displayLanding?portal=true" method="post">
+        						<h2 class="h2 text-uppercase">Start a new Order</h2>
+        						
+        						<div class="loading" style="display: none;"><i class="fa fa-spinner fa-spin"></i> Loading...</div>
+        						<div class="form-group text-left">
+        							<label for="jobNumber" class="h4 text-14 w-100">Enter your school's order number:</label>
+        							<div class="input-group">
+        								<input type="text" id="jobNumber" class="form-control" placeholder="i.e. 4489" name="jobNumber" required>
+        							</div>
+        						</div>
+        						<div class="form-group">
+									<button class="btn btn-primary btn-large w-100" id="jobSearchButton" onclick="searchByJobNumber();">Enter</button>
+								</div>
+        						<div id="search-by-school" class="text-left text-sm-center">
+        							<p class="text-16 ">Don't know the order number? <a href="#" onclick="clearErrors();" class="text-16" data-toggle="collapse" data-target=".search-form-school" aria-expanded="false" aria-controls="search-school-job search-school-name enter-order-number">Search by school name.</a></p>
+        						</div>
+        					</form>
+
+        					<form name="search-school-name" id="search-school-name" class="form dropdown landing-search-form search-form-school collapse fade" data-parent="#landing-forms-accordion" action="https://www.yearbookordercenter.com/general/displayLanding?portal=true" method="post">
+        						<h2 class="h2 text-uppercase">Start a new Order</h2>
+        						
+        						<div class="loading" style="display: none;"><i class="fa fa-spinner fa-spin"></i> Loading...</div>
+                        		<div class="form-group text-left">
+                        			<label for="schoolName" class="h4 text-14">Search for your school by name:</label>
+                        			<div class="input-group">
+                        				<input type="text" id="schoolName" class="form-control" placeholder="Enter School Name" name="schoolName" required>
+                        				<div class="input-group-btn bs-dropdown-to-select-group">
+                        					<ul id="school-search-dropdown" class="dropdown-menu w-100 white-content-box" role="menu">
+                        					</ul>
+                        				</div>
+                        			</div>
+                        		</div>
+                        		<div id="search-by-school" class="text-left text-sm-center">
+                        			<p class="text-14">Know the order number? <a href="#" onclick="clearErrors();" class="text-14" data-toggle="collapse" data-target=".search-form-school" aria-expanded="false" aria-controls="search-school-job search-school-name enter-order-number">Search by order number.</a></p>
+                        		</div>
+        					</form>
+        					
+        					
+				        	<div id="loginBox" class="row justify-content-center" style="display: none">
+								<form name="schoolNameSearchForm" id="schoolNameSearchForm" action="https://www.yearbookordercenter.com/general/displayLanding?portal=true" method="post">
+									<input type="hidden" name="searchBy" id="schoolSearch" value="schoolSearch">
+		        					<h2 class="h2 text-uppercase">You have selected</h2>
+							      	<div class="credential">
+							      	</div>
+							      	<p class="text-14 text-muted">Schools often have similar names, so please review your selection carefully to avoid ordering errors.</p>
+									<div class="loading" style="display: none;"><i class="fa fa-spinner fa-spin"></i> Loading...</div>
+									<a class="btn btn-primary mb-2 confirmContinue text-white">Continue</a>
+	        						<a class="btn btn-secondary mb-2 text-white" onclick="window.location.href='/jobsearch/logout'">Cancel</a>
+						      	</form>
+							</div> 
+							
+							
+        					<form id="enter-order-number" class="form dropdown landing-search-form search-form-confirmation collapse fade" data-parent="#landing-forms-accordion" action="https://www.yearbookordercenter.com/checkout/displayOrder" method="post">
+	                            <h2 class="h2 text-uppercase">Find an Existing Order</h2>
+                                <div class="form-group text-left">
+                                    <label for="confirmationNumber" class="text-14 h4">Enter your confirmation number below:</label>
+                                    <div class="input-group">
+                                        <input type="text" id="confirmationNumber" class="form-control" placeholder="EXAMPLE-232" required="true" name="confirmationNumber">
+                                    </div> 
+                                </div>
+                                
+                                <div class="form-group">
+                                    <button type="button" onclick="searchExisting()" class="btn btn-primary btn-large w-100">Find Order</button>
+                                </div>
+        					</form>
+        				
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        	
+      		<div class="row justify-content-center" id="existing-order">
+	        	<div class="col-12 col-md-8 text-center">
+	            	<div id="lookup-order-wrap">
+	                	<span class="h4 text-uppercase text-white">Already have an existing order?</span><br class="d-sm-none" />
+	                    <a href="#" class="btn btn-primary btn-small" data-toggle="collapse" data-target=".search-form-confirmation" aria-expanded="false" aria-controls="search-school-job search-school-name enter-order-number" onclick="hideExistingOrderButton();">Look up Order</a>
+	           		</div>
+              	</div>
+	    	</div>
+	    	
+	    	<div class="row justify-content-center" id="school-order" style="display: none;">
+	        	<div class="col-12 col-md-8 text-center">
+	            	<div id="lookup-order-wrap">
+	                	<span class="h4 text-uppercase text-white">Know your school's order number?</span><br class="d-sm-none" />
+	                    <a href="#" class="btn btn-primary btn-small" data-toggle="collapse" data-target=".search-form-school" aria-expanded="false" aria-controls="search-school-job search-school-name enter-order-number" onclick="hideSchoolOrderButton()">Look up School's Order</a>
+	           		</div>
+              	</div>
+	    	</div>
+	    	
+	
+    	</div>
+	</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 text-white">
+                <img id="landing-page-logo" class="logo logo-white" src="/images/icons/herff-jones-vector-logo.svg" alt="Herff Jones logo">
+                <p class="small">
+                    &copy; 2021 Herff Jones, All Rights Reserved.
+                    <br/>
+                    <a href="https://www.herffjones.com/privacy" target="_blank"  class="text-white small">Privacy Policy</a>
+              </p>
+            </div>
+            <div class="col-md-3 d-none d-md-block"></div>
+            <div class="col-md-3 text-white">
+                <h4 class="text-uppercase">En Espa&#xf1;ol</h4>
+                <p class="small">Llama al 866-287-3096 si necesitas un operador en espa&#xf1;ol.</p>
+            </div>
+            <div class="col-md-3 text-white">
+              <h4 class="text-uppercase">Need Help with Your Order?</h4>
+                  <p class="small mb-0"><span class="h5">Toll Free:</span> 866-287-3096</p>
+                  <p class="small mt-0">
+                      <span class="h5">Email:</span> 
+                      <a class="text-white small" href="mailto:yearbookordercenter@herffjones.com">yearbookordercenter@herffjones.com</a>
+                  </p>
+              <p class="small">
+                  Customer Support: Open Monday through Friday, 8:00 a.m. to 5:00 p.m. (CST).
+              </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+
+	
+	
+
+
+	
+	
+
+
+	
+	
+
+
+
+
+	<!-- Google Analytics -->
+	
+		
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-17360653-1']);
+				_gaq.push(['_trackPageview']);
+				
+				(function() {
+					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				})();
+
+				function sendTracking(category,value,label){
+					_gaq.push(['_trackEvent', category, value, label]);
+				}
+			</script>
+	
+	<!-- Google Tag Manager -->
+	
+			<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MRJBQN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+			<script>
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+				{'gtm.start': new Date().getTime(),event:'gtm.js'}
+				);var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+				j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','dataLayer','GTM-MRJBQN');
+			</script>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+			<script type="text/javascript">
+				try {
+					window.dataLayer = window.dataLayer || [];					window.dataLayer.HJEcommerce = window.dataLayer.HJEcommerce || [];					window.dataLayer.HJEcommerce.push({					'criteoAccountNumberAd':'61344',					'criteoAccountNumberYb':'55591',					'criteoAccountNumberArray':['55591','61344'],					'criteoAccountNumber':'55591',					'criteoHasCatalog':false,					'emarsysMerchantID':'1C79924127BB9143',					'email':'',					'customerId':'',					'ui_school':'',					'ui_job':'',					'productCode':'1',					'productCodeEmarsys':'2',					'products': [],					'cart': [],					'purchase': {'orderId':'','items':[]},					'end':true});
+					console.log('****HJEcommerce****');
+					console.log(window.dataLayer.HJEcommerce);
+				} catch (e) {
+					window.dataLayer = window.dataLayer || [];
+					window.dataLayer.HJEcommerce = window.dataLayer.HJEcommerce || [];
+				}
+			</script>
+			
+			<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+			<script type="text/javascript">
+				var ScarabQueue = ScarabQueue || [];
+				(function(id) {
+				  if (document.getElementById(id)) return;
+				  var js = document.createElement('script'); js.id = id;
+				  js.src = '//cdn.scarabresearch.com/js/1C79924127BB9143/scarab-v2.js';
+				  var fs = document.getElementsByTagName('script')[0];
+				  fs.parentNode.insertBefore(js, fs);
+				})('scarab-js-api');
+			</script>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					try {
+						var deviceType = /iPad/.test(navigator.userAgent)?"t":/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent)?"m":"d";
+						window.dataLayer = window.dataLayer || [];
+						window.dataLayer.HJEcommerce = window.dataLayer.HJEcommerce || [];
+						var HJEcommerceData =  window.dataLayer.HJEcommerce;
+					
+						//Criteo
+						window.criteo_q = window.criteo_q instanceof Array ? window.criteo_q : [];
+						var criteoData = window.criteo_q;
+
+						function runCriteo(criteoCartSegment, criteoAccountNumber, criteoTransactionId) {
+							//setAccount
+							//Override Criteo Account Number based on pathname
+							var pathname = window.location.pathname.toLowerCase() || "";
+							var validPathsArray = ["/", "/general/displayLanding", "/general/homepage"];
+							if (criteoCartSegment == null && validPathsArray.indexOf(pathname) >= 0) {
+								criteoAccountNumber = HJEcommerceData[0].criteoAccountNumberArray;
+							}
+
+							//(typeof HJEcommerceData[0].criteoAccountNumber !== "undefined" && HJEcommerceData[0].criteoAccountNumber != "")
+							if (criteoAccountNumber != "") {
+								criteoData.push({"event":"setAccount", "account": criteoAccountNumber});
+								//setSiteType
+								criteoData.push({"event":"setSiteType", "type": deviceType});
+					
+								//setEmail
+								if (typeof HJEcommerceData[0].email !== "undefined") {
+									criteoData.push({"event":"setEmail", "email": [HJEcommerceData[0].email]});
+								}
+								
+								//viewHome
+								if (
+									(typeof HJEcommerceData[0].productCode !== "undefined" && HJEcommerceData[0].productCode == "") &&
+									(typeof HJEcommerceData[0].products !== "undefined" && HJEcommerceData[0].products.length == 0) &&
+									(typeof HJEcommerceData[0].purchase.orderId !== "undefined" && HJEcommerceData[0].purchase.orderId == "") 
+									&& (!(typeof HJEcommerceData[0].cart !== "undefined" && HJEcommerceData[0].cart.length > 0))
+									) {
+									var viewHomeObject = {"event":"viewHome", "ui_school": "", "ui_job": ""};
+									//(ui_school)
+									if (typeof HJEcommerceData[0].ui_school !== "undefined" && HJEcommerceData[0].ui_school != "") {
+										viewHomeObject.ui_school = HJEcommerceData[0].ui_school;
+									}
+									
+									//(ui_job)
+									if (typeof HJEcommerceData[0].ui_job !== "undefined" && HJEcommerceData[0].ui_job != "") {
+										viewHomeObject.ui_job = HJEcommerceData[0].ui_job;
+									}
+									criteoData.push(viewHomeObject);
+								}
+								//viewList
+								if (
+									(typeof HJEcommerceData[0].productCode !== "undefined" && HJEcommerceData[0].productCode == "") &&
+									(typeof HJEcommerceData[0].products !== "undefined" && HJEcommerceData[0].products.length > 0) 
+									) {
+									items = [];
+									if (typeof HJEcommerceData[0].criteoHasCatalog !== "undefined" && HJEcommerceData[0].criteoHasCatalog) {
+										for (i=0; i<HJEcommerceData[0].products.length; i++) {
+											/*Criteo Maximum of 3 products in list: https://support.criteo.com/hc/en-us/articles/202806971 */
+											if (i < 3) {
+												items.push(HJEcommerceData[0].products[i].productCode);
+											}
+										}
+									} else {
+										items.push("1");
+									}
+									criteoData.push({"event":"viewList", "item" : items});
+								}
+								//viewItem
+								if (
+									(typeof HJEcommerceData[0].productCode !== "undefined" && HJEcommerceData[0].productCode != "") 
+									&& (!(typeof HJEcommerceData[0].cart !== "undefined" && HJEcommerceData[0].cart.length > 0))
+									) {
+									var viewItemObject = {"event":"viewItem", "ui_school": "", "ui_job": "", "item": ""};
+					
+									//viewItem (ui_school)
+									if (typeof HJEcommerceData[0].ui_school !== "undefined" && HJEcommerceData[0].ui_school != "") {
+										viewItemObject.ui_school = HJEcommerceData[0].ui_school;
+									}
+									
+									//viewItem (ui_job)
+									if (typeof HJEcommerceData[0].ui_job !== "undefined" && HJEcommerceData[0].ui_job != "") {
+										viewItemObject.ui_job = HJEcommerceData[0].ui_job;
+									}
+					
+									if (typeof HJEcommerceData[0].criteoHasCatalog !== "undefined" && HJEcommerceData[0].criteoHasCatalog) {
+										viewItemObject.item = HJEcommerceData[0].productCode;
+									} else {
+										viewItemObject.item = "1";
+									}
+									criteoData.push(viewItemObject);
+								}
+								//viewBasket
+								//criteoCartSegment
+								//(typeof HJEcommerceData[0].cart !== "undefined" && HJEcommerceData[0].cart.length > 0) && (typeof HJEcommerceData[0].purchase.orderId !== "undefined" && HJEcommerceData[0].purchase.orderId == "")  
+								if (criteoCartSegment != null && criteoTransactionId == null) {
+									basket = [];
+									if (typeof HJEcommerceData[0].criteoHasCatalog !== "undefined" && HJEcommerceData[0].criteoHasCatalog) {
+										basket.push({"id":criteoCartSegment.productCode, "price":criteoCartSegment.price*criteoCartSegment.quantity, "quantity":criteoCartSegment.quantity});
+									} else {
+										var totalBasketAmount = 0;
+										totalBasketAmount += criteoCartSegment.price * criteoCartSegment.quantity;
+										basket.push({"id":"1", "price":totalBasketAmount, "quantity":1});
+									}
+									var jobNumber = "";
+									if (typeof HJEcommerceData[0].ui_job !== "undefined" && HJEcommerceData[0].ui_job != "") {
+										jobNumber = HJEcommerceData[0].ui_job;
+									}
+									var schoolName = "";
+									if (typeof HJEcommerceData[0].ui_school !== "undefined" && HJEcommerceData[0].ui_school != "") {
+										schoolName = HJEcommerceData[0].ui_school;
+									}
+									criteoData.push({"event":"viewBasket", "item" : basket, "ui_job": jobNumber, "ui_school": schoolName});
+								}
+								//trackTransaction
+								//criteoCartSegment
+								//criteoTransactionId
+								//(typeof HJEcommerceData[0].purchase.orderId !== "undefined" && HJEcommerceData[0].purchase.orderId != "")
+								if (criteoTransactionId != null && criteoCartSegment != null) {
+									basket = [];
+									if (typeof HJEcommerceData[0].criteoHasCatalog !== "undefined" && HJEcommerceData[0].criteoHasCatalog) {
+										basket.push({"id":criteoCartSegment.productCode, "price":criteoCartSegment.price*criteoCartSegment.quantity, "quantity":criteoCartSegment.quantity});
+									} else {
+										var totalBasketAmount = 0;
+										totalBasketAmount += criteoCartSegment.price*criteoCartSegment.quantity;
+				
+										basket.push({"id":"1", "price":totalBasketAmount, "quantity":1});
+									}
+									var jobNumber = "";
+									if (typeof HJEcommerceData[0].ui_job !== "undefined" && HJEcommerceData[0].ui_job != "") {
+										jobNumber = HJEcommerceData[0].ui_job;
+									}
+									var schoolName = "";
+									if (typeof HJEcommerceData[0].ui_school !== "undefined" && HJEcommerceData[0].ui_school != "") {
+										schoolName = HJEcommerceData[0].ui_school;
+									}
+									criteoData.push({"event":"trackTransaction", "id":criteoTransactionId, "item" : basket, "ui_job": jobNumber, "ui_school": schoolName});
+								}							
+							}
+							
+							console.log("****CRITEO DATA BELOW****");
+							console.log(criteoData);
+						}
+											
+						//Basket
+						if (
+							(typeof HJEcommerceData[0].cart !== "undefined" && HJEcommerceData[0].cart.length > 0) &&
+							(typeof HJEcommerceData[0].purchase.orderId !== "undefined" && HJEcommerceData[0].purchase.orderId == "")  
+							) {
+							console.log("basket");
+							for (i=0; i<HJEcommerceData[0].cart.length; i++) {
+								runCriteo(HJEcommerceData[0].cart[i], HJEcommerceData[0].cart[i].criteoAccountNumber, null);
+							}
+						} 
+						//Transaction
+						else if (
+								(typeof HJEcommerceData[0].purchase.orderId !== "undefined" && HJEcommerceData[0].purchase.orderId != "") 
+								){
+							console.log("transaction");
+							for (i=0; i<HJEcommerceData[0].purchase.items.length; i++) {
+								transactionId = HJEcommerceData[0].purchase.orderId.toString() + "-" + HJEcommerceData[0].purchase.items[i].criteoAccountNumber.toString();
+								runCriteo(HJEcommerceData[0].purchase.items[i], HJEcommerceData[0].purchase.items[i].criteoAccountNumber, transactionId);
+							}
+						}
+						//Everythingelse
+						else {
+							console.log("everythingelse");
+							runCriteo(null, HJEcommerceData[0].criteoAccountNumber, null);
+						}
+							
+						//Emarsys
+						//var ScarabQueue = ScarabQueue || [];
+						  
+						if (typeof HJEcommerceData[0].emarsysMerchantID !== "undefined" && HJEcommerceData[0].emarsysMerchantID != "") {
+							if (typeof HJEcommerceData[0].email !== "undefined" && HJEcommerceData[0].email != "") {
+								ScarabQueue.push( ["setEmail", HJEcommerceData[0].email ] );
+							}
+							
+							//Tag for Job Number, School Name and displayed ProductName
+							var emarsysSchoolName = HJEcommerceData[0].ui_school.toString().replace(/\:/gi, "").replace(/\|/gi, "");
+							var emarsysJobNumber = HJEcommerceData[0].ui_job.toString().replace(/\:/gi, "").replace(/\|/gi, "");
+							//Yearbook (Default productCodeEmarsys=2) or Advertisement (productCodeEmarsys=1)
+							var emarsysProductName = ((HJEcommerceData[0].productCodeEmarsys.toString() == "1") ? "Advertisement":"Yearbook");
+							
+							if (emarsysSchoolName.length && emarsysJobNumber.length) {
+								var emarsysTag = emarsysJobNumber + ":" + emarsysSchoolName + ":" + emarsysProductName;
+								//Per Emarsys: send empty tag first to clear out data then send tag with data
+								ScarabQueue.push( ["tag", "" ] );
+								ScarabQueue.push( ["tag", emarsysTag ] );
+							}
+					
+							if (
+								!(typeof HJEcommerceData[0].purchase.orderId !== "undefined" && HJEcommerceData[0].purchase.orderId != "") &&
+								(typeof HJEcommerceData[0].productCodeEmarsys !== "undefined" && HJEcommerceData[0].productCodeEmarsys != "")
+								) {
+								ScarabQueue.push( ["view", HJEcommerceData[0].productCodeEmarsys ] );
+							}
+							if (
+								!(typeof HJEcommerceData[0].purchase.orderId !== "undefined" && HJEcommerceData[0].purchase.orderId != "") &&
+								(typeof HJEcommerceData[0].products !== "undefined" && HJEcommerceData[0].products.length > 0)  &&
+								(typeof HJEcommerceData[0].productCodeEmarsys !== "undefined" && HJEcommerceData[0].productCodeEmarsys == "")
+								) {
+								for (i=0; i<HJEcommerceData[0].products.length; i++) {
+									//Emarsys can only have one viewed product
+									if (i < 1) {
+										ScarabQueue.push( ["view", HJEcommerceData[0].products[i].productCode ] );
+									}
+								}
+							}
+					
+							if (typeof HJEcommerceData[0].cart !== "undefined" && HJEcommerceData[0].cart.length > 0) {
+								cartcontent = [];
+								for (i=0; i<HJEcommerceData[0].cart.length; i++) {
+									cartcontent.push({"item":HJEcommerceData[0].cart[i].productCodeEmarsys, "price":HJEcommerceData[0].cart[i].price, "quantity":HJEcommerceData[0].cart[i].quantity});
+								}
+								ScarabQueue.push( ["cart", cartcontent ] );
+							} else {
+								if (!(typeof HJEcommerceData[0].purchase.orderId !== "undefined" && HJEcommerceData[0].purchase.orderId != "")) {
+									ScarabQueue.push( ["cart", [] ] );
+								}
+							}
+					
+							if (
+								(typeof HJEcommerceData[0].purchase.orderId !== "undefined" && HJEcommerceData[0].purchase.orderId != "") 
+								) {
+								var emarsys_purchase_command = {
+								"orderId": HJEcommerceData[0].purchase.orderId,
+								"items": []
+								}
+					
+								for (i=0; i<HJEcommerceData[0].purchase.items.length; i++) {
+									emarsys_purchase_command.items.push({"item":HJEcommerceData[0].purchase.items[i].productCodeEmarsys, "price":HJEcommerceData[0].purchase.items[i].price, "quantity":HJEcommerceData[0].purchase.items[i].quantity});
+								}
+					
+								ScarabQueue.push( ["purchase", emarsys_purchase_command ] );
+							}
+					
+							ScarabQueue.push( ["go"] );
+							
+							console.log("****EMARSYS DATA BELOW****");
+							console.log(ScarabQueue);
+						}
+					} 
+					catch (e) {
+						console.log("****JS Error with GTM Datalayer****");
+						console.log(e);
+					}
+				});
+			</script>
+			
+
+	
+	
+
+	
+    
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+	
+	
+	
+	
+
+	
+		
+	
+		
+	
+	
+	
+	
+
+
+
+
+</html>

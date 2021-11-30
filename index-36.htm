@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>HR Imaging Partners - School Photography</title>
+    <meta name="application-name" content="HR Imaging" />
+    <meta name="google-site-verification" content="AmMJJYpyvLrbVgqWu9hsRWBcdGBzuYEkwv7f28g_Aik" />
+    <meta name="description" content="HR Imaging Partners is a full-service company specializing in meeting the photography needs of all types of schools. Shop online to view and purchase pictures." />
+    <meta name="keywords" content="School,Photography,Underclass,Seniors,Sports,Dances,Pictures,Yearbooks" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600|Montserrat:400,700'
+        type='text/css' />
+    <link rel="shortcut icon" href="favicons.png" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-config" content="none" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <style type="text/css">
+        body
+        {
+            font: 'Open Sans' , Helvetica, Arial, sans-serif;
+            font-family: 'Open Sans';
+            font-weight: 100;
+        }
+        em
+        {
+            color: #ff5722;
+            font-weight: 500;
+        }
+        .ui-autocomplete
+        {
+            padding: 5px;
+            overflow: auto;
+            max-height: 300px;
+        }
+    </style>
+    <script type="text/javascript">
+        var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; // Check if browser is iOS
+        $(function () {
+            SearchText();
+
+            if ($("#orgs_id").val()) {
+                $("#goorg").attr("href", 'https://shop.hrimaging.com/pws/orghome.aspx?oid=' + $("#orgs_id").val());
+                $("#orgs_name").on("keypress", function (e) {
+                    if (e.keyCode == 13) {
+                        window.location.href = 'https://shop.hrimaging.com/pws/orghome.aspx?oid=' + $("#orgs_id").val();
+                        return false; // prevent the button click from happening
+                    }
+                });
+            }
+            else {
+                $("#goorg").attr("href", '');
+            }
+
+            $("#orgs_name").on('click, focus', function () {
+                $(this).select();
+                //                if (iOS) {
+                //                    $(this).val('');
+                //                }
+            });
+        });
+        function SearchText() {
+            $.ajax({
+                url: "orgs.xml",
+                dataType: "xml",
+                success: function (xmlResponse) {
+                    var data = $("Orgs", xmlResponse).map(function () {
+                        return {
+                            value: $("Name", this).text(),
+                            id: $("Id", this).text()
+                        };
+                    }).get();
+                    $("#orgs_name").autocomplete({
+                        source: data,
+                        minLength: 2,
+                        select: function (event, ui) {
+                            if (ui.item.value == -1) {
+                                return false;
+                            }
+                            $("#orgs_name").val(ui.item.value);
+                            $("#orgs_id").val(ui.item.id);
+                            $("#goorg").attr("href", 'https://shop.hrimaging.com/pws/orghome.aspx?oid=' + ui.item.id);
+                            $("#goorg").focus();
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+</head>
+<body class="w3-margin-0">
+    <form id="form1" runat="server">
+    <div class="w3-container w3-center w3-padding-16">
+        <a href="https://shop.hrimaging.com">
+            <img alt="HRILogo" src="images\Logoh.jpg" class="w3-border-0" /></a>
+    </div>
+    <div class="w3-container" style="padding: 0;">
+        <div class="w3-bar w3-blue">
+            <div class="w3-dropdown-hover w3-blue w3-right">
+                <button class="w3-button w3-blue w3-hover-opacity w3-hide-small" style="margin-right:32px">Sign In</button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="https://shop.hrimaging.com/shop/login.aspx" class="w3-bar-item w3-button w3-hover-opacity w3-hide-small">My Shop</a>
+                    <a href="https://myschool.hrimaging.com/" class="w3-bar-item w3-button w3-hover-opacity w3-hide-small">My School</a>
+                    <a href="https://quip.hrimaging.com/" class="w3-bar-item w3-button w3-hover-opacity w3-hide-small">Quip</a>
+                    <a href="http://webmail.hrimaging.com/" class="w3-bar-item w3-button w3-hover-opacity w3-hide-small">Webmail</a>
+                </div>
+            </div>
+            <a href="https://www.hrimaging.com/#contact" class="w3-bar-item w3-button w3-hover-opacity w3-right w3-hide-small">Contact Us</a>
+            <a href="https://www.hrimaging.com/#gallery" class="w3-bar-item w3-button w3-hover-opacity w3-right w3-hide-small">Gallery</a>
+            <a href="https://www.hrimaging.com/#shop" class="w3-bar-item w3-button w3-hover-opacity w3-right w3-hide-small">Shop Online</a>
+            <a href="https://www.hrimaging.com/#whatwedo" class="w3-bar-item w3-button w3-hover-opacity w3-right w3-hide-small">School Services</a>
+            <a href="https://www.youtube.com/watch?v=COC5NJ26Clw&t" class="w3-bar-item w3-orange w3-button w3-hover-opacity w3-right w3-hide-small">School Picture Day and Social Distancing</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button  w3-hover-opacity w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">Menu</a>
+        </div>
+
+        <div id="sm_menu" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium" style="font-size: 1em">
+            <a href="https://www.youtube.com/watch?v=COC5NJ26Clw&t" class="w3-bar-item w3-orange w3-button w3-hover-opacity">School Picture Day and Social Distancing</a>
+            <a href="https://www.hrimaging.com/#whatwedo" class="w3-bar-item w3-button w3-hover-opacity">School Services</a>
+            <a href="https://www.hrimaging.com/#shop" class="w3-bar-item w3-button w3-hover-opacity">Shop Online</a>
+            <a href="https://www.hrimaging.com/#gallery" class="w3-bar-item w3-button w3-hover-opacity">Gallery</a>
+            <a href="https://www.hrimaging.com/#contact" class="w3-bar-item w3-button w3-hover-opacity">Contact Us</a>
+            <hr />
+            <a href="https://shop.hrimaging.com/shop/login.aspx" class="w3-bar-item w3-button w3-hover-opacity">My Shop</a>
+            <a href="https://myschool.hrimaging.com/" class="w3-bar-item w3-button w3-hover-opacity">My School</a>
+            <a href="https://quip.hrimaging.com/" class="w3-bar-item w3-button w3-hover-opacity">Quip</a>
+            <a href="http://webmail.hrimaging.com/" class="w3-bar-item w3-button w3-hover-opacity">Webmail</a>
+        </div>
+    </div>
+    <span class="anchor" id="shop"></span>
+    <div class="w3-container w3-center w3-light-green w3-padding-16">
+        <h2 style="font-weight: 100;">
+            Let's start by finding your school or organization.
+        </h2>
+        <div style="width:80%" class="w3-bar w3-border">
+            <!--<label class="w3-bar-item w3-mobile" style="width:20%">Find my school</label>-->
+            <input id="orgs_name" class="w3-bar-item w3-input w3-white w3-mobile w3-left-align" style="width:80%" placeholder="Start typing zip, city, school, or organization name" />
+            <a id="goorg" href="" class="w3-bar-item w3-button w3-mobile w3-blue w3-hover-green" style="width:20%">Submit</a>
+        </div>
+    </div>
+    <div>
+        <input id="orgs_id" style="visibility:hidden" />
+    </div>
+    <div>
+        <div class="w3-center w3-xxlarge w3-text-amber w3-margin-top" style="font-weight: 400;">
+            Life's a moving picture.
+            <div class="w3-text-light-green">
+                We capture it best!</div>
+        </div>
+    </div>
+    <div style="padding: 0;">
+        <img src="images/bg0.jpg" alt="Student Background" class="w3-image"
+            width="100%" />
+    </div>
+    <span class="anchor" id="whatwedo"></span>
+    <div class="w3-container w3-center w3-margin-top">
+        <h1 style="font-weight: 100;">
+            We serve you first.</h1>
+    </div>
+    <div class="w3-container" style="font-size: 1.4em">
+        HR Imaging Partners is a full-service company specializing in meeting the photography
+        and yearbook needs of all types of schools -- from large high schools, to neighborhood
+        elementary buildings. We're big enough to offer any product or service while still
+        being small enough to know our customers by name.
+        <div class="w3-container w3-margin">
+            <div class="w3-third w3-center w3-padding w3-hover-opacity">
+                <a href="https://branding.hrimaging.com/" target="_blank" title="Branding" style="text-decoration:none">
+                    <img src="images/icons/branding.jpg" alt="Branding"
+                         class="w3-image" /><br />
+                    Your School<br />
+                    Branding Experts!
+                </a>
+            </div>
+            <div class="w3-third w3-center w3-padding w3-hover-opacity">
+                <a href="schoolphotography.htm" title="School Photography" style="text-decoration:none">
+                    <img src="images/icons/whatwedo.jpg" alt="School Photography"
+                         class="w3-image" /><br />
+                    School Photography
+                </a>
+            </div>
+            <div class="w3-third w3-center w3-padding w3-hover-opacity">
+                <a href="yearbooks.htm" title="Yearbooks" style="text-decoration:none">
+                    <img src="images/icons/yearbook.jpg" alt="Yearbooks"
+                         class="w3-image" /><br />
+                    Yearbooks
+                </a>
+            </div>
+        </div>
+    </div>
+    <span class="anchor" id="gallery"></span>
+    <div class="w3-container w3-center w3-margin-top">
+        <h1 style="font-weight: 100;">
+            Gallery - some of our best!</h1>
+    </div>
+    <div class="w3-container" style="font-size: 1.4em">
+        Great photos are the core of our company. We offer both traditional and contemporary
+        style portrait programs permitting students to express their individuality through
+        the use of our studio props and creative backgrounds.
+    </div>
+    <div class="w3-container w3-margin">
+        <div class="w3-row">
+            <div class="w3-quarter w3-center w3-padding">
+                <img src="images/gallery/slide/102.jpg" alt="Gallery Image 1"
+                    class="w3-image" />
+            </div>
+            <div class="w3-quarter w3-center w3-padding">
+                <img src="images/gallery/slide/014.jpg" alt="Gallery Image 2"
+                    class="w3-image" />
+            </div>
+            <div class="w3-quarter w3-center w3-padding">
+                <img src="images/gallery/slide/110.jpg" alt="Gallery Image 3"
+                    class="w3-image" />
+            </div>
+            <div class="w3-quarter w3-center w3-padding">
+                <img src="images/gallery/slide/178.jpg" alt="Gallery Image 4"
+                    class="w3-image" />
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-quarter w3-center w3-padding">
+                <img src="images/gallery/slide/166.jpg" alt="Gallery Image 5"
+                    class="w3-image" />
+            </div>
+            <div class="w3-quarter w3-center w3-padding">
+                <img src="images/gallery/slide/01.jpg" alt="Gallery Image 6"
+                    class="w3-image" />
+            </div>
+            <div class="w3-quarter w3-center w3-padding">
+                <img src="images/gallery/slide/028.jpg" alt="Gallery Image 7"
+                    class="w3-image" />
+            </div>
+            <div class="w3-quarter w3-center w3-padding">
+                <img src="images/gallery/slide/190.jpg" alt="Gallery Image 8"
+                    class="w3-image" />
+            </div>
+        </div>
+    </div>
+    <span class="anchor" id="contact"></span>
+    <div class="w3-container w3-margin-bottom">
+        <div class="w3-center">
+            <h1 style="font-weight: 100;">
+                Contact Us</h1>
+        </div>
+        <div class="w3-container" style="font-size: 1.4em">
+            If you have any comments or feedback don't hesitate to contact us. We're always
+            looking for ways we can improve our services.
+            <div class="w3-margin">
+                <div class="w3-third">
+                    <div>
+                        <h4 class="w3-text-indigo" style="margin-bottom:0px">HR Imaging Partners, Inc.</h4>
+                        <span class="w3-medium">4105 Progress Drive<br />
+                        Ottawa, IL 61350</span>
+                    </div>
+                </div>
+                <div class="w3-third">
+                    <div>
+                        <h4 class="w3-text-indigo" style="margin-bottom:0px">Customer Service:</h4>
+                        <a href='https://shop.hrimaging.com/pws/contactus.aspx'><img src='https://shop.hrimaging.com/images/contact_us.jpg' class="w3-hover-opacity" /></a>
+                        <h4 class="w3-text-indigo" style="margin-bottom:0px">School Administrators:</h4>
+                        <span class="w3-medium">815-433-1885</span>
+                        <h4 class="w3-text-indigo" style="margin-bottom:0px">Home Office:</h4>
+                        <span class="w3-medium">815-433-1869 | Mon-Fri: 9am-4pm CST</span>
+                        <h4 class="w3-text-indigo" style="margin-bottom:0px">Ohio Office:</h4>
+                        <span class="w3-medium">740-369-4215 | Mon-Fri: 9am-5pm EST</span>
+                    </div>
+                </div>
+                <div class="w3-third">
+                    <div>
+                        <h4 class="w3-text-indigo" style="margin-bottom:0px">Interested in working for us?</h4>
+                        <span class="w3-medium">Email us at jobs@hrimaging.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w3-center w3-small w3-text-grey">
+        © 2019 HR Imaging Partners Inc.
+    </div>
+    </form>
+    <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("sm_menu");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>
+</html>

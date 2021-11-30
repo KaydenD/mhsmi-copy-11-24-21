@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PTCFast.com</title>
+        <!--<link href="css/style.201503.css" rel="stylesheet" type="text/css"/>-->
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="/js/jquery.201309.js"></script>
+    <script src="/js/jquery-ui.js"></script>
+    <script>
+    function pu(url) {
+      w=window.open(url,null,'left=100,top=100,width=800,height=600,status=no,toolbar=no,menubar=no,location=no');
+      w.focus();
+    }
+    </script>
+      <script language="javascript">
+    function logout()
+    {
+      document.frm_logout.submit();
+    }
+  function go_back_to_email()
+  {
+    document.frm_parentletter.action="email_text.php";
+    document.frm_parentletter.mode.value="";
+    document.frm_parentletter.submit();
+  }
+  </script>
+    <script language="javascript">
+      if (top.location!=location) {
+        top.location.href=document.location.href;
+      }
+      function hideNewMessage(){
+        $('#new-message-link').hide();
+      }
+      function bannerManage(opt)
+	 {
+	    document.banner_frm_manage.target="";
+		document.banner_frm_manage.action ='editconferenceinfo.php';
+		document.banner_frm_manage.mode.value = opt;
+		document.banner_frm_manage.setting_status.value = 1;
+	    document.banner_frm_manage.submit();
+	 }
+    </script>
+    </head>
+    <body bgcolor="#e7e7e7">
+        <form name="banner_frm_manage" method="post">
+            <input type="hidden" name="action" />
+            <input type="hidden" name="mode" />
+            <input type="hidden" name="setting_status" />
+        </form>
+    <noscript><div style="background:red;color:white;font-size:8pt;font-family:sans-serif;font-weight:bold;padding:2px 10px; margin:0px; margin-bottom:5px; border-bottom:1px solid black;">This site requires javascript support to function correctly; please ensure that this is enabled in your browser.</div></noscript>
+    <form name="frm_logout" action="adminlogin.php" method="post"> <input type="hidden" name="mode" value="logout"> <input type="submit" style="visibility:hidden "> </form>
+    <table width="796" height="600" align="center" class="border" cellpadding="0" cellspacing="0">
+        <tr>
+        <td colspan="2"  bgcolor="#003163" height="100" style="padding-left:10px;padding-right:10px" class="sitename" valign="middle">
+    <div style="margin-top:-3px; margin-bottom:6px; font-size:35px">            </div>    <div style="font-size:28px" onclick="location.href='index.html'" onmouseover="document.body.style.cursor='pointer'" onmouseout="document.body.style.cursor='default'">
+      PTCFast.com - Conference Scheduler      </div>
+        </td>
+    </tr>
+    <tr>
+    <td colspan="2" style="padding-left:30px;" bgcolor="#003163" valign="bottom">
+    <table cellpadding="0" align="left" cellspacing="0" height="20" bgcolor="#003163">
+          <td width="10" class="linktabtd">&nbsp;
+      </td>
+                  <td width="11" class="linktabtd">&nbsp;	</td>
+                    </tr>
+        </table>
+        </td></tr>
+                <tr><td  valign="top" align="right" style="padding-left:10px;">
+          <script language="javascript">
+          function open_faq()
+          {
+            document.frm_faq.target="_blank";
+            document.frm_faq.submit();
+          }
+        </script>
+          <form name="frm_faq" action="faq.php" method="post">
+          <input type="hidden" name="mode" value="" />
+          </form>
+          <table width="100%"  align="right"  cellpadding="0" cellspacing="0">
+          <tr><td valign="top" align="left" style="padding-left:2px;"></td><td colspan="2"  valign="top" align="right" style="padding-left:10px;">
+          <a href="javascript:open_faq();" style="padding-right:10px; color:#0000FF; ">Help/FAQ</a>
+          <br /><a href="mailto:support@ptcfast.com" style="padding-right:10px; color:#0000FF; ">Questions or Suggestions?</a>
+                    </td></tr>
+          </table>
+          </td></tr>
+                <tr><td  style="padding-top:10px; padding-left:10px; " valign="top" align="left" >
+          <table width="100%">
+				<tr>
+					<td  align="center" colspan="3">&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" align="left" class="bigtxt">
+					 Parent Login <br><br>
+                     					</td>
+	  			</tr>
+	       </table>
+		   		    <form name="frm_parentlogin" action="/parentlogin.php" method="post">
+					<input type="hidden" name="mode" value="login">
+                                        <input type="hidden" name="another" value="">
+                                        <input type="hidden" name="another_ts" value="">
+					<TABLE width="80%" cellPadding="5" cellSpacing="2" border="0" class="border" bgcolor="#FFFFFF">
+                                        		               <TR>
+			            <TD colspan="2" class="td_head" align="left">Login Here:</TD>
+			           </TR>
+					   
+			            <TD colspan="2" align="left" style="font-size:12px;">Entry Code (supplied in your letter):
+                        </TD>
+			           </TR>
+                                        			     
+					   <TR>
+			            <TD colspan="2" align="left" style="font-size:12px;"><input type="text" name="parent_code" value="" ></TD>
+			           </TR>
+                  	   <TR>
+			            <TD colspan="2" align="left" style="font-size:12px;">&nbsp;</TD>
+			           </TR>
+					   <TR>
+			            <TD colspan="2" align="left" style="font-size:12px;"><input type="submit" value="Submit" ></TD>
+			            			           </TR>
+					    <TR>
+                                      <TD colspan="2" align="left" style="font-size:12px;"><a href="forget_parent_password.php">I forgot my entry code.</a></TD>
+                                    			           </TR>
+					      <TR>
+			            <TD colspan="2" align="left" style="font-size:12px;">&nbsp;</TD>
+			           </TR>
+                    </TABLE>
+				  </form>	
+  </td></tr>
+    <tr><td colspan="2" height="30" class="copyright" valign="middle" align="center">Copyright &copy; 2009-2021 PTCFast, LLC. All rights reserved.    </td></tr>
+    </table>
+    </body>
+    </html>
+    					

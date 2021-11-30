@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    
+    <!-- Material Design Components -->
+    <link rel="stylesheet" href="/css/material-components-web.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <title>College Scholarships - Scholarships.com</title><meta name="description" content="Scholarships.com - College Scholarships" /><meta name="keywords" content="Scholarships,Financial Aid,College Scholarships" /><meta name="author" content="Scholarships.com" /><meta name="robots" content="all, index, follow" />
+    
+    
+    <link href="/css/defaultstyleresp.css" rel="stylesheet"/>
+<link href="/css/modal.css" rel="stylesheet"/>
+<link href="/css/validation.css" rel="stylesheet"/>
+
+    <link href="/css/jquery-ui.structure.min.css" rel="stylesheet"/>
+<link href="/css/jquery-ui.theme.min.css" rel="stylesheet"/>
+<link href="/css/jquery.modal.min.css" rel="stylesheet"/>
+
+    
+
+        <style type="text/css" media="all">
+            @import "/css/tourstyle.css";
+            @import "/css/onecollayout.css";
+        </style>
+                    <style type="text/css" media="all">
+        #contentcolumn {
+            text-align: left;
+        }
+
+        #divOrderForm .field-validation-error {
+            margin-left: 140px;
+        }
+
+        .resultstable {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid gray;
+            margin-bottom: 35px;
+        }
+
+            .resultstable td {
+                border: 1px solid gray;
+            }
+
+        #contentcolumn {
+            padding: 0;
+        }
+    </style>
+
+    <style>
+        #header-container {
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+
+        :root {
+            --mdc-theme-primary: #1565C0;
+            --mdc-theme-accent: #1565C0;
+        }
+
+        .mdc-button--raised {
+            background-color: #1565C0 !important;
+            color: #ffffff !important;
+        }
+
+        /* Override JQuery UI Modal Classes */
+        .ui-dialog-title {
+            display: none;
+        }
+
+        .ui-widget-header {
+            background: none;
+            border: none;
+        }
+
+        .ui-dialog-titlebar .ui-dialog-titlebar-close {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            margin: inherit;
+        }
+
+        .ui-dialog .ui-dialog-titlebar {
+            padding-bottom: 0;
+        }
+
+        .ui-dialog-titlebar .ui-button {
+            float: left;
+            background-color: transparent;
+            border: none;
+        }
+
+        .ui-icon {
+            width: 0;
+            height: 0;
+        }
+        /*Modal Styles*/
+        .blocker {
+            z-index: 2147483640;
+        }
+
+        .modal {
+            border: 1px solid #000000;
+            max-width: 900px !important;
+            border-radius: 0;
+        }
+
+            .modal a.close-modal {
+                top: 7px;
+                right: 7px;
+                background-image: url(/img/close.png);
+                background-size: 20px;
+            }
+
+                .modal a.close-modal::after {
+                    content: "X";
+                    color: rgba(193, 199, 201, 1);
+                }
+        @media(max-width:500px) {
+            #side_ad{
+                display:none;
+            }
+        }
+    </style>
+    <style type="text/css" media="print">
+        .blocker {
+            position: absolute;
+            overflow: visible;
+        }
+    </style>
+
+        <!-- Media.net Header Portion of Script for Page Header -->
+        <script type="text/javascript">
+            window._mNHandle = window._mNHandle || {};
+            window._mNHandle.queue = window._mNHandle.queue || [];
+            medianet_versionId = "121199";
+            medianet_chnm = ""; // Used to specify the channel name
+            (function () {
+                var sct = document.createElement("script"),
+                    sctHl = document.getElementsByTagName("script")[0],
+                    isSSL = 'https:' == document.location.protocol;
+                sct.type = "text/javascript";
+                sct.src = (isSSL ? 'https:' : 'http:') + '//contextual.media.net/dmedianet.js?cid=8CUB0YK88' + (isSSL ? '&https=1' : '') + '';
+                sct.async = "async";
+                sctHl.parentNode.insertBefore(sct, sctHl);
+            })();
+        </script>
+
+    <script src="https://cdn.adapex.io/hb/aaw.sclr.js" async></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+			
+				fbq('init', '1116670508757724');
+			
+		fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1116670508757724&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['SLScoutObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://scout-cdn.salesloft.com/sl.js', 'slscout');
+        slscout(["init", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0IjoxMDMzMDV9.4X_PFDO_MM0FsfdonaCcM6ScHQ5ZB2fxx7G_8u9DUFs"]);
+    </script>
+
+</head>
+<body >
+    
+    <div id="">
+
+<style type="text/css">
+    .shrink {
+        max-height: 0;
+    }
+
+    nav.menuresp > ul {
+        transition: height 0.8s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+    }
+
+    #icon-logo {
+        display: inline-block;
+        height: 52px;
+    }
+#divAdSense{ 
+background-color: white;
+max-height: 100px; /* Value larger than actual height */
+transition: max - height 0.8s;
+overflow: hidden;
+}
+#divAdSense.shrink {
+max-height: 0;
+}
+#citizens320 {
+            display: none;
+            }
+
+    @media (max-width: 769px) {
+
+#icon-logo {
+            height: 32px;
+            }
+        }
+
+    @media (max-width : 767px) {
+        .niche-images, .loan-images {
+                max-width: 100%;
+            }
+
+            nav.menuresp > ul,
+        nav.menuresp > ul.expand {
+            display: none;
+            }
+
+#citizens320 {
+        display: block;
+        }
+
+#citizens728 {
+        display: none;
+        }
+    }
+</style>
+<div id="header-container">
+
+    <nav role="navigation" class="menuresp">
+            <div>
+                <img id="nav-btn" src="/img/nav-btn.png" />
+                <a style="text-decoration:none;" href="/">
+                    <img id="icon-logo" class="top-logo" src="/img/SDC_LOGO_CAP_LEFT_WHITE_2020.png" alt="Scholarships for College Free College Scholarship Search 2020-2021" title="Scholarships for College Free College Scholarship Search 2020-2021" />
+                </a>
+            </div>
+                    <ul>
+
+                <li><a href="/"><img id="icon-logo" src="/img/SDC_LOGO_CAP_LEFT_WHITE_2020.png" alt="Scholarships for College Free College Scholarship Search 2020-2021" title="Scholarships for College Free College Scholarship Search 2020-2021" /></a></li>
+
+                <li><a href="/scholarship-search">Scholarship Search</a></li>
+
+                <li><a href="/scholarship-directory">Scholarship Directory</a></li>
+
+                <li><a href="/college-search">College Search</a></li>
+
+                <li><a href="/news">News</a></li>
+                <li><a href="/financial-aid/student-loans/">Student Loans</a></li>
+                <li><a href="/student-resources/">Student Resources</a></li>
+
+                <li><a href="/educators/">Educators</a></li>
+                <li><a href="/scholarship-providers-resources/list-your-scholarship/create-account/">Submit A Scholarship</a></li>
+
+                <li><a href="/login">Login</a></li>
+
+            </ul>
+    </nav>
+        <nav class="sidemenu">
+                <ul>
+                    <li><a href="/" id="hrefHomeDashboard">Home</a></li>
+                    <li><a href="/scholarship-search">Scholarship Search</a></li>
+                    <li><a href="/scholarship-directory">Scholarship Directory</a></li>
+                    <li><a href="/college-search">College Search</a></li>
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/financial-aid/student-loans/">Student Loans</a></li>
+                    <li><a href="/student-resources/">Student Resources</a></li>
+                    <li><a href="/educators/">Educators</a></li>
+                    <li><a href="/scholarship-providers-resources/list-your-scholarship/create-account/">Submit A Scholarship</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+        </nav>
+</div>
+<div id="header-spacer"></div>
+        <div style="margin: auto; text-align: center; padding-top: 10px;" id="nichebanner">
+            <div data-aaad='true' data-aa-adunit='/21622869755/SCLR_970x90_1'></div>
+            <div data-aaad='true' data-aa-adunit='/21622869755/SCLR_Mob_320v_1'></div>
+        </div>
+        
+
+<div id="contentcolumn" style="margin-top:20px;">
+            <div class="eyebrow">
+                <a href='/' >Home</a> > <a href='/financial-aid/' >Financial Aid</a> > College Scholarships
+            </div>
+        <div class="byline">
+        </div>
+            <!--Standard content page elements.-->
+<h1>College Scholarships</h1>
+
+<p id="pageContentParagraph">
+    <input data-val="true" data-val-number="The field ContentPageId must be a number." data-val-required="The ContentPageId field is required." id="ContentPageId" name="ContentPageId" type="hidden" value="70" />
+        <p>
+   With millions of scholarships in our database that are tailored to
+    applicants based on criteria ranging from GPA to specific special interests,
+    the easiest way to see what you qualify for is to conduct a <a href="/scholarship-search" target="_blank">free college scholarship search</a> at Scholarships.com. For scholarships, contests, and sweepstakes you can apply
+    in a matter of minutes, explore these offers:</p><!-- In Article - Content Page After First Paragraph -->
+<div style="max-width: 720px; margin-left:auto; margin-right:auto; margin-top:20px; margin-bottom:20px;">
+<div class="adheader">ADVERTISEMENT</div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-5167456420696376"
+     data-ad-slot="9246150151"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+  <div style="display: block; clear: left; margin-bottom: 20px; vertical-align: top;">
+        <h2>Apply For These Three Today</h2>
+        <p>Start applying for scholarships today, no matter what year in school, no matter your financial or academic situation, you are more than likely going to need all the help you can get paying for college. The featured scholarships below are a great place to start!</p>
+        <div style="display: inline-table; text-align: center; vertical-align: top; margin-top: 0px;">
+            <a href="javascript:sdcOpenNewWindow('/scc.aspx?pid=959');" style="border: none;">
+                <img src="/img/Niche100.png" alt="Niche No Essay Scholarship" style="border: 0px; border-color: #ccc; max-width: 300px;" /></a>
+                <img src="/cpcimg_959.gif" alt="Niche No Essay Scholarship"
+                     width="1" height="1" border="0" />
+            
+            <a href="javascript:sdcOpenNewWindow('/scc.aspx?pid=1350');" style="border: none;">
+                <img src="/img/10k_320x100.jpg" style="border: 0px; max-width: 300px;" alt="CollegeXpress Scholarship" /></a>
+                <img src="/cpcimg_1350.gif" alt="CollegeXpress Scholarship"
+                     width="1" height="1" border="0" />
+            
+            <a href="javascript:sdcOpenNewWindow('/scc.aspx?pid=670');" style="border: none;">
+                <img src="/img/ScholPoints100.png" style="border: 0px; max-width: 300px;" alt="ScholarshipPoints Scholarship" /></a>
+                <img src="/cpcimg_670.gif" alt="ScholarshipPoints Scholarship"
+                     width="1" height="1" border="0" />
+            
+        </div>
+    </div>
+<h2 style="clear: left; padding-top: 20px;">
+    Alternative Scholarship Search Methods </h2>
+<h2 class="toptwo">
+    <a href="/financial-aid/college-scholarships/scholarships-by-grade-level/">Search Scholarships by Grade Level</a></h2>
+<p>
+    Most college scholarships target incoming freshmen and <a href="/financial-aid/college-scholarships/scholarships-by-grade-level/undergraduate-scholarships/">undergraduates</a>,
+    so the sooner you start searching for awards and <a href="/financial-aid/college-scholarships/scholarship-application-strategies/apply-for-scholarships/" title="Apply for Scholarships"
+        target="_top">applying for them</a>, the better. If you are a <a href="/financial-aid/college-scholarships/scholarships-by-grade-level/high-school-scholarships/">
+            high school student</a>, adding scholarship applications to your 
+    list of things to do alongside <a href="/resources/college-prep/applying/early-decision-early-action-and-more-pros-and-cons-of-application-deadlines/" title="The College Application Process - What Students Should Know"
+        target="_top">college applications</a> and <a href="/resources/study-skills/standardized-testing/" title="Standardized Testing"
+            target="_top">standardized tests</a> is extremely important. <a href="/financial-aid/college-scholarships/scholarships-by-grade-level/undergraduate-scholarships/" title="Undergraduate Scholarships"
+                target="_top">Undergraduates</a> that have received generous scholarships
+    to pay for their freshman year should continue their hard work and good academic standing throughout college,
+    because many scholarships must be renewed and are open to upper classmen as well.  While scholarships for <a href="/financial-aid/college-scholarships/scholarships-by-grade-level/graduate-scholarships/">graduate
+        students</a> are less common, they are often very generous, as many target particular
+    fields of study, or are awarded by potential employers who want better-educated
+    employees. Conduct a college <a href="/scholarship-search">scholarships search</a>
+    or browse through our site to see the scholarships by <a href="/financial-aid/college-scholarships/scholarships-by-grade-level/">grade
+        level</a> that you may qualify for, because no matter your year, you could be
+    missing out on dozens of opportunities to <a href="/financial-aid/funding-your-education/" title="Funding Your Education"
+        target="_top">fund your education</a>.
+</p>
+<h3>
+    Some Examples:</h3>
+<ul class="bot10">
+    <li><a href="https://www.scholarships.com/financial-aid/college-scholarships/scholarships-by-grade-level/high-school-scholarships/">
+        High School Scholarships</a></li>
+    <li><a href="https://www.scholarships.com/financial-aid/college-scholarships/scholarships-by-grade-level/undergraduate-scholarships/">
+        Undergraduate Scholarships</a></li>
+    <li><a href="https://www.scholarships.com/financial-aid/college-scholarships/scholarships-by-grade-level/graduate-scholarships/">
+        Graduate Scholarships</a></li>
+</ul>
+
+
+
+<h2 class="toptwo" style="clear: left;">
+    <a href="/financial-aid/college-scholarships/scholarships-by-major/">Scholarships by Major</a></h2>
+<p>
+    For incoming college students who know what they want to do <a href="/resources/after-college/"
+        title="After College" target="_top">post-graduation</a> or have experience
+    in a field they would like to explore more, college scholarships geared toward particular
+    <a href="/financial-aid/college-scholarships/scholarships-by-major/">majors</a> and fields of study are an excellent option.
+    Awards in high demand areas such as <a href="/financial-aid/college-scholarships/scholarships-by-major/nursing-scholarships/">nursing</a> and <a href="/financial-aid/college-scholarships/scholarships-by-major/education-scholarships/">
+        education</a> are plentiful, especially when working in low-income communities or high-demand regions.
+    Look outside your college for scholarships by <a href="/financial-aid/college-scholarships/scholarships-by-major/"
+        title="Scholarships by Major" target="_top">major</a>, as many outside organizations
+    will have private scholarship funds established to recruit college students into a particular
+    field. Conduct a college <a href="/scholarship-search">scholarship search</a>
+    or browse through our site to see <a href="/financial-aid/college-scholarships/scholarships-by-major/" title="Scholarships by Major"
+        target="_top">college scholarships by major</a> that you qualify for.
+</p>
+<h3>
+    Some Examples:</h3>
+<ul class="bot10">
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-major/nursing-scholarships//">
+        Nursing Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-major/math-scholarships/">
+        Math Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-major/history-scholarships/">
+        History Scholarships</a></li>
+</ul>
+<h2 class="toptwo">
+    <a href="/financial-aid/college-scholarships/sports-scholarships/">Sports Scholarships</a></h2>
+<p>
+    While <a href="/financial-aid/college-scholarships/sports-scholarships/">sports scholarships</a> are more competitive, you do not have to be a
+    star athlete to land a generous award. Most <a href="/financial-aid/college-scholarships/sports-scholarships/"
+        title="Sports Scholarships" target="_top">sports scholarships</a> will come
+    directly from your college if you intend to play on their team, but if you are more
+    interested in playing a club or intramural sport, you could qualify for
+    scholarships from local groups and outside organizations that award sports-related scholarships. Many of those awards will
+    look at criteria such as <a href="/financial-aid/grants/applying-for-grants/" title="Applying for Grants" target="_top">
+        need</a>, <a href="/resources/public-service-and-volunteering/" title="Public Service and Volunteering" target="_top">
+            community service</a> and your <a href="/financial-aid/college-scholarships/scholarships-by-type/academic-scholarships-and-merit-scholarships/" title="Academic Scholarships and Merit Scholarships"
+                target="_top">academic record</a>. So if you enjoy <a href="/financial-aid/college-scholarships/sports-scholarships/golf-scholarships/">golf</a>
+    but aren’t destined to play in the PGA, do not assume you can’t
+    land a college scholarship. Browse through our suggestions for scholarships by sport,
+    or conduct a free <a href="/scholarship-search">scholarship search</a> to find
+    awards you may be eligible for based on other criteria.</p>
+<h3>
+    Some Examples:</h3>
+<ul class="bot10">
+    <li><a href='/financial-aid/college-scholarships/sports-scholarships/baseball-scholarships/'>
+        Baseball Scholarships</a></li>
+    <li><a href='/financial-aid/college-scholarships/sports-scholarships/basketball-scholarships/'>
+        Basketball Scholarships </a></li>
+    <li><a href='/financial-aid/college-scholarships/sports-scholarships/football-scholarships/'>
+        Football Scholarships</a></li>
+    <li><a href='/financial-aid/college-scholarships/sports-scholarships/cheerleading-scholarships/'>
+        Cheerleading Scholarships </a></li>
+    <li><a href='/financial-aid/college-scholarships/sports-scholarships/ice-hockey-scholarships/'>
+        Ice Hockey Scholarships</a></li>
+</ul>
+<h2 class="toptwo">
+    <a href="/financial-aid/college-scholarships/scholarships-by-state/">Scholarships by State</a></h2>
+<p>
+    One of the best places to begin researching scholarships is looking at those provided by your home <a href="/financial-aid/college-scholarships/scholarships-by-state/">state</a>. Some of the most generous <a href="/financial-aid/"
+        title="Financial Aid" target="_top">financial aid</a> awards will come directly
+    from your college, and your base tuition will undoubtedly be much less at an in-state
+    public institution. If staying in your home state is an option, include that in your
+    criteria when you are doing your <a href="/scholarship-search">scholarship search</a>.
+    Look at what your local college could offer you, especially if you’re entering into
+    a high-demand field like <a href="/financial-aid/college-scholarships/scholarships-by-major/education-scholarships/">education</a> or <a href="/financial-aid/college-scholarships/scholarships-by-major/nursing-scholarships/">
+        nursing</a>. Contact local organizations for private college scholarships
+    that may be set aside for incoming students who are staying in-state. Browse through
+    our suggestions for <a href="/financial-aid/college-scholarships/scholarships-by-state/">scholarships by state</a>, for tips
+    on how state assistance will help you start your career.
+</p>
+<h3>
+    Some Examples:</h3>
+<ul class="bot10">
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-state/california-scholarships/" title="California Scholarships" target="_top">California
+        Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-state/connecticut-scholarships/" title="Connecticut Scholarships" target="_top">Connecticut
+        Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-state/delaware-scholarships/" title="Delaware Scholarships" target="_top">Delaware Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-state/florida-scholarships/" title="Florida Scholarships" target="_top">Florida Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-state/illinois-scholarships/" title="Illinois Scholarships" target="_top">Illinois Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-state/montana-scholarships/" title="Montana Scholarships" target="_top">Montana Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-state/new-jersey-scholarships/" title="New Jersey Scholarships" target="_top">New Jersey
+        Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-state/new-york-scholarships/" title="New York Scholarships" target="_top">New York Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-state/ohio-scholarships/" title="Ohio Scholarships" target="_top">Ohio Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-state/oklahoma-scholarships/" title="Oklahoma Scholarships" target="_top">Oklahoma Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-state/pennsylvania-scholarships/" title="Pennsylvania Scholarships" target="_top">Pennsylvania
+        Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-state/texas-scholarships/" title="Texas Scholarships" target="_top">Texas Scholarships</a></li>
+</ul>
+<h2 class="toptwo">
+    <a href="/financial-aid/college-scholarships/scholarships-by-type/">Scholarships by Type</a></h2>
+<p>
+    Chances are that whatever makes you <a href="/financial-aid/college-scholarships/scholarships-by-type/unusual-scholarships/" title="Unusual Scholarships"
+        target="_top">unique</a>, whether it be talent or personal characteristics can land you a scholarship. Whether you’re
+    a star <a href="/financial-aid/college-scholarships/scholarships-by-type/athletic-scholarships/">athlete</a> on your high school ice hockey team,
+    a returning <a href="/financial-aid/college-scholarships/scholarships-by-type/scholarships-for-adult-students/">adult student</a>, getting an advanced
+    degree, speak another language, or have survived a rare disease, you will
+    find an award to fit your specific profile. <a href="/financial-aid/college-scholarships/scholarships-by-type/">Scholarships by type</a> are often
+    much less competitive than awards based on need or <a href="/financial-aid/college-scholarships/scholarships-by-type/academic-scholarships-and-merit-scholarships/">academics</a>.
+     Make a list of what makes you stand out, and conduct a <a href="/scholarship-search">
+        scholarships search</a> or browse through our site to see many of the scholarships
+    you could be eligible for.</p>
+<h3>
+    Some Examples:</h3>
+<ul class="bot10">
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-type/academic-scholarships-and-merit-scholarships/" title="Academic Scholarships and Merit Scholarships"
+        target="_top">Academic Scholarships and Merit Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-type/athletic-scholarships/" title="Athletic Scholarships" target="_top">Athletic Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-type/cancer-scholarships/" title="Cancer Scholarships" target="_top">Cancer Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-type/corporate-scholarships/" title="Corporate Scholarships" target="_top">Corporate Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-type/essay-scholarships/" title="Essay Scholarships" target="_top">Essay Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-type/full-tuition-scholarships/" title="Full Tuition Scholarships" target="_top">Full Tuition
+        Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-type/last-dollar-scholarship/" title="Last Dollar Scholarship" target="_top">Last Dollar
+        Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-type/minority-scholarships/" title="Minority Scholarships" target="_top">Minority Scholarships</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-type/scholarships-for-women/" title="Scholarships for Women" target="_top">Scholarships
+        for Women</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarships-by-type/unusual-scholarships/" title="Unusual Scholarships" target="_top">Unusual Scholarships</a></li>
+</ul>
+<!-- =================================   ============================= -->
+<h2 class="toptwo">
+    <a href="/financial-aid/college-scholarships/scholarship-application-strategies/">Scholarship Application Strategies</a></h2>
+<p>
+    The college <a href="/financial-aid/college-scholarships/scholarship-application-strategies/scholarship-application/">scholarship application</a> process can be time-consuming
+    and stress-inducing if you already have a stack of <a href="/resources/study-skills/standardized-testing/">standardized
+        test prep</a> material and <a href="/resources/college-prep/applying/">college applications</a>
+    to get through. But with a few <a href="/financial-aid/college-scholarships/scholarship-application-strategies/" title="Scholarship Application Strategies"
+        target="_top">tips and strategies</a> you’ll feel much more prepared to send
+    in a winning, organized scholarship application. When you’re tired of <a href="/financial-aid/college-scholarships/scholarship-application-strategies/scholarship-application/"
+        title="Scholarship Application" target="_top">filling out applications</a>, remember that the time you put in now could lead to funding that doesn't require repayment. Browse through our site to learn about <a href="/financial-aid/college-scholarships/scholarship-application-strategies/">
+        scholarship application strategies</a> that could bump you to the top of that
+    very competitive pile and <a href="/financial-aid/financial-aid-tips/maximizing-your-financial-aid-package/" title="Maximizing Your Financial Aid Package"
+        target="_top">maximize your financial aid package</a>.</p>
+<h3>
+    Some Examples:</h3>
+<ul class="bot10">
+    <li><a href='/financial-aid/college-scholarships/scholarship-application-strategies/apply-for-scholarships/'>
+        Apply for Scholarships</a></li>
+    <li><a href='/financial-aid/college-scholarships/scholarship-application-strategies/create-success-find-money-for-college/'>
+        Create Success: Find Money for College</a></li>
+    <li><a href='/financial-aid/college-scholarships/scholarship-application-strategies/finding-scholarships-how-and-where-to-look/'>
+        Finding Scholarships; How & Where to Look</a></li>
+    <li><a href='/financial-aid/college-scholarships/scholarship-application-strategies/top-10-tips-for-writing-effective-scholarship-essays/'>
+        Top 10 Tips for Writing Effective Scholarship Essays</a></li>
+    <li><a href='/financial-aid/college-scholarships/scholarship-application-strategies/winning-scholarships-attention-to-detail-will-pay-off/'>
+        Winning Scholarships: Attention to Detail Will Pay Off</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarship-application-strategies/how-to-write-a-scholarship-worthy-essay/" title="How to Write a Scholarship-Worthy Essay" target="_top">How to Write A Scholarship-Worthy Essay</a></li>
+</ul>
+<!-- =================================   ============================= -->
+<h2 class="toptwo">
+    <a href="/financial-aid/college-scholarships/scholarship-information/">Scholarship Information</a></h2>
+<p>
+    Do not let popular misconceptions or <a href="/financial-aid/college-scholarships/scholarship-information/scholarship-myths/">scholarship myths</a>
+    scare you out of applying for awards. Landing an award is highly possible, especially
+    if your <a href="/scholarship-search">scholarship search</a> is focused on specific criteria linked to your profile. It is never too late to make yourself
+    a more attractive <a href="/financial-aid/college-scholarships/scholarship-application-strategies/scholarship-application/" title="Scholarship Application" target="_top">
+        scholarship applicant</a> in the eyes of the judges who will be distributing
+    the awards. If you do your research now and learn about what it takes to win a college
+    scholarship, you’ll improve your chances of being awarded even the most competitive
+    scholarships. Browse through our site to see what you should watch out for before
+    submitting applications, and remember that any scholarship search engines that
+    ask you to pay a <a href="/financial-aid/college-scholarships/scholarship-information/scholarship-scams/">fee</a> are trying to sell a product or service. Why pay for a scholarship search when we offer it at no cost to you? Start with our free college <a href="/scholarship-search">
+        scholarship search</a> to find legitimate, generous awards to <a href="/financial-aid/funding-your-education/"
+            title="Funding Your Education" target="_top">fund your education</a>, and
+    don’t forget to let us know when you land that first prize.
+</p>
+<h3>
+    Some Examples:</h3>
+<ul class="bot10">
+    <li><a href="/financial-aid/college-scholarships/scholarship-information/college-scholarships-and-grants/">
+        College Scholarships and Grants</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarship-information/scholarship-myths/">
+        Scholarship Myths</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarship-information/scholarship-winners-secrets-to-success/">
+        Scholarship Winners' Secrets to Success</a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarship-information/scholarship-opportunities/">
+        Scholarship Opportunities </a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarship-information/the-scholarship-application/">
+        The Scholarship Application </a></li>
+    <li><a href="/financial-aid/college-scholarships/scholarship-information/the-scholarship-advantage/">
+        The Scholarship Advantage </a></li>
+</ul>
+<!-- =================================   ============================= -->
+<h2 class="toptwo">
+    College Scholarship FAQ</h2>
+<p>
+    Have questions about college scholarships? We have answers. Check out our list
+    below but if you have any additional queries, don't hesitate to <a href="/about-us/contact-us/"
+        title="Contact Us" target="_top">contact us</a>.</p>
+<ul>
+    <li><a href="#FAQ1">What is a scholarship?</a></li>
+    <li><a href="#FAQ2">How is a scholarship different from a grant?</a></li>
+    <li><a href="#FAQ3">How is a scholarship different from a fellowship?</a></li>
+    <li><a href="#FAQ4">How do scholarships differ from loans?</a></li>
+    <li><a href="#FAQ5">Will winning a scholarship impact my financial aid package?</a></li>
+    <li><a href="#FAQ6">If I’m not eligible for financial aid, can I still receive a scholarship?</a></li>
+    <li><a href="#FAQ7">Why should I apply for scholarships? </a></li>
+    <li><a href="#FAQ8">What are the odds of winning a scholarship?</a></li>
+    <li><a href="#FAQ9">Can I win multiple scholarships?</a></li>
+    <li><a href="#FAQ10">Am I still eligible for scholarships if I am not a full-time student?</a></li>
+    <li><a href="#FAQ11">Can I win scholarships if I attend an online school?</a></li>
+    <li><a href="#FAQ12">Where can I find scholarships?</a></li>
+    <li><a href="#FAQ13">I’m not a strong writer. Will I have to write an essay for every
+        scholarship I’m applying to?</a></li>
+    <li><a href="#FAQ14">Who should I ask to write me a letter of recommendation to accompany
+        my scholarship application and when should I ask them?</a></li>
+    <li><a href="#FAQ15">When should I start applying for scholarships?</a></li>
+    <li><a href="#FAQ16">My schedule is packed. Can my parents apply for scholarships for
+        me?</a></li>
+    <li><a href="#FAQ17">I have a question about the application process/award/requirements.
+        Is it ok to contact the scholarship provider directly?</a></li>
+    <li><a href="#FAQ18">Will I have to pay an application fee?</a></li>
+    <li><a href="#FAQ19">How do I know if I’ve won a scholarship?</a></li>
+    <li><a href="#FAQ20">Will I have to reapply for this award each year I’m in school,
+        like the FAFSA?</a></li></ul>
+<h3 id="FAQ1">
+    What is a scholarship?</h3>
+<p>
+    Scholarships are funds used to <a href="/financial-aid/financial-aid-information/pay-for-school/" title="Pay for School" target="_top">
+        pay for higher education</a> that do not have to be repaid to the provider.
+    Scholarships may be awarded based on any number of criteria including <a href="/financial-aid/college-scholarships/scholarships-by-type/academic-scholarships-and-merit-scholarships/"
+        title="Academic Scholarships and Merit Scholarships" target="_top">academics</a>,
+    achievements, hobbies, talents, affiliations with various groups, or career aspirations.
+    They are available from the federal and <a href="/financial-aid/college-scholarships/scholarships-by-state/" title="Scholarships by State"
+        target="_top">state</a> government, large corporations, <a href="/financial-aid/college-scholarships/scholarships-by-type/local-scholarships/"
+            title="Local Scholarships" target="_top">local</a> businesses, professional
+    organizations, <a href="/financial-aid/college-scholarships/scholarships-by-type/university-scholarships/" title="University Scholarships" target="_top">
+        universities</a> and individuals. Each scholarship has its own requirements which must be met. Our <a href="/scholarship-search"
+        title="" target="_top">scholarship search</a> can match you with the scholarships
+    you qualify for and have the best chance of <a href="/financial-aid/college-scholarships/scholarship-application-strategies/winning-scholarships-attention-to-detail-will-pay-off/" title="Winning Scholarships; Attention to Detail Will Pay Off"
+        target="_top">winning</a>.</p>
+<h3 id="FAQ2">
+    How is a scholarship different from a grant?</h3>
+<p>
+    Though the terms "scholarship" and "<a href="/financial-aid/grants/" title="Grants" target="_top">grant</a>"
+    are often used interchangeably, there are a few differences between the two. They are
+    both considered "free money", but in the majority of cases scholarships
+    are awarded to students who are planning to attend or are already enrolled in some
+    form of postsecondary education. Awardees are often required to maintain specific
+    grade point averages, participate in <a href="/resources/college-prep/preparing-for-college/extracurricular-activities-can-translate-into-scholarship-opportunities/" title="Extracurricular Activities Can Translate Into Scholarship Opportunities"
+        target="_top">certain activities</a>, or take a certain amount of credits per
+    semester to remain eligible for the scholarships they earned initially. Failure
+    to adhere to these guidelines results in suspension or cancellation of the
+    <a href="/financial-aid/funding-your-education/" title="Funding Your Education" target="_top">funding</a>.
+    Grant recipients, however, don't necessarily have to attend or plan to <a href="/resources/college-prep/attending-college/" title="Attending College" target="_top">attend college</a>:
+    Grant applicants/recipients often need the funds to finance research projects (recipients are expected
+    to create proposals and update the donors regularly to maintain funding) or, in
+    the case for entrepreneurs or natural disaster victims, require capital to help
+    start or rebuild their lives.</p>
+<h3 id="FAQ3">
+    How is a scholarship different from a fellowship?</h3>
+<p>
+    Like scholarships, <a href="/financial-aid/college-scholarships/scholarships-by-grade-level/graduate-scholarships/research-fellowships/" title="Research Fellowships" target="_top">
+        fellowships</a> are considered gift aid and do not have to be repaid but they
+    are typically only available for <a href="/financial-aid/college-scholarships/scholarships-by-grade-level/graduate-scholarships/" title="Graduate Scholarships"
+        target="_top">graduate students</a>. Some fellowships
+    include <a href="/resources/campus-life/college-costs/tuition-and-fees/" title="Tuition and Fees" target="_top">tuition</a>
+    waivers or payments to universities in lieu of tuition but most include a stipend
+    to cover reasonable <a href="/resources/campus-life/college-costs/college-living-expenses/" title="College Living Expenses" target="_top">
+        living expenses</a>.</p>
+<h3 id="FAQ4">
+    How do scholarships differ from loans?</h3>
+<p>
+    The main difference between scholarships and <a href="/financial-aid/student-loans/" title="Student Loans"
+        target="_top">loans</a> is that while scholarships do not require repayment,
+    loans do, with added interest. Loans are awarded federally (<a href="/financial-aid/student-loans/direct-loans/" title="Stafford Loans"
+        target="_top">Stafford</a>, Perkins and <a href="/financial-aid/student-loans/plus-loans/" title="PLUS Loans"
+            target="_top">PLUS</a>) as well as privately (through banks and other lenders
+    like Sallie Mae) and can be either subsidized (no payments must be made while in
+    school) or unsubsidized (payments must be made while in school).</p>
+<h3 id="FAQ5">
+    Will winning a scholarship impact my Financial Aid package?</h3>
+<p>
+    It may. The government takes student <a href="/financial-aid/college-scholarships/scholarship-information/scholarship-awards/" title="Scholarship Awards"
+        target="_top">awards</a> into consideration when offering aid. However, students
+    should not be deterred by this. The effects are not likely to be great. Many schools
+    use student money to offset <a href="/financial-aid/student-loans/" title="Student Loans" target="_top">
+        loan</a> eligibility, not grant awards. Students who receive little aid can
+    benefit greatly from <a href="/financial-aid/college-scholarships/scholarship-information/scholarship-opportunities/" title="Scholarship Opportunities" target="_top">
+        scholarships.</a>
+</p>
+<h3 id="FAQ6">
+    Can I still receive a scholarship, even if I do not qualify for financial aid?</h3>
+<p>
+    Yes, there are plenty of scholarships that aren’t based on financial need. Play
+    to your strengths: If you have a high GPA, apply for <a href="/financial-aid/college-scholarships/scholarships-by-type/academic-scholarships-and-merit-scholarships/" title="Academic Scholarships and Merit Scholarships"
+        target="_top">academic scholarships</a>, if you’re a great writer, apply for
+    <a href="/financial-aid/college-scholarships/scholarships-by-type/essay-scholarships/" title="Essay Scholarships" target="_top">essay</a> and <a
+        href="/financial-aid/college-scholarships/scholarships-by-type/scholarship-poetry-contests/" title="Scholarship Poetry Contests" target="_top">poetry scholarships</a>.
+    If you're creative, apply for <a href="/financial-aid/college-scholarships/scholarships-by-major/art-scholarships/" title="Art Scholarships" target="_top">
+        art</a> and <a href="/financial-aid/college-scholarships/scholarships-by-major/design-scholarships/" title="Design Scholarships" target="_top">design
+            scholarships</a> and so forth. You could have your entire tuition
+    covered by scholarships if you do your due diligence, which means you'll graduate
+    with zero student loan debt.</p>
+<h3 id="FAQ7">
+    Why should I apply for scholarships?</h3>
+<p>
+   Why <i>would't</i> you apply for scholarships? A scholarship
+    is free <a href="/financial-aid/find-money-for-college/" title="Find Money for College" target="_top">money for
+        college</a>, that you don't have to worry about paying back, so you can spend
+    more time focusing on <a href="/resources/college-prep/college-classes/" title="College Classes" target="_top">classes</a>.
+    Whether it's grades, <a href="/financial-aid/college-scholarships/sports-scholarships/" title="Sports Scholarships" target="_top">
+        athleticism</a>, creativity, or being <a href="/financial-aid/college-scholarships/scholarships-by-type/technology-scholarships/" title="Technology Scholarships"
+            target="_top">tech savvy</a> you are being rewarded for something you are good at, so why not take advantage of it? 
+    Many students don't want to <a href="/financial-aid/college-scholarships/scholarship-application-strategies/apply-for-scholarships/" title="Apply for Scholarships" target="_top">
+        apply for scholarships</a> because they fear they will not win.
+    But applying for the scholarships in our <a href="/scholarship-search" title="" target="_top">scholarship search</a>
+    will increase your chances of winning exponentially, because we match our scholarships based on applicants' specific qualities and interests.
+    Scholarships can paired with <a href="/financial-aid/" title="Financial Aid"
+        target="_top">financial aid</a> to cover the cost of <a href="/resources/campus-life/college-costs/books-and-supplies/" title="Books and Supplies"
+            target="_top">books</a>, supplies, <a href="/resources/campus-life/college-costs/room-and-board/" title="Room and Board"
+                target="_top">room and board</a> and even entire tuitions, but you will
+    never know if that's possible unless you apply.</p>
+<h3 id="FAQ8">
+    What are the odds of winning a scholarship?</h3>
+<p>
+    It depends on the scholarship you're applying for. National scholarships will 
+    have larger applicant pools than state or <a href="/financial-aid/college-scholarships/scholarships-by-major/" title="Scholarships by Major"
+        target="_top">major-specific scholarships,</a> but they are all judged on specific
+    sets of requirements. If you follow the criteria, you will have a better chance
+    of winning than someone who doesn't; the same goes for students who observe <a href="/financial-aid/college-scholarships/scholarship-application-strategies/scholarship-application-deadlines/"
+        title="Scholarship Application Deadlines" target="_top">deadlines</a> versus
+    students who submit their applications late. You won't win a scholarship because
+    of who you know; you'll earn it based on how well you follow directions, meet deadlines, and the
+    caliber of your responses.</p>
+<h3 id="FAQ9">
+    Can I win multiple scholarships?</h3>
+<p>
+    Yes, but typically not from the same <a href="/scholarship-providers-resources/" title="Scholarship Providers' Resources"
+        target="_top">scholarship provider</a> during the same award year. If you're
+    applying to more than one scholarship, be sure to keep your <a href="/financial-aid/college-scholarships/scholarship-application-strategies/scholarship-application/"
+        title="Scholarship Application" target="_top">applications</a> 
+    organized. Sending the wrong materials to the wrong scholarship committee
+    can guarantee you won't be receiving those <a href="/financial-aid/funding-your-education/" title="Funding Your Education"
+        target="_top">funds for college</a>.</p>
+<h3 id="FAQ10">
+    Am I still eligible for scholarships if I am not a full-time student?</h3>
+<p>
+    This varies from scholarship to scholarship. Some awards require students to be
+    full-time students, others are valid for students attending part-time, and some
+    are offered specifically to individuals who aren’t currently enrolled but plan to
+    <a href="/financial-aid/college-scholarships/scholarships-by-type/scholarships-for-returning-students/" title="Scholarships for Returning Students" target="_top">return
+        to school</a> during the next semester.</p>
+<h3 id="FAQ11">
+    Can I win scholarships if I attend an online school?</h3>
+<p>
+    This depends on the school and scholarship provider. Our <a href="/scholarship-search" title=""
+        target="_top">scholarship search</a> will present awards meeting your exact criteria.
+    Contact your <a href="/resources/college-prep/choosing-the-right-school/" title="Choosing the Right School" target="_top">
+        school</a> directly and ask about <a href="/financial-aid/college-scholarships/scholarship-information/scholarship-opportunities/" title="Scholarship Opportunities"
+            target="_top">scholarship opportunities</a> available exclusively for enrolled students.</p>
+<h3 id="FAQ12">
+    Where can I find scholarships?</h3>
+<p>
+    You already have! Here on Scholarships.com,  you can fill out a profile
+    granting access to the 2.7 million <a href="/financial-aid/college-scholarships/scholarship-information/scholarship-awards/" title="Scholarship Awards"
+        target="_top">scholarship awards</a> in our database.
+    For additional awards, speak to your <a href="/resources/college-prep/preparing-for-college/20-questions-to-ask-your-school-counselor/" title="20 Questions To Ask Your Guidance Counselor"
+        target="_top">guidance counselor</a>, financial aid officer, <a href="/resources/public-service-and-volunteering/"
+            title="Public Service and Volunteering" target="_top">volunteer</a> coordinator,
+    coach, employer or <a href="/resources/parents-practical-guide-to-college/" title="Parents’ Practical Guide to College"
+        target="_top">parents’</a> employers. Scholarships are also distributed by large
+    corporations, such as <a href="/financial-aid/college-scholarships/scholarships-by-type/corporate-scholarships/google-scholarships/" title="Google Scholarships" target="_top">
+        Google</a>, and local businesses alike. The <a href="/financial-aid/college-scholarships/scholarship-information/scholarship-winners-secrets-to-success/" title="Scholarship Winners' Secrets to Success"
+        target="_top">winners</a> of business and corporation scholarhips will be drawn from a smaller applicant pool.</p>
+<h3 id="FAQ13">
+    I'm not a strong writer. Will I have to write an essay for every scholarship I'm
+    applying for?</h3>
+<p>
+    While the majority of <a href="/financial-aid/college-scholarships/scholarship-application-strategies/" title="Scholarship Application Strategies"
+        target="_top">application processes</a> entail some kind of essay
+    to assess applicants' <a href="/financial-aid/college-scholarships/scholarships-by-type/writing-scholarships/" title="Writing Scholarships" target="_top">
+        writing skills</a>, not all providers require one. Keep in mind that scholarships
+    that do not require <a href="/financial-aid/college-scholarships/scholarships-by-type/essay-scholarships/" title="Essay Scholarships" target="_top">
+        essays</a> can be more competitive, or have additional guidelines to ensure the
+    right students apply. If you're having difficulty finding an essay-free scholarship,
+    check out our "<a href="/financial-aid/college-scholarships/scholarships-by-type/" title="Scholarships by Type" target="_top">Scholarships
+        by Type</a>" section for <a href="/financial-aid/college-scholarships/scholarships-by-type/easy-scholarships/" title="Easy Scholarships" target="_top">
+            easy scholarships</a> or <a href="/financial-aid/college-scholarships/scholarships-by-type/video-contest-scholarships/" title="Video Contest Scholarships"
+                target="_top">video scholarships</a>, where applicants produce short
+    multimedia pieces instead of writing traditional essays.</p>
+<h3 id="FAQ14">
+    Who should I ask to write me a letter of recommendation,
+    and when should I ask them?</h3>
+<p>
+    Teachers, coaches, employers or volunteer supervisors are all excellent choices
+    for <a href="/financial-aid/college-scholarships/scholarship-application-strategies/scholarship-letter-of-recommendation-advice/" title="The Scholarship Letter of Recommendation" target="_top">
+        letters of recommendation</a> because they can detail your strengths and achievements
+    in ways that appeal to scholarship committees. Do not ask <a href="/resources/parents-practical-guide-to-college/"
+        title="Parents' Practical Guide to College" target="_top">parents</a>, relatives
+    or your peers, because their references carry less weight than a professional reference. 
+    Request their assistance at least 2-3 weeks before the <a href="/financial-aid/college-scholarships/scholarship-application-strategies/scholarship-application-deadlines/"
+        title="Scholarship Application Deadlines" target="_top">application deadline</a>.
+    Professors typically write more than one, so asking in a timely
+    manner is not only appreciated but will likely yield a more thoughtful letter.</p>
+<h3 id="FAQ15">
+    When should I start applying for scholarships?</h3>
+<p>
+    The sooner the better. Eligibility requirements such as
+    "you must be a <a href="/financial-aid/college-scholarships/scholarships-by-grade-level/high-school-scholarships/scholarships-for-high-school-seniors/" title="Scholarships for High School Seniors"
+        target="_top">high school senior</a>", "you must be a college sophomore majoring
+    in <a href="/financial-aid/college-scholarships/scholarships-by-major/computer-science-scholarships/" title="Computer Science Scholarships" target="_top">computer
+        science</a>", "you must be under the age of 30, etc." vary. Regardless of the requirements, if you miss the deadline
+    you will not receive a scholarship. For precaution, make sure your application
+    packet is complete at least two weeks before the <a href="/financial-aid/college-scholarships/scholarship-application-strategies/scholarship-application-deadlines/" title="Scholarship Application Deadlines"
+        target="_top">deadline</a>, in case you have to resubmit due to a mailing/emailing error.</p>
+<h3 id="FAQ16">
+Can my parents apply for scholarships on my behalf?</h3>
+<p>
+    Your parents can certainly help you throughout the process, however
+    you must be the one to <a href="/financial-aid/college-scholarships/scholarship-application-strategies/scholarship-application/"
+        title="Scholarship Application" target="_top">fill out the application</a>,
+    <a href="/financial-aid/college-scholarships/scholarship-application-strategies/top-10-tips-for-writing-effective-scholarship-essays/" title="Top 10 Tips for Writing Effective Scholarship Essays"
+        target="_top">write the essay</a>, complete necessary supplements and sign the
+    appropriate forms. Your <a href="/resources/parents-practical-guide-to-college/" title="Parents’ Practical Guide to College"
+        target="_top">parents</a> can assist you in securing your transcripts and even
+    stamping your envelope, but if it is determined that they did the bulk of the work
+     you will be ineligible to receive the <a href="/financial-aid/college-scholarships/scholarship-information/scholarship-awards/" title="Scholarship Awards"
+        target="_top">award</a>.</p>
+<h3 id="FAQ17">
+    I have a question about the scholarship, can I contact the scholarship provider directly?</h3>
+<p>
+    This should be detailed in the scholarship's regulations and guidelines.
+    The <a href="/scholarship-providers-resources/" title="Scholarship Providers' Resources" target="_top">scholarship
+        provider</a> may have the answer to your question but if they have a strict
+    "no call" or "no e-mail" policy, DO NOT call or e-mail. Instead, speak to your <a
+        href="/resources/college-prep/preparing-for-college/20-questions-to-ask-your-school-counselor/" title="20 Questions To Ask Your Guidance Counselor" target="_top">
+        guidance counselor</a> or financial aid officer; they've probably encountered
+    the same questions in past years and will be able to point you in the right direction. </p>
+<h3 id="FAQ18">
+    Will I have to pay an Application Fee?</h3>
+<p>
+    Scholarships.com does not list any scholarships that require application
+    fees but there are some scholarships out there that might. It's ultimately your decision
+    whether or not you want to <a href="/financial-aid/college-scholarships/scholarship-application-strategies/apply-for-scholarships/" title="Apply for Scholarships"
+        target="_top">apply for a scholarship</a> that has an application fee.
+    <p>
+        <h3 id="FAQ19">
+            How do I know if I've won a scholarship?</h3>
+        <p>
+            Someone from the scholarship committee should contact you directly via phone or email by a specific date so it's essential to make yourself as available as possible as
+            that time draws closer. The funds will then be sent to you or the school you will
+            be attending during the next semester. If someone from a third-party organization
+            claims they need personal information (Social Security number, bank account numbers,
+            and so forth) to complete the award process, it could be a <a href="/financial-aid/financial-aid-tips/protecting-yourself-against-scholarship-scams/" title="Protecting Yourself Against Scholarship Scams"
+                target="_top">scam</a>; get as much information about the solicitor as possible
+            without divulging your details and contact the scholarship provider directly to
+            determine your next step.
+        </p>
+        <h3 id="FAQ20">
+            Will I have to reapply each year, such as required for FAFSA? </h3>
+        <p>
+            Scholarships generally come in three <a href="/financial-aid/college-scholarships/scholarships-by-type/" title="Scholarships by Type"
+                target="_top">varieties</a>: one-time, renewable, or renewable with stipulations.
+            One-time awards are granted only once, while renewable scholarships
+            are granted each year. Some are dispensed automatically each year after the initial
+            <a href="/financial-aid/college-scholarships/scholarship-information/scholarship-awards/" title="Scholarship Awards" target="_top">award</a> but most
+            renewable awards call for the recipient to reapply or provide transcripts and progress
+            reports to ensure they are still meeting the guidelines set by the scholarship committee.
+            If you were awarded for your <a href="/financial-aid/college-scholarships/scholarships-by-type/academic-scholarships-and-merit-scholarships/" title="Academic Scholarships and Merit Scholarships"
+                target="_top">stellar grades</a> or <a href="/financial-aid/college-scholarships/sports-scholarships/" title="Sports Scholarships"
+                    target="_top">athletic achievement</a>, a low GPA or nonparticipation on
+            a university team could discontinue your award so check with your
+            <a href="/scholarship-providers-resources/" title="Scholarship Providers' Resources" target="_top">scholarship
+                provider</a> to determine what is required for continued funding.</p>
+ <div style="padding: 15px 0px 15px 0px;">
+  <script id="mNCC" language="javascript">
+    medianet_height = "250";
+    medianet_crid = "722627912";
+    medianet_versionId = "111299"; 
+    (function() {
+        var isSSL = 'https:' == document.location.protocol;
+        var mnSrc = (isSSL ? 'https:' : 'http:') + '//contextual.media.net/nmedianet.js?cid=8CUB0YK88' + (isSSL ? '&https=1' : '');
+        document.write('<scr' + 'ipt type="text/javascript" id="mNSC" src="' + mnSrc + '"></scr' + 'ipt>');
+    })();
+  </script>
+</div>
+</p>
+            <!--End standard page elements-->
+        <div class="clearboth"></div>
+<h3>Last Reviewed: November 2021</h3></div>
+
+
+
+    </div>
+        <div id="footer">
+            
+<style type="text/css">
+    .onetone a {text-decoration: none;}
+    a.footeruni {color: #777; text-decoration:none;}
+    </style>
+<div style="border-bottom: 1px solid #CCCED2; clear: both; max-width: 940px; text-align: center; margin: 0px auto; position: relative; text-align: left; padding-top: 0px; margin-bottom: 0px;">
+<h3 style="color: #777; margin-bottom: 0px; margin-top:0; padding-top:1em; font-size: 1.4rem;">Explore Scholarships.com</h3></div>
+<div class="bottomnavigation">
+    <ul class="col1">
+        <li style="font-size: .9rem; padding-bottom: 10px;"><b>Channels</b></li>
+        <li>
+            <a id="1_hlHome" href="/">Home</a></li>
+        <li><a href="/scholarship-search/">Scholarship Search</a></li>
+        <li><a href="/financial-aid/">Financial Aid</a></li>
+        <li><a href="/college-search/">College Search</a></li>
+        <li><a href="/news/">News</a></li>
+        <li><a href="/student-resources/">Student Resources</a></li>
+        <li><a href="/educators/">Educators</a></li>
+        <li><a href="/scholarship-providers-resources/list-your-scholarship/create-account">Submit A Scholarship</a></li>
+        <li><a href="/about-us/in-the-news/">In the News</a></li>
+        <li><a href="/financial-aid/college-scholarships/success-stories/">Success Stories</a></li>
+        <li><a href="/resources">Resources</a></li>
+    </ul>
+
+    <ul class="col2">
+        <li style="font-size: .9rem; padding-bottom: 10px;"><b>Scholarships</b></li>
+        <li><a href="/scholarship-search">Scholarship Search</a></li>
+        <li class="noborder"><a href="/financial-aid/college-scholarships/scholarship-directory">Scholarship Directory</a></li>
+        <li><a href="/financial-aid/college-scholarships/featured-scholarships/">Featured Scholarships</a></li>
+        <li><a href="/financial-aid/college-scholarships/scholarships-by-type/">Scholarships By Type</a></li>
+        <li><a href="/financial-aid/college-scholarships/scholarships-com-scholarships/">Scholarships.com Scholarships</a></li>
+        <li><a href="/financial-aid/college-scholarships/scholarships-by-type/minority-scholarships/african-american-scholarships/">Scholarships for African-Americans</a></li>
+        <li><a href="/financial-aid/college-scholarships/scholarships-by-type/minority-scholarships/hispanic-scholarships/">Scholarships for Hispanics</a></li>
+        <li><a href="/financial-aid/college-scholarships/scholarships-by-type/minority-scholarships/latino-scholarships/">Scholarships for Latinos</a></li>
+        <li><a href="/financial-aid/college-scholarships/scholarships-by-type/first-in-family-scholarships/">Scholarships for First In Family</a></li>
+        <li><a href="/financial-aid/college-scholarships/scholarships-by-type/veteran-scholarships/">Scholarships for Veterans</a></li>
+        <li><a href="/financial-aid/college-scholarships/scholarships-by-type/scholarships-for-gay-or-lesbian-students/">Scholarships for LGBTQ Students</a></li>
+        <li><a href="/financial-aid/college-scholarships/scholarships-by-type/scholarships-for-women/">Scholarships for Women</a></li>
+        <li><a href="/financial-aid/college-scholarships/sports-scholarships/">Scholarships for Sports/Athletics</a></li>
+        <li><a href="/financial-aid/college-scholarships/scholarships-trending-now/">Scholarships Trending Now</a></li>
+        <li><a href="/financial-aid/college-scholarships/scholarships-by-major/">Scholarships by Academic Majors</a></li>
+        <li><a href="/financial-aid/college-scholarships/scholarships-by-state/">Scholarships by State</a></li>
+    </ul>
+
+    <ul class="col3">
+        <li style="font-size: .9rem; padding-bottom: 10px;"><b>College</b></li>
+        <li><a href="/college-search/">College Search</a></li>
+        <li><a href="/resources/campus-life/">Campus Life</a></li>
+        <li class="noborder"><a href="/resources/college-prep/">College Prep</a></li>
+        <li><a href="/college-search/colleges-trending-now/">Colleges Trending Now</a></li>
+        <li><a href="/financial-aid/">Financial Aid</a></li>
+        <li><a href="/financial-aid/student-loans/">Student Loans</a></li>
+        <li><a href="https://www.rightstudent.com">College Partnerships</a></li>
+    </ul>
+
+    <ul class="col4">
+        <li style="font-size: .9rem; padding-bottom: 10px;"><b>Help</b></li>
+        <li><a href="/support/frequently-asked-questions/">FAQ</a></li>
+        <li><a href="/about-us/linking/">Linking</a></li>
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/about-us/contact-us/">Contact Us</a></li>
+        <li><a href="/Site-Map/">Site Map</a></li>
+        <li><a href="/about-us/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/about-us/terms-of-use/">Terms of Use</a></li>
+        <li><a href="/about-us/career-opportunities/">Career Opportunities</a></li>
+        <li><a href="/about-us/scholarships-com-media-kit/">Media Kit</a></li>
+    </ul>
+</div>
+<br />
+   <div id="outerpage">
+       <div class="onetone" style="padding-bottom: 10px;">            
+                <a href="https://www.facebook.com/scholarships.com.info" target="_blank">
+                    <img src="/img/fb_3.png" alt="Facebook" title="Facebook" style="margin-right: 5px;" />
+                </a>
+                <a href="https://www.instagram.com/scholarshipscom/" target="_blank">
+                    <img src="/img/insta_3.png" alt="Instagram" title="Instagram" style="margin-right: 5px;">
+                </a>
+                <a href="https://twitter.com/Scholarshipscom" target="_blank">
+                    <img src="/img/twitter_3.png" alt="Twitter" title="Twitter" style="margin-right: 5px;" />
+                </a>
+                <a href="https://www.linkedin.com/company/scholarships-com" target="_blank">
+                    <img src="/img/linkedin_gry.png" alt="LinkedIn" title="LinkedIn" style="margin-right: 5px;" />
+                </a>
+                <a href="https://itunes.apple.com/us/app/scholarships.com/id691353931?mt=8" target="_blank">
+                    <img src="/img/apple_3.png" alt="Available on the App Store" title="Scholarships.com iPhone & iPad App" style="margin-right: 5px;" />
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.scholarships&hl=en" target="_blank">
+                    <img src="/img/google_3.png" alt="Android App on Google Play" title="Scholarships.com Android App" />
+                </a>                         
+        </div>
+         <div class="onetone">
+            <em style="float: left; padding-left: 5px;"><a href="javascript:openWindow('http://www.bbb.org/chicago/business-reviews/scholarships-and-financial-aid/scholarshipscom-in-highland-park-il-53000345');"><img src="/img/bbb-seal-horizontal77.png" alt="BBB Accredited Business" title="BBB Accredited Business" id="bbbtile"></a></em>
+        </div>
+
+       <div class="onetone">
+           <!-- <div>
+               <a href="//privacy.truste.com/privacyseal/validation?rid=8d4d759e-2d94-4880-9d01-0e9ff164d12c" target="_blank"><img style="border: none" src="//privacy-policy.truste.com/privacyseal/seal?rid=8d4d759e-2d94-4880-9d01-0e9ff164d12c" alt="TRUSTe" /></a>
+           </div> -->
+           <div style="padding-left: 10px;"><a href="/about-us/privacy-policy/" target="_blank"><img style="border: none; height: 30px;" src="/img/pvseal.png" alt="TRUSTe"/></a></div>
+       </div>
+   </div> 
+<div style="text-align: center; width: 100%;">
+    <p class="cpyrgt" style="font-size: .9rem;">Copyright &copy; 1998 - 2021
+        Scholarships.com
+        <br />Scholarships.com All Rights Reserved<br />
+        Scholarships.com Publisher<br />
+        <a href="https://www.scholarships.com" class="footeruni">www.scholarships.com</a>
+        <br />
+         <a class="footeruni" href="/do-not-sell-my-personal-information">Do Not Sell My Personal Information</a>
+    </p>
+</div>
+
+        </div>
+    
+<!-- Start Google Analytics -->
+
+    <script type="text/javascript">
+
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-2166858-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+<!-- End Google Analytics -->
+    <!--Copyright Navigation-->
+    <script src="/js/jquery-2.1.1.js"></script>
+
+    <script src="/js/jquery-ui.js"></script>
+<script src="/js/jquery.modal.min.js"></script>
+
+    <script src="/js/jquery.validate.js"></script>
+<script src="/js/jquery.validate.unobtrusive.js"></script>
+<script src="/js/jquery.validate.validators.js"></script>
+
+    <script src="/js/Common.js"></script>
+
+        <script type="text/javascript">
+            $(function () {
+                $.validator.setDefaults({
+                    onfocusout: false,
+                    onkeyup: false,
+                    onclick: false
+                });
+            });
+        </script>
+            <!-- Material Design Components -->
+        <script src="/js/material-components-web.js"></script>
+
+    
+
+                <script type="text/javascript">
+        function ShowHideElement(id) {
+
+        }
+        $(document).ready(function () {
+                
+                    setTimeout(function () {
+                        $("#side_ad").animate({ 'right': '35px' }, "slow");
+                    }, 5000);
+                    $("#aCloseSlider").click(function () {
+                        document.getElementById('side_ad').style.display = 'none';
+                        const campId = $(this).attr('data-adid');
+                        $.ajax({
+                            type: "POST",
+                            url: "/campaign/placementcampaignnotinterested",
+                            data: "campId=" + campId,
+                            dataType: "json",
+                            error: function (xhr, status, error) {
+                                console.log(error);
+                            }
+                        });
+                        return false;
+                    });
+                
+            $("#txtCollege").autocomplete({
+                source: function (request, response) {
+                    var term = request.term.replace(/&/g, '~').replace(/</g, '').replace(/>/g, '').replace(/\*/g, '').replace(/%/g, '').replace(/:/g, '').replace(/\\/g, '').replace(/\?/g, '');
+                    $.ajax({
+                        url: 'https://www.simpletuition.com/api/school_search?term=' + term + '&cnt=10&brnd=scholarships_com&map=true',
+                        data: {},
+                        dataType: 'json',
+                        type: "GET",
+                        success: function (data) {
+                            response($.map(data.ac, function (item) {
+                                var collegeName = item.name.replace(/&/g, '~').replace(/</g, '').replace(/>/g, '').replace(/\*/g, '').replace(/%/g, '').replace(/:/g, '').replace(/\\/g, '').replace(/\?/g, '');
+                                return {
+                                    label: item.name + "|" + item.location, value: item.doe + "|" + encodeURI(collegeName)
+                                }
+                            }));
+                        }
+                    })
+                },
+                select: function (event, ui) {
+                    window.location = '/financial-aid/student-loans/' + ui.item.value;
+                    return false;
+                },
+                focus: function (event, ui) {
+                    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+                        window.location = '/financial-aid/student-loans/' + ui.item.value;
+                        $(".ui-menu-item").hide();
+                        return false;
+                    } else {
+                        event.preventDefault();
+                    }
+                }
+            }).autocomplete("instance")._renderItem = function (ul, item) {
+                var itemArray = item.label.split("|");
+                return $("<li>").addClass("listItem")
+                    .append("<div><span class='college-name'>" + itemArray[0] + "</span><br /><span class='college-city-state'>" + itemArray[1] + "</span></div>").appendTo(ul);
+            };
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#nav-btn').click(function () {
+                if ($('.sidemenu').css('width') == '0px') {
+                    $(".sidemenu").animate({
+                        width: "250px"
+                    });
+                    $('body').css('position', 'fixed');
+                    $("body").animate({
+                        left: "250px"
+                    });
+                } else {
+                    $(".sidemenu").animate({
+                        width: "0px"
+                    });
+                    $("body").animate({
+                        left: "0px"
+                    });
+                    $('body').css('position', '');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

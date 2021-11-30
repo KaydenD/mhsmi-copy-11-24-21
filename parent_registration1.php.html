@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PTCFast.com</title>
+        <!--<link href="css/style.201503.css" rel="stylesheet" type="text/css"/>-->
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="/js/jquery.201309.js"></script>
+    <script src="/js/jquery-ui.js"></script>
+    <script>
+    function pu(url) {
+      w=window.open(url,null,'left=100,top=100,width=800,height=600,status=no,toolbar=no,menubar=no,location=no');
+      w.focus();
+    }
+    </script>
+      <script language="javascript">
+    function logout()
+    {
+      document.frm_logout.submit();
+    }
+  function go_back_to_email()
+  {
+    document.frm_parentletter.action="email_text.php";
+    document.frm_parentletter.mode.value="";
+    document.frm_parentletter.submit();
+  }
+  </script>
+    <script language="javascript">
+      if (top.location!=location) {
+        top.location.href=document.location.href;
+      }
+      function hideNewMessage(){
+        $('#new-message-link').hide();
+      }
+      function bannerManage(opt)
+	 {
+	    document.banner_frm_manage.target="";
+		document.banner_frm_manage.action ='editconferenceinfo.php';
+		document.banner_frm_manage.mode.value = opt;
+		document.banner_frm_manage.setting_status.value = 1;
+	    document.banner_frm_manage.submit();
+	 }
+    </script>
+    </head>
+    <body bgcolor="#e7e7e7">
+        <form name="banner_frm_manage" method="post">
+            <input type="hidden" name="action" />
+            <input type="hidden" name="mode" />
+            <input type="hidden" name="setting_status" />
+        </form>
+    <noscript><div style="background:red;color:white;font-size:8pt;font-family:sans-serif;font-weight:bold;padding:2px 10px; margin:0px; margin-bottom:5px; border-bottom:1px solid black;">This site requires javascript support to function correctly; please ensure that this is enabled in your browser.</div></noscript>
+    <form name="frm_logout" action="adminlogin.php" method="post"> <input type="hidden" name="mode" value="logout"> <input type="submit" style="visibility:hidden "> </form>
+    <table width="796" height="600" align="center" class="border" cellpadding="0" cellspacing="0">
+        <tr>
+        <td colspan="2"  bgcolor="#003163" height="100" style="padding-left:10px;padding-right:10px" class="sitename" valign="middle">
+    <div align="right"></div><script type="text/javascript">function getTranslation(lang){
+			var date = new Date(new Date().getTime() + 86400 * 30 * 1000);
+			document.cookie = "lang=" + lang + "; path=/; expires=" + date.toUTCString();
+			location.reload(true);
+			//window.location = "/parent_registration1.php?"
+			return false;}</script><style>.lang_link{font-size:13px;color:#FFFFFF;margin-left:6px}.lang_link:active{color:#FFFFFF}</style><div style="margin-top:-3px; margin-bottom:6px; font-size:32px">Mercy High School      <br /><span style='font-size:25px;'>Farmington Hills, MI</span>      </div>    <div style="font-size:25px" onclick="location.href='index.html'" onmouseover="document.body.style.cursor='pointer'" onmouseout="document.body.style.cursor='default'">
+      Conference Scheduler      </div>
+        </td>
+    </tr>
+    <tr>
+    <td colspan="2" style="padding-left:30px;" bgcolor="#003163" valign="bottom">
+    <table cellpadding="0" align="left" cellspacing="0" height="20" bgcolor="#003163">
+          <td width="10" class="linktabtd">&nbsp;
+      </td>
+                  <td width="11" class="linktabtd">&nbsp;	</td>
+                    </tr>
+        </table>
+        </td></tr>
+                  <tr><td align="right">
+           <a href="/schools/Mercy_High_School_1" style="color:#0000ff;padding-right:10px;">Return to the list of conferences</a>                     </td></tr>
+              <tr><td  style="padding-top:10px; padding-left:10px; " valign="top" align="left" >
+            <form name="frm_parent_reg1" method="post">
+    <TABLE width="80%" cellPadding="5" cellSpacing="2" border="0" class="border" bgcolor="#FFFFFF">
+    <TR><TD colspan="2" class="td_head" align="left">Parent Signup for Teacher Conference</TD></TR>
+        <TR><TD colspan="2" align="left">Please enter your Entry Code</TD></TR>
+    <TR>
+    <TD colspan="2" align="left"><input type="text" name="cid" id="parent_code" value=""> <i>-- from the school letter</i></TD>
+    </TR>
+    <TR><TD colspan="2" align="left">&nbsp;</TD></TR>
+    <TR><TD colspan="2" align="left"><input type="submit" name="btn1" value="Submit"> -- Press here to begin signup process</TD></TR>
+    </TABLE>
+    </form>
+      </td></tr>
+    <tr><td colspan="2" height="30" class="copyright" valign="middle" align="center">Copyright &copy; 2009-2021 PTCFast, LLC. All rights reserved.    </td></tr>
+    </table>
+    </body>
+    </html>
+              <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+            <style>
+div.ui-tooltip {
+    max-width: 600px;
+}
+            </style>
+          <script>
+            $( function() {
+              $( '.tooltip' ).tooltip({
+                  content: 'Our Privacy Policy is Short and Simple:<br /><ul><li>  We will not use the parent emails or student lists for any purpose other than communicating with the parents about their specific parent-teacher conference. Additionally, we will not sell or circulate parent emails or student lists.</li>                    <li>We will not sell or give the emails provided by teachers and/or school administrators to anyone else, nor will we use them for any purpose other than (a) communicating with users about their conferences or (b) providing occasional updates on changes that might take place in PTCFast, or perhaps, and only very rarely, letting users know if we release specific additional software tools likely to be of direct interest to users of PTCFast.</li></ul>'
+                 
+            } );
+        });
+            
+
+        </script>
